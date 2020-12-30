@@ -1,0 +1,1 @@
+this  folder will only contain the props that is accessed or needed by more than one components to render. Don't put6 unnecessary codes or files like images logs in here

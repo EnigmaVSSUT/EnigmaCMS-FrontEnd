@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Instructions for contributing
 
-## Available Scripts
+Strictly Follow this guide to organize your code. we are using _components folder method_ i.e each components should have its own folder containing all the codes(css, js,etc) that it needs to execute.
 
-In the project directory, you can run:
+## File structure
 
-### `yarn start`
+-  Starting with **public** folder:- <br>
+   - keep this clean and put all the favicon in _favicon_ folder.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Src** folder:- <br>
+    - _assets_ will be containing images,icons,logos and etc.
+    - _components_ this folder will contain each and every components with their own individual folder each containing their respective **Props** and **codes** that they need to run.
+    - _redux_ this folder will contain the codes for data management using redux.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Attention:-
 
-### `yarn test`
+- The Folder named **global** inside the components folder will only contain the **props** that is accessed or needed by more than one components to render.
+- Create individual folder for each global props. **Don't put** unnecessary codes or files like images logs in here.
+- Their will be certain components that needs **data** to test the **functionality** in that case build a demo data in that **particular** _components or props_ folder and test it. After the backend is ready connect it using redux and remove the demo data.
+- Also keep your _assets_ folder organized create folders for better distinctions between each files.
+- When naming a **component folder** make sure that the 1st letter should be **capital** that will help in distinguish between folder and the jsx file.
+- Make sure you are using the **preferred** Technology framework libraries.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br> For any queries contact **Team Web Enigma**.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Happy contribution 🎉
