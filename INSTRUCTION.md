@@ -12,7 +12,8 @@ Starting with **public** folder:- <br>
 
 ### Attention:-
 ```
-- The Folder named **global** inside the components folder will only contain the **props** that is accessed or needed by more than one components to render. Create individual folder for each global props. **Don't put** unnecessary codes or files like images logs in here.
+- The Folder named **global** inside the components folder will only contain the **props** that is accessed or needed by more than one components to render.
+- Create individual folder for each global props. **Don't put** unnecessary codes or files like images logs in here.
 - Their will be certain components that needs data to test the functionality in that case build a demo data in that **particular** _components or props_ folder and test it. After the backend is ready connect it using redux and remove the demo data.
 - Make sure you are using the preferred packages as mentioned above.
 
@@ -20,6 +21,4 @@ Starting with **public** folder:- <br>
 
 <br> for any queries contact _Team Web || Enigma_.
 
-
-<br>
 ### Happy contributing 🎉
