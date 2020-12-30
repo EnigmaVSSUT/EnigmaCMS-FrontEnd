@@ -1,12 +1,11 @@
 # Instructions for contributing
 
-Strictly Follow this guide to organize your code. we are using _components folder method_ i.e each components should have its own folder containing all the codes(css, js,etc) that it needs to execute. <br>
+Strictly Follow this guide to organize your code. we are using _components folder method_ i.e each components should have its own folder containing all the codes(css, js,etc) that it needs to execute.
 
-##File structure
+## File structure
 
 Starting with **public** folder:- <br>
 - keep this clean and put all the favicon in _favicon_ folder.
-<br>
 
 **Src** folder:- <br>
 - _assets_ will be containing images,icons,logos and etc.
@@ -22,6 +21,6 @@ Starting with **public** folder:- <br>
 
 
 
-<br> for any queries contact _Team Web Enigma_.
+<br> For any queries contact **Team Web Enigma**.
 
-### Happy contributing 🎉
+## Happy contribution 🎉
