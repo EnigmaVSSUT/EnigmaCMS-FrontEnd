@@ -4,13 +4,13 @@ Strictly Follow this guide to organize your code. we are using _components folde
 
 ## File structure
 
-Starting with **public** folder:- <br>
-- keep this clean and put all the favicon in _favicon_ folder.
+-  Starting with **public** folder:- <br>
+ - keep this clean and put all the favicon in _favicon_ folder.
 
-**Src** folder:- <br>
-- _assets_ will be containing images,icons,logos and etc.
-- _components_ this folder will contain each and every components with their own individual folder each containing their respective **Props** and **codes** that they need to run.
-- _redux_ this folder will contain the codes for data management using redux.
+- **Src** folder:- <br>
+ - _assets_ will be containing images,icons,logos and etc.
+ - _components_ this folder will contain each and every components with their own individual folder each containing their respective **Props** and **codes** that they need to run.
+ - _redux_ this folder will contain the codes for data management using redux.
 
 ### Attention:-
 
