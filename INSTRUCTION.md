@@ -1,5 +1,6 @@
 # Instructions for contributing
-Strictly Follow this guide to organize your code. we are using _components folder method_ i.e each components should have its own folder containing all the codes(css, js,etc) that it needs to execute.
+
+Strictly Follow this guide to organize your code. we are using _components folder method_ i.e each components should have its own folder containing all the codes(css, js,etc) that it needs to execute. <br>
 
 ##File structure
 
