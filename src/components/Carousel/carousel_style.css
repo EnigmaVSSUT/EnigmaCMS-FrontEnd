@@ -1,0 +1,17 @@
+.carousel{
+  opacity: 1;
+}
+.carousel_img{
+  height: 100vh;
+  object-fit: cover;
+  filter: grayscale(80%);
+}
+
+@media (max-width:600px) {
+  .carousel_img{
+    /* height: 80vh; */
+    object-fit: cover;
+    /* filter: grayscale(100%); */
+  }
+
+}
