@@ -11,9 +11,9 @@ import "./carousel_style.css"
 function carousel(){
   return <>
 
-  <Carousel className="carousel">
+  <Carousel className="carousel" controls={false} indicators={false} pause="false">
 
-<Carousel.Item interval={2000}>
+<Carousel.Item interval={2500}>
  <img
    className="d-block w-100 carousel_img"
    src={Img1}
@@ -22,7 +22,7 @@ function carousel(){
 
 </Carousel.Item>
 
-<Carousel.Item interval={2000}>
+<Carousel.Item interval={2500}>
  <img
    className="d-block w-100 carousel_img"
    src={Img2}
@@ -32,7 +32,7 @@ function carousel(){
 
 </Carousel.Item>
 
-<Carousel.Item interval={2000}>
+<Carousel.Item interval={2500}>
  <img
    className="d-block w-100 carousel_img"
    src={Img3}
@@ -44,12 +44,11 @@ function carousel(){
 
 </Carousel>
 
-<section className="intro">
-<div className="container-fluid">
+
+{/*<div className="container intro_txt ">
 <h1>Enigma the coding club vssut</h1>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-</div>
-</section>
+</div>*/}
+
 
   </>
 }
