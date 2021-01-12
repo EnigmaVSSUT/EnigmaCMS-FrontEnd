@@ -27,6 +27,11 @@ background-color: transparent;
   color: #35FF1F  !important;
   padding: 10px !important;
 }
+.nav_item_dark a:hover{
+  background-color: rgba(128, 128, 128, 0.35) !important;
+border-radius: 5px;
+color: white !important;
+}
 
 
 .logo_img{

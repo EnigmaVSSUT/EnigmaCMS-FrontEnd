@@ -45,9 +45,9 @@ function carousel(){
 </Carousel>
 
 
-{/*<div className="container intro_txt ">
-<h1>Enigma the coding club vssut</h1>
-</div>*/}
+<div className="container intro_txt ">
+<h1>Enigma the coding club vssut</h1><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
 
 
   </>
