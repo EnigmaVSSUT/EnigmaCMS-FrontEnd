@@ -1,0 +1,102 @@
+.card {
+  height: 200px;
+  width: 100%;
+  min-width: 250px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #17141d;
+  box-shadow: -1rem 0 3rem #000;
+  display: flex;
+  flex-direction: column;
+  transition: 0.2s;
+  margin: 0;
+  scroll-snap-align: start;
+  clear: both;
+  position: relative;
+}
+
+.card:focus-within ~ .card,
+.card:hover ~ .card {
+  transform: translateX(130px);
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+  border: 2px solid #35ff1f;
+}
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.header {
+  margin-bottom: auto;
+}
+
+.header h2 {
+  font-size: 20px;
+  margin: 0.25rem 0 auto;
+  text-decoration: none;
+  color: white;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card:hover .header h2 {
+  background-color: #35ff1f;
+  background-image: linear-gradient(315deg, #028610 0%, #35ff1f 74%);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.author {
+  margin: 3rem 0 0;
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  position: relative;
+}
+
+.avatar {
+  grid-area: auto;
+  align-self: start;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: contain;
+  display: block;
+  overflow: hidden;
+  margin: 16px 10px;
+}
+
+.authorName {
+  grid-area: auto;
+  box-sizing: border-box;
+  color: rgb(233, 230, 230);
+  cursor: ;
+}
+
+.authorNamePrefix {
+  font-style: normal;
+  font-weight: 700;
+  color: #7a7a8c;
+}
+
+.halfcircle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 48px;
+  fill: none;
+  stroke: #00b712;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
