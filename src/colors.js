@@ -4,6 +4,7 @@ export const green = "#35ff1f";
 export const black = '#000'
 export const darkPrimary = "#18191a";
 export const darkSecondary = "#242526";
+export const darkSecondary2 = "#001E28";
 export const darkHighlight = "#3a3b3c";
 export const foregroundActive= "#e4e6eb";
 export const foregroundInactive= "#b0b3b8";
