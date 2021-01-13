@@ -1,0 +1,39 @@
+.nav_bar{
+background-color: transparent;
+
+}
+.nav_item{
+  margin-right: 40px;
+}
+.nav_item a {
+  color: #EDEDEE  !important;
+  padding: 10px !important;
+}
+
+.nav_item a:hover{
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.35);
+}
+
+.nav_bar_dark{
+  background-color: #100E17 !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.nav_item_dark{
+  margin-right: 40px;
+}
+
+.nav_item_dark a{
+  color: #35FF1F  !important;
+  padding: 10px !important;
+}
+.nav_item_dark a:hover{
+  background-color: rgba(128, 128, 128, 0.35) !important;
+border-radius: 5px;
+color: white !important;
+}
+
+
+.logo_img{
+
+}
