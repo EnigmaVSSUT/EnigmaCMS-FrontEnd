@@ -1,17 +1,16 @@
 import React from "react";
 
-import { Button } from "@material-ui/core";
-
-import { makeStyles } from "@material-ui/core/styles";
-import DeleteIcon from "@material-ui/icons/Delete";
-import CloudUploadIcon from "@material-ui/icons/CloudUpload";
-import KeyboardVoiceIcon from "@material-ui/icons/KeyboardVoice";
-import Icon from "@material-ui/core/Icon";
-import SaveIcon from "@material-ui/icons/Save";
+import { Button, makeStyles } from "@material-ui/core";
+import LinkedIn from "@material-ui/icons/LinkedIn";
+import GitHub from "@material-ui/icons/GitHub";
+import Twitter from "@material-ui/icons/Twitter";
+import Facebook from "@material-ui/icons/Facebook";
+import * as colors from "./../../../colors";
 
 const useStyles = makeStyles(theme => ({
   button: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(1.3),
+    width:265
   },
 }));
 
@@ -19,33 +18,52 @@ const OAuthButtons = (props) => {
   const classes = useStyles();
 
   return (
-    <div>
-      <Button variant="contained" color="secondary" className={classes.button} startIcon={<DeleteIcon />}>
-        Delete
-      </Button>
-      {/* This Button uses a Font Icon, see the installation instructions in the Icon component docs. */}
-      <Button variant="contained" color="primary" className={classes.button} endIcon={<Icon>send</Icon>}>
-        Send
-      </Button>
-      <Button variant="contained" color="default" className={classes.button} startIcon={<CloudUploadIcon />}>
-        Upload
-      </Button>
-      <Button
-        variant="contained"
-        disabled
-        color="secondary"
-        className={classes.button}
-        startIcon={<KeyboardVoiceIcon />}
+    <>
+      <Button 
+        variant="contained" 
+        color='primary' 
+        size="large" 
+        className={classes.button} 
+        startIcon={<GitHub />}
+        style={{textTransform: 'none', backgroundColor:colors.black}}
       >
-        Talk
+        {props.type} with GitHub
       </Button>
-      <Button variant="contained" color="primary" size="small" className={classes.button} startIcon={<SaveIcon />}>
-        Save
+
+      <Button 
+        variant="contained" 
+        color="primary" 
+        size="large" 
+        className={classes.button} 
+        startIcon={<LinkedIn />}
+        style={{textTransform: 'none', backgroundColor:colors.blueLinkedIn}}
+      >
+        {props.type} with LinkedIn
       </Button>
-      <Button variant="contained" color="primary" size="large" className={classes.button} startIcon={<SaveIcon />}>
-        Save
+
+      <Button 
+        variant="contained" 
+        color="primary" 
+        size="large" 
+        className={classes.button} 
+        startIcon={<Twitter />}
+        style={{textTransform: 'none', backgroundColor:colors.blueTwitter}}
+      >
+        {props.type} with Twitter
       </Button>
-    </div>
+
+      <Button 
+        variant="contained" 
+        color="primary" 
+        size="large" 
+        className={classes.button} 
+        startIcon={<Facebook />}
+        style={{textTransform: 'none', backgroundColor:colors.blueFacebook}}
+      >
+        {props.type} with Facebook
+      </Button>
+
+    </>
   );
 }
 export default OAuthButtons;

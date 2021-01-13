@@ -3,7 +3,7 @@ import React, { useState } from "react";
 // import Navbar from "../Navbar/navbar";
 import { Box, Container, Hidden, makeStyles } from "@material-ui/core";
 import AuthCard from "./sections/AuthCard";
-import Description from "./sections/Description";
+import FlipCard from "./sections/FlipCard";
 import SectionSelector from "./sections/SectionSelector";
 import * as colors from "./../../colors";
 
@@ -37,18 +37,17 @@ function Auth() {
   return (
     <Container className={classes.body}>
       {/* <Navbar/> */}
-      <SectionSelector 
-        handleChangeSection={handleChangeSection}
-      />
+      <SectionSelector handleChangeSection={handleChangeSection} />
       <Box className={classes.mainContainer}>
         <Box display="flex" alignContent="flex-start" className={classes.movingBox}>
-          <AuthCard />
+          <AuthCard type="Sign up" />
           <Hidden xsDown>
-            <Description />
+            <FlipCard />
           </Hidden>
-          <AuthCard />
+          <AuthCard type="Sign in" />
         </Box>
       </Box>
+      {/* <Footer/> */}
     </Container>
   );
 }
