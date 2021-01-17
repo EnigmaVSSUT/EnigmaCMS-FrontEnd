@@ -20,6 +20,7 @@ const SectionSelector = (props) => {
   const changeActive= () => {
     setActive(!active)
     props.handleChangeSection()
+    props.handleFlipBoxFlip()
   }
   return (
     <Box display="flex" justifyContent="space-between" className={classes.flexBox}>

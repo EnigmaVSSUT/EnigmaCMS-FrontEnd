@@ -5,7 +5,7 @@ import * as colors from "../../../colors";
 const useStyle = makeStyles(theme => ({
   selectorButton: props => {
     return {
-      margin: "10px 10px 5px",
+      margin: "10px 10px 0px",
       borderRadius: props.active ? "4px 4px 0 0" : "10px",
       color: props.active ? colors.button.foregroundActive : colors.button.foregroundInactive,
       backgroundColor: props.active && colors.button.backgound,

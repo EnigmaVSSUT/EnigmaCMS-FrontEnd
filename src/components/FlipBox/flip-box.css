@@ -15,6 +15,7 @@
 
 .flip-box-front,
 .flip-box-back {
+  position: relative;
   width: 90%;
   grid-area: inners;
   background-size: cover;
@@ -36,38 +37,17 @@
 }
 
 
-.flip-box:hover .flip-box-front {
+.flip-box-flip .flip-box-front {
   transform: rotateY(-180deg);
   transform-style: preserve-3d;
 }
-.flip-box:hover .flip-box-back {
+.flip-box-flip .flip-box-back {
   transform: rotateY(0deg);
   transform-style: preserve-3d;
 }
 
-/* flipbox contents */
-.flip-box .inner ul {
-  font-size: 24px;
-}
-
+/* flipbox content */
 .flip-box .inner {
   z-index: 2;
   transform:  translateZ(60px) scale(.94);
-}
-
-.flip-box-header {
-  font-size: 34px;
-}
-
-.flip-box p {
-  font-size: 20px;
-}
-
-.flip-box-img {
-  margin: 25px;
-}
-
-.invert-color {
-  -webkit-filter: invert(1);
-          filter: invert(1);
 }
