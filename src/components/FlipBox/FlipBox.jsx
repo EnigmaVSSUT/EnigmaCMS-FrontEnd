@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { makeStyles } from "@material-ui/core";
-import useCommonCardStyle from "../Auth/style.js";
-import "./flip-box.css";
+import useCommonCardStyle from "../Auth/cardStyle.js";
+import style from "./flipBox.module.css";
 
 const useStyle = makeStyles(theme => ({
   tint: {
-    borderRadius:25,
+    borderRadius: 25,
     height: "100%",
     width: "100%",
     position: "absolute",
@@ -22,34 +22,37 @@ const useStyle = makeStyles(theme => ({
   },
 }));
 
+let flipBoxClasses = [style.flipBox];
+
 function FlipBox(props) {
   const cardClass = useCommonCardStyle();
   const classes = useStyle();
-  
+
   useEffect(() => {
+    let index = flipBoxClasses.indexOf(style.flipBoxFlip);
     if (props.isFlipped) {
-      document.querySelector(".flip-box").classList.remove("flip-box-flip");
+      if (index !== -1) flipBoxClasses.splice(index, 1);
     } else {
-      document.querySelector(".flip-box").classList.add("flip-box-flip");
+      if (index === -1) flipBoxClasses.push(style.flipBoxFlip);
     }
   });
   return (
-    <div className={`${cardClass.card} container `}>
-      <div className="flip-box">
+    <div className={[cardClass.card, style.container].join(" ")}>
+      <div className={flipBoxClasses.join(" ")}>
         <div
-          className="flip-box-front text-center"
-          style={{ backgroundImage: 'url("https://source.unsplash.com/1600x900/?river")' }}
+          className={style.flipBoxFront}
+          style={{ backgroundImage: props.frontBackground}}
         >
           <div className={classes.tint}></div>
-          <div className="inner">{props.frontContent}</div>
+          <div className={style.inner}>{props.frontContent}</div>
         </div>
 
         <div
-          className="flip-box-back text-center"
-          style={{ backgroundImage: 'url("https://source.unsplash.com/1600x900/?water")' }}
+          className={style.flipBoxBack}
+          style={{ backgroundImage: props.rearBackground }}
         >
-          <div className={`${classes.tint}`}></div>
-          <div className="inner">{props.backContent}</div>
+          <div className={classes.tint}></div>
+          <div className={style.inner}>{props.rearContent}</div>
         </div>
       </div>
     </div>

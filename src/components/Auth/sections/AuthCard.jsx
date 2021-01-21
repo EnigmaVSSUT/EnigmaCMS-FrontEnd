@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Card, Typography, Box, makeStyles } from "@material-ui/core";
-import useCommonCardStyle from "../style.js";
+import useCommonCardStyle from "../cardStyle.js";
 import OAuthButtons from "./../components/OAuthButtons";
 
 const useStyle = makeStyles(theme => ({

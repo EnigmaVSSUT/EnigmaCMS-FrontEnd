@@ -1,5 +1,5 @@
 import { makeStyles } from "@material-ui/core";
-import * as colors from "./../../colors";
+import * as colors from "./colors";
 
 const useStyle = makeStyles(theme => ({
   card: {

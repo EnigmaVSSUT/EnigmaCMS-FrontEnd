@@ -4,7 +4,7 @@
   background-color: transparent !important;
 }
 
-.flip-box {
+.flipBox {
   transform-style: preserve-3d;
   perspective: 1000px;
   display: grid;
@@ -13,8 +13,8 @@
   padding: 10vh 0;
 }
 
-.flip-box-front,
-.flip-box-back {
+.flipBoxFront,
+.flipBoxBack {
   position: relative;
   width: 90%;
   grid-area: inners;
@@ -25,29 +25,29 @@
   transition: transform 2000ms cubic-bezier(.4,.2,.2,1);
 }
 
-.flip-box-front {
+.flipBoxFront {
   transform: rotateY(0deg);
   transform-style: preserve-3d;
 }
 
-.flip-box-back {
+.flipBoxBack {
   color: #fff;
   transform: rotateY(180deg);
   transform-style: preserve-3d;
 }
 
 
-.flip-box-flip .flip-box-front {
+.flipBoxFlip .flipBoxFront {
   transform: rotateY(-180deg);
   transform-style: preserve-3d;
 }
-.flip-box-flip .flip-box-back {
+.flipBoxFlip .flipBoxBack {
   transform: rotateY(0deg);
   transform-style: preserve-3d;
 }
 
 /* flipbox content */
-.flip-box .inner {
+.flipBox .inner {
   z-index: 2;
   transform:  translateZ(60px) scale(.94);
 }

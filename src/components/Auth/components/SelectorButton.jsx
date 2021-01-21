@@ -1,6 +1,6 @@
 import { makeStyles, Button } from "@material-ui/core";
 import React from "react";
-import * as colors from "../../../colors";
+import * as colors from "../colors";
 
 const useStyle = makeStyles(theme => ({
   selectorButton: props => {

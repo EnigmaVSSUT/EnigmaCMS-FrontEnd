@@ -5,7 +5,7 @@ import { Box, Container, Hidden, makeStyles } from "@material-ui/core";
 import AuthCard from "./sections/AuthCard";
 import FlipBox from "../FlipBox/FlipBox";
 import SectionSelector from "./sections/SectionSelector";
-import * as colors from "./../../colors";
+import * as colors from "./colors";
 
 const useStyle = makeStyles(theme => ({
   body: {
@@ -59,10 +59,7 @@ function Auth() {
     <Container className={classes.body}>
       {/* <Navbar/> */}
 
-      <SectionSelector 
-        handleChangeSection={handleChangeSection} 
-        handleFlipBoxFlip={handleFlipBoxFlip} 
-      />
+      <SectionSelector handleChangeSection={handleChangeSection} handleFlipBoxFlip={handleFlipBoxFlip} />
       <hr className={classes.hr} />
 
       <Box className={classes.mainContainer}>
@@ -71,7 +68,9 @@ function Auth() {
           <Hidden xsDown>
             <FlipBox
               frontContent={<h1>Component1 passed through props</h1>}
-              backContent={<h1>Component2 passed through props</h1>}
+              frontBackground='url("https://source.unsplash.com/1600x900/?river")'
+              rearContent={<h1>Component2 passed through props</h1>}
+              rearBackground='url("https://source.unsplash.com/1600x900/?water")'
               isFlipped={isFlipped}
             />
           </Hidden>
