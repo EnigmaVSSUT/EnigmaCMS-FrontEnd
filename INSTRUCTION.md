@@ -20,6 +20,7 @@ Strictly Follow this guide to organize your code. we are using _components folde
 - Also keep your _assets_ folder organized create folders for better distinctions between each files.
 - When naming a **component folder** make sure that the 1st letter should be **capital** that will help in distinguish between folder and the jsx file.
 - Make sure you are using the **preferred** Technology framework libraries.
+- **All must use CSS modules to assign css styling to your react components**
 
 
 
