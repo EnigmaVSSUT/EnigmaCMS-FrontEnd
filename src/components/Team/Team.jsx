@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 // import Navbar from "../Navbar/navbar";
 import { Box, Container, Hidden, makeStyles } from "@material-ui/core";
-import * as colors from "../Auth/colors";
+import * as colors from "./colors";
 
 const useStyle = makeStyles(theme => ({
   
@@ -27,7 +27,7 @@ function Team() {
 
   return (
     <div>
-
+jhv
     </div>
   );
 }
