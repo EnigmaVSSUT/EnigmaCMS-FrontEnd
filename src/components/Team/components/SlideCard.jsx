@@ -1,8 +1,14 @@
-import { Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from "@material-ui/core";
+import { Typography, IconButton, makeStyles } from "@material-ui/core";
 import React from "react";
-import { SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
 import style from "./../style.module.css";
+import { LinkedIn, GitHub, Facebook, Instagram } from "@material-ui/icons";
+import logo from './../../../assets/logos/logo.jpg'
+
+const useStyles = makeStyles({
+  iconButton:{'& > span': {
+    zIndex: -1,
+  }}
+});
 
 function Profile(props) {
   const {
@@ -15,51 +21,64 @@ function Profile(props) {
     facebook,
     instagram,
     linkedin,
-  } = props.profile;
-  // console.log(id, firstname);
+  } = props.profile || '';
+
+  const styles = useStyles()
   return (
-    <Card>
-      <CardActionArea>
-        <CardMedia
-          className={style.profileImage}
-          component="img"
-          alt="Profile Picture"
-          height="180"
-          width="180"
-          image={profile_pic_url}
-          title={`${firstname} ${lastname}`}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h6">
-            {`${firstname} ${lastname}`}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {get_year_display}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        {/* <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button> */}
-      </CardActions>
-      <span className={style.hash}>#{id+1}</span>
-    </Card>
+    <div className={props.classes}>
+      {props.profile != null ? (
+        <>
+          <img className={style.profileImage} alt="Profile Picture" src={profile_pic_url} />
+
+          <div className={style.content}>
+            <div className={style.info}>
+              <Typography gutterBottom variant="h6">
+                {`${firstname} ${lastname}`}
+              </Typography>
+              <Typography variant="body2" color="white" component="p">
+                {get_year_display}
+              </Typography>
+            </div>
+            <div className={style.links}>
+              <IconButton className={styles.iconButton} onClick={() => window.open(github)}>
+                <GitHub />
+              </IconButton>
+              <IconButton className={styles.iconButton} onClick={() => window.open(linkedin)}>
+                <LinkedIn />
+              </IconButton>
+              <IconButton className={styles.iconButton} onClick={() => window.open(facebook)}>
+                <Facebook />
+              </IconButton>
+              <IconButton className={styles.iconButton} onClick={() => window.open(instagram)}>
+                <Instagram />
+              </IconButton>
+            </div>
+          </div>
+        </>
+      ) : (
+        <>
+          <img className={style.profileImage} alt="Profile Picture" src={logo} />
+        </>
+      )}
+
+      {/* <span className={style.hash}>#{id + 1}</span> */}
+    </div>
   );
 }
 
 function SlideCard(props) {
   const { profile1, profile2 } = props;
   return (
-    <SwiperSlide>
-      <div className={style.slideCard}>
-        <Profile className={style.card1} profile={profile1} />
-        {profile2 != null && <Profile className={style.card2} profile={profile2} />}
-      </div>
-    </SwiperSlide>
+    <div className={style.slideCard}>
+      <Profile classes={style.profileCard} profile={profile1} />
+      {
+      profile2 != null 
+      ?
+      <Profile classes={[style.profileCard2, style.profileCard].join(' ')} profile={profile2} />
+      :
+      <Profile classes={[style.profileCard2, style.profileCard].join(' ')} profile={null} />
+      }
+    </div>
   );
 }
 
