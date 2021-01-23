@@ -1,0 +1,38 @@
+.teamRoot {
+  background-color: #100f17;
+  color: #e4e6eb;
+}
+.hr {
+  color: #e4e6eb;
+  width: 55px;
+  background-color: #e4e6eb;
+  height: 3px;
+  border-radius: 4px;
+  margin: 5px auto;
+}
+.tab:first-child{
+  border-radius: 15px 0 0 0;
+}
+.tab:last-child{
+  border-radius: 0 15px 0 0;
+}
+.tab[aria-selected="true"] {
+  background-color: #35ff15 !important;
+  color: #100f17;
+}
+.tab[aria-selected="false"]{
+  background-color:#3a3b3c38 !important;
+}
+.tab[aria-selected="false"]:hover{
+  background-color:#3a3b3c !important;
+}
+.tabPanel{
+  background-color: #242526;
+  height: 90vh;
+}
+.swiperContainer{
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}

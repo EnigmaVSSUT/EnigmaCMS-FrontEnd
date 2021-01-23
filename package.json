@@ -14,7 +14,8 @@
     "react-dom": "^16.13.1",
     "react-preloaders": "^3.0.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "swiper": "^6.4.8"
   },
   "scripts": {
     "start": "react-scripts start",
