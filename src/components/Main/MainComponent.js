@@ -1,12 +1,23 @@
-import React from "react";
-import "./main.css";
-import Footer from "../Footer/Footer";
+import React from 'react';
+import "./main.css"
+import Carousel from "../Carousel/carousel.jsx"
+import Row from "../Project-row/Row.js"
+
+import {Container} from "react-bootstrap";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function MainComponent() {
-  return (
-    <div className="intro">
-      <h1> Welcome to Enigma! Start Coding </h1>
-    </div>
-  );
+    return (<>
+        <Carousel/>
+        <Container fluid className="body_section">
+        <Container>
+
+        </Container>
+        <Row/>
+        </Container>
+        </>
+    );
 }
 
 export default MainComponent;

@@ -1,21 +1,35 @@
-import React, { lazy, Suspense } from "react";
-import {BrowserRouter, Route, Switch } from "react-router-dom";
 
-const Auth = lazy(() => import("./components/Auth/Auth"));
-const MainComponent = lazy(() => import("./components/Main/MainComponent"));
+import React from 'react';
+import Preloaders from "./components/Preloader/preloader.jsx"
+import Navbar from "./components/Navbar/navbar.jsx"
+import Footer from "./components/Footer/Footer.js"
+import MainComponent from './components/Main/MainComponent';
+import Contact from "./components/Contact/Contact.js"
+import Auth from "./components/Auth/Auth.jsx"
+import {Switch,Route,}from "react-router-dom";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Suspense fallback={<div>Loading Page...</div>}>
-          {" "}
-          {/*prelaoder here in fallback*/}
-          <Route path="/main" component={MainComponent}></Route>
-          <Route path="/auth" component={Auth}></Route>
-        </Suspense>
-      </Switch>
-    </BrowserRouter>
+    <React.Fragment>
+    <Navbar/>
+    <Switch>
+          <Route path="/" exact>
+          <MainComponent />
+          </Route>
+          <Route path="/contact">
+             <Contact/>
+          </Route>
+          <Route path="/auth">
+             <Auth/>
+          </Route>
+          <Route>
+          <MainComponent />
+          </Route>
+        </Switch>
+        <Footer/>
+
+    </React.Fragment>
+
   );
 }
 

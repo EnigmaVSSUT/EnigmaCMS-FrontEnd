@@ -3,10 +3,10 @@ body {
     color: #35ff1f;
 }
 
-.button 
+.button
 {
     border-radius   : 10px;
-    background-color: #100E17; 
+    background-color: #100E17;
     border          : 2px solid #35ff1f;
     color           : white;
     padding         : 5px 30px;
