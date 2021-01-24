@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Preloaders from "./components/Preloader/preloader.jsx"
 import Navbar from "./components/Navbar/navbar.jsx"
@@ -28,6 +29,7 @@ function App() {
         <Footer/>
 
     </React.Fragment>
+
   );
 }
 
