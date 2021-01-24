@@ -70,7 +70,7 @@ React.useEffect(()=>{
         <Nav.Link href="blogs">Blogs</Nav.Link>
         <Nav.Link href="team">Team</Nav.Link>
         <Nav.Link href="contact">Contact us</Nav.Link>
-        <Nav.Link href="login">Login</Nav.Link>
+        <Nav.Link href="auth">Login</Nav.Link>
       </Nav>
 
     </Navbar.Collapse>
@@ -79,4 +79,3 @@ React.useEffect(()=>{
 }
 
 export default NavBar;
-
