@@ -18,4 +18,7 @@ Here's what you need to do to run the website on your local computer.
 
 Now, examine the code, make the changes you want, commit using git commit command with an appropriate message and lastly, create a new pull requests after you are done committing the changes.
 
-Happy Hacking !
+Before getting started take look on our [License](https://github.com/EnigmaVSSUT/EnigmaCMS-FrontEnd/blob/main/LICENSE) .
+
+
+**Happy Hacking!**
