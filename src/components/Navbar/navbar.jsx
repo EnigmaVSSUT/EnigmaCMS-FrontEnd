@@ -50,7 +50,7 @@ React.useEffect(()=>{
 
   return <>
   <Navbar collapseOnSelect expand="lg"  variant="dark"  fixed="top" className={navstyle}>
-  <Navbar.Brand href="#home" className="logo_img ml-3">
+  <Navbar.Brand href="/" className="logo_img ml-3">
     <img
       src={Logo}
       width="40"
@@ -63,13 +63,13 @@ React.useEffect(()=>{
     <Navbar.Collapse id="responsive-navbar-nav">
 
       <Nav className={nav_item}>
-        <Nav.Link href="#Aboutus">About us</Nav.Link>
-        <Nav.Link href="#Demo1">Demo1</Nav.Link>
-        <Nav.Link href="#Demo2">Demo2</Nav.Link>
-        <Nav.Link href="#Demo3">Demo3</Nav.Link>
-        <Nav.Link href="#Demo4">Demo4</Nav.Link>
-        <Nav.Link href="#Demo5">Demo5</Nav.Link>
-        <Nav.Link href="#Demo6">Demo6</Nav.Link>
+        <Nav.Link href="#about_us">About us</Nav.Link>
+        <Nav.Link href="#what_we_do">What we do</Nav.Link>
+        <Nav.Link href="#project">Projects</Nav.Link>
+        <Nav.Link href="blogs">Blogs</Nav.Link>
+        <Nav.Link href="team">Team</Nav.Link>
+        <Nav.Link href="contact">Contact us</Nav.Link>
+        <Nav.Link href="login">Login</Nav.Link>
       </Nav>
 
     </Navbar.Collapse>

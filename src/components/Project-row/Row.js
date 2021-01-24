@@ -12,26 +12,22 @@ import website from "../../assets/ProjextRowIcons/website.svg";
 const Row = () => {
   return (
     <section className={classes.cardList}>
-      <Card logo={android} title={"React Animating Rows"} />
-      <Card logo={python} title={"React Animating Rows"} />
-      <Card logo={ml} title={"React Animating Rows"} />
-      <Card logo={java} title={"React Animating Rows"} />
-      <Card logo={android} title={"React Animating Rows"} />
-      <Card logo={ml} title={"React Animating Rows"} />
+
       <Card logo={python} title={"React Animating Rows"} />
       <Card logo={java} title={"React Animating Rows"} />
-      <Card logo={database} title={"React Animating Rows"} />
       <Card logo={android} title={"React Animating Rows"} />
       <Card logo={database} title={"React Animating Rows"} />
-      <Card logo={android} title={"React Animating Rows"} />
-      <Card logo={android} title={"React Animating Rows"} />
       <Card logo={ml} title={"React Animating Rows"} />
-      <Card logo={website} title={"React Animating Rows"} />
+      <Card logo={database} title={"React Animating Rows"} />
       <Card logo={ml} title={"React Animating Rows"} />
-      <Card logo={website} title={"React Animating Rows"} />
       <Card logo={python} title={"React Animating Rows"} />
-      <Card logo={python} title={"React Animating Rows"} />
-      <Card logo={python} title={"React Animating Rows"} />
+      <Card logo={java} title={"React Animating Rows"} />
+      <Card logo={android} title={"React Animating Rows"} />
+      <Card logo={database} title={"React Animating Rows"} />
+      <Card logo={ml} title={"React Animating Rows"} />
+      <Card logo={database} title={"React Animating Rows"} />
+      <Card logo={ml} title={"React Animating Rows"} />
+
     </section>
   );
 };
