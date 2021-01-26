@@ -1,9 +1,12 @@
+
 import React from 'react';
-import Team from './components/Team/Team';
+import MainComponent from './components/Main/MainComponent';
+
 
 function App() {
-  return (
-    <Team/>
+  return (<>
+ <MainComponent/>
+    </>
   );
 }
 
