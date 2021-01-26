@@ -39,6 +39,10 @@ const useStyle = makeStyles(theme => ({
       };
     },
   },
+  navspace: {
+    width: '100%',
+    height: 60,
+  }
 }));
 
 function Auth() {
@@ -57,7 +61,7 @@ function Auth() {
 
   return (
     <Container className={classes.body}>
-      {/* <Navbar/> */}
+      <div className={classes.navspace}></div>
 
       <SectionSelector handleChangeSection={handleChangeSection} handleFlipBoxFlip={handleFlipBoxFlip} />
       <hr className={classes.hr} />

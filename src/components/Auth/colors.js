@@ -5,6 +5,7 @@ export const black = '#000'
 export const darkPrimary = "#18191a";
 export const darkSecondary = "#242526";
 export const darkSecondary2 = "#001E28";
+export const darkSecondary3 = "#100e17";
 export const darkHighlight = "#3a3b3c";
 export const foregroundActive= "#e4e6eb";
 export const foregroundInactive= "#b0b3b8";
@@ -14,8 +15,8 @@ export const blueFacebook = "#036de4";
 export const blueLinkedIn = "#0a66c2";
 
 export const body = {
-  backgound: darkPrimary,
-  foregroundActive
+  backgound: darkSecondary3,
+  foregroundActive,
 };
 export const card = {
   backgound: darkSecondary,
