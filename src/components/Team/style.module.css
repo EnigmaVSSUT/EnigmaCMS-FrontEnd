@@ -1,0 +1,110 @@
+.teamRoot {
+  background-color: #100f17;
+  color: #e4e6eb;
+}
+.hr {
+  color: #e4e6eb;
+  width: 55px;
+  background-color: #e4e6eb;
+  height: 3px;
+  border-radius: 4px;
+  margin: 5px auto;
+}
+.tab:first-child{
+  border-radius: 15px 0 0 0;
+}
+.tab:last-child{
+  border-radius: 0 15px 0 0;
+}
+.tab[aria-selected="true"] {
+  background-color: #35ff15 !important;
+  color: #100f17;
+}
+.tab[aria-selected="false"]{
+  background-color:#3a3b3c38 !important;
+}
+.tab[aria-selected="false"]:hover{
+  background-color:#3a3b3c !important;
+}
+.tabPanel{
+  background-color: #242526;
+  height: 130vh;
+}
+.swiperWrap{
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Profile Cards and its container SlideCard */
+.slideCard{
+  height: 600px;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items: flex-start;
+}
+.profileCard{
+  height: 300px;
+  width: 200px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #34ff1500 ;
+  border-radius: 25px;
+  transition: all 0.5s cubic-bezier(0.9, 0, 0.33, 1);
+}
+.profileCard2{
+  transform: translateX(100px);
+  z-index: 1;
+}
+.profileCard:hover{
+  background-color: #35ff15 ;
+  transition: all 0.5s cubic-bezier(0.9, 0, 0.33, 1);
+}
+.profileImage{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100%;
+}
+.content{
+  position: relative;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info{
+  text-align: center;
+  z-index: 0;
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.9, 0, 0.33, 1);
+}
+.profileCard:hover .info{
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.9, 0, 0.33, 1);
+}
+.links{
+  position:absolute;
+  display: flex;
+  top: 5px;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  height: 100%;
+  background-color: #35ff1500 ;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.9, 0, 0.33, 1);
+}
+.profileCard:hover .links{
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s cubic-bezier(0.9, 0, 0.33, 1);
+}

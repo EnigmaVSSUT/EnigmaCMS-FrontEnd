@@ -17,6 +17,7 @@
     "react-preloaders": "^3.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "swiper": "^6.4.8",
     "redux": "^4.0.5",
     "web-vitals": "^0.2.4"
   },
