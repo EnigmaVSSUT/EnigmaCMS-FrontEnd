@@ -1,7 +1,7 @@
 import React from 'react'
 import {Sugar} from 'react-preloaders';
 
-function Preloaders() {
+function Preloader() {
   return (
     <React.Fragment>
       <Sugar color={'#35FF1F'} background="#100E17" time={3000} />
@@ -9,4 +9,4 @@ function Preloaders() {
   );
 }
 
-export default Preloaders;
+export default Preloader;
