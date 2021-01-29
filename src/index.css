@@ -1,5 +1,7 @@
-body{
+body {
   margin: 0;
   padding: 0;
-  background-color: #100E17 !important;
+  background-color: #100e17 !important;
+  overflow: auto !important;
+  position: static !important;
 }

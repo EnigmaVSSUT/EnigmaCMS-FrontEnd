@@ -3,11 +3,8 @@ import React from "react";
 import {Navbar,Nav} from "react-bootstrap";
 
 import Logo from "../../assets/logos/logo.jpg"
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar_style.css"
-
-
-
 
 function NavBar(){
 
@@ -50,7 +47,7 @@ React.useEffect(()=>{
 });
 
   return <>
-  <Navbar collapseOnSelect expand="lg"  variant="dark"  fixed="top" className={navstyle}>
+  <Navbar collapseOnSelect expand="lg"  variant="dark"  sticky="top" className={navstyle}>
   <Navbar.Brand href="/" className="logo_img ml-3">
     <img
       src={Logo}
@@ -64,9 +61,9 @@ React.useEffect(()=>{
     <Navbar.Collapse id="responsive-navbar-nav">
 
       <Nav className={nav_item}>
-        <Nav.Link href="#about_us">About us</Nav.Link>
-        <Nav.Link href="#what_we_do">What we do</Nav.Link>
-        <Nav.Link href="#project">Projects</Nav.Link>
+        <Nav.Link href="/#about_us">About us</Nav.Link>
+        <Nav.Link href="/#what_we_do">What we do</Nav.Link>
+        <Nav.Link href="/#project">Projects</Nav.Link>
         <Nav.Link href="blogs">Blogs</Nav.Link>
         <Nav.Link href="team">Team</Nav.Link>
         <Nav.Link href="contact">Contact us</Nav.Link>
