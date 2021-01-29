@@ -3,6 +3,7 @@
   padding: 3rem;
   overflow-y: hidden;
   overflow-x: scroll;
+  min-height: 252px;
 }
 
 .cardList::-webkit-scrollbar {

@@ -1,0 +1,40 @@
+body {
+  background-color: #100E17;
+  color: #35ff1f;
+}
+
+.button
+{
+  border-radius   : 10px;
+  background-color: #100E17;
+  border          : 2px solid #35ff1f;
+  color           : white;
+  padding         : 5px 30px;
+  transition-duration: 0.4s;
+  text-align      : center;
+  text-decoration : none;
+  font-size       : 25px;
+  margin          : 4px 2px;
+  cursor          : pointer;
+}
+
+.button:hover {
+  background-color: #35ff1f;
+  color           :#100E17;
+}
+
+.commonBorder {
+  background: #35ff1f;
+  height: 3px;
+  width: 100px;
+  margin: 30px auto;
+}
+.socialLinksContainer a {
+  height: 50px;
+  width: 50px;
+  margin: 0 30px 30px 0;
+  line-height: 50px;
+  margin-top: 50px;
+  margin-right: 20px;
+  box-shadow: 2px 2px 5px rgb(17 169 0 / 70%);
+}

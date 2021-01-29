@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-// import Navbar from "../Navbar/navbar";
 import { Box, Container, Hidden, makeStyles } from "@material-ui/core";
 import AuthCard from "./sections/AuthCard";
 import FlipBox from "../FlipBox/FlipBox";
@@ -57,7 +56,6 @@ function Auth() {
 
   return (
     <Container className={classes.body}>
-      {/* <Navbar/> */}
 
       <SectionSelector handleChangeSection={handleChangeSection} handleFlipBoxFlip={handleFlipBoxFlip} />
       <hr className={classes.hr} />
@@ -70,7 +68,7 @@ function Auth() {
               frontContent={<h1>Component1 passed through props</h1>}
               frontBackground='url("https://source.unsplash.com/1600x900/?river")'
               rearContent={<h1>Component2 passed through props</h1>}
-              rearBackground='url("https://source.unsplash.com/1600x900/?water")'
+              rearBackground='url("https://source.unsplash.com/1600x900/?beautiful-design")'
               isFlipped={isFlipped}
             />
           </Hidden>
