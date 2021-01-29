@@ -1,0 +1,8 @@
+#preloader {
+  background-color: black;
+}
+div#preloader span::after {
+  background: #35ff1f;
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+}
