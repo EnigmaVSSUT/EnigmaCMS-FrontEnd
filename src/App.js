@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Footer from "./components/Footer/Footer";
 import Preloader from "./components/Preloader/Preloader";
-import Navbar from "./components/Navbar/navbar";
+import Navbar from "./components/Navbar/Navbar";
 
 const Home = lazy(() => import("./components/Home/Home"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
