@@ -1,12 +1,12 @@
 import React from 'react'
-import {Sugar} from 'react-preloaders';
+import style from "./Preloader.module.css";
 
 function Preloader() {
   return (
-    <React.Fragment>
-      <Sugar color={'#35FF1F'} background="#100E17" time={3000} />
-    </React.Fragment>
+    <div class={style.preloader}>
+      <div class={style.spinner}></div>
+    </div>
   );
 }
 
-export default Preloader;
+export default Preloader

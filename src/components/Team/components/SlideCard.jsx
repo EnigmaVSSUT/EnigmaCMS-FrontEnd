@@ -2,17 +2,19 @@ import { Typography, IconButton, makeStyles } from "@material-ui/core";
 import React from "react";
 import style from "./../style.module.css";
 import { LinkedIn, GitHub, Facebook, Instagram } from "@material-ui/icons";
-import logo from './../../../assets/logos/logo.jpg'
+import logo from "./../../../assets/logos/logo.jpg";
 
 const useStyles = makeStyles({
-  iconButton:{'& > span': {
-    zIndex: -1,
-  }}
+  iconButton: {
+    "& > span": {
+      zIndex: -1,
+    },
+  },
 });
 
 function Profile(props) {
   const {
-    id,
+    // id,
     firstname,
     lastname,
     profile_pic_url,
@@ -21,14 +23,14 @@ function Profile(props) {
     facebook,
     instagram,
     linkedin,
-  } = props.profile || '';
+  } = props.profile || "";
 
-  const styles = useStyles()
+  const styles = useStyles();
   return (
     <div className={props.classes}>
       {props.profile != null ? (
         <>
-          <img className={style.profileImage} alt="Profile Picture" src={profile_pic_url} />
+          <img className={style.profileImage} alt="avatar" src={profile_pic_url} />
 
           <div className={style.content}>
             <div className={style.info}>
@@ -57,7 +59,12 @@ function Profile(props) {
         </>
       ) : (
         <>
-          <img className={style.profileImage} alt="Profile Picture" src={logo} />
+          <img
+            className={style.profileImage}
+            alt="avatar"
+            style={{ objectFit: "contain", background: "black" }}
+            src={logo}
+          />
         </>
       )}
 
@@ -71,13 +78,11 @@ function SlideCard(props) {
   return (
     <div className={style.slideCard}>
       <Profile classes={style.profileCard} profile={profile1} />
-      {
-      profile2 != null 
-      ?
-      <Profile classes={[style.profileCard2, style.profileCard].join(' ')} profile={profile2} />
-      :
-      <Profile classes={[style.profileCard2, style.profileCard].join(' ')} profile={null} />
-      }
+      {profile2 != null ? (
+        <Profile classes={[style.profileCard2, style.profileCard].join(" ")} profile={profile2} />
+      ) : (
+        <Profile classes={[style.profileCard2, style.profileCard].join(" ")} profile={null} />
+      )}
     </div>
   );
 }

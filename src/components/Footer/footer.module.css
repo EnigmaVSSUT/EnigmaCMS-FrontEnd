@@ -15,3 +15,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.heading {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #35ff1f;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}

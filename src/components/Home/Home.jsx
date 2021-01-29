@@ -1,11 +1,13 @@
 import React from 'react';
-import Carousel from "./../Carousel/carousel";
-import Row from "./../Project-row/Row";
+import Row from "../ProjectRow/ProjectRow";
+
 
 function Home() {
   return (
     <>
-      <Carousel />
+      <Row />
+      <Row />
+      <Row />
       <Row />
     </>
   );
