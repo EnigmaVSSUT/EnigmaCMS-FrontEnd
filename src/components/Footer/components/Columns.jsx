@@ -6,11 +6,9 @@ const columns = (props) => {
     <div className={classes.column}>
       <h4>{props.title}</h4>
       <ul className={classes.links}>
-        {Object.keys(props.links).map((link) => (
-          <li>
-            <a key={link} href={props.links[link]}>
-              {link}
-            </a>
+        {Object.keys(props.links).map(link => (
+          <li key={link}>
+            <a href={props.links[link]}>{link}</a>
           </li>
         ))}
       </ul>
