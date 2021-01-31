@@ -14,7 +14,7 @@ const useStyles = makeStyles({
 
 function Profile(props) {
   const {
-    // id,
+    id,
     firstname,
     lastname,
     profile_pic_url,
@@ -27,7 +27,7 @@ function Profile(props) {
 
   const styles = useStyles();
   return (
-    <div className={props.classes}>
+    <div key={id!=undefined ? id : -1} className={props.classes}>
       {props.profile != null ? (
         <>
           <img className={style.profileImage} alt="avatar" src={profile_pic_url} />
@@ -58,17 +58,13 @@ function Profile(props) {
           </div>
         </>
       ) : (
-        <>
-          <img
-            className={style.profileImage}
-            alt="avatar"
-            style={{ objectFit: "contain", background: "black" }}
-            src={logo}
-          />
-        </>
+        <img
+          className={style.profileImage}
+          alt="avatar"
+          style={{ objectFit: "contain", background: "black" }}
+          src={logo}
+        />
       )}
-
-      {/* <span className={style.hash}>#{id + 1}</span> */}
     </div>
   );
 }

@@ -6,9 +6,6 @@ function Home() {
   return (
     <>
       <Row />
-      <Row />
-      <Row />
-      <Row />
     </>
   );
 }
