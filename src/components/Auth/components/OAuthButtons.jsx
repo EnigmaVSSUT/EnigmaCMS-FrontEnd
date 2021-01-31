@@ -1,10 +1,7 @@
 import React from "react";
 
 import { Button, makeStyles } from "@material-ui/core";
-import LinkedIn from "@material-ui/icons/LinkedIn";
-import GitHub from "@material-ui/icons/GitHub";
-import Twitter from "@material-ui/icons/Twitter";
-import Facebook from "@material-ui/icons/Facebook";
+import {LinkedIn, GitHub, Twitter, Facebook} from "@material-ui/icons";
 import * as colors from "../colors";
 
 const useStyles = makeStyles(theme => ({

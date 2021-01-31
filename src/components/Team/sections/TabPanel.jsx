@@ -26,7 +26,7 @@ function TabPanel(props) {
     let profile1 = profiles[i];
     let profile2 = profiles[i + 1];
     slides.push(
-      <SwiperSlide key={`slide-{i}`}>
+      <SwiperSlide key={`slide-${i}`}>
         <SlideCard profile1={profile1} profile2={profile2 ? profile2 : null} />
       </SwiperSlide>
     );

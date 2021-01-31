@@ -16,7 +16,7 @@
 .flipBoxFront,
 .flipBoxBack {
   position: relative;
-  width: 90%;
+  width: 100%;
   grid-area: inners;
   background-size: cover;
   background-position: center;
@@ -47,7 +47,7 @@
 }
 
 /* flipbox content */
-.flipBox .inner {
+.flipBox .inner > *{
   z-index: 2;
   transform:  translateZ(60px) scale(.94);
 }
