@@ -11,12 +11,13 @@ const useStyles = makeStyles({
     width: "100%",
     borderRadius: "100px",
     padding: "10px",
-    transform: "translateY(-13px) translateZ(2px)",
+    transform: "translateY(-13px) translateZ(2px) scale(0.945)",
     textAlign: "center",
   },
   icon: {
     marginRight: 10,
     "&:hover": {
+      color: "#35ff1f",
       backgroundColor: "#4b52533b",
     },
   },
@@ -48,23 +49,25 @@ function Head(props) {
           {projectName}
         </Typography>
         <img src={projectImage} className={styles.projectImage} alt="Project Preview" />
+
         <Fab variant="extended" className={classes.linkWrap} onClick={() => window.open(repoLink)}>
           <SvgIcon component={RepoIcon} className={classes.icon} />
           <a href={repoLink} className={classes.repoLink}>
             GitHub Repo Link
           </a>
         </Fab>
+
         <div className={styles.rise3D}>
           <Typography variant="body1">
-            {shortDescription} 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure pariatur, sed dolores numquam odit hic magni?
+            {shortDescription} Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure pariatur, sed dolores
+            numquam odit hic magni?
           </Typography>
           <div className={styles.cardFooter}>
             <Button color="primary" className={classes.button} startIcon={<Link />} href={projectLink}>
               Have a look on the Project!
             </Button>
 
-            <IconButton color="primary" className={classes.icon} onClick={() => {}}>
+            <IconButton color="primary" className={classes.icon} onClick={() => props.handleFlipBoxFlip()}>
               <FlipCameraAndroid />
             </IconButton>
           </div>
@@ -83,18 +86,23 @@ function Tail(props) {
         <Typography className={styles.projectName} variant="h4">
           {projectName}
         </Typography>
-        <div className={styles.rise3D}>
-          <Typography variant="body1">
-            {longDescription}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure pariatur, sed dolores numquam odit hic magni?
+        <div className={[styles.rise3D, styles.tailContent].join(" ")}>
+          <Typography variant="body1" className={styles.longDescription}>
+            A{longDescription} Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure pariatur, sed dolores
+            numquam odit hic magni Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum alias ipsam voluptate
+            at. Eaque natus tempora sed consequatur, totam odit blanditiis iure, animi voluptatibus error a placeat,
+            dicta perspiciatis fugit.
           </Typography>
-          <Typography className={styles.projectName} variant="h4">
-            {team}
-          </Typography>
-          <div className={styles.cardFooter}>
-            <IconButton color="primary" className={classes.icon} onClick={() => {}}>
-              <FlipCameraAndroid />
-            </IconButton>
+
+          <div className={styles.cardFooter2}>
+            <Typography className={styles.team} variant="h6">
+              {team}
+            </Typography>
+            <div className={styles.iconContainer}>
+              <IconButton color="primary" className={classes.icon} onClick={() => props.handleFlipBoxFlip()}>
+                <FlipCameraAndroid />
+              </IconButton>
+            </div>
           </div>
         </div>
       </div>
@@ -107,7 +115,9 @@ function Tail(props) {
 function SlideBox(props) {
 
   const [isFlipped, flipIt] = useState(false);
-
+  const handleFlipBoxFlip = () => {
+    flipIt(!isFlipped);
+  };
   const {
     id,
     projectName,
@@ -127,15 +137,15 @@ function SlideBox(props) {
           <Head
             content={{ projectImage, projectName, shortDescription, projectLink, repoLink }}
             flipIt={flipIt}
-            isFlipped={isFlipped}
+            handleFlipBoxFlip={handleFlipBoxFlip}
           />
         }
         frontBackground="#001e28"
         rearContent={
-          <Tail 
-            content={{ projectName, longDescription, team }} 
-            flipIt={flipIt} 
-            isFlipped={isFlipped}
+          <Tail
+            content={{ projectName, longDescription, team }}
+            flipIt={flipIt}
+            handleFlipBoxFlip={handleFlipBoxFlip}
           />
         }
         rearBackground="#001e28"

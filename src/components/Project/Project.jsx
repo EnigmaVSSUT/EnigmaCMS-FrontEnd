@@ -22,7 +22,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -33,7 +33,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -44,7 +44,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -55,7 +55,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -66,7 +66,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -77,7 +77,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -88,7 +88,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -99,7 +99,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -110,7 +110,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -121,7 +121,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -132,7 +132,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -143,7 +143,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -154,7 +154,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -165,7 +165,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -176,7 +176,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -187,7 +187,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
     {
@@ -198,7 +198,7 @@ function Project(props) {
       //get_year_display: "2nd Year",
       repoLink: "2nd Year",
       longDescription: "asdff",
-      team: ['a', 'b', 'c', 'd', 'e', 'f'],
+      team: 'the team behind this project was mentored by ABC / This project is done by ABC',
       projectLink: "asdfdf",
     },
   ];

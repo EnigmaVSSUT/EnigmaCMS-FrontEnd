@@ -205,21 +205,25 @@ function Team() {
   };
   return (
     <div className={style.teamRoot}>
-
       <Typography align="center" variant="h1">
         Meet the Team
       </Typography>
       <div className={style.hr} />
 
-      <div>
-        <StyledTabs value={value} onChange={handleChange} className={style.tabsParent} indicator={{display:'none'}} centered>
+      <div className={style.teamSection}>
+        <StyledTabs
+          value={value}
+          onChange={handleChange}
+          className={style.tabsParent}
+          indicator={{ display: "none" }}
+          centered
+        >
           <Tab className={style.tab} label="Present Members" />
           <Tab className={style.tab} label="Alumni" />
         </StyledTabs>
       </div>
-      <TabPanel profiles={PresentMemberProfiles} value={value} index={0}/>
-      <TabPanel profiles={[...PresentMemberProfiles].reverse()} value={value} index={1}/>
-
+      <TabPanel profiles={PresentMemberProfiles} value={value} index={0} />
+      <TabPanel profiles={[...PresentMemberProfiles].reverse()} value={value} index={1} />
     </div>
   );
 }

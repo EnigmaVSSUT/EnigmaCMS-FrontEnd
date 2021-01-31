@@ -12,12 +12,6 @@
   border-radius: 4px;
   margin: 15px auto;
 }
-/* 
-.noFlowFlexbox{
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-} */
 .face {
   height: 520px;
   width: 360px;
@@ -36,7 +30,7 @@
 /* Head */
 .innerFront,
 .innerBack {
-  width: calc(100% - 10px);
+  width: calc(100% - 11px);
   height: calc(100% - 10px);
   border: solid 5px #ea0339;
   border-radius: 15px;
@@ -73,5 +67,22 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  height: 80px;
+  min-height: 90px;
+}
+
+/* Tail */
+.tailContent{
+  text-align: center;
+  padding: 30px 7px 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.longDescription{
+  margin-bottom: 40px;
+}
+.iconContainer{
+  display: flex;
+  justify-content: flex-end;
 }
