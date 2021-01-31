@@ -37,7 +37,7 @@ function Profile(props) {
               <Typography gutterBottom variant="h6">
                 {`${firstname} ${lastname}`}
               </Typography>
-              <Typography variant="body2" color="white" component="p">
+              <Typography variant="body2" component="p">
                 {get_year_display}
               </Typography>
             </div>

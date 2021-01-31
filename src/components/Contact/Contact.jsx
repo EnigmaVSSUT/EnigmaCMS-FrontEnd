@@ -75,7 +75,7 @@ export default function Contact() {
                 frameborder: "0",
                 marginTop: "50px",
               }}
-              allowfullscreen
+              allowFullScreen
             />
           </div>
 
