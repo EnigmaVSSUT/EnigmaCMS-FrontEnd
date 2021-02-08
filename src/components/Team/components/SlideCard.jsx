@@ -27,8 +27,8 @@ function Profile(props) {
 
   const styles = useStyles();
   return (
-    <div key={id!=undefined ? id : -1} className={props.classes}>
-      {props.profile != null ? (
+    <div key={id!==undefined ? id : -1} className={props.classes}>
+      {props.profile !== null ? (
         <>
           <img className={style.profileImage} alt="avatar" src={profile_pic_url} />
 

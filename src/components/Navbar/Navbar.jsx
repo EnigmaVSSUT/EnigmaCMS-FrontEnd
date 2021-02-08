@@ -13,7 +13,7 @@ const [nav_item,setnav_item]=React.useState("ml-auto nav_item")
 
 const listenscroll= () =>{
   if(window.screen.width > 600){
-    if(window.scrollY > 700){
+    if(window.scrollY > 120){
       setnav_item("ml-auto nav_item_dark");
       return setnavstyle("nav_bar_dark");
     }else{
@@ -21,7 +21,7 @@ const listenscroll= () =>{
         return setnavstyle("nav_bar");
     }
   }else{
-    if(window.scrollY > 480){
+    if(window.scrollY > 80){
       setnav_item("ml-auto nav_item_dark");
       return setnavstyle("nav_bar_dark");
     }else{
