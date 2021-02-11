@@ -1,0 +1,34 @@
+.carousel{
+  opacity: 1;
+}
+.carousel_img{
+  height: 100vh;
+  object-fit: cover;
+  /* filter: grayscale(80%); */
+}
+/* .intro {
+  position: relative;
+}
+
+.intro .intro_txt {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 1000px;
+  z-index: 99999;
+  color: white;
+  transform: translate(-50%, -50%)
+
+}
+.intro .intro_txt h1{
+font-size: 4rem;
+font-weight: 900;
+} */
+
+@media (max-width:600px) {
+  .carousel_img{
+    /* height: 80vh; */
+    object-fit: cover;
+    /* filter: grayscale(100%); */
+  }
+
+}
