@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styles from "./Hero.module.css";
 
 import './particles.css';
@@ -6,6 +6,9 @@ import './particles.css';
 import enigmaLogo from './../../../assets/logos/enigma-logo-small.png'
 
 function Hero() {
+  useEffect(() => {
+    if (window.ParticleSlider !== undefined) window.initParticles();
+  }, []);
   return (
     <div className={styles.stickyWrap}>
       <div className={styles.homeSectionWrap}>

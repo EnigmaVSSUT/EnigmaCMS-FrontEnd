@@ -1,5 +1,6 @@
 import React from 'react';
 import Row from "../ProjectRow/ProjectRow";
+import Whatwedo from '../Whatwedo/Whatwedo';
 import Hero from './sections/Hero';
 
 
@@ -8,6 +9,7 @@ function Home() {
     <>
       <div className="stickyWrap">
         <Hero />
+        <Whatwedo />
         <Row />
       </div>
     </>
