@@ -19,6 +19,8 @@
   gap: 20px;
   padding: 10px;
   justify-content: center;
+  max-width: 1280px;
+  margin: auto;
 }
 
 .services {
@@ -54,12 +56,13 @@
 }
 
 .services__box {
-  padding: 40px;
   background: #17141d;
   color: #fff;
-  transition: all 0.5s linear;
-  min-width: 340px;
+  transition: all 0.5s ease;
+  min-width: 308px;
   max-width: 400px;
+  width: 91%;
+  padding: 30px 40px;
 }
 
 .services__box:hover {
@@ -83,4 +86,8 @@
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   margin-bottom: 15px;
+}
+
+.services__boxheader:last-child {
+  margin: 0;
 }

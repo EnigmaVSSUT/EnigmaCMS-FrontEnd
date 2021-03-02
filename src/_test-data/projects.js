@@ -9,6 +9,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Web Development",
   },
   {
     id: 1,
@@ -20,6 +21,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Machine Learning",
   },
   {
     id: 2,
@@ -31,6 +33,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Java",
   },
   {
     id: 3,
@@ -42,6 +45,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Android",
   },
   {
     id: 4,
@@ -53,6 +57,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Python",
   },
   {
     id: 5,
@@ -64,6 +69,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Android",
   },
   {
     id: 6,
@@ -75,6 +81,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Web Development",
   },
   {
     id: 7,
@@ -86,6 +93,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Android",
   },
   {
     id: 8,
@@ -97,6 +105,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Web Development",
   },
   {
     id: 9,
@@ -108,6 +117,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Machine Learning",
   },
   {
     id: 10,
@@ -119,6 +129,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Android",
   },
   {
     id: 11,
@@ -130,6 +141,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Web Development",
   },
   {
     id: 12,
@@ -141,6 +153,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Android",
   },
   {
     id: 13,
@@ -152,6 +165,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Machine Learning",
   },
   {
     id: 14,
@@ -163,6 +177,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Android",
   },
   {
     id: 15,
@@ -174,6 +189,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Java",
   },
   {
     id: 16,
@@ -185,6 +201,7 @@ const projects = [
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
     projectLink: "asdfdf",
+    field: "Android",
   },
 ];
 

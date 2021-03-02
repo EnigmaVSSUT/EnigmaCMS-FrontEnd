@@ -1,7 +1,7 @@
 import React from 'react';
-import Row from "../ProjectRow/ProjectRow";
-import Whatwedo from '../Whatwedo/Whatwedo';
-import Hero from './sections/Hero';
+import Row from "./sections/ProjectRow/ProjectRow";
+import Whatwedo from "./sections/Whatwedo/Whatwedo";
+import Hero from "./sections/Hero/Hero";
 
 
 function Home() {

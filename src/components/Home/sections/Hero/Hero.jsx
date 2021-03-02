@@ -3,7 +3,7 @@ import styles from "./Hero.module.css";
 
 import './particles.css';
 
-import enigmaLogo from './../../../assets/logos/enigma-logo-small.png'
+import enigmaLogo from "./../../../../assets/logos/enigma-logo-small.png";
 
 function Hero() {
   useEffect(() => {
