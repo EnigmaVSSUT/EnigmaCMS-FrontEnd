@@ -5,7 +5,6 @@
 }
 
 .container {
-  width: 1200px;
   margin: 0 auto;
 }
 
@@ -13,15 +12,13 @@
   background: #100e17;
 }
 
-
-.row {
+.card__wrapper {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-}
-
-.col {
-  width: 33.33333333333333%;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
 }
 
 .services {
@@ -31,8 +28,7 @@
 }
 
 .common {
-  width: 33.33333333333333%;
-  margin: 20px auto;
+  margin: 60px auto 20px;
   text-align: center;
 }
 
@@ -57,12 +53,13 @@
   margin: 30px auto;
 }
 
-.services__box              {
+.services__box {
   padding: 40px;
   background: #17141d;
   color: #fff;
-  margin: 20px;
   transition: all 0.5s linear;
+  min-width: 340px;
+  max-width: 400px;
 }
 
 .services__box:hover {
@@ -78,7 +75,7 @@
 }
 
 .services__box:hover .commonIcons {
-  color:#100e17;
+  color: #100e17;
 }
 
 .services__boxheader {
@@ -86,19 +83,4 @@
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   margin-bottom: 15px;
-}
-
-@media (max-width: 765px) {
-  .container {
-    width: 100%;
-    padding: 0 20px;
-  }
-  
-  .col {
-    width: 100%;
-  }
-
-.common {
-  width: 100%;
-}
 }
