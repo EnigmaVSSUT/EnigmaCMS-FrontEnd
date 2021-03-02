@@ -2,7 +2,7 @@ import { Typography, IconButton, makeStyles, SvgIcon, Fab, Button } from "@mater
 import React, { useState } from "react";
 import styles from "./../Project.module.css";
 import { Link, FlipCameraAndroid } from "@material-ui/icons";
-import { ReactComponent as RepoIcon } from './../../../assets/icons/repo.svg';
+import { ReactComponent as RepoIcon } from "./../../../assets/icons/repo.svg";
 
 import FlipBox from "../../FlipBox/FlipBox";
 
@@ -13,6 +13,9 @@ const useStyles = makeStyles({
     padding: "10px",
     transform: "translateY(-13px) translateZ(2px) scale(0.945)",
     textAlign: "center",
+    "&:hover .repoLink": {
+      color: "#0056b3 !important",
+    },
   },
   icon: {
     marginRight: 10,
@@ -52,22 +55,23 @@ function Head(props) {
 
         <Fab variant="extended" className={classes.linkWrap} onClick={() => window.open(repoLink)}>
           <SvgIcon component={RepoIcon} className={classes.icon} />
-          <a href={repoLink} className={classes.repoLink}>
+          <a href={repoLink} className={classes.repoLink + " repoLink"}>
             GitHub Repo Link
           </a>
         </Fab>
 
-        <div className={styles.rise3D}>
+        <div className={navigator.userAgent.indexOf("Mozilla") !== -1 ? styles.rise3DFireFox : styles.rise3D}>
           <Typography variant="body1">
             {shortDescription} Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure pariatur, sed dolores
             numquam odit hic magni?
           </Typography>
           <div className={styles.cardFooter}>
-            <Button color="primary" className={classes.button} startIcon={<Link />} href={projectLink}>
-              Have a look on the Project!
-            </Button>
-
-            <IconButton color="primary" className={classes.icon} onClick={() => props.handleFlipBoxFlip()}>
+            {projectLink && (
+              <Button color="primary" className={classes.button} startIcon={<Link />} href={projectLink}>
+                Have a look on the Project!
+              </Button>
+            )}
+            <IconButton color="primary" style={{marginLeft: projectLink || 'auto'}} className={classes.icon} onClick={() => props.handleFlipBoxFlip()}>
               <FlipCameraAndroid />
             </IconButton>
           </div>
@@ -86,7 +90,12 @@ function Tail(props) {
         <Typography className={styles.projectName} variant="h4">
           {projectName}
         </Typography>
-        <div className={[styles.rise3D, styles.tailContent].join(" ")}>
+        <div
+          className={[
+            navigator.userAgent.indexOf("Mozilla") !== -1 ? styles.rise3DFireFox : styles.rise3D,
+            styles.tailContent,
+          ].join(" ")}
+        >
           <Typography variant="body1" className={styles.longDescription}>
             A{longDescription} Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure pariatur, sed dolores
             numquam odit hic magni Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum alias ipsam voluptate
@@ -110,24 +119,13 @@ function Tail(props) {
   );
 }
 
-
-
 function SlideBox(props) {
-
   const [isFlipped, flipIt] = useState(false);
   const handleFlipBoxFlip = () => {
     flipIt(!isFlipped);
   };
-  const {
-    id,
-    projectName,
-    shortDescription,
-    projectImage,
-    repoLink,
-    longDescription,
-    team,
-    projectLink,
-  } = props.project || "";
+  const { id, projectName, shortDescription, projectImage, repoLink, longDescription, team, projectLink } =
+    props.project || "";
 
   return (
     <div id={id} className={props.classes}>

@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Suspense fallback={<Preloader />}>
-            <Route path="/project" component={Project} exact />
+            <Route path="/project/:cardId" render={props => <Project {...props} />} exact />
             <Route path="/" component={Home} exact />
             <Route path="/contact" component={Contact} exact />
             <Route path="/auth" component={Auth} exact />

@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./column.module.css";
 const columns = (props) => {
-  Object.keys(props.links).map((link) => console.log(props.links[link]));
+  // Object.keys(props.links).map((link) => console.log(props.links[link]));
   return (
     <div className={classes.column}>
       <h4>{props.title}</h4>

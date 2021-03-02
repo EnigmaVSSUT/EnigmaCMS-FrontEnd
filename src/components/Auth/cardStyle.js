@@ -10,7 +10,7 @@ const useStyle = makeStyles(theme => ({
     minWidth: "calc(50% - 20px)",
     [theme.breakpoints.down('xs')]:{
       minWidth: "100%",
-      transform: 'translateX(calc(-30px))'
+      // transform: 'translateX(calc(-30px))'
     },
     margin:10,
     padding:'10vh 0',

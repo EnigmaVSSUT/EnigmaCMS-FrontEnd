@@ -33,9 +33,10 @@ const Row = () => {
       <div className={classes.cardList}>
         {projectsData.map(projectObj => {
           return <Card
+            key={projectObj.id}
             logo={getLogo(projectObj.field)}
             title={projectObj.projectName}
-            link={`/project/#${projectObj.id}`}
+            link={`/project/${projectObj.id}`}
             team={projectObj.team}
           />;
         })}
