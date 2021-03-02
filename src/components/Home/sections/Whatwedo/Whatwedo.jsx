@@ -56,7 +56,7 @@ export default function Whatwedo() {
 
       <div className={classes.card__wrapper}>
         {state.map(info => (
-          <div className={classes.services__box}>
+          <div key={info.id} className={classes.services__box}>
             {info.icon}
             <div className={classes.services__boxheader}>{info.heading}</div>
             <div className={classes.services__boxheader} style={{ fontFamily: "sans-serif", fontSize: 14 }}>

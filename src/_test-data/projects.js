@@ -164,7 +164,7 @@ const projects = [
     repoLink: "2nd Year",
     longDescription: "asdff",
     team: "the team behind this project was mentored by ABC / This project is done by ABC",
-    projectLink: "asdfdf",
+    
     field: "Machine Learning",
   },
   {
