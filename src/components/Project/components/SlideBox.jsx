@@ -130,7 +130,7 @@ function SlideBox(props) {
   } = props.project || "";
 
   return (
-    <div className={props.classes}>
+    <div id={id} className={props.classes}>
       <FlipBox
         key={id}
         frontContent={
