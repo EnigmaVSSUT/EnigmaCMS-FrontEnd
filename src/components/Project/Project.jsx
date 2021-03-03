@@ -1,5 +1,5 @@
 import { Typography, Box } from "@material-ui/core";
-import React, { useEffect } from "react";
+import React from "react";
 import SlideBox from "./components/SlideBox";
 import styles from "./Project.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,20 +10,6 @@ import projects from "./../../_test-data/projects";
 
 function Project(props) {
   const { cardId } = props.match.params;
-  useEffect(() => {
-    // transform: translate3d(-11900px, 0px, 0px)
-    document.querySelectorAll(".swiper-wrapper").forEach(SwWrapper => {
-      const str1 = SwWrapper.style.transform.slice(12);
-      const currentXtranslate = str1.slice(0, str1.indexOf("px"));
-
-      const card = SwWrapper.querySelector(".swiper-slide");
-      const cardWidth = parseInt(card.getBoundingClientRect().width + parseInt(card.style.marginRight.slice(0, 2)));
-
-      setTimeout(() => {
-        SwWrapper.style.transform = `translate3d(${currentXtranslate - cardWidth * cardId}px, 0px, 0px)`;
-      }, 1000);
-    });
-  }, [cardId]);
 
   const settings = {
     loop: true,
@@ -50,7 +36,7 @@ function Project(props) {
       <Box p={2} className={styles.swiperContainer}>
         <Swiper
           onSlideChange={() => console.log("slide change")}
-          onSwiper={swiper => console.log(swiper)}
+          onSwiper={swiper => cardId && swiper.slideToLoop(parseInt(cardId), 300)}
           {...settings}
         >
           {slides}
