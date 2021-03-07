@@ -1,6 +1,7 @@
 .cardHolder {
   position: relative;
-  min-width: 250px;
+  min-width: 130px;
+  height: 100%;
   transition: 0.2s;
 }
 
@@ -8,9 +9,10 @@
   position: absolute;
   top: 0;
   left: 0;
+  max-height: 350px;
   height: 100%;
   width: 100%;
-  min-width: 250px;
+  min-width: 260px;
   padding: 3.5rem 2.3rem;
   border-radius: 16px;
   background: #17141d;
@@ -34,8 +36,18 @@
   transform: translateY(-2rem);
   border: 2px solid #35ff1f;
 }
-.cardHolder:not(:first-child) {
-  margin-left: -130px;
+
+.cardId {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #fff;
+  background: #00b712;
+  border: solid 1px #00b712;
+  height: 27px;
+  width: 27px;
+  text-align: center;
+  border-radius: 100%;
 }
 
 .header {

@@ -1,0 +1,59 @@
+.container {
+  margin: 0 auto;
+}
+
+.common {
+  margin: 60px auto 20px;
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #35ff1f;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+}
+
+.mainContent {
+  font-size: 16px;
+  color: #dfdfdf;
+  font-family: "Poppins", sans-serif;
+}
+
+.commonBorder {
+  background: #35ff1f;
+  height: 3px;
+  width: 100px;
+  margin: 30px auto;
+}
+
+.main {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutImg {
+  object-fit: contain;
+  object-position: center;
+  max-width: 650px;
+  width: 90%;
+}
+
+.content {
+  min-width: 340px;
+  max-width: 650px;
+  padding: 10px 20px;
+}
+
+@media (max-width: 1360px) {
+  .main {
+    flex-wrap: wrap;
+  }
+  .content {
+    max-width: 850px;
+    text-align: center;
+  }
+}
