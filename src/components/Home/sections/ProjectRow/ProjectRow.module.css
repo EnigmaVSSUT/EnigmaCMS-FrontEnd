@@ -30,7 +30,6 @@
 
 .cardList {
   display: flex;
-  padding: 3rem;
   overflow-y: hidden;
   overflow-x: scroll;
   min-height: 450px;

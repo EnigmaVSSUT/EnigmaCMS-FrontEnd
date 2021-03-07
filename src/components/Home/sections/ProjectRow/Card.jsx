@@ -5,6 +5,7 @@ const Card = props => {
   return (
     <div className={classes.cardHolder}>
       <article className={classes.card}>
+        <span className={classes.cardId}>{props.id}</span>
         <header className={classes.header}>
           <a href={props.link}>
             <h2>{props.title}</h2>
