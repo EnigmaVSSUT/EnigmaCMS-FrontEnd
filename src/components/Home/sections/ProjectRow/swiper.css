@@ -11,4 +11,11 @@
 .project-row-slider .swiper-slide {
   width: 130px;
   height: 350px;
+  transition: 0.2s;
+}
+
+.swiper-slide:focus-within ~ .swiper-slide,
+.swiper-slide:hover ~ .swiper-slide {
+  transition: 0.2s;
+  transform: translateX(130px);
 }

@@ -23,10 +23,6 @@ function carousel() {
           <img className="d-block w-100 carousel_img" src={Img3} alt="Third slide" />
         </Carousel.Item>
       </Carousel>
-
-      {/*<div className="container intro_txt ">
-<h1>Enigma the coding club vssut</h1><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-</div>*/}
     </>
   );
 }
