@@ -25,12 +25,6 @@
   clear: both;
 }
 
-.cardHolder:focus-within ~ .cardHolder,
-.cardHolder:hover ~ .cardHolder {
-  transition: 0.2s;
-  transform: translateX(130px);
-}
-
 .card:hover {
   transition: 0.2s;
   transform: translateY(-2rem);
