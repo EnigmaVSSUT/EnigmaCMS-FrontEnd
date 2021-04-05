@@ -4,18 +4,64 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
 
+  <!-- ================favicon============= -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/Favicon/favicon-16x16.png">
+  <link rel="manifest" href="/Favicon/site.webmanifest">
 
-  <title>React App</title>
+  <title>Enigma VSSUT</title>
 </head>
 
 <body>
-
-
   <div id="root"></div>
+  <script>
+    let isNotInitiated;
+      var initParticles = function () {
+        if (isNotInitiated) {
+          var ps = new ParticleSlider({
+            ptlGap: 0,
+            ptlSize: 0,
+            width: 1e9,
+            height: 1e9,
+            mouseForce: 400,
+          });
+
+          window.addEventListener
+            ? window.addEventListener(
+              "click",
+              function () {
+                ps.init(true);
+              },
+              false
+            )
+            : (window.onclick = function () {
+              ps.init(true);
+            });
 
 
+          isNotInitiated = false;
+        }
+      };
 
+      var initParticleSlider = (function () {
+        var psScript = document.createElement("script");
+        psScript.addEventListener
+          ? psScript.addEventListener("load", initParticles, false)
+          : (psScript.onload = initParticles);
+        psScript.src = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/23500/ps-0.9.js';
+        psScript.setAttribute("type", "text/javascript");
+        document.body.appendChild(psScript);
+        isNotInitiated = true;
+      })(
+        window.addEventListener
+          ? window.addEventListener("load", initParticleSlider, false)
+          : (window.onload = initParticleSlider)
+      );
+  </script>
 </body>
 
 </html>

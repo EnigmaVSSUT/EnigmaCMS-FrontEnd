@@ -1,0 +1,59 @@
+.container {
+  padding: 0 !important;
+  position: relative;
+  background-color: transparent !important;
+}
+
+.flipBox {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  display: grid;
+  place-items: center;
+  grid-template-areas: "inners";
+  padding: 10vh 0;
+}
+
+.flipBoxFront,
+.flipBoxBack {
+  position: relative;
+  width: 100%;
+  grid-area: inners;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  min-height: 425px;
+  transition: transform 2000ms cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.flipBoxFront {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flipBoxBack {
+  color: #fff;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flipBoxFlip .flipBoxFront {
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+}
+.flipBoxFlip .flipBoxBack {
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+}
+
+/* flipbox content */
+.flipBox .inner > * {
+  position: relative;
+  z-index: 2;
+  transform: translateZ(60px) scale(0.94);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}

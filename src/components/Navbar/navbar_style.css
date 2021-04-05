@@ -1,0 +1,40 @@
+.nav_bar{
+background-color: transparent;
+
+}
+.nav_item{
+  margin-right: 40px;
+}
+.nav_item a {
+  font-family: apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  color: #ffffff  !important;
+  padding: 10px !important;
+}
+
+.nav_item a:hover{
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.35);
+}
+
+.nav_bar_dark{
+  background-color: #17141D !important;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.nav_item_dark{
+  margin-right: 40px;
+}
+
+.nav_item_dark a{
+  color: #ffffff  !important;
+  padding: 10px !important;
+}
+.nav_item_dark a:hover{
+  background-color: rgba(128, 128, 128, 0.35) !important;
+border-radius: 5px;
+color: #ffffff !important;
+}
+
+
+.logo_img{
+
+}
