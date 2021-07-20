@@ -39,7 +39,8 @@
 }
 .column ul li a:hover {
   color: #35ff1f;
-  padding-left: 8px;
+  padding-left: 15px;
+  transform: scale(1.1);
 }
 
 /*responsive*/

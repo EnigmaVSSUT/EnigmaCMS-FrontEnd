@@ -3,12 +3,14 @@
   color: #e4e6eb;
 }
 .hr {
-  color: #e4e6eb;
-  width: 55px;
-  background-color: #e4e6eb;
+  width: 150px;
+  background-color: #35ff15;
   height: 3px;
   border-radius: 4px;
   margin: 5px auto;
+}
+.teamSection{
+  margin-top: 40px;
 }
 .tab:first-child{
   border-radius: 15px 0 0 0;
@@ -28,7 +30,6 @@
 }
 .tabPanel{
   background-color: #242526;
-  height: 130vh;
 }
 .swiperWrap{
   overflow: hidden;

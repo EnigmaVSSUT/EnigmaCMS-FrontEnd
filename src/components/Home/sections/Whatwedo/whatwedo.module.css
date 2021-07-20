@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.bgMain {
+  background: #100e17;
+}
+
+.card__wrapper {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.services {
+  background: #100e17;
+  padding: 100px 0;
+  color: #fff;
+}
+
+.common {
+  margin: 60px auto 20px;
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #35ff1f;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+}
+
+.mainContent {
+  font-size: 16px;
+  color: #dfdfdf;
+  font-family: "Poppins", sans-serif;
+}
+
+.commonBorder {
+  background: #35ff1f;
+  height: 3px;
+  width: 100px;
+  margin: 30px auto;
+}
+
+.services__box {
+  background: #17141d;
+  color: #fff;
+  transition: all 0.5s ease;
+  min-width: 308px;
+  max-width: 400px;
+  width: 91%;
+  padding: 30px 40px;
+}
+
+.services__box:hover {
+  background: #35ff1f;
+  color: #100e17;
+  transform: scale(1.1);
+}
+
+.commonIcons {
+  font-size: 40px;
+  color: #35ff1f;
+  margin-bottom: 15px;
+}
+
+.services__box:hover .commonIcons {
+  color: #100e17;
+}
+
+.services__boxheader {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.services__boxheader:last-child {
+  margin: 0;
+}

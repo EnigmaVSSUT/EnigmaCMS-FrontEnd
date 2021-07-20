@@ -1,31 +1,47 @@
+.cardHolder {
+  position: relative;
+  min-width: 130px;
+  height: 100%;
+  transition: 0.2s;
+}
+
 .card {
-  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 350px;
+  height: 100%;
   width: 100%;
-  min-width: 250px;
-  padding: 1.5rem;
+  min-width: 260px;
+  padding: 3.5rem 2.3rem;
   border-radius: 16px;
   background: #17141d;
   box-shadow: -1rem 0 3rem #000;
   display: flex;
   flex-direction: column;
-  transition: 0.2s;
   margin: 0;
+  transition: 0.2s;
   scroll-snap-align: start;
   clear: both;
-  position: relative;
-}
-
-.card:focus-within ~ .card,
-.card:hover ~ .card {
-  transform: translateX(130px);
 }
 
 .card:hover {
-  transform: translateY(-1rem);
+  transition: 0.2s;
+  transform: translateY(-2rem);
   border: 2px solid #35ff1f;
 }
-.card:not(:first-child) {
-  margin-left: -130px;
+
+.cardId {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  color: #fff;
+  background: #00b712;
+  border: solid 1px #00b712;
+  height: 27px;
+  width: 27px;
+  text-align: center;
+  border-radius: 100%;
 }
 
 .header {
@@ -43,9 +59,12 @@
 }
 
 .card:hover .header h2 {
+  text-shadow: none;
+}
+
+.header h2:hover {
   background-color: #35ff1f;
   background-image: linear-gradient(315deg, #028610 0%, #35ff1f 74%);
-  text-shadow: none;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -64,6 +83,9 @@
   align-self: start;
   position: relative;
   box-sizing: border-box;
+  display: grid;
+  height: 100%;
+  align-items: end;
 }
 
 .avatar img {
