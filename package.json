@@ -17,9 +17,9 @@
     "react-icons": "^4.2.0",
     "react-preloaders": "^3.0.3",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^4.0.1",
     "redux": "^4.0.5",
-    "swiper": "^6.4.8",
+    "swiper": "^6.4.10",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
