@@ -63,6 +63,7 @@
   max-width: 400px;
   width: 91%;
   padding: 30px 40px;
+  cursor:pointer;
 }
 
 .services__box:hover {
