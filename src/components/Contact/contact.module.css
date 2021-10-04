@@ -1,26 +1,25 @@
 body {
-  background-color: #100E17;
+  background-color: #100e17;
   color: #35ff1f;
 }
 
-.button
-{
-  border-radius   : 10px;
-  background-color: #100E17;
-  border          : 2px solid #35ff1f;
-  color           : white;
-  padding         : 5px 30px;
+.button {
+  border-radius: 10px;
+  background-color: #100e17;
+  border: 2px solid #35ff1f;
+  color: white;
+  padding: 5px 30px;
   transition-duration: 0.4s;
-  text-align      : center;
-  text-decoration : none;
-  font-size       : 25px;
-  margin          : 4px 2px;
-  cursor          : pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .button:hover {
   background-color: #35ff1f;
-  color           :#100E17;
+  color: #100e17;
 }
 
 .commonBorder {

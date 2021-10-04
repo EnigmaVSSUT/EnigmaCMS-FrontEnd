@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./events.module.css";
-const EventCard = ({ upcoming }) => {
+const EventCard = ({ onRegisterClick }) => {
   return (
-    <div className={`${classes.card} ${upcoming && classes.upcoming}`}>
+    <div className={`${classes.card}`}>
       <div className={classes.img_container}></div>
       <div className={classes.card_content}>
         <h2 className={classes.title}>LEVEL-UP DSA</h2>
@@ -19,7 +19,9 @@ const EventCard = ({ upcoming }) => {
           dolor vitae, magnam exercitationem nulla voluptas cupiditate tempore
           animi.
         </p>
-        <button className={classes.button}>Register Now</button>
+        <button onClick={onRegisterClick} className={classes.button}>
+          Register Now
+        </button>
       </div>
     </div>
   );
