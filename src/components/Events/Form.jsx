@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
@@ -17,6 +17,7 @@ import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
 import { Grid, Switch, Typography } from "@material-ui/core";
 import Slider from "@material-ui/core/Slider";
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 
 const CssTextField = withStyles({
   root: {
@@ -86,6 +87,13 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FormModal({ open }) {
   const classes = useStyles();
+  const [selectedBranchIndex, setselectedBranchIndex] = useState(0);
+  const [language, setLanguage] = useState("");
+  const [skillLevel, setSkillLevel] = useState(0);
+  const [participated, setparticipated] = useState({
+    Yes: true,
+    No: false,
+  });
 
   const options = [
     "None",
@@ -103,14 +111,13 @@ export default function FormModal({ open }) {
   ];
 
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleClickListItem = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleMenuItemClick = (event, index) => {
-    setSelectedIndex(index);
+    setselectedBranchIndex(index);
     setAnchorEl(null);
   };
 
@@ -137,9 +144,18 @@ export default function FormModal({ open }) {
         >
           <ListItemText
             secondary={
-              <Typography style={{ color: "#fff" }}>
-                Branch : {options[selectedIndex]}
-              </Typography>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Typography style={{ color: "#fff" }}>
+                  Branch : {options[selectedBranchIndex]}
+                </Typography>
+                <ArrowDropDownIcon style={{ color: "white" }} />
+              </div>
             }
             className={classes.menu}
           />
@@ -156,7 +172,7 @@ export default function FormModal({ open }) {
           <MenuItem
             key={option}
             disabled={index === 0}
-            selected={index === selectedIndex}
+            selected={index === selectedBranchIndex}
             onClick={(event) => handleMenuItemClick(event, index)}
           >
             {option}
@@ -165,8 +181,6 @@ export default function FormModal({ open }) {
       </Menu>
     </div>
   );
-
-  const [language, setLanguage] = React.useState("");
 
   const handleLanguageChange = (event) => {
     setLanguage(event.target.value);
@@ -207,15 +221,28 @@ export default function FormModal({ open }) {
     </div>
   );
 
+  const skillArray = [
+    "beginner",
+    "beginner++",
+    "intermediate",
+    "intermediate++",
+    "expert",
+    "master",
+  ];
+
   const Skill = (
     <div style={{ padding: "10px" }}>
       <Typography style={{ color: "white" }} id="discrete-slider" gutterBottom>
-        How Skilled are you in DSA ?
+        How Skilled are you in DSA ?{" "}
+        <strong style={{ color: "#35ff1f", letterSpacing: "1px" }}>
+          {skillArray[skillLevel]}
+        </strong>
       </Typography>
       <CustomSlider
         defaultValue={0}
         aria-labelledby="discrete-slider"
         step={1}
+        onChange={(e, v) => setSkillLevel(v)}
         marks
         min={0}
         max={5}
@@ -223,16 +250,14 @@ export default function FormModal({ open }) {
     </div>
   );
 
-  const [state, setState] = React.useState({
-    Yes: true,
-    No: false,
-  });
-
   const handleSwitch = (event) => {
-    setState({ ...state, [event.target.name]: event.target.checked });
+    setparticipated({
+      ...participated,
+      [event.target.name]: event.target.checked,
+    });
   };
 
-  const participated = (
+  const competitive = (
     <Grid component="label" container alignItems="center" spacing={1}>
       <Grid item>
         <Typography style={{ color: "white" }}>
@@ -246,7 +271,7 @@ export default function FormModal({ open }) {
       </Grid>
       <Grid item>
         <Switch
-          checked={state.No}
+          checked={participated.No}
           onChange={handleSwitch}
           name="No"
           inputProps={{ "aria-label": "secondary checkbox" }}
@@ -292,7 +317,7 @@ export default function FormModal({ open }) {
               <div style={{ paddingTop: "15px" }}>
                 <CssTextField
                   className={classes.margin}
-                  label="e-mail"
+                  label="Email"
                   variant="outlined"
                   id="custom-css-outlined-input"
                   type="email"
@@ -337,21 +362,22 @@ export default function FormModal({ open }) {
               {Branch}
               {Language}
               {Skill}
-              {participated}
+              {competitive}
               <div style={{ paddingTop: "15px" }}>
                 <CssTextField
                   className={classes.margin}
-                  label="If yes Mention your profie link(on the competitive platform you are in)"
+                  label="Mention your profie link(The competitive platform you are in)"
                   variant="outlined"
                   id="custom-css-outlined-input"
                   type="text"
                   required
                   fullWidth
+                  disabled={!participated.No}
                 />
               </div>
               <div style={{ marginTop: "10px" }}>
                 <center>
-                  <button className={styles.button}>Submit</button>
+                  <button className={styles.button}>SUBMIT</button>
                 </center>
               </div>
             </form>
