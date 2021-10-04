@@ -1,0 +1,131 @@
+.heading {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #35ff1f;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+}
+
+.common {
+  margin: 60px auto 20px;
+  text-align: center;
+}
+.mainContent {
+  font-size: 16px;
+  color: #dfdfdf;
+  font-family: "Poppins", sans-serif;
+}
+.commonBorder {
+  background: #35ff1f;
+  height: 3px;
+  width: 100px;
+  margin: 30px auto;
+}
+/* card */
+.container {
+  max-width: 800px;
+  text-align: center;
+}
+.content {
+  color: #ffffff;
+}
+.card .upcoming {
+  border: 1px solid #35ff1f;
+}
+.card {
+  background: #17141d;
+  max-width: 700px;
+  box-shadow: -1rem 0 3rem #000;
+  margin: 30px;
+  border-radius: 16px;
+  display: grid;
+  grid-template-column: repeat(5, 1fr);
+  transition: 0.2s;
+  flex: 1 1 30% !important;
+}
+.card:hover {
+  transition: 0.2s;
+}
+.card .img_container {
+  width: 230px;
+  height: 100%;
+  grid-column: 2;
+  background: #17141d;
+  background-image: url("https://www.dropbox.com/s/7d5qt5wb2xpqeww/city-street.jpg?raw=1");
+  background-size: cover;
+  background-position: center center;
+  border-radius: 16px;
+}
+.date {
+  font-size: 15px;
+  color: rgb(218, 206, 206);
+}
+.date > strong {
+  color: #35ff1f;
+  letter-spacing: 3px;
+}
+.card_content {
+  grid-column: 3 / 5;
+  padding: 10px 30px;
+  border-left: 1px solid #ccc;
+  text-align: center;
+}
+.title {
+  text-transform: uppercase;
+  color: #35ff1f;
+}
+h1 {
+  margin-bottom: 0;
+}
+.card_content .author {
+  border-top: 1px solid #cdcdcd;
+  font-weight: 700;
+  margin-top: 25px;
+  padding: 25px 0 10px 0;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    display: block;
+    max-width: 95%;
+    margin: auto;
+  }
+  .card .img_container {
+    height: 250px;
+    width: 100%;
+  }
+  .card_content {
+    border: 0;
+    border-top: 1px solid #ccc;
+  }
+}
+
+.button {
+  border-radius: 10px;
+  background-color: #100e17;
+  border: 2px solid #35ff1f;
+  color: white;
+  padding: 3px 20px;
+  transition-duration: 0.4s;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+.button:hover {
+  background-color: #35ff1f;
+  color: #100e17;
+}
+.pastEvents {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.upcoming {
+  margin: auto;
+  max-width: 60%;
+}
