@@ -63,6 +63,7 @@ React.useEffect(()=>{
       <Nav className={nav_item}>
         <Nav.Link href="/#about_us">About us</Nav.Link>
         <Nav.Link href="/#what_we_do">What we do</Nav.Link>
+        <Nav.Link href="/events">Events</Nav.Link>
         <Nav.Link href="/#project">Projects</Nav.Link>
         {/* <Nav.Link href="/blogs">Blogs</Nav.Link> */}
         <Nav.Link href="/team">Team</Nav.Link>

@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Preloader from "./components/Preloader/Preloader";
 import Navbar from "./components/Navbar/Navbar";
+import Events from "./components/Events";
 
 const Home = lazy(() => import("./components/Home/Home"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
@@ -18,12 +19,17 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Suspense fallback={<Preloader />}>
-            <Route path="/project/:cardId" render={props => <Project {...props} />} exact />
+            <Route
+              path="/project/:cardId"
+              render={(props) => <Project {...props} />}
+              exact
+            />
             <Route path="/project" component={Project} exact />
             <Route path="/" component={Home} exact />
             <Route path="/contact" component={Contact} exact />
             <Route path="/auth" component={Auth} exact />
             <Route path="/team" component={Team} exact />
+            <Route path="/events" component={Events} exact />
           </Suspense>
         </Switch>
       </BrowserRouter>
