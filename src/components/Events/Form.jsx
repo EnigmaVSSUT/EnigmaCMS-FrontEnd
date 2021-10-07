@@ -18,6 +18,7 @@ import FormLabel from "@material-ui/core/FormLabel";
 import { Grid, Switch, Typography } from "@material-ui/core";
 import Slider from "@material-ui/core/Slider";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
+import CancelIcon from "@material-ui/icons/Cancel";
 
 const CssTextField = withStyles({
   root: {
@@ -85,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function FormModal({ open }) {
+export default function FormModal({ open, handeClose }) {
   const classes = useStyles();
   const [selectedBranchIndex, setselectedBranchIndex] = useState(0);
   const [language, setLanguage] = useState("");
@@ -298,6 +299,7 @@ export default function FormModal({ open }) {
       >
         <Fade in={open}>
           <div className={styles.modal} style={{ height: "95%" }}>
+            <CancelIcon onClick={handeClose} className={styles.icon} />
             <Typography
               style={{
                 color: "#35ff1f",
