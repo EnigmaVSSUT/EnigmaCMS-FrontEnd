@@ -10,7 +10,7 @@ function Events() {
   };
   return (
     <div>
-      <FormModal open={open} />
+      <FormModal handeClose={() => setOpen(false)} open={open} />
       <div className={classes.common}>
         <h3 className={classes.heading}>{header.mainHeader}</h3>
         <p className={classes.mainContent}>{header.text}</p>
