@@ -1,0 +1,25 @@
+.common {
+  margin: 60px auto 20px;
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #35ff1f;
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+}
+
+.mainContent {
+  font-size: 16px;
+  color: #dfdfdf;
+  font-family: "Poppins", sans-serif;
+}
+
+.commonBorder {
+  background: #35ff1f;
+  height: 3px;
+  width: 100px;
+  margin: 30px auto;
+}
