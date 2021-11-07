@@ -79,28 +79,25 @@
 }
 .card {
   background: #17141d;
-  max-width: 700px;
+  width: 80%;
   box-shadow: -1rem 0 3rem #000;
   margin: 30px;
   border-radius: 16px;
   display: grid;
-  grid-template-column: repeat(5, 1fr);
   transition: 0.2s;
   padding: 10px;
-  flex: 1 1 30% !important;
+  /* flex: 1 1 30% !important; */
 }
 .card:hover {
-  transition: 0.2s;
+  transition: 0.2s !important;
 }
-.card .img_container {
-  width: 230px;
-  height: 100%;
-  grid-column: 2;
-  background: #17141d;
-  background-image: url("https://www.dropbox.com/s/7d5qt5wb2xpqeww/city-street.jpg?raw=1");
-  background-size: cover;
-  background-position: center center;
-  border-radius: 16px;
+
+.poster {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 5px;
 }
 .date {
   font-size: 15px;
@@ -115,6 +112,10 @@
   padding: 10px 30px;
   border-left: 1px solid #ccc;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .title {
   text-transform: uppercase;
@@ -136,6 +137,7 @@ h1 {
     display: block;
     max-width: 95%;
     margin: auto;
+    margin-bottom: 10px;
   }
   .card .img_container {
     height: 250px;
@@ -144,6 +146,13 @@ h1 {
   .card_content {
     border: 0;
     border-top: 1px solid #ccc;
+    display: flex;
+  }
+  .content {
+    font-size: small;
+  }
+  .title {
+    font-size: medium;
   }
 }
 
@@ -160,6 +169,7 @@ h1 {
   margin: 4px 2px;
   cursor: pointer;
   letter-spacing: 2px;
+  max-width: 300px;
 }
 .button:hover {
   background-color: #35ff1f;
