@@ -1,42 +1,59 @@
-import React, { useState } from "react";
-import {Typography,  Tabs, Tab, withStyles } from "@material-ui/core";
-import style from './style.module.css'
-import TabPanel from "./sections/TabPanel";
-
-import PresentMemberProfiles from "./../../_test-data/profiles";
-
-const StyledTabs = withStyles({
-  indicator: {
-    display:'none',
-  },
-})(props => <Tabs {...props} TabIndicatorProps={{ children: <span /> }} />);
-
+import React, { useState, useEffect } from "react";
+import style from "./style.module.css";
+import { Axios } from "./../../helpers/AxiosInstance";
+import Heading from "../Heading";
+import Row from "./Row.jsx";
 function Team() {
-  const [value, setValue] = useState(0);
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-  return (
-    <div className={style.teamRoot}>
-      <Typography align="center" variant="h1">
-        Meet the Team
-      </Typography>
-      <div className={style.hr} />
+  const [first, setfirst] = useState([]);
+  const [second, setsecond] = useState([]);
+  const [third, setthird] = useState([]);
+  const [final, setfinal] = useState([]);
+  const [alumnai, setalumnai] = useState([]);
 
-      <div className={style.teamSection}>
-        <StyledTabs
-          value={value}
-          onChange={handleChange}
-          className={style.tabsParent}
-          indicator={{ display: "none" }}
-          centered
-        >
-          <Tab className={style.tab} label="Present Members" />
-          <Tab className={style.tab} label="Alumni" />
-        </StyledTabs>
-      </div>
-      <TabPanel profiles={PresentMemberProfiles} value={value} index={0} />
-      <TabPanel profiles={[...PresentMemberProfiles].reverse()} value={value} index={1} />
+  useEffect(() => {
+    const d = new Date();
+    const year = d.getFullYear();
+    Axios({
+      method: "GET",
+      url: `members/member-list?year_of_passing=${year + 1}`,
+    }).then((res) => {
+      setfinal(res.data);
+    });
+    Axios({
+      method: "GET",
+      url: `members/member-list?year_of_passing=${year + 2}`,
+    }).then((res) => {
+      setthird(res.data);
+    });
+    Axios({
+      method: "GET",
+      url: `members/member-list?year_of_passing=${year + 3}`,
+    }).then((res) => {
+      setsecond(res.data);
+    });
+    Axios({
+      method: "GET",
+      url: `members/member-list?year_of_passing=${year + 4}`,
+    }).then((res) => {
+      console.log(res.data);
+      setfirst(res.data);
+    });
+    Axios({
+      method: "GET",
+      url: `members/member-list?year_of_passing=${year}`,
+    }).then((res) => {
+      setalumnai(res.data);
+    });
+    console.log("STUDENTS:", first, second, third, final, alumnai);
+  }, []);
+  return (
+    <div>
+      <Heading main="Our Team" sub="Meet our team" />
+      <Row year={final} heading="Final Year" />
+      <Row year={third} heading="Pre-Final Year" />
+      <Row year={second} heading="Second Year" />
+      <Row year={first} heading="First Year" />
+      <Row year={alumnai} heading="Alumnai" />
     </div>
   );
 }
