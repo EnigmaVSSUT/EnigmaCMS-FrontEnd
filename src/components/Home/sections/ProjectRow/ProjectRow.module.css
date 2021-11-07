@@ -1,4 +1,4 @@
-.projectSection{
+.projectSection {
   padding: 50px 0 100px 0;
 }
 
@@ -33,6 +33,7 @@
   overflow-y: hidden;
   overflow-x: scroll;
   min-height: 450px;
+  padding: 30px;
 }
 
 .cardList::-webkit-scrollbar {
