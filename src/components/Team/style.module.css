@@ -22,6 +22,8 @@
 
 .card:hover {
   border: 2px solid #35ff1f;
+  transform: scale(1.1);
+  box-shadow: 0rem 0px 4rem 3px #001b08;
 }
 
 .row {
@@ -39,15 +41,19 @@
 .profile_pic {
   border-radius: 45%;
   height: 100px;
-  width: 100%;
+  width: 100px;
   padding: 5px;
+  transition: 0.2s;
+}
+.card:hover .profile_pic {
+  border-radius: 30%;
 }
 
 .name {
   color: #35ff1f;
   text-align: center;
   font-size: medium;
-  font-weight: bold;
+  font-weight: bolder;
   line-height: 20px;
 }
 .domain {
@@ -62,9 +68,11 @@
 }
 .social > a {
   color: #258642;
+  transition: 0.2s;
 }
 .social > a:hover {
   color: #35ff1f;
+  transform: scale(1.3);
 }
 .heading {
   color: #35ff1f;
