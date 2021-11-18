@@ -4,4 +4,6 @@ body {
   background-color: #100e17 !important;
   overflow: auto !important;
   position: static !important;
+  top: 0;
+  left: 0;
 }
