@@ -3,6 +3,8 @@ import style from "./style.module.css";
 import { Axios } from "./../../helpers/AxiosInstance";
 import Heading from "../Heading";
 import Row from "./Row.jsx";
+import AdministrationCard from "./AdministrationCard";
+import AdmRow from "./Adm_row";
 function Team() {
   const [first, setfirst] = useState([]);
   const [second, setsecond] = useState([]);
@@ -49,6 +51,7 @@ function Team() {
   return (
     <div>
       <Heading main="Our Team" sub="Meet our team" />
+      <AdmRow />
       <Row year={final} heading="Final Year" />
       <Row year={third} heading="Pre-Final Year" />
       <Row year={second} heading="Second Year" />

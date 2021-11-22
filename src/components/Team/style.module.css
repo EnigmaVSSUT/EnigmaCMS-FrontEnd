@@ -1,3 +1,6 @@
+.wrapper {
+  position: relative;
+}
 .card {
   height: auto;
   min-width: 150px !important;
@@ -20,12 +23,59 @@
   border: 2px solid #17141d;
 }
 
+.scrollKeys {
+  display: none !important;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+}
+.icons {
+  color: #1cca09a8;
+  opacity: 80%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.icons:hover {
+  transform: scale(1.2);
+  opacity: 100%;
+}
+.wrapper:hover .scrollKeys {
+  display: flex !important;
+}
+.adminCard {
+  height: auto;
+  flex: 20%;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: #17141d;
+  box-shadow: 0rem 0px 4rem 3px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  margin: 3px 10px 7px 10px;
+  scroll-snap-align: start;
+  clear: both;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid #17141d;
+}
+
 .card:hover {
   border: 2px solid #35ff1f;
   transform: scale(1.1);
   box-shadow: 0rem 0px 4rem 3px #001b08;
 }
-
+.adminCard:hover {
+  border: 2px solid #35ff1f;
+  transform: scale(1.05);
+  box-shadow: 0rem 0px 4rem 3px #001b08;
+}
 .row {
   display: flex;
   overflow-y: hidden;
@@ -34,6 +84,8 @@
   scroll-behavior: smooth;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.2s;
+  scroll-behavior: smooth;
 }
 .row::-webkit-scrollbar {
   display: none;
@@ -47,6 +99,26 @@
 }
 .card:hover .profile_pic {
   border-radius: 30%;
+}
+.adProfile_pic {
+  border-radius: 45%;
+  height: 140px;
+  width: 140px;
+  padding: 5px;
+  transition: 0.2s;
+}
+.adName {
+  color: #35ff1f;
+  text-align: center;
+  font-size: large;
+  font-weight: bolder;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.adDesgnation {
+  font-size: medium;
+  color: #169208;
+  text-align: center;
 }
 
 .name {
@@ -77,4 +149,9 @@
 .heading {
   color: #35ff1f;
   margin-left: 10px;
+}
+.admRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
