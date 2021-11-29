@@ -9,9 +9,9 @@ const AdmRow = () => {
       img: "/vssut_administration/dsw.jpg",
     },
     {
-      name: "Saroj Kumar Sarangi",
+      name: "Dr. Saroj Kumar Sarangi",
       designation: "Vice President Technical Society",
-      img: "/vssut_administration/vptech.jpg",
+      img: "/vssut_administration/vptech.jpeg",
     },
     {
       name: "Dr. Santosh Kumar Majhi",
