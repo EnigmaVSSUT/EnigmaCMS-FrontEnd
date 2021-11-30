@@ -24,7 +24,7 @@ function App() {
               render={(props) => <Project {...props} />}
               exact
             />
-            <Route path="/project" component={Project} exact />
+            <Route path="/projects" component={Project} exact />
             <Route path="/" component={Home} exact />
             <Route path="/contact" component={Contact} exact />
             <Route path="/auth" component={Auth} exact />
