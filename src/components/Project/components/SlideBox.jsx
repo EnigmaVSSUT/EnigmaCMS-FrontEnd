@@ -1,43 +1,43 @@
-import { Typography, IconButton, makeStyles, SvgIcon, Fab, Button } from "@material-ui/core";
+import { Typography, IconButton, makeStyles, Button } from "@material-ui/core";
 import React, { useState } from "react";
 import styles from "./../Project.module.css";
 import { Link, FlipCameraAndroid } from "@material-ui/icons";
-import { ReactComponent as RepoIcon } from "./../../../assets/icons/repo.svg";
 
 import FlipBox from "../../FlipBox/FlipBox";
 
 const useStyles = makeStyles({
   linkWrap: {
     width: "100%",
-    borderRadius: "100px",
+    borderRadius: "10px",
     padding: "10px",
+    fontSize: "20px",
+    border: "3px solid #35ff1f",
     transform: "translateY(-13px) translateZ(2px) scale(0.945)",
     textAlign: "center",
-    "&:hover .repoLink": {
-      color: "#0056b3 !important",
-    },
+    backgroundColor: "#100E17",
   },
   icon: {
     marginRight: 10,
+    color: "#35ff1f",
     "&:hover": {
-      color: "#35ff1f",
       backgroundColor: "#4b52533b",
     },
   },
   repoLink: {
-    color: "#000",
+    color: "#35ff1f",
     "&:hover": {
+      color: "#35ff1f",
       cursor: "pointer",
       textDecoration: "none",
     },
   },
   button: {
-    color: "#bdbdff",
+    color: "#35ff1f",
     textTransform: "none",
     marginBottom: 5,
     "&:hover": {
-      color: "#6377e8",
-      backgroundColor: "#4b52533b",
+      color: "#35ff1f",
+      backgroundColor:"#35ffif",
     },
   },
 });
@@ -48,17 +48,14 @@ function Head(props) {
   return (
     <div className={styles.face}>
       <div className={styles.innerFront}>
-        <Typography className={styles.projectName} variant="h4">
-          {projectName}
-        </Typography>
         <img src={projectImage} className={styles.projectImage} alt="Project Preview" />
 
-        <Fab variant="extended" className={classes.linkWrap} onClick={() => window.open(repoLink)}>
-          <SvgIcon component={RepoIcon} className={classes.icon} />
-          <a href={repoLink} className={classes.repoLink + " repoLink"}>
-            GitHub Repo Link
+        <button className={classes.linkWrap} onClick={() => window.open(projectLink)}>
+          
+          <a className={classes.repoLink}>
+          {projectName}
           </a>
-        </Fab>
+        </button>
 
         <div className={navigator.userAgent.indexOf("Mozilla") !== -1 ? styles.rise3DFireFox : styles.rise3D}>
           <Typography variant="body1">
@@ -67,11 +64,11 @@ function Head(props) {
           </Typography>
           <div className={styles.cardFooter}>
             {projectLink && (
-              <Button color="primary" className={classes.button} startIcon={<Link />} href={projectLink}>
-                Have a look on the Project!
+              <Button color="primary" className={classes.button} startIcon={<Link />} href={repoLink}>
+              GitHub Repo Link
               </Button>
             )}
-            <IconButton color="primary" style={{marginLeft: projectLink || 'auto'}} className={classes.icon} onClick={() => props.handleFlipBoxFlip()}>
+            <IconButton color="primary" style={{marginLeft: repoLink || 'auto'}} className={classes.icon} onClick={() => props.handleFlipBoxFlip()}>
               <FlipCameraAndroid />
             </IconButton>
           </div>
@@ -87,9 +84,6 @@ function Tail(props) {
   return (
     <div className={styles.face}>
       <div className={styles.innerBack}>
-        <Typography className={styles.projectName} variant="h4">
-          {projectName}
-        </Typography>
         <div
           className={[
             navigator.userAgent.indexOf("Mozilla") !== -1 ? styles.rise3DFireFox : styles.rise3D,
@@ -138,15 +132,15 @@ function SlideBox(props) {
             handleFlipBoxFlip={handleFlipBoxFlip}
           />
         }
-        frontBackground="#001e28"
+        frontBackground="#FFC0CB"
         rearContent={
           <Tail
-            content={{ projectName, longDescription, team }}
+            content={{ longDescription, team }}
             flipIt={flipIt}
             handleFlipBoxFlip={handleFlipBoxFlip}
           />
         }
-        rearBackground="#001e28"
+        rearBackground="#FFC0CB"
         isFlipped={isFlipped}
       />
     </div>
