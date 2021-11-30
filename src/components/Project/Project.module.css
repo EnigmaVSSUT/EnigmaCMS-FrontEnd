@@ -16,8 +16,8 @@
   height: 520px;
   width: 320px;
   box-sizing: border-box;
-  border: solid 8px #0365e3;
-  background-color: #001d27;
+  border: solid 5px #35ff1f;
+  background-color: #17141D;
   transform: none !important;
   border-radius: 25px;
   display: flex;
@@ -30,22 +30,11 @@
 .innerBack {
   width: calc(100% - 11px);
   height: calc(100% - 10px);
-  border: solid 5px #ea0339;
+  border: solid 5px #17141D;
   border-radius: 15px;
 }
 .innerBack {
-  border: solid 5px #35ff1f;
-}
-.projectName {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -15px);
-  background: linear-gradient(180deg, #100e17 0%, #001d27 100%);
-  color: #0365e3;
-  font-weight: bolder;
-  padding: 0 10px;
-  border-radius: 0 0 5px 5px;
+  border: solid 5px #17141D ;
 }
 .projectImage {
   width: 100%;
