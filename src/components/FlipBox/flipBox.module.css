@@ -1,7 +1,7 @@
 .container {
   padding: 0 !important;
   position: relative;
-  background-color: transparent !important;
+  background-color:transparent !important;
 }
 
 .flipBox {
@@ -10,7 +10,7 @@
   display: grid;
   place-items: center;
   grid-template-areas: "inners";
-  padding: 10vh 0;
+  padding: 5vh 2.5vh 5vh 2.5vh;
 }
 
 .flipBoxFront,

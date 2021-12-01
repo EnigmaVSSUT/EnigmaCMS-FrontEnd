@@ -1,8 +1,8 @@
 import { Typography, IconButton, makeStyles, Button } from "@material-ui/core";
 import React, { useState } from "react";
 import styles from "./../Project.module.css";
-import { Link, FlipCameraAndroid } from "@material-ui/icons";
-
+import { FlipCameraAndroid } from "@material-ui/icons";
+import { FaGithub } from 'react-icons/fa';
 import FlipBox from "../../FlipBox/FlipBox";
 
 const useStyles = makeStyles({
@@ -64,7 +64,7 @@ function Head(props) {
           </Typography>
           <div className={styles.cardFooter}>
             {projectLink && (
-              <Button color="primary" className={classes.button} startIcon={<Link />} href={repoLink}>
+              <Button color="primary" className={classes.button} startIcon={<FaGithub />} href={repoLink}>
               GitHub Repo Link
               </Button>
             )}
