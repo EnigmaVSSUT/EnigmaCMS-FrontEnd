@@ -5,12 +5,33 @@ import Heading from "../Heading";
 import Row from "./Row.jsx";
 import AdministrationCard from "./AdministrationCard";
 import AdmRow from "./Adm_row";
+import {Typography,ButtonGroup,makeStyles,Button} from '@material-ui/core';
+import{Link,} from 'react-router-dom';
+
+const useStyles = makeStyles({
+  btn: {
+    backgroundColor: ' #30ef1f',
+    textColor:'white',
+    marginBottom: "20px",
+    '&:hover':{
+      backgroundColor: '#28a616',
+    }
+  },
+  link:{
+    textDecoration: 'none',
+    textColor:'#ffffff'
+  }
+}
+);
+
 function Team() {
   const [first, setfirst] = useState([]);
   const [second, setsecond] = useState([]);
   const [third, setthird] = useState([]);
   const [final, setfinal] = useState([]);
   const [alumnai, setalumnai] = useState([]);
+
+  const classes = useStyles();
 
   useEffect(() => {
     const d = new Date();
@@ -51,12 +72,18 @@ function Team() {
   return (
     <div>
       <Heading main="Our Team" sub="Meet our team" />
+      <Typography align='center'>
+     <ButtonGroup  className={classes.btn}>
+        <Button><Link className={classes.link} to='/team'>Current Team</Link></Button>
+        <Button><Link className={classes.link} to='/team/alumnai'>Alumnai Team</Link></Button>
+      </ButtonGroup>
+      </Typography>
       <AdmRow />
       <Row year={final} heading="Final Year" />
       <Row year={third} heading="Pre-Final Year" />
       <Row year={second} heading="Second Year" />
       <Row year={first} heading="First Year" />
-      <Row year={alumnai} heading="Alumnai" />
+    
     </div>
   );
 }
