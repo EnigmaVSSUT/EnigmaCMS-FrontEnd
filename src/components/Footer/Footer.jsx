@@ -7,24 +7,15 @@ const Footer = () => {
   
   const elements = {
     "About Us": {
-      "about us": "#",
-      "lorem ipsum": "#",
-      "lorem ipsumm": "#",
-      lorem: "#",
+      "Objective":"/objective",
+      "Our Members": "/team",
+      "Projects": "/projects",
+      "Events": "/events",
     },
 
     "Contact us": {
-      "about us": "#",
-      "lorem ipsum": "#",
-      "lorem ipsumm": "#",
-      lorem: "#",
-    },
-
-    Links: {
-      "about us": "#",
-      "lorem ipsum": "#",
-      "lorem ipsumm": "#",
-      lorem: "#",
+      "Location": "/contact",
+      "Message Us": "/contact",
     },
   };
 
