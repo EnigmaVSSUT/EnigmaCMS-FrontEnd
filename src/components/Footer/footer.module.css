@@ -1,9 +1,9 @@
 .container {
-  max-width: 850px;
+  max-width: 1170px;
   margin: auto;
 }
 .row {
-  padding: 30px 25px;
+  padding: 30px 10px;
   display: flex;
   flex-wrap: wrap;
 }

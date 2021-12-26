@@ -7,7 +7,6 @@ import Navbar from "./components/Navbar/Navbar";
 import Events from "./components/Events";
 
 const Home = lazy(() => import("./components/Home/Home"));
-const Objective = lazy(() => import("./components/Home/sections/About/About"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
 const Auth = lazy(() => import("./components/Auth/Auth"));
 const Team = lazy(() => import("./components/Team/Team"));
@@ -26,7 +25,6 @@ function App() {
               exact
             />
             <Route path="/projects" component={Project} exact />
-            <Route path="/objective" component={Objective} exact />
             <Route path="/" component={Home} exact />
             <Route path="/contact" component={Contact} exact />
             <Route path="/auth" component={Auth} exact />
