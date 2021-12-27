@@ -10,7 +10,9 @@ function NavBar() {
   const [nav_item, setnav_item] = React.useState("ml-auto nav_item");
 
   const navs = [
-    { name: "Home",path:"/"},
+
+    {name: "Home", path: "/"},
+
     { name: "Events", path: "events" },
     { name: "Projects", path: "projects" },
     { name: "Team", path: "team" },
