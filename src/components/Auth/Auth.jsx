@@ -62,17 +62,17 @@ function Auth() {
 
       <Box className={classes.mainContainer}>
         <Box display="flex" alignContent="flex-start" className={classes.movingBox}>
-          <AuthCard type="Sign up" />
+          <AuthCard type="Sign Up" />
           <Hidden xsDown>
             <FlipBox
-              frontContent={<h1>Component1 passed through props</h1>}
+              frontContent="Welcome back! Sign in for a better experience!"
               frontBackground='url("https://source.unsplash.com/1600x900/?river")'
-              rearContent={<h1>Component2 passed through props</h1>}
+              rearContent="Get Started! Join us to be a part of the journey!"
               rearBackground='url("https://source.unsplash.com/1600x900/?beautiful-design")'
               isFlipped={isFlipped}
             />
           </Hidden>
-          <AuthCard type="Sign in" />
+          <AuthCard type="Sign In" />
         </Box>
       </Box>
       {/* <Footer/> */}
