@@ -12,6 +12,7 @@ const Auth = lazy(() => import("./components/Auth/Auth"));
 const Team = lazy(() => import("./components/Team/Team"));
 const Alumin = lazy(() => import("./components/Team/Alumin"));
 const Project = lazy(() => import("./components/Project/Project"));
+const AboutUs = lazy(() => import("./components/About/AboutUs"));
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
               render={(props) => <Project {...props} />}
               exact
             />
+            <Route exact path='/aboutus' component={AboutUs} />
             <Route path="/projects" component={Project} exact />
             <Route path="/" component={Home} exact />
             <Route path="/contact" component={Contact} exact />

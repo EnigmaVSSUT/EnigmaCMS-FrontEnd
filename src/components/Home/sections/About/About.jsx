@@ -1,8 +1,32 @@
 import React from "react";
+import {Button,makeStyles} from "@material-ui/core";
 import classes from "./about.module.css";
 import about from "./../../../../assets/images/Home/about.svg";
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
+import { Link } from "react-router-dom";
+
+
+const useStyles = makeStyles({
+  btn: {
+    background: "#1fbe0e",
+    color: "white",
+    marginTop: "20px",
+    padding: "5px 10px",
+    borderRadius: "5px",
+    '&:hover': {
+      background: "#1c8a10",
+      textDecoration: "none",
+    }
+    
+  },
+  link:{
+    textDecoration: "none",
+  }
+  
+})
 
 function About() {
+  const cls = useStyles();
   return (
     <div className={classes.container}>
       <div className={classes.common}>
@@ -25,6 +49,8 @@ function About() {
           giving them enough exposure towards participating in coding contests, Hackathons and other tech events.
           The rich knowledge sharing enivironment at Enigma boosts both personal as well as proffessional development of students.
         </div>
+        <Link className={cls.link} to='/aboutus'><Button  className={cls.btn} size="small" variant="outlined" endIcon={<KeyboardArrowRightIcon fontSize='small'/>}>Know More</Button></Link>
+        
       </div>
     </div>
   );
