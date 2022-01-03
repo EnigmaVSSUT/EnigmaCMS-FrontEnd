@@ -39,7 +39,8 @@ function FlipBox(props) {
           style={{ backgroundImage: props.frontBackground}}
         >
           {/* <div className={classes.tint}></div> */}
-          <div className={style.heading}>{props.frontContent}</div>
+          <div className={style.inner}>{props.frontContent}</div>
+          <div className={style.heading}>{props.frontHeading}</div>
         </div>
 
         <div
@@ -47,7 +48,8 @@ function FlipBox(props) {
           style={{ backgroundImage: props.rearBackground }}
         >
           {/* <div className={classes.tint}></div> */}
-          <div className={style.heading}>{props.rearContent}</div>
+          <div className={style.inner}>{props.rearContent}</div>
+          <div className={style.heading}>{props.rearHeading}</div>
         </div>
       </div>
     </div>

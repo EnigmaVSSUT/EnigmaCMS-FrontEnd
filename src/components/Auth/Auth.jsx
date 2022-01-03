@@ -43,7 +43,11 @@ const useStyle = makeStyles(theme => ({
 function Auth() {
   const [isSignUp, changeSection] = useState(true);
   const [isFlipped, flipIt] = useState(false);
-
+  var heading=" ";
+  if(flipIt)
+    heading="Welcome back! Sign in for a better experience!";
+  else
+    heading="Get Started! Join us to be a part of the journey!";
   const handleChangeSection = () => {
     changeSection(!isSignUp);
   };
@@ -65,9 +69,9 @@ function Auth() {
           <AuthCard type="Sign Up" />
           <Hidden xsDown>
             <FlipBox
-              frontContent="Welcome back! Sign in for a better experience!"
+              frontHeading={"Welcome back! Sign in for a better experience!"}
               frontBackground='url("https://source.unsplash.com/1600x900/?river")'
-              rearContent="Get Started! Join us to be a part of the journey!"
+              rearHeading={"Get Started! Join us to be a part of the journey!"}
               rearBackground='url("https://source.unsplash.com/1600x900/?beautiful-design")'
               isFlipped={isFlipped}
             />

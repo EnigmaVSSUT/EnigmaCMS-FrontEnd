@@ -51,15 +51,11 @@
 .flipBoxFlip .flipBoxFront {
   transform: rotateY(-180deg);
   transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 .flipBoxFlip .flipBoxBack {
   transform: rotateY(0deg);
   transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
 }
 
 /* flipbox content */
@@ -67,4 +63,6 @@
   position: relative;
   z-index: 2;
   transform: translateZ(60px) scale(0.94);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
