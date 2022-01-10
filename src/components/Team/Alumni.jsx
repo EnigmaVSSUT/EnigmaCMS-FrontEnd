@@ -18,8 +18,8 @@ const useStyles = makeStyles({
 }
 );
 
-const Alumin = () => {
- const [alumnai, setalumnai] = useState([]);
+const Alumni = () => {
+ const [alumni, setalumni] = useState([]);
 
 const classes = useStyles();
 
@@ -31,9 +31,9 @@ const classes = useStyles();
       method: "GET",
       url: `members/member-list?year_of_passing=${year}`,
     }).then((res) => {
-      setalumnai(res.data);
+      setalumni(res.data);
     });
-    console.log("STUDENTS:",  alumnai);
+    console.log("STUDENTS:",  alumni);
   }, []);
     return (
         <div>
@@ -41,13 +41,13 @@ const classes = useStyles();
      <Typography align='center'>
      <ButtonGroup  className={classes.btn}>
         <Button><Link to='/team'>Current Team</Link></Button>
-        <Button><Link to='/team/alumnai'>Alumnai Team</Link></Button>
+        <Button><Link to='/team/alumni'>Alumni Team</Link></Button>
       </ButtonGroup>
       </Typography>
      
-      <Row year={alumnai} heading="Alumnai" />
+      <Row year={alumni} heading="Alumni" />
         </div>
     )
 }
 
-export default Alumin
+export default Alumni
