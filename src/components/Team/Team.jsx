@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   link:{
     textDecoration: 'none',
     textColor:'#ffffff'
-  }
+  },
 }
 );
 
@@ -71,9 +71,9 @@ function Team() {
   }, []);
   return (
     <div>
-      <Heading main="Our Team" sub="Meet our team" />
+      <Heading main="Our Team" sub="Teamwork is the secret that makes common people achieve uncommon results. Individuals at enigma share a common love for coding and development. Meet the passionate faces behind Enigma. " />
       <Typography align='center'>
-     <ButtonGroup  className={classes.btn}>
+      <ButtonGroup  className={classes.btn}>
         <Button><Link className={classes.link} to='/team'>Current Team</Link></Button>
         <Button><Link className={classes.link} to='/team/alumni'>Alumni Team</Link></Button>
       </ButtonGroup>

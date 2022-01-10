@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./contact.module.css";
 import TextField from "@material-ui/core/TextField";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
+import Heading from "../Heading";
 import Social from "../Social/SocialMedia";
 
 const CssTextField = withStyles({
@@ -47,21 +48,11 @@ export default function Contact() {
   const classes = useStyles();
 
   return (
-    <section className="my-5 py-5">
+    <section className="my-3 py-3">
       <div className="container">
         <div className="text-center">
-          <h1
-            styles={{
-              color: "#35ff1f",
-              fontSize: "36px",
-              fontFamily: "poppins",
-            }}
-          >
-            Get In Touch With Us
-          </h1>
-        </div>
-        <div className={styles.commonBorder}></div>
-
+          <Heading main="Get in Touch with Us" sub="Reach out to us anytime! We are here to help and answer any query you have. We look forward to hearing from you." />
+        </div>      
         <div className="row">
           <div className="col-md-7">
             <iframe

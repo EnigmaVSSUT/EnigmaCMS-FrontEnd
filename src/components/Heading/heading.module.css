@@ -7,12 +7,13 @@
   margin-bottom: 20px;
   font-weight: 500;
   color: #35ff1f;
-  font-size: 36px;
+  font-size: 40px;
   font-family: "Poppins", sans-serif;
 }
 
 .mainContent {
   font-size: 16px;
+  padding: 0 9%;
   color: #dfdfdf;
   font-family: "Poppins", sans-serif;
 }

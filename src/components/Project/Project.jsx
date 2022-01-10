@@ -1,5 +1,6 @@
 import { Typography, Box } from "@material-ui/core";
 import React from "react";
+import Heading from "../Heading";
 import SlideBox from "./components/SlideBox";
 import styles from "./Project.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -29,10 +30,7 @@ function Project(props) {
 
   return (
     <div className={styles.projectRoot}>
-      <Typography align="center" variant="h1" className={styles.heading}>
-        Projects
-      </Typography>
-      <div className={styles.hr} />
+      <Heading main="Our Projects" sub="Our team members regularly work on innovative projects from every aspect of advanced computing. Take a quick look at our recent projects. "/>      
       <Box p={2} className={styles.swiperContainer}>
         <Swiper
           onSlideChange={() => console.log("slide change")}
