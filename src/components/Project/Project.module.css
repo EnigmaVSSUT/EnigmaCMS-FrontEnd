@@ -1,85 +1,25 @@
-.projectRoot {
-  min-height: 100vh;
-  width: 100%;
-}
-.heading {
-  color: #e4e6eb !important;
-}
-.hr {
-  width: 100px;
-  background-color: #35ff1f;
-  height: 3px;
-  border-radius: 4px;
-  margin: 15px auto;
-}
-.face {
-  height: 520px;
-  width: 320px;
-  box-sizing: border-box;
-  border: solid 5px #35ff1f;
-  background-color: #17141D;
-  transform: none !important;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Head */
-.innerFront,
-.innerBack {
-  width: calc(100% - 11px);
-  height: calc(100% - 10px);
-  border: solid 5px #17141D;
-  border-radius: 15px;
-}
-.innerBack {
-  border: solid 5px #17141D ;
-}
-.projectImage {
-  width: 100%;
-  min-height: 250px;
-  max-height: 250px;
-  border-radius: 10px;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center center;
-  object-position: center center;
-}
-.rise3D {
-  position: relative;
-  z-index: 2;
-  transform: translateZ(60px) scale(0.94);
-  transform-style: preserve-3d;
-  padding: 0 10px 0 10px;
-}
-
-.rise3DFireFox {
-  position: relative;
-  z-index: 2;
-  transform: scale(0.94);
-  padding: 0 10px 0 10px;
-}
-.cardFooter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 90px;
-}
-
-/* Tail */
-.tailContent {
-  text-align: center;
-  padding: 30px 7px 15px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.longDescription {
-  margin-bottom: 40px;
-}
-.iconContainer {
-  display: flex;
-  justify-content: flex-end;
-}
+.section {
+    display: flex;
+    background-color: #100e17;
+    height: 100%;
+    width: 100%;
+  }
+  
+.container {
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+.layout {
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
