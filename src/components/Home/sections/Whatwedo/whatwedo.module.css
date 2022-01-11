@@ -50,7 +50,7 @@
 }
 
 .commonBorder {
-  background: hsl(114, 100%, 56%);
+  background: #35ff1f;
   height: 3px;
   width: 100px;
   margin: 30px auto;
