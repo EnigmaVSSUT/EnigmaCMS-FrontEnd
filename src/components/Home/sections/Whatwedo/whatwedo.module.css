@@ -45,11 +45,12 @@
 .mainContent {
   font-size: 16px;
   color: #dfdfdf;
+  padding:0 70px;
   font-family: "Poppins", sans-serif;
 }
 
 .commonBorder {
-  background: #35ff1f;
+  background: hsl(114, 100%, 56%);
   height: 3px;
   width: 100px;
   margin: 30px auto;
