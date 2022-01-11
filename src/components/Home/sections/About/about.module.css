@@ -45,7 +45,9 @@
 .content {
   min-width: 340px;
   max-width: 650px;
-  padding: 10px 20px;
+  padding: 20px 80px;
+  font-size: 1.2rem;
+  text-align: justify;
 }
 
 @media (max-width: 1360px) {
