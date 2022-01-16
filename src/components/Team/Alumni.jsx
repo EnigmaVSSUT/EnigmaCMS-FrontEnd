@@ -29,7 +29,7 @@ const classes = useStyles();
    
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year}`,
+      url: `members/member-list?year_of_passing=${year - 2}`,
     }).then((res) => {
       setalumni(res.data);
     });

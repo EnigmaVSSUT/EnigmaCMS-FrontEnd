@@ -38,32 +38,32 @@ function Team() {
     const year = d.getFullYear();
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 1}`,
+      url: `members/member-list?year_of_passing=${year}`,
     }).then((res) => {
       setfinal(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 2}`,
+      url: `members/member-list?year_of_passing=${year + 1}`,
     }).then((res) => {
       setthird(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 3}`,
+      url: `members/member-list?year_of_passing=${year + 2}`,
     }).then((res) => {
       setsecond(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 4}`,
+      url: `members/member-list?year_of_passing=${year + 3}`,
     }).then((res) => {
       console.log(res.data);
       setfirst(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year}`,
+      url: `members/member-list?year_of_passing=${year - 2}`,
     }).then((res) => {
       setalumni(res.data);
     });
