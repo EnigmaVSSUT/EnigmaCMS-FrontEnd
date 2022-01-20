@@ -11,7 +11,7 @@ const Objective = lazy(() => import("./components/Home/sections/About/About"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
 const Auth = lazy(() => import("./components/Auth/Auth"));
 const Team = lazy(() => import("./components/Team/Team"));
-const Alumin = lazy(() => import("./components/Team/Alumin"));
+const Alumni = lazy(() => import("./components/Team/Alumni"));
 const Project = lazy(() => import("./components/Project/Project"));
 const AboutUs = lazy(() => import("./components/About/AboutUs"));
 
@@ -34,7 +34,7 @@ function App() {
             <Route path="/contact" component={Contact} exact />
             <Route path="/auth" component={Auth} exact />
             <Route path="/team" component={Team} exact />
-            <Route exact path='/team/alumnai' component={Alumin}/>
+            <Route exact path='/team/alumni' component={Alumni}/>
             <Route path="/events" component={Events} exact />
           </Suspense>
         </Switch>

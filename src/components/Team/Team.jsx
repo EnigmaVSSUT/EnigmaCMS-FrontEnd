@@ -20,7 +20,7 @@ const useStyles = makeStyles({
   link:{
     textDecoration: 'none',
     textColor:'#ffffff'
-  }
+  },
 }
 );
 
@@ -29,7 +29,7 @@ function Team() {
   const [second, setsecond] = useState([]);
   const [third, setthird] = useState([]);
   const [final, setfinal] = useState([]);
-  const [alumnai, setalumnai] = useState([]);
+  const [alumni, setalumni] = useState([]);
 
   const classes = useStyles();
 
@@ -65,17 +65,17 @@ function Team() {
       method: "GET",
       url: `members/member-list?year_of_passing=${year}`,
     }).then((res) => {
-      setalumnai(res.data);
+      setalumni(res.data);
     });
-    console.log("STUDENTS:", first, second, third, final, alumnai);
+    console.log("STUDENTS:", first, second, third, final, alumni);
   }, []);
   return (
     <div>
-      <Heading main="Our Team" sub="Meet our team" />
+      <Heading main="Our Team" sub="Teamwork is the secret that makes common people achieve uncommon results. Individuals at enigma share a common love for coding and development. Meet the passionate faces behind Enigma. " />
       <Typography align='center'>
-     <ButtonGroup  className={classes.btn}>
+      <ButtonGroup  className={classes.btn}>
         <Button><Link className={classes.link} to='/team'>Current Team</Link></Button>
-        <Button><Link className={classes.link} to='/team/alumnai'>Alumnai Team</Link></Button>
+        <Button><Link className={classes.link} to='/team/alumni'>Alumni Team</Link></Button>
       </ButtonGroup>
       </Typography>
       <AdmRow />

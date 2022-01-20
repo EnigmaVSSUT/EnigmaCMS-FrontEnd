@@ -17,6 +17,7 @@
 
 .mainContent {
   font-size: 16px;
+  padding:0 65px;
   color: #dfdfdf;
   font-family: "Poppins", sans-serif;
 }
@@ -46,6 +47,7 @@
   min-width: 340px;
   max-width: 650px;
   padding: 10px 20px;
+  text-align: justify;
 }
 
 @media (max-width: 1360px) {

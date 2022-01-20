@@ -31,13 +31,13 @@ function About() {
     <div className={classes.container}>
       <div className={classes.common}>
         <h3 className={classes.heading}>About Us</h3>
-        <p className={classes.mainContent}>Who we are</p>
+        <p className={classes.mainContent}>Enigma is the official coding club of VSSUT. Enigma aims to establish a coding culture in our university by providing a proper platform to the budding tech enthusiasts. Since its inception in 2011, Enigma has taken under its shade more than 250 students and we stand amongst the most active technical clubs in VSSUT. Our aim is to provide students learn technical skills to create design and solve real-life challenges.</p>
         <div className={classes.commonBorder}></div>
       </div>
       <div className={classes.main}>
         <img className={classes.aboutImg} src={about} alt="Enigma People" />
         <div className={classes.content}>
-          Enigma is the official coding Club of VSSUT that emphasizes on developing a strong technology enriched culture
+        Enigma is the official coding Club of VSSUT that emphasizes on developing a strong technology enriched culture
           in the University where students get plethora of opportunities to experiment, learn and empower themselves by 
           exploiting technology for betterment. 
           We at Enigma believe that Technology holds infinite potential to transform the way we perceive things thus opening 

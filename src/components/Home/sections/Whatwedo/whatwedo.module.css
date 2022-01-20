@@ -38,13 +38,14 @@
   margin-bottom: 20px;
   font-weight: 500;
   color: #35ff1f;
-  font-size: 36px;
+  font-size: 32px;
   font-family: "Poppins", sans-serif;
 }
 
 .mainContent {
   font-size: 16px;
   color: #dfdfdf;
+  padding:0 70px;
   font-family: "Poppins", sans-serif;
 }
 

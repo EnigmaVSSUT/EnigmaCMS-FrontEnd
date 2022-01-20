@@ -1,49 +1,32 @@
-import { Typography, Box } from "@material-ui/core";
-import React from "react";
-import SlideBox from "./components/SlideBox";
+import React, { useState, useEffect } from "react";
+import { Axios } from "../../helpers/AxiosInstance"; 
 import styles from "./Project.module.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
-import "./swiper.css";
+import Card from "./Card";
+import Heading from "../Heading";
 
-import projects from "./../../_test-data/projects";
+function Project(){
 
-function Project(props) {
-  const { cardId } = props.match.params;
-
-  const settings = {
-    loop: true,
-    slidesPerView: "auto",
-    spaceBetween: 10,
-  };
-
-  const slides = [];
-  const len = projects.length;
-  for (let i = 0; i < len; i++) {
-    slides.push(
-      <SwiperSlide key={`slide-${i}`}>
-        <SlideBox project={projects[i]} />
-      </SwiperSlide>
-    );
-  }
+  const [projects, setprojects] = useState([]);
+  useEffect(() => {
+    Axios({
+      method: "GET",
+      url: "projects/list",
+    }).then((res) => {
+      setprojects(res.data);
+    });
+  }, []);
 
   return (
-    <div className={styles.projectRoot}>
-      <Typography align="center" variant="h1" className={styles.heading}>
-        Projects
-      </Typography>
-      <div className={styles.hr} />
-      <Box p={2} className={styles.swiperContainer}>
-        <Swiper
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={swiper => cardId && swiper.slideToLoop(parseInt(cardId), 300)}
-          {...settings}
-        >
-          {slides}
-        </Swiper>
-      </Box>
-    </div>
+    <main className={styles.section}>
+      <section className={styles.container}>
+      <Heading main="Our Projects" sub="Our team members regularly work on innovative projects from every aspect of advanced computing. Take a quick look at our recent projects. "/>      
+        <div className={styles.layout}>
+        {projects && projects.map((project) => <Card project={project} />)}
+        </div>
+      </section>
+    </main>
   );
-}
+};
+
 
 export default Project;

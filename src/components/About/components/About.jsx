@@ -3,9 +3,11 @@ import {
   Typography,
   Container,
   Grid,
+  Card,
   Paper,
   Divider,
 } from "@material-ui/core";
+import { CardContent } from "@mui/material";
 import React from "react";
 import about from "./../../../assets/images/Home/about.jpg";
 
@@ -14,11 +16,17 @@ const useStyles = makeStyles({
     objectFit: "cover",
     maxWidth: "100%",
   },
-  abtPaper: {
-    padding: "20px",
-    textAlign: "justify",
-    borderColor: "#35ff1f",
+  card:{
+    padding:'10px',
+    // border:'1px solid red',
+    margin:'10px 10px',
+    backgroundColor:'#100e17',
+    boxShadow: "5px 5px 5px #888888",
   },
+  content:{
+    color:'#fff',
+    textAlign:'justify',
+  }
 });
 const About = () => {
   const classes = useStyles();
@@ -36,8 +44,9 @@ const About = () => {
             <img className={classes.abtImg} src={about} />
           </Grid>
           <Grid item sm={6} xs={12}>
-            <Paper elevation={3} className={classes.abtPaper}>
-              <Typography variant="body1">
+            <Card className={classes.card}>
+              <CardContent >
+              <Typography variant="body1" className={classes.content}>
                 In today's rapidly changing environment programming skills are
                 essential tools that can be utilized and incorporated into
                 various fields and domains. Hence, it becomes absolutely
@@ -49,7 +58,7 @@ const About = () => {
               </Typography>
               <Divider />
               <Typography variant="h6">Our Vission</Typography>
-              <Typography variant="body1">
+              <Typography variant="body1" className={classes.content}>
                 Enigma is for students who are curious problem solvers and
                 responsible team players. Enigma conducts regular informative
                 sessions, events, and workshops to enable attendees to upskill
@@ -63,7 +72,8 @@ const About = () => {
                 daily routine and we provide wide scope to everyone willing to
                 participate in coding contests across the globe.
               </Typography>
-            </Paper>
+              </CardContent>
+            </Card>
           </Grid>
         </Grid>
       </Paper>

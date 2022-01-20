@@ -9,13 +9,13 @@ const useStyle = makeStyles(theme => ({
     minHeight: "50vh",
     minWidth: "calc(50% - 20px)",
     [theme.breakpoints.down('xs')]:{
-      minWidth: "100%",
+      minWidth: "94%",
       // transform: 'translateX(calc(-30px))'
     },
     margin:10,
-    padding:'10vh 0',
+    padding:'14vh 0 8vh 0',
     overflow:'hidden'
   },
 }));
 
-export default useStyle
+export default useStyle;

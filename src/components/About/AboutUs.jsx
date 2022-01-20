@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, Typography } from '@material-ui/core'
+import { Container, makeStyles, Typography } from '@material-ui/core'
 import About from './components/About'
 import Achievements from './components/Achievements'
 import Colab from './components/Colab'
@@ -18,6 +18,7 @@ const useStyles = makeStyles({
 const AboutUs = () => {
     const classes = useStyles();
     return (
+        <Container>
         <div className={classes.root}>
             <Typography variant="h3"  className={classes.heading}>About Us</Typography>
             <About />
@@ -26,6 +27,7 @@ const AboutUs = () => {
             <Typography variant="h4"  className={classes.heading}>Achievements</Typography>
             <Achievements />
         </div>
+        </Container>
     )
 }
 

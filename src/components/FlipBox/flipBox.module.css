@@ -4,6 +4,13 @@
   background-color: transparent !important;
 }
 
+.heading{
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 11% 25% ;
+}
+
 .flipBox {
   transform-style: preserve-3d;
   perspective: 1000px;
@@ -26,6 +33,7 @@
 }
 
 .flipBoxFront {
+  color: #ededee;
   transform: rotateY(0deg);
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
@@ -33,7 +41,7 @@
 }
 
 .flipBoxBack {
-  color: #fff;
+  color: #ededee;
   transform: rotateY(180deg);
   transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
@@ -44,6 +52,7 @@
   transform: rotateY(-180deg);
   transform-style: preserve-3d;
 }
+
 .flipBoxFlip .flipBoxBack {
   transform: rotateY(0deg);
   transform-style: preserve-3d;

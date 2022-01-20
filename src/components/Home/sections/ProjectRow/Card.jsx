@@ -1,14 +1,14 @@
 import React from "react";
 import classes from "./Card.module.css";
 
-const Card = (props) => {
+const Card = ({project}) => {
   return (
     <article className={classes.card}>
       <header className={classes.header}>
-        <h2>{props.title}</h2>
+        <h2>{project.name}</h2>
       </header>
 
-      <div className={classes.author}>
+      {/*<div className={classes.author}>
         <a className={classes.avatar} href="#">
           <img src={props.logo} />
         </a>
@@ -21,7 +21,11 @@ const Card = (props) => {
           <div className={classes.authorNamePrefix}>Author</div>
           Durgesh N. Birmiwal
         </div>
-      </div>
+        </div>*/}
+
+        <div className={classes.authorName}>
+          {project.description}
+        </div>
     </article>
   );
 };
