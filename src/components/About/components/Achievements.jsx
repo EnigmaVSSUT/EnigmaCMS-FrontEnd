@@ -31,9 +31,15 @@ const useStyles = makeStyles({
 
 const Achievements = () => {
  const classes = useStyles();
- const [open, setOpen] = useState(true);
+ const [open, setOpen] = useState({
+    id1:true,
+    id2:true,
+    id3:true,
+    id4:true,
+    id5:true,
+ });
   const achievements = [
-    {year: 'Achievement 2020',
+    {id:1,year: 'Achievement 2020',
     list:[
       {title:'Credit Suisse GCC global ranks 6, 9, 22, 24, 49. '},
       {title:'ICPC regionals 2020.'},
@@ -42,7 +48,7 @@ const Achievements = () => {
       {title:'HWI, 11 students under 300 nationwide out of 120k participants.'},
     ]
   },
-  {year: 'Achievement 2019',
+  {id:2,year: 'Achievement 2019',
     list:[
       {title:'Runners up in Smart India Hackathon 2019, by Multiple Finalists.'},
       {title:'Multiple Qualifications in ACM-ICPC 2019.'},
@@ -51,7 +57,7 @@ const Achievements = () => {
       {title:'Third and Fifth positions in CodeBattles, organized by HackerEarth.'},
     ]
   },
-  {
+  {id:3,
     year:'Achievement 2018',
     list:[
       {title:'International finalist MoveHack: A global mobility Hackathon organized by NITI Aayog and the Government of India.'},
@@ -60,14 +66,14 @@ const Achievements = () => {
       {title:'Runners up Hack in the North 2.0 IIIT Allahabad'},
     ]
   },
-  {
+  { id:4,
     year:'Achievement 2017',
     list:[
       {title:'CodeChamp Runners up, conducted by Infosys Bhubaneswar.'},
       {title:'Fourth position in Hack in the North conducted by IIIT Allahabad.'},
     ]
   },
-  {
+  { id:5,
     year:'Past Achievements',
     list:[
       {title:'Runners Up in Uber Scale It.'},
@@ -95,10 +101,10 @@ const Achievements = () => {
         {achievements.map((item)=>{
         
           const handleClick = () => {
-            setOpen(!open);
+            setOpen({...open,[item.id]:!open[item.id]});
           };
           return(  
-            <Grid item >
+            <Grid item key={item.id}>
                   <List
                   sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
                   component="nav"
@@ -107,9 +113,9 @@ const Achievements = () => {
                   <ListItemButton onClick={handleClick}>
              
                 <ListItemText primary={item.year} />
-                {open ? <ExpandLess /> : <ExpandMore />}
+                {open[item.id] ? <ExpandLess /> : <ExpandMore />}
               </ListItemButton>
-              <Collapse in={open} timeout="auto" unmountOnExit>
+              <Collapse in={open[item.id]} timeout="auto" unmountOnExit>
                 {item.list.map((subitem)=>(
                       <List component="div" disablePadding>
                       <ListItemButton sx={{ pl: 4 }}>

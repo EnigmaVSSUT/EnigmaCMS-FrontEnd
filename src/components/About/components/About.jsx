@@ -26,6 +26,9 @@ const useStyles = makeStyles({
   content:{
     color:'#fff',
     textAlign:'justify',
+  },
+  vision:{
+    color:'#35ff1f',
   }
 });
 const About = () => {
@@ -57,7 +60,7 @@ const About = () => {
                 technical clubs in VSSUT.
               </Typography>
               <Divider />
-              <Typography variant="h6">Our Vission</Typography>
+              <Typography className={classes.vision} variant="h6">Our Vission</Typography>
               <Typography variant="body1" className={classes.content}>
                 Enigma is for students who are curious problem solvers and
                 responsible team players. Enigma conducts regular informative

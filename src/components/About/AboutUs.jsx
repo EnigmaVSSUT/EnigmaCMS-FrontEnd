@@ -9,7 +9,7 @@ const useStyles = makeStyles({
         margin: '60px auto 20px'
     },
     heading:{
-        marginBottom: '20px',
+        margin: '20px',
         color:'#35ff1f',
         
     }
