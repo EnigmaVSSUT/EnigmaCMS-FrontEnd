@@ -1,0 +1,61 @@
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
+import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import gdsc from '../../../assets/images/colab/1.png'
+import gfg from '../../../assets/images/colab/2.png'
+import he from '../../../assets/images/colab/4.png'
+import cc from '../../../assets/images/colab/3.png'
+const useStyles = makeStyles({
+    grid:{
+        // border:'1px solid red',
+        justifyContent:'space-around',
+        marginBottom:'20px',
+    }
+})
+const Colab = () => {
+    const classes = useStyles();
+    const community = [
+        {title:'GDSC', desc:'GDSC is a global network of over 1,000,000 students and professionals who are committed to improving the lives of underrepresented groups in the world.', img:gdsc},
+        {title:'HackerEarth', desc:'The HackerEarth Campus Ambassador Program is a platform for students who are passionate about programming, to start and run an active programming club in their college. A HackerEarth Campus Ambassador is a leader with a keen interest in starting and building a programming community.', img:he},
+        {title:'CodeChef', desc:'CodeChef VSSUT is an initiative for the geeks who share a common love for Computational Problem Solving. It is a non-commercial organization with a goal to provide a platform for programmers & developers everywhere to meet, compete and have fun. We host exciting contests frequently and post content to sharpen their coding skills.', img:cc},
+        {title:'Geek for Geeks', desc:'GDSC is a global network of over 1,000,000 students and professionals who are committed to improving the lives of underrepresented groups in the world.', img:gfg},
+
+    ]
+
+    return (
+      
+        <Grid className={classes.grid} container spacing={3}>
+            {community.map((item) => (
+                <Grid item>
+                  <Card sx={{ maxWidth: 345 }} >
+                       <CardActionArea>
+                 <CardMedia
+                 component="img"
+                 height="140"
+                 image={item.img}
+                 alt="logo"
+               />
+               <CardContent>
+                 <Typography gutterBottom variant="h5" component="div">
+                  {item.title}
+                 </Typography>
+                 <Typography variant="body2" color="text.secondary">
+                  {item.desc}
+                 </Typography>
+               </CardContent>
+               </CardActionArea>
+               </Card>
+               </Grid>
+            ))}
+         </Grid>
+       
+     
+    )
+}
+
+export default Colab

@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./whatwedo.module.css";
-import { FaMobileAlt, FaLaptopCode, FaVrCardboard, FaGlobe, FaRegImage, FaBrain } from "react-icons/fa";
+import { FaMobileAlt,FaGamepad, FaLaptopCode, FaVrCardboard, FaGlobe, FaRegImage, FaBrain } from "react-icons/fa";
 
 export default function Whatwedo() {
   const [header] = React.useState({
@@ -43,6 +43,12 @@ export default function Whatwedo() {
       id: 6,
       icon: <FaRegImage style={{ fontSize: 40 }} className={classes.commonIcons} />,
       heading: "UI/UX",
+      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+    },
+    {
+      id: 7,
+      icon: <FaGamepad style={{ fontSize: 40 }} className={classes.commonIcons} />,
+      heading: "Game Development",
       text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
     },
   ]);
