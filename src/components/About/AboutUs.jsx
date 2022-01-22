@@ -22,7 +22,7 @@ const AboutUs = () => {
         <div className={classes.root}>
             <Typography variant="h3"  className={classes.heading}>About Us</Typography>
             <About />
-            <Typography variant="h4"  className={classes.heading}>Colaborations</Typography>
+            <Typography variant="h4"  className={classes.heading}>Collaborations</Typography>
             <Colab />
             <Typography variant="h4"  className={classes.heading}>Achievements</Typography>
             <Achievements />

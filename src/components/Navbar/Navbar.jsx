@@ -17,7 +17,7 @@ function NavBar() {
     { name: "Projects", path: "projects" },
     { name: "Team", path: "team" },
     { name: "Contact Us", path: "contact" },
-    { name: "Login", path: "auth" },
+    // { name: "Login", path: "auth" },
   ];
 
   const listenscroll = () => {
