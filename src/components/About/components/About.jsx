@@ -9,7 +9,7 @@ import {
 } from "@material-ui/core";
 import { CardContent } from "@mui/material";
 import React from "react";
-import about from "./../../../assets/images/Home/about.jpg";
+import about from "./../../../assets/images/Home/aboutUs.png";
 
 const useStyles = makeStyles({
   abtImg: {
@@ -20,8 +20,8 @@ const useStyles = makeStyles({
     padding:'10px',
     // border:'1px solid red',
     margin:'10px 10px',
-    backgroundColor:'#100e17',
-    boxShadow: "5px 5px 5px #888888",
+    backgroundColor: "#17141d",
+    // boxShadow: "5px 5px 5px #888888",
   },
   content:{
     color:'#fff',
@@ -35,7 +35,7 @@ const About = () => {
   const classes = useStyles();
   return (
     <Container>
-      <Paper sx={{ padding:'10px', flexGrow: 1, margin: "auto" }}>
+     
         <Grid
           container
           direction="row"
@@ -59,29 +59,36 @@ const About = () => {
                 more than 250 students and we stand amongst the most active
                 technical clubs in VSSUT.
               </Typography>
-              <Divider />
+              </CardContent>
+            </Card>
+            <Card className={classes.card}>
+              <CardContent >
               <Typography className={classes.vision} variant="h6">Our Vission</Typography>
-              <Typography variant="body1" className={classes.content}>
-                Enigma is for students who are curious problem solvers and
-                responsible team players. Enigma conducts regular informative
-                sessions, events, and workshops to enable attendees to upskill
-                themselves. Our members are currently working on innovative
-                projects from every aspect of advanced computing, and have
-                worked with several corporations so as to educate its
-                participants with modern-day advancements and innovations in
-                technology. We also have a wide and supportive alumni base who
-                are extremely well placed in tech giants around the globe.
-                Participating in programming challenges is a part of our club's
-                daily routine and we provide wide scope to everyone willing to
-                participate in coding contests across the globe.
-              </Typography>
+                <Typography variant="body1" className={classes.content}>
+                  Enigma is for students who are curious problem solvers and
+                  responsible team players. Enigma conducts regular informative
+                  sessions, events, and workshops to enable attendees to upskill
+                  themselves. Our members are currently working on innovative
+                  projects from every aspect of advanced computing, and have
+                  worked with several corporations so as to educate its
+                  participants with modern-day advancements and innovations in
+                  technology. We also have a wide and supportive alumni base who
+                  are extremely well placed in tech giants around the globe.
+                  Participating in programming challenges is a part of our club's
+                  daily routine and we provide wide scope to everyone willing to
+                  participate in coding contests across the globe.
+                </Typography>
               </CardContent>
             </Card>
           </Grid>
         </Grid>
-      </Paper>
+      
     </Container>
   );
 };
 
 export default About;
+
+
+
+{/*  */}
