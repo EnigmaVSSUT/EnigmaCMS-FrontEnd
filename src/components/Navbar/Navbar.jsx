@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 import Logo from "../../assets/logos/logo.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -79,7 +80,9 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className={nav_item}>
             {navs.map((nav) => (
-              <Nav.Link href={`${nav.path}`}>{nav.name}</Nav.Link>
+              <Link to={`${nav.path}`} key={`nav-links-${nav.name}`}>
+                {nav.name}
+              </Link>
             ))}
           </Nav>
         </Navbar.Collapse>

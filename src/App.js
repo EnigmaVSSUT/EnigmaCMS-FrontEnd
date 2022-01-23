@@ -19,8 +19,8 @@ const AboutUs = lazy(() => import("./components/About/AboutUs"));
 function App() {
   return (
     <>
-      <Navbar />
       <BrowserRouter>
+        <Navbar />
         <Switch>
           <Suspense fallback={<Preloader />}>
             <Route
