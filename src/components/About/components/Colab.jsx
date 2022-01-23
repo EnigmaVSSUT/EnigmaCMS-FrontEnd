@@ -15,7 +15,16 @@ const useStyles = makeStyles({
         // border:'1px solid red',
         justifyContent:'space-around',
         marginBottom:'20px',
+    },
+    desc:{
+        color:'#fff',
+    },
+    title:{
+        color: "#35ff1f",
+        letterSpacing: "3px",
+        fontSize: '25px'  
     }
+
 })
 const Colab = () => {
     const classes = useStyles();
@@ -32,7 +41,7 @@ const Colab = () => {
         <Grid className={classes.grid} container spacing={3}>
             {community.map((item) => (
                 <Grid item>
-                  <Card sx={{ maxWidth: 345 }} >
+                  <Card sx={{ maxWidth: 345,backgroundColor: "#17141d" }} elevation={3} >
                        <CardActionArea>
                  <CardMedia
                  component="img"
@@ -41,10 +50,10 @@ const Colab = () => {
                  alt="logo"
                />
                <CardContent>
-                 <Typography gutterBottom variant="h5" component="div">
+                 <Typography className={classes.title} gutterBottom variant="" component="div">
                   {item.title}
                  </Typography>
-                 <Typography variant="body2" color="text.secondary">
+                 <Typography  className={classes.desc} variant="body2" >
                   {item.desc}
                  </Typography>
                </CardContent>
