@@ -8,6 +8,7 @@ const Footer = () => {
   const elements = {
     "About Us": {
       "Objective": "/objective",
+      "Our Chapters":"/colab",
       "Our Members": "/team",
       "Projects": "/projects",
       "Events": "/events",

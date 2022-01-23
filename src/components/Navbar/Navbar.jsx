@@ -11,7 +11,8 @@ function NavBar() {
 
   const navs = [
 
-    {name: "Home", path: "/"},
+    { name: "Home", path: "/"},
+    { name: "About Us", path:"aboutus"},
     { name: "Events", path: "events" },
     { name: "Projects", path: "projects" },
     { name: "Team", path: "team" },

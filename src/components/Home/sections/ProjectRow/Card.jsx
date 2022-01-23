@@ -6,7 +6,9 @@ const Card = ({project}) => {
     <article className={classes.card}>
       <header className={classes.header}>
         <h2>{project.name}</h2>
+
       </header>
+      <img src={project.image} alt="" />
 
       {/*<div className={classes.author}>
         <a className={classes.avatar} href="#">
