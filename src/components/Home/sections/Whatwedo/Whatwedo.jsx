@@ -1,5 +1,7 @@
 import React from "react";
+import { Container } from "@material-ui/core";
 import classes from "./whatwedo.module.css";
+import  {GiCyberEye} from "react-icons/gi";
 import { FaMobileAlt,FaGamepad, FaLaptopCode, FaVrCardboard, FaGlobe, FaRegImage, FaBrain } from "react-icons/fa";
 
 export default function Whatwedo() {
@@ -13,49 +15,57 @@ export default function Whatwedo() {
       id: 1,
       icon: <FaGlobe style={{ fontSize: 40 }} className={classes.commonIcons} />,
       heading: "Web Development",
-      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+      text: "Web development refers to the creation, and maintenance of websites. It includes aspects such as web design, web publishing, web programming, and database management. It is the creation of an application that works over the internet i.e. websites.",
     },
     {
       id: 2,
       icon: <FaLaptopCode style={{ fontSize: 40 }} className={classes.commonIcons} />,
       heading: "Competitive Programming",
-      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+      text: "Competitive programming is solving well-defined problems by writing computer programs under specified limits and conditions as per the problem.",
     },
     {
       id: 3,
       icon: <FaBrain style={{ fontSize: 40 }} className={classes.commonIcons} />,
       heading: "AI/ML",
-      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+      text: "Artificial intelligence (AI) is the intelligence demonstrated by machines, as opposed to natural intelligence displayed by animals including humans and Machine learning (ML) is the study of computer algorithms that can improve automatically through experience and by the use of data.",
     },
     {
       id: 4,
       icon: <FaMobileAlt style={{ fontSize: 40 }} className={classes.commonIcons} />,
       heading: "App Devlopment",
-      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+      text: "App Development is the process in which developers create an application to be used on smartphones, tablets and other mobile devices.",
     },
     {
       id: 5,
       icon: <FaVrCardboard style={{ fontSize: 40 }} className={classes.commonIcons} />,
       heading: "AR/VR",
-      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+      text: "Augmented Reality/Virtual Reality is a method by which we can alter our real world by adding some digital elements to it. ",
     },
     {
       id: 6,
       icon: <FaRegImage style={{ fontSize: 40 }} className={classes.commonIcons} />,
       heading: "UI/UX",
-      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+      text: "The User Interface or UI is the graphical layout of an application consisting of buttons,images , text and anything that the user interacts with and UX or User Experience is the experience of the user while dealing with the UI elements.",
     },
     {
       id: 7,
       icon: <FaGamepad style={{ fontSize: 40 }} className={classes.commonIcons} />,
       heading: "Game Development",
-      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+      text: "Game Development is the overall process of creating a video game by using components such as Story, Characters, Audio, Art, Lighting, etc.",
+    },
+    {
+      id: 8,
+      icon: <GiCyberEye style={{ fontSize: 40 }} className={classes.commonIcons} />,
+      heading: "Cyber Security",
+      text: "Cyber Security is the practice of protecting computers, mobile devices, Servers, electronic Systems, networks, and data from malicious attacks.",
     },
   ]);
   return (
     <div className={classes.container}>
       <div className={classes.common}>
+        <Container>
         <h3 className={classes.heading}>{header.mainHeader}</h3>
+        </Container>
         <p className={classes.mainContent}>{header.mainText}</p>
         <h1 className={classes.mainHeader}>{header.subHeading}</h1>
         <p className={classes.mainContent}>{header.text}</p>

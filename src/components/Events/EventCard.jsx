@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./events.module.css";
+
 const EventCard = ({ onRegisterClick, event }) => {
   return (
     <>
@@ -16,9 +18,12 @@ const EventCard = ({ onRegisterClick, event }) => {
               {event.start_date}
             </h3>
             <p className={classes.content}>{event.description}</p>
-            <button onClick={onRegisterClick} className={classes.button}>
-              Register Now
-            </button>
+           <Link to={`events/${event.id}`}>
+              <button  className={classes.button}>
+                   View More
+               </button>
+            </Link>
+            
           </div>
         </div>
       )}
