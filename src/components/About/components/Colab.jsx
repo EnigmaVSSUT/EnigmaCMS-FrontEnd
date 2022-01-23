@@ -23,7 +23,7 @@ const Colab = () => {
         {title:'GDSC', desc:'GDSC is a global network of over 1,000,000 students and professionals who are committed to improving the lives of underrepresented groups in the world.', img:gdsc},
         {title:'HackerEarth', desc:'The HackerEarth Campus Ambassador Program is a platform for students who are passionate about programming, to start and run an active programming club in their college. A HackerEarth Campus Ambassador is a leader with a keen interest in starting and building a programming community.', img:he},
         {title:'CodeChef', desc:'CodeChef VSSUT is an initiative for the geeks who share a common love for Computational Problem Solving. It is a non-commercial organization with a goal to provide a platform for programmers & developers everywhere to meet, compete and have fun. We host exciting contests frequently and post content to sharpen their coding skills.', img:cc},
-        {title:'Geek for Geeks', desc:'GDSC is a global network of over 1,000,000 students and professionals who are committed to improving the lives of underrepresented groups in the world.', img:gfg},
+        {title:'Geeks for Geeks', desc:'GeeksForGeeks has started an official student chapter in VSSUT. It hosts many programming contests, hackathons and events for the university student helping students hone their coding skills and prepare them for the placement scenario. Students excelling in these contests are rewarded with various GeeksForGeeks goodies and voucher.', img:gfg},
 
     ]
 
