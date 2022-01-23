@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Preloader from "./components/Preloader/Preloader";
 import Navbar from "./components/Navbar/Navbar";
 import Events from "./components/Events";
+import EventDetails from "./components/Events/EventDetails";
 
 const Home = lazy(() => import("./components/Home/Home"));
 const Objective = lazy(() => import("./components/Home/sections/About/About"));
@@ -36,6 +37,7 @@ function App() {
             <Route path="/team" component={Team} exact />
             <Route exact path='/team/alumni' component={Alumni}/>
             <Route path="/events" component={Events} exact />
+            <Route path="/events/:id" component={EventDetails} exact />
           </Suspense>
         </Switch>
       </BrowserRouter>
