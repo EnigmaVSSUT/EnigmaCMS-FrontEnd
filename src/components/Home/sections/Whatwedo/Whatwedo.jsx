@@ -1,5 +1,7 @@
 import React from "react";
+import { Container } from "@material-ui/core";
 import classes from "./whatwedo.module.css";
+import  {GiCyberEye} from "react-icons/gi";
 import { FaMobileAlt,FaGamepad, FaLaptopCode, FaVrCardboard, FaGlobe, FaRegImage, FaBrain } from "react-icons/fa";
 
 export default function Whatwedo() {
@@ -51,11 +53,19 @@ export default function Whatwedo() {
       heading: "Game Development",
       text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
     },
+    {
+      id: 8,
+      icon: <GiCyberEye style={{ fontSize: 40 }} className={classes.commonIcons} />,
+      heading: "Cyber Security",
+      text: "Lorem Ipsum is simply dummy text of the printing typesetting industry. simply dummy",
+    },
   ]);
   return (
     <div className={classes.container}>
       <div className={classes.common}>
+        <Container>
         <h3 className={classes.heading}>{header.mainHeader}</h3>
+        </Container>
         <p className={classes.mainContent}>{header.mainText}</p>
         <h1 className={classes.mainHeader}>{header.subHeading}</h1>
         <p className={classes.mainContent}>{header.text}</p>
