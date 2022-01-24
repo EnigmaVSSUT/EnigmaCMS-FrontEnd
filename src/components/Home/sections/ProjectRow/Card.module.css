@@ -1,5 +1,5 @@
 .card {
-  height: 400px;
+  height: 390px;
   width: 100%;
   min-width: 250px;
   padding: 1.5rem;
@@ -29,14 +29,14 @@
 }
 
 .header {
-  margin-bottom: auto;
+  margin-bottom: 6;
 }
 
 .header h2 {
   font-size: 20px;
-  margin: 0.25rem 0 auto;
+  margin: 0.25rem 0 1rem;
   text-decoration: none;
-  color: white;
+  color: rgb(148, 139, 139);
   border: 0;
   display: inline-block;
   cursor: pointer;
@@ -50,9 +50,14 @@
   -webkit-background-clip: text;
   background-clip: text;
 }
-
+.projectimg{
+  margin: 5;
+  height:140px;
+  width:100%;
+  border-radius: 8%;
+}
 .author {
-  margin: 3rem 0 0;
+  margin: 4rem 0 0;
   display: grid;
   grid-template-columns: 75px 1fr;
   align-items: center;
@@ -78,6 +83,8 @@
 
 .authorName {
   grid-area: auto;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   box-sizing: border-box;
   color: rgb(233, 230, 230);
   cursor: pointer;

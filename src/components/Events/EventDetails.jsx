@@ -115,7 +115,7 @@ const EventDetails = () => {
             </CardContent>
           </Card>
           <div className={cls.buttons}>
-            <button className={classes.button}>Register</button>
+            <button className={classes.button}>Registrations Closed</button>
             <Link to="/events">
               <button className={classes.button}>Go back</button>
             </Link>
