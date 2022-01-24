@@ -27,7 +27,7 @@ const Footer = () => {
           {Object.keys(elements).map(title => {
             return <Column key={title} title={title} links={elements[title]} />;
           })}
-          <div>
+          <div className={classes.social}>
             <h4 className={classes.heading}>follow us</h4>
             <Social />
           </div>

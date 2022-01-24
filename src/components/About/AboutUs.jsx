@@ -9,9 +9,8 @@ const useStyles = makeStyles({
         margin: '60px auto 20px'
     },
     heading:{
-        margin: '20px',
+        margin: '10px',
         color:'#35ff1f',
-        
     }
 })
 
@@ -22,7 +21,7 @@ const AboutUs = () => {
         <div className={classes.root}>
             <Typography variant="h3"  className={classes.heading}>About Us</Typography>
             <About />
-            <Typography variant="h4"  className={classes.heading}>Collaborations</Typography>
+            {/* <Typography variant="h4"  className={classes.heading}>Collaborations</Typography> */}
             <Colab />
             <Typography variant="h4"  className={classes.heading}>Achievements</Typography>
             <Achievements />
