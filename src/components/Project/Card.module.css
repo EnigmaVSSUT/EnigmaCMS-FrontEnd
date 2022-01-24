@@ -96,3 +96,29 @@
   transform: translateY(0.25rem);
 
 }
+.buttonDiv{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.button {
+  border-radius: 10px;
+  background-color: #100e17;
+  border: 2px solid #35ff1f;
+  color: white;
+  padding: 3px 20px;
+  transition-duration: 0.4s;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  max-width: 300px;
+}
+.button:hover {
+  background-color: #35ff1f;
+  color: #100e17;
+}
