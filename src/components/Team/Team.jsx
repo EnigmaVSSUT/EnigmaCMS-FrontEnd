@@ -10,18 +10,21 @@ import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   btn: {
+
     backgroundColor: " #30ef1f",
     textColor: "white",
     marginBottom: "20px",
     "&:hover": {
       backgroundColor: "#28a616",
     },
+
   },
   link: {
-    textDecoration: "none",
-    textColor: "#ffffff",
+    
   },
+
 });
+
 
 function Team() {
   const [first, setfirst] = useState([]);
@@ -37,32 +40,32 @@ function Team() {
     const year = d.getFullYear();
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 1}`,
+      url: `members/member-list?year_of_passing=${year }`,
     }).then((res) => {
       setfinal(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 2}`,
+      url: `members/member-list?year_of_passing=${year + 1}`,
     }).then((res) => {
       setthird(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 3}`,
+      url: `members/member-list?year_of_passing=${year + 2}`,
     }).then((res) => {
       setsecond(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 4}`,
+      url: `members/member-list?year_of_passing=${year +3}`,
     }).then((res) => {
       console.log(res.data);
       setfirst(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year}`,
+      url: `members/member-list?year_of_passing=${year -2 }`,
     }).then((res) => {
       setalumni(res.data);
     });
@@ -70,6 +73,7 @@ function Team() {
   }, []);
   return (
     <div>
+
       <Heading
         main="Our Team"
         sub="Teamwork is the secret that makes common people achieve uncommon results. Individuals at enigma share a common love for coding and development. Meet the passionate faces behind Enigma. "
@@ -80,7 +84,7 @@ function Team() {
             <Link
               className={classes.link}
               to="/team"
-              style={{ color: "black" }}
+              style={{ color: "black", textDecoration: "none" }}
             >
               Current Team
             </Link>
@@ -89,12 +93,13 @@ function Team() {
             <Link
               className={classes.link}
               to="/team/alumni"
-              style={{ color: "black" }}
+              style={{ color: "black", textDecoration: "none" }}
             >
               Alumni Team
             </Link>
           </Button>
         </ButtonGroup>
+
       </Typography>
       <AdmRow />
       <Row year={final} heading="Final Year" />

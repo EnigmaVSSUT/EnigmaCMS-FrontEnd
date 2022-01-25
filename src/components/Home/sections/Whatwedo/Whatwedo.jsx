@@ -1,8 +1,9 @@
 import React from "react";
-import { Container } from "@material-ui/core";
+
 import classes from "./whatwedo.module.css";
 import  {GiCyberEye} from "react-icons/gi";
 import { FaMobileAlt,FaGamepad, FaLaptopCode, FaVrCardboard, FaGlobe, FaRegImage, FaBrain } from "react-icons/fa";
+import { Container } from "@mui/material";
 
 export default function Whatwedo() {
   const [header] = React.useState({
@@ -65,10 +66,10 @@ export default function Whatwedo() {
       <div className={classes.common}>
         <Container>
         <h3 className={classes.heading}>{header.mainHeader}</h3>
-        </Container>
         <p className={classes.mainContent}>{header.mainText}</p>
         <h1 className={classes.mainHeader}>{header.subHeading}</h1>
         <p className={classes.mainContent}>{header.text}</p>
+        </Container>
         <div className={classes.commonBorder}></div>
       </div>
 
