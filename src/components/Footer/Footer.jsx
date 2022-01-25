@@ -3,6 +3,8 @@ import Column from "./components/Columns";
 import classes from "./footer.module.css";
 import Social from "../Social/SocialMedia";
 const Footer = () => {
+  const url1 = "tel:+91 7978924503"
+  const url2 = "mailto:enigma.vssut@gmail.com"
   const elements = {
     "About Us": {
       "Objective": "/objective",
@@ -13,8 +15,8 @@ const Footer = () => {
     },
 
     "Contact us": {
-      "+91 7978924503":"#",
-      "enigma.vssut@gmail.com":"#",
+      "+91 7978924503":`${url1}`,
+      "enigma.vssut@gmail.com":`${url2}`,
       "Location": "/contact",
       "Message Us": "/contact",
     },
