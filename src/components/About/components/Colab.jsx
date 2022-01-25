@@ -15,9 +15,15 @@ const useStyles = makeStyles({
         // border:'1px solid red',
         justifyContent:'space-around',
         marginBottom:'20px',
+        marginTop:'15px',
+
     },
     desc:{
         color:'#fff',
+    },
+    heading:{
+        marginTop: '30px',
+        color:'#35ff1f', 
     },
     title:{
         color: "#35ff1f",
@@ -37,7 +43,8 @@ const Colab = () => {
     ]
 
     return (
-      
+        <>
+        <Typography variant="h4" align="center" className={classes.heading}>Collaborations</Typography>
         <Grid className={classes.grid} container spacing={3}>
             {community.map((item) => (
                 <Grid item>
@@ -62,6 +69,8 @@ const Colab = () => {
                </Grid>
             ))}
          </Grid>
+        </>
+        
        
      
     )

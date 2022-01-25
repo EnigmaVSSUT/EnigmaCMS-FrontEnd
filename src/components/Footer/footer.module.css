@@ -3,7 +3,8 @@
   margin: auto;
 }
 .row {
-  padding: 30px 25px;
+  padding: 30px 25px 0 50px;
+  margin:10;
   display: flex;
   flex-wrap: wrap;
 }
@@ -11,12 +12,15 @@
 .footer {
   background-color: #24262b;
   padding: 70px 0;
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin-top: 50px;
+  padding-bottom: 20px;
 }
-
+.social{
+  margin-left:25px;
+}
 .heading {
   font-size: 18px;
   color: #ffffff;

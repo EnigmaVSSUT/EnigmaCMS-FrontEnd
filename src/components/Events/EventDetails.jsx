@@ -145,8 +145,7 @@ const EventDetails = () => {
             </CardContent>
           </Card>
           <div className={cls.buttons}>
-            {/* <button className={classes.button}>Register</button> */}
-            <StyledButton variant='outlined' onClick={handleOpen}>Register</StyledButton>
+            <button className={classes.button}>Registrations Closed</button>
             <Link to="/events">
               <StyledButton variant='outlined' className={classes.button}>Go back</StyledButton>
             </Link>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Axios } from "../../../../helpers/AxiosInstance"; import classes from "./ProjectRow.module.css";
+import { Axios } from "../../../../helpers/AxiosInstance";
+import classes from "./ProjectRow.module.css";
 import Card from "./Card";
 import Heading from "../../../Heading";
 
@@ -25,10 +26,10 @@ const Row = () => {
   return (
     <div>
     <Heading main="Our Projects" sub="Our team members regularly work on innovative projects from every aspect of advanced computing. Take a quick look at our recent projects. "/>
-    {/* <h1 >Our Projects</h1>
-    <p >Our team members regularly work on innovative projects from every aspect of advanced computing. Take a quick look at our recent projects. </p> */}
-    <section className={classes.cardList}>
-    {projects && projects.map((project) => <Card project={project} />)}
+    <section className={classes.cardList}>  
+    {projects && projects.map((project) => 
+        <Card project={project} />
+    )}
     </section>
     </div>
   );
