@@ -16,6 +16,8 @@ const Team = lazy(() => import("./components/Team/Team"));
 const Alumni = lazy(() => import("./components/Team/Alumni"));
 const Project = lazy(() => import("./components/Project/Project"));
 const AboutUs = lazy(() => import("./components/About/AboutUs"));
+const Colab = lazy(() => import("./components/About/components/Colab"));
+
 
 function App() {
   return (
@@ -30,6 +32,7 @@ function App() {
               exact
             /> */}
             <Route exact path='/aboutus' component={AboutUs} />
+            <Route exact path='/colab' component={Colab} />
             <Route path="/projects" component={Project} exact />
             <Route path="/objective" component={Objective} exact />
             <Route path="/" component={Home} exact />

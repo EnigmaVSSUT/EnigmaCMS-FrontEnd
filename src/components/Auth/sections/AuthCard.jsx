@@ -6,9 +6,13 @@ import OAuthButtons from "./../components/OAuthButtons";
 
 const useStyle = makeStyles(theme => ({
   head: {
-    margin: "12px 0 2.5rem 0",
-    fontSize: 27,
+    margin: "10px 1rem 2rem 1rem",
+    fontSize: 24,
     fontWeight: 600,
+    [theme.breakpoints.down('xs')]:{
+      fontSize:22,
+      textAlign:"center"
+    },
   },
 }));
 

@@ -1,12 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./Card.module.css";
 
 const Card = ({project}) => {
   return (
-    <article className={classes.card}>
+    <Link className={classes.card} to={"projects"}>
+    <article >
+    
       <header className={classes.header}>
         <h2>{project.name}</h2>
+
       </header>
+
+       <img className={classes.projectimg} src={project.image} alt="" />
+
+      
 
       {/*<div className={classes.author}>
         <a className={classes.avatar} href="#">
@@ -27,6 +35,7 @@ const Card = ({project}) => {
           {project.description}
         </div>
     </article>
+  </Link>
   );
 };
 

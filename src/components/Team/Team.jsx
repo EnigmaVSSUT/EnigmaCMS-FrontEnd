@@ -5,28 +5,26 @@ import Heading from "../Heading";
 import Row from "./Row.jsx";
 import AdministrationCard from "./AdministrationCard";
 import AdmRow from "./Adm_row";
-import {Typography,ButtonGroup,makeStyles,Button} from '@material-ui/core';
-import{Link,} from 'react-router-dom';
+import { Typography, ButtonGroup, makeStyles, Button } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   btn: {
-    backgroundColor: ' #11be79',
-     color:'white',
-    marginBottom: "20px",
-    '&:hover':{
-      backgroundColor: '#11be79',
-    }
-  },
-  link:{
-    textDecoration: 'none',
-    textColor:'#ffffff'
-  },
-  btns:{
-    color: 'white'
-  }
 
-}
-);
+    backgroundColor: " #30ef1f",
+    textColor: "white",
+    marginBottom: "20px",
+    "&:hover": {
+      backgroundColor: "#28a616",
+    },
+
+  },
+  link: {
+    
+  },
+
+});
+
 
 function Team() {
   const [first, setfirst] = useState([]);
@@ -67,7 +65,7 @@ function Team() {
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year -1 }`,
+      url: `members/member-list?year_of_passing=${year -2 }`,
     }).then((res) => {
       setalumni(res.data);
     });
@@ -75,19 +73,39 @@ function Team() {
   }, []);
   return (
     <div>
-      <Heading main="Our Team" sub="Teamwork is the secret that makes common people achieve uncommon results. Individuals at enigma share a common love for coding and development. Meet the passionate faces behind Enigma. " />
-      <Typography className={classes.btns} align='center'>
-      <ButtonGroup  className={classes.btn}>
-        <Button ><Link style={{textDecoration:'none'}}  to='/team'>Current Team</Link></Button>
-        <Button><Link style={{textDecoration:'none'}}  to='/team/alumni'>Alumni Team</Link></Button>
-      </ButtonGroup>
+
+      <Heading
+        main="Our Team"
+        sub="Teamwork is the secret that makes common people achieve uncommon results. Individuals at enigma share a common love for coding and development. Meet the passionate faces behind Enigma. "
+      />
+      <Typography align="center">
+        <ButtonGroup className={classes.btn}>
+          <Button>
+            <Link
+              className={classes.link}
+              to="/team"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              Current Team
+            </Link>
+          </Button>
+          <Button>
+            <Link
+              className={classes.link}
+              to="/team/alumni"
+              style={{ color: "black", textDecoration: "none" }}
+            >
+              Alumni Team
+            </Link>
+          </Button>
+        </ButtonGroup>
+
       </Typography>
       <AdmRow />
       <Row year={final} heading="Final Year" />
       <Row year={third} heading="Pre-Final Year" />
       <Row year={second} heading="Second Year" />
       <Row year={first} heading="First Year" />
-    
     </div>
   );
 }

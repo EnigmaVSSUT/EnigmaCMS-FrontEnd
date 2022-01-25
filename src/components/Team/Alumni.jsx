@@ -29,7 +29,7 @@ const classes = useStyles();
    
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year}`,
+      url: `members/member-list?year_of_passing=${year-1}`,
     }).then((res) => {
       setalumni(res.data);
     });
@@ -40,8 +40,8 @@ const classes = useStyles();
      <Heading main="Our Team" sub="Meet our team" />
      <Typography align='center'>
      <ButtonGroup  className={classes.btn}>
-        <Button><Link to='/team'>Current Team</Link></Button>
-        <Button><Link to='/team/alumni'>Alumni Team</Link></Button>
+        <Button><Link  style={{ color: "black", textDecoration: "none" }} to='/team'>Current Team</Link></Button>
+        <Button><Link  style={{ color: "black", textDecoration: "none" }} to='/team/alumni'>Alumni Team</Link></Button>
       </ButtonGroup>
       </Typography>
      
