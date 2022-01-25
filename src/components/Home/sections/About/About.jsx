@@ -19,9 +19,7 @@ const useStyles = makeStyles({
     }
     
   },
-  link:{
-    textDecoration: "none",
-  }
+
   
 })
 
@@ -51,7 +49,7 @@ function About() {
           giving them enough exposure towards participating in coding contests, Hackathons and other tech events.
           The rich knowledge sharing enivironment at Enigma boosts both personal as well as proffessional development of students.
         </div>
-        <Link className={cls.link} to='/aboutus'><Button  className={cls.btn} size="small" variant="outlined" endIcon={<KeyboardArrowRightIcon fontSize='small'/>}>Know More</Button></Link>
+        <Link style={{textDecoration:'none'}} to='/aboutus'><Button  className={cls.btn} size="small" variant="outlined" endIcon={<KeyboardArrowRightIcon fontSize='small'/>}>Know More</Button></Link>
         
       </div>
     </div>

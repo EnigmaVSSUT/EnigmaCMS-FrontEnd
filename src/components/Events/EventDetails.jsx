@@ -53,16 +53,24 @@ const useStyles = makeStyles({
 
 const EventDetails = () => {
   const cls = useStyles();
-  const { id } = useParams();
+  const { slug } = useParams();
   const [event, setEvent] = useState({});
 
   useEffect(() => {
+    // Axios({
+    //   method: "GET",
+    //   url: 'events/list/'
+    // }).then((res) => {
+    //   setEvent(res.data[id-1]);
+    // });
     Axios({
       method: "GET",
-      url: "events/list/",
+      url:`events/detail/${slug}`
     }).then((res) => {
-      setEvent(res.data[id - 1]);
+      setEvent(res.data);
+     
     });
+    // console.log(slug)
   }, []);
 
   return (

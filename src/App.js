@@ -6,6 +6,7 @@ import Preloader from "./components/Preloader/Preloader";
 import Navbar from "./components/Navbar/Navbar";
 import Events from "./components/Events";
 import EventDetails from "./components/Events/EventDetails";
+import ProjectDetails from "./components/Project/ProjectDetails";
 
 const Home = lazy(() => import("./components/Home/Home"));
 const Objective = lazy(() => import("./components/Home/sections/About/About"));
@@ -25,11 +26,11 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Suspense fallback={<Preloader />}>
-            <Route
+            {/* <Route
               path="/project/:cardId"
               render={(props) => <Project {...props} />}
               exact
-            />
+            /> */}
             <Route exact path='/aboutus' component={AboutUs} />
             <Route exact path='/colab' component={Colab} />
             <Route path="/projects" component={Project} exact />
@@ -40,7 +41,8 @@ function App() {
             <Route path="/team" component={Team} exact />
             <Route exact path='/team/alumni' component={Alumni}/>
             <Route path="/events" component={Events} exact />
-            <Route path="/events/:id" component={EventDetails} exact />
+            <Route path="/events/:slug" component={EventDetails} exact />
+            <Route path="/projects/:slug" component={ProjectDetails} exact />
           </Suspense>
         </Switch>
       </BrowserRouter>

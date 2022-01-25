@@ -18,7 +18,7 @@ const EventCard = ({ onRegisterClick, event }) => {
               {event.start_date}
             </h3>
             <p className={classes.content}>{event.description}</p>
-           <Link to={`events/${event.id}`}>
+           <Link to={`events/${event.slug}`}>
               <button  className={classes.button}>
                    View More
                </button>
