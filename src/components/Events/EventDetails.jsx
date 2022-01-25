@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Axios } from "../../helpers/AxiosInstance";
-import { Container, Card, CardContent, Typography, Grid, Button, Modal } from "@mui/material";
+import { Container, Card, CardContent, Typography, Grid, Button } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
 import classes from "./events.module.css";
 import Heading from "../Heading/index";
