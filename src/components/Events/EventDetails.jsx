@@ -153,7 +153,7 @@ const EventDetails = () => {
           </div>
         </Grid>
       </Grid>
-      <RegistrationForm open={form} handleClose={handleClose} />
+      <RegistrationForm open={form} event={event} handleClose={handleClose} />
     </Container>
   );
 };
