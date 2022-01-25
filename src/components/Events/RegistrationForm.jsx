@@ -59,7 +59,7 @@ const StyledFormControl = styled(FormControl)({
     }
 })
 
-const Form = ({open, event, handleClose}) => {
+const RegistrationForm = ({open, event, handleClose}) => {
     const {register, handleSubmit} = useForm()
     const [branches, setBranches] = useState([])
     const onSubmit = (d) => {
@@ -68,7 +68,7 @@ const Form = ({open, event, handleClose}) => {
             return;
         }
         d.event = event.id
-        console.log(d)
+        // console.log(d)
         // Axios.post('events/register',{...d})
         // .then(res => {
         //     console.log(res)
@@ -81,7 +81,7 @@ const Form = ({open, event, handleClose}) => {
     useEffect(() => {
         UnivAxios.get('core/department-list/?is_academic=true/')
         .then(res => {
-            console.log(res.data)
+            // console.log(res.data)
             setBranches(res.data)
         })
         .catch(err => console.log(err.message))
@@ -226,4 +226,4 @@ const Form = ({open, event, handleClose}) => {
     );
 }
  
-export default Form;
+export default RegistrationForm;
