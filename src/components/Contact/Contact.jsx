@@ -4,7 +4,10 @@ import styles from "./contact.module.css";
 import TextField from "@material-ui/core/TextField";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Heading from "../Heading";
+import { FiPhone } from "react-icons/fi";
+import { HiOutlineMail } from "react-icons/hi";
 import Social from "../Social/SocialMedia";
+import Typography from '@mui/material/Typography';
 
 const CssTextField = withStyles({
   root: {
@@ -42,6 +45,14 @@ const useStyles = makeStyles(theme => ({
   multilineColor: {
     color: "#35ff1f",
   },
+  icon:{
+    fontSize:"1.7rem",
+    margin:5,
+    color:"#35ff1f",
+  },
+  text:{
+    color:"white",
+  },
 }));
 
 export default function Contact() {
@@ -52,7 +63,11 @@ export default function Contact() {
       <div className="container">
         <div className="text-center">
           <Heading main="Get in Touch with Us" sub="Reach out to us anytime! We are here to help and answer any query you have. We look forward to hearing from you." />
-        </div>      
+        </div> 
+        <div>
+          <Typography variant="h6" align="center" className={classes.text}><span className={classes.icon}><FiPhone className={classes.icon}/></span>+91 7978924503</Typography>
+          <Typography variant="h6" align="center" className={classes.text}><span className={classes.icon}><HiOutlineMail className={classes.icon}/></span>enigma.vssut@gmail.com</Typography>
+        </div>     
         <div className="row">
           <div className="col-md-7">
             <iframe
