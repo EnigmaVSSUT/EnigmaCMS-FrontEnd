@@ -10,17 +10,21 @@ import{Link,} from 'react-router-dom';
 
 const useStyles = makeStyles({
   btn: {
-    backgroundColor: ' #30ef1f',
-    textColor:'white',
+    backgroundColor: ' #11be79',
+     color:'white',
     marginBottom: "20px",
     '&:hover':{
-      backgroundColor: '#28a616',
+      backgroundColor: '#11be79',
     }
   },
   link:{
     textDecoration: 'none',
     textColor:'#ffffff'
   },
+  btns:{
+    color: 'white'
+  }
+
 }
 );
 
@@ -38,32 +42,32 @@ function Team() {
     const year = d.getFullYear();
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 1}`,
+      url: `members/member-list?year_of_passing=${year }`,
     }).then((res) => {
       setfinal(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 2}`,
+      url: `members/member-list?year_of_passing=${year + 1}`,
     }).then((res) => {
       setthird(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 3}`,
+      url: `members/member-list?year_of_passing=${year + 2}`,
     }).then((res) => {
       setsecond(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year + 4}`,
+      url: `members/member-list?year_of_passing=${year +3}`,
     }).then((res) => {
       console.log(res.data);
       setfirst(res.data);
     });
     Axios({
       method: "GET",
-      url: `members/member-list?year_of_passing=${year}`,
+      url: `members/member-list?year_of_passing=${year -1 }`,
     }).then((res) => {
       setalumni(res.data);
     });
@@ -72,10 +76,10 @@ function Team() {
   return (
     <div>
       <Heading main="Our Team" sub="Teamwork is the secret that makes common people achieve uncommon results. Individuals at enigma share a common love for coding and development. Meet the passionate faces behind Enigma. " />
-      <Typography align='center'>
+      <Typography className={classes.btns} align='center'>
       <ButtonGroup  className={classes.btn}>
-        <Button><Link className={classes.link} to='/team'>Current Team</Link></Button>
-        <Button><Link className={classes.link} to='/team/alumni'>Alumni Team</Link></Button>
+        <Button ><Link style={{textDecoration:'none'}}  to='/team'>Current Team</Link></Button>
+        <Button><Link style={{textDecoration:'none'}}  to='/team/alumni'>Alumni Team</Link></Button>
       </ButtonGroup>
       </Typography>
       <AdmRow />
