@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Axios } from "../../helpers/AxiosInstance";
-import { Container, Card, CardContent, Typography, Grid } from "@mui/material";
+import { Container, Card, CardContent, Typography, Grid, Button } from "@mui/material";
 import { makeStyles } from "@material-ui/core/styles";
 import classes from "./events.module.css";
 import Heading from "../Heading/index";
+import RegistrationForm from './RegistrationForm'
+import { styled } from "@mui/system";
 
 const useStyles = makeStyles({
   txt: {
@@ -55,6 +57,13 @@ const EventDetails = () => {
   const cls = useStyles();
   const { slug } = useParams();
   const [event, setEvent] = useState({});
+  const [form, setForm] = useState(false)
+  const handleClose = () => {
+    setForm(false)
+  }
+  const handleOpen = () => {
+    setForm(true)
+  }
 
   useEffect(() => {
     // Axios({
@@ -72,6 +81,19 @@ const EventDetails = () => {
     });
     // console.log(slug)
   }, []);
+
+
+  const StyledButton = styled(Button)({
+    backgroundColor: 'transparent',
+    borderColor: '#35ff1f',
+    color: '#fff',
+    borderRadius: 12,
+    '&:hover': {
+      backgroundColor: '#35ff1f',
+      color: '#000',
+      borderColor: '#35ff1f'
+    }
+  })
 
   return (
     <Container>
@@ -123,13 +145,14 @@ const EventDetails = () => {
             </CardContent>
           </Card>
           <div className={cls.buttons}>
-            <button className={classes.button}>Registrations Closed</button>
+            <StyledButton variant='outlined' onClick={handleOpen}>Registrations Closed</StyledButton>
             <Link to="/events">
-              <button className={classes.button}>Go back</button>
+              <StyledButton variant='outlined'>Go back</StyledButton>
             </Link>
           </div>
         </Grid>
       </Grid>
+      <RegistrationForm open={form} event={event} handleClose={handleClose} />
     </Container>
   );
 };
