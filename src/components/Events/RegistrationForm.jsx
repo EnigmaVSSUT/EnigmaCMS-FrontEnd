@@ -3,6 +3,7 @@ import { styled } from "@mui/system";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { UnivAxios, Axios } from "../../helpers/AxiosInstance";
+import CloseIcon from '@material-ui/icons/Close';
 
 const PrimaryButton = styled(Button)({
     maxWidth: 100,
@@ -103,13 +104,25 @@ const RegistrationForm = ({open, event, handleClose}) => {
                 }}
                 onSubmit={handleSubmit(onSubmit)}
             >
-                <Typography
-                    variant="h4"
-                    mb={2}
-                    color='#35ff1f'
+                <Box
+                    sx={{
+                        display: 'flex',
+                        mb: 2,
+                        alignItems: 'center'
+                    }}
                 >
-                    Registration Form
-                </Typography>
+                    <Typography
+                        sx={{
+                            flexGrow: 1
+                        }}
+                        variant="h4"
+                        color='#35ff1f'
+                    >
+                        Registration Form
+                    </Typography>
+                    <CloseIcon style={{color: '#ffffff', cursor: 'pointer'}} fontSize='large' onClick={handleClose} />
+                </Box>
+                
                 <StyledTextField
                     variant='outlined'
                     label='First Name'
