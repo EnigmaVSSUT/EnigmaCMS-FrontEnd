@@ -4,7 +4,7 @@ import classes from "./Card.module.css";
 
 const Card = ({project}) => {
   return (
-    <Link className={classes.card} to={"projects"}>
+    <Link className={classes.card} to={`projects/${project.slug}`}>
     <article >
     
       <header className={classes.header}>
