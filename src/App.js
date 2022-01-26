@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Events from "./components/Events";
 import EventDetails from "./components/Events/EventDetails";
 import ProjectDetails from "./components/Project/ProjectDetails";
+import Scroll from "./components/Scroll/Scroll";
 
 const Home = lazy(() => import("./components/Home/Home"));
 const Objective = lazy(() => import("./components/Home/sections/About/About"));
@@ -17,6 +18,7 @@ const Alumni = lazy(() => import("./components/Team/Alumni"));
 const Project = lazy(() => import("./components/Project/Project"));
 const AboutUs = lazy(() => import("./components/About/AboutUs"));
 const Colab = lazy(() => import("./components/About/components/Colab"));
+
 
 
 function App() {
@@ -47,6 +49,7 @@ function App() {
         </Switch>
       </BrowserRouter>
       <Footer />
+      <Scroll />
     </>
   );
 }
