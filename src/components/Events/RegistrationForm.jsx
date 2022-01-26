@@ -166,7 +166,7 @@ const RegistrationForm = ({open, event, handleClose}) => {
                     <StyledTextField
                         variant='outlined'
                         label='WhatsApp Number'
-                        type='tel'
+                        type='number'
                         pattern='[0-9]{10}'
                         { ...register('whatsapp_no') }
                         required
@@ -199,7 +199,8 @@ const RegistrationForm = ({open, event, handleClose}) => {
                     </StyledTextField>
                     {/* radio group : gender */}
                     
-                    <StyledTextField 
+                    <StyledTextField
+                        type='number'
                         variant='outlined'
                         label='Registration No'
                         { ...register('reg_number') }
