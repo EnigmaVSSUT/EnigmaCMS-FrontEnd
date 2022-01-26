@@ -69,7 +69,7 @@ const RegistrationForm = ({open, event, handleClose}) => {
             return;
         }
         d.event = event.id
-        console.log(d)
+        // console.log(d)
     }
     
     useEffect(() => {
