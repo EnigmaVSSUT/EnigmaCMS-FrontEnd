@@ -69,13 +69,6 @@ const RegistrationForm = ({open, event, handleClose}) => {
         }
         d.event = event.id
         // console.log(d)
-        // Axios.post('events/register',{...d})
-        // .then(res => {
-        //     console.log(res)
-        // })
-        // .catch(err => {
-        //     console.log(err.message)
-        // })
     }
     
     useEffect(() => {
@@ -117,13 +110,6 @@ const RegistrationForm = ({open, event, handleClose}) => {
                 >
                     Registration Form
                 </Typography>
-                <StyledTextField
-                    variant='outlined'
-                    label='Event'
-                    required
-                    value={event.name}
-                    readOnly={true}
-                />
                 <StyledTextField
                     variant='outlined'
                     label='First Name'
