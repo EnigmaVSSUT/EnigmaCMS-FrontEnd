@@ -90,9 +90,6 @@ const RegistrationForm = ({open, event, handleClose}) => {
             setBranches(res.data)
         })
         .catch(err => console.log(err.message))
-       
-
-        
         console.log(reg.firstname)
     }, [reg])
     const submit = ()=>{
