@@ -1,4 +1,4 @@
-import { Box, Button, FormControl, FormControlLabel, FormLabel, MenuItem, Modal, Radio, RadioGroup, Slide, Stack, TextField, Typography } from "@mui/material";
+import { Box, Button, FormControl, FormControlLabel, FormLabel, MenuItem, Modal, Radio, RadioGroup, Slide, Stack, TextField, Typography,Alert } from "@mui/material";
 import { styled } from "@mui/system";
 import { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
@@ -61,6 +61,7 @@ const StyledFormControl = styled(FormControl)({
 })
 
 const RegistrationForm = ({open, event, handleClose}) => {
+    const [alert, setAlert] = useState(false);
     const {register, handleSubmit, getValues, control} = useForm()
     const [branches, setBranches] = useState()
     const [reg,setReg] = useState({
@@ -76,7 +77,7 @@ const RegistrationForm = ({open, event, handleClose}) => {
     })
 
     // Form Submit
-    const onSubmit = (d) => {
+    const onSubmit = async(d) => {
         if(d.whatsapp_no.length !== 10){
             alert('Please enter a 10-digit whatsapp number')
             return;
@@ -86,8 +87,20 @@ const RegistrationForm = ({open, event, handleClose}) => {
         }
         d.event = event.id
         console.log(d)
-        Axios.post('events/register/', d)
-            .then(res => console.log(res))
+       await Axios.post('events/register/', d)
+        .then(response => {
+            if(response.data.success === true)
+              {
+               
+                setAlert(true);
+              
+              }
+            else
+              {
+                
+                setAlert(true);
+              }
+           })
             .catch(err => console.log(err.message))
     }
 
@@ -110,6 +123,9 @@ const RegistrationForm = ({open, event, handleClose}) => {
     // }
 
     return (
+        <>
+      
+
         <Modal
             open={open}
             onClose={handleClose}
@@ -279,13 +295,15 @@ const RegistrationForm = ({open, event, handleClose}) => {
                                 color: '#fff',
                             }}
                         >Cancel</Button>
+                         
                     </Stack>
-                    
+                    {alert ?   <Alert severity="success">Registration Successful</Alert> : <></> }
                 </Box>
             </Slide>
             {/* </form> */}
             
         </Modal>
+        </>
     );
 }
  
