@@ -1,7 +1,7 @@
 import { Box, Button, FormControl, FormControlLabel, FormLabel, MenuItem, Modal, Radio, RadioGroup, Slide, Stack, TextField, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { UnivAxios, Axios } from "../../helpers/AxiosInstance";
 import CloseIcon from '@material-ui/icons/Close';
 
@@ -61,7 +61,7 @@ const StyledFormControl = styled(FormControl)({
 })
 
 const RegistrationForm = ({open, event, handleClose}) => {
-    const {register, handleSubmit,getValues} = useForm()
+    const {register, handleSubmit, getValues, control} = useForm()
     const [branches, setBranches] = useState()
     const [reg,setReg] = useState({
         "firstname": "",
@@ -74,15 +74,23 @@ const RegistrationForm = ({open, event, handleClose}) => {
         "expectations": "",  
         "reg_number" : "" 
     })
+
+    // Form Submit
     const onSubmit = (d) => {
         if(d.whatsapp_no.length !== 10){
             alert('Please enter a 10-digit whatsapp number')
             return;
         }
+        if(d.gender === null || d.gender === undefined){
+            alert('Please choose your gender!')
+        }
         d.event = event.id
-        // console.log(d)
+        console.log(d)
+        Axios.post('events/register/', d)
+            .then(res => console.log(res))
+            .catch(err => console.log(err.message))
     }
-    
+
     useEffect(() => {
         UnivAxios.get('core/department-list/?is_academic=true/')
         .then(res => {
@@ -91,15 +99,15 @@ const RegistrationForm = ({open, event, handleClose}) => {
         })
         .catch(err => console.log(err.message))
         console.log(reg.firstname)
-    }, [reg])
-    const submit = ()=>{
-        Axios.post('events/register/',reg)
-        .then(res=>{
-            console.log(res)
-        })
-        .catch(err=>console.log(err.message))
+    }, [])
+    // const submit = ()=>{
+    //     Axios.post('events/register/',reg)
+    //     .then(res=>{
+    //         console.log(res)
+    //     })
+    //     .catch(err=>console.log(err.message))
 
-    }
+    // }
 
     return (
         <Modal
@@ -110,7 +118,7 @@ const RegistrationForm = ({open, event, handleClose}) => {
                 overflowY: 'scroll'
             }}
         >
-            <form onSubmit={submit}>
+            {/* <form onSubmit={submit}> */}
             <Slide
                 direction='right'
                 in={open}
@@ -165,18 +173,25 @@ const RegistrationForm = ({open, event, handleClose}) => {
                         required
                     />
                     <StyledFormControl>
-                        <FormLabel>Gender</FormLabel>
-                        <RadioGroup
-                            row
-                            aria-labelledby="demo-radio-buttons-group-label"
-                            defaultValue="Male"
-                            name="gender-group"
-                            { ...register('gender') }
-                        >
-                            <FormControlLabel value="Male" control={<Radio />} label="Male" />
-                            <FormControlLabel value="Female" control={<Radio />} label="Female" />
-                            <FormControlLabel value="Other" control={<Radio />} label="Other" />
-                        </RadioGroup>
+                        <FormLabel id='gender'>Gender</FormLabel>
+                        <Controller 
+                            control={control}
+                            name='gender'
+                            render={({
+                                field: {onChange, value}
+                            }) => (
+                                <RadioGroup
+                                    aria-labelledby="gender"
+                                    row
+                                    value={value}
+                                    onChange={onChange}
+                                >
+                                    <FormControlLabel value="Male" control={<Radio />} label="Male"/>
+                                    <FormControlLabel value="Female" control={<Radio />} label="Female"/>
+                                    <FormControlLabel value="Other" control={<Radio />} label="Other"/>
+                                </RadioGroup>
+                            )}
+                        />
                     </StyledFormControl>
                     <StyledTextField
                         variant='outlined'
@@ -215,12 +230,23 @@ const RegistrationForm = ({open, event, handleClose}) => {
                         { ...register('branch') }
                         required
                     >
-
-                        { branches && branches.map(branch => (
+                        {/* Uncomment this if branch list is updated */}
+                        {/* { branches && branches.map(branch => (
                             <MenuItem value={branch.name}>{branch.name}</MenuItem>
-                        ))}
+                        ))} */}
+                        <MenuItem value='Chemical Engineering'>Chemical Engineering</MenuItem>
+                        <MenuItem value='Civil Engineering'>Civil Engineering</MenuItem>
+                        <MenuItem value='Computer Science and Engineering'>Computer Science and Engineering</MenuItem>
+                        <MenuItem value='Electrical Engineering'>Electrical Engineering</MenuItem>
+                        <MenuItem value='Electrical & Electronics Engineering'>Electrical & Electronics Engineering</MenuItem>
+                        <MenuItem value='Electronics & Telecommunication Engineering'>Electronics & Telecommunication Engineering</MenuItem>
+                        <MenuItem value='Information Technology'>Information Technology</MenuItem>
+                        <MenuItem value='Mechanical Engineering'>Mechanical Engineering</MenuItem>
+                        <MenuItem value='Metallurgical & Materials Engineering'>Metallurgical & Materials Engineering</MenuItem>
+                        <MenuItem value='Production Engineering'>Production Engineering</MenuItem>
+                        <MenuItem value='Architecture'>Architecture</MenuItem>
+                        <MenuItem value='Integrated MSc'>Integrated MSc</MenuItem>
                     </StyledTextField>
-                    {/* radio group : gender */}
                     
                     <StyledTextField
                         type='number'
@@ -231,8 +257,6 @@ const RegistrationForm = ({open, event, handleClose}) => {
                         required
                     />
 
-                    
-
                     <StyledTextField
                         variant='outlined'
                         label='What are your expectations from this event?'
@@ -242,9 +266,9 @@ const RegistrationForm = ({open, event, handleClose}) => {
                         <PrimaryButton
                             variant='contained'
                             type='submit'
-                             onClick={()=>{
-                                 setReg(getValues())                           
-                             }}
+                            //  onClick={()=>{
+                            //      setReg(getValues())                           
+                            //  }}
                         >
                             Submit
                         </PrimaryButton>
@@ -259,7 +283,7 @@ const RegistrationForm = ({open, event, handleClose}) => {
                     
                 </Box>
             </Slide>
-            </form>
+            {/* </form> */}
             
         </Modal>
     );
