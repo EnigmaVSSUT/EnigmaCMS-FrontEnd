@@ -63,13 +63,13 @@ const StyledFormControl = styled(FormControl)({
 const RegistrationForm = ({open, event, handleClose}) => {
     const {register, handleSubmit,getValues} = useForm()
     const [branches, setBranches] = useState()
-    const [data,setData] = useState({
+    const [reg,setReg] = useState({
         "firstname": "",
         "lastname": "",
         "email": "",
         "year": "",
         "branch": "",
-        "gender": null,
+        "gender": "",
         "whatsapp_no": "",
         "expectations": "",  
         "reg_number" : "" 
@@ -90,12 +90,19 @@ const RegistrationForm = ({open, event, handleClose}) => {
             setBranches(res.data)
         })
         .catch(err => console.log(err.message))
-        // Axios.post('events/register/', data)
-        // .then(res => {
-        //     console.log(res.data)
-        // })
-        console.log(data)
-    }, [data])
+       
+
+        
+        console.log(reg.firstname)
+    }, [reg])
+    const submit = ()=>{
+        Axios.post('events/register/',reg)
+        .then(res=>{
+            console.log(res)
+        })
+        .catch(err=>console.log(err.message))
+
+    }
 
     return (
         <Modal
@@ -106,6 +113,7 @@ const RegistrationForm = ({open, event, handleClose}) => {
                 overflowY: 'scroll'
             }}
         >
+            <form onSubmit={submit}>
             <Slide
                 direction='right'
                 in={open}
@@ -166,6 +174,7 @@ const RegistrationForm = ({open, event, handleClose}) => {
                             aria-labelledby="demo-radio-buttons-group-label"
                             defaultValue="Male"
                             name="gender-group"
+                            { ...register('gender') }
                         >
                             <FormControlLabel value="Male" control={<Radio />} label="Male" />
                             <FormControlLabel value="Female" control={<Radio />} label="Female" />
@@ -193,8 +202,8 @@ const RegistrationForm = ({open, event, handleClose}) => {
                         label='Year'
                         { ...register('year') }
                         required
-                        value='1'
-                        onChange={(e) => {setData(e.target.value)}}
+                       
+                        
                     >
                         <MenuItem value='1'>1st</MenuItem>
                         <MenuItem value='2'>2nd</MenuItem>
@@ -237,8 +246,7 @@ const RegistrationForm = ({open, event, handleClose}) => {
                             variant='contained'
                             type='submit'
                              onClick={()=>{
-                                 setData(getValues())                           
-
+                                 setReg(getValues())                           
                              }}
                         >
                             Submit
@@ -251,9 +259,10 @@ const RegistrationForm = ({open, event, handleClose}) => {
                             }}
                         >Cancel</Button>
                     </Stack>
+                    
                 </Box>
             </Slide>
-            
+            </form>
             
         </Modal>
     );
