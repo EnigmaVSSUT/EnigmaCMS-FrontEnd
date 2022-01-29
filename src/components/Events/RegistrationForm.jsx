@@ -90,8 +90,12 @@ const RegistrationForm = ({open, event, handleClose}) => {
             setBranches(res.data)
         })
         .catch(err => console.log(err.message))
-    //    Axios.post('events/register/', data)
-    }, [])
+        // Axios.post('events/register/', data)
+        // .then(res => {
+        //     console.log(res.data)
+        // })
+        console.log(data)
+    }, [data])
 
     return (
         <Modal
@@ -190,6 +194,7 @@ const RegistrationForm = ({open, event, handleClose}) => {
                         { ...register('year') }
                         required
                         value='1'
+                        onChange={(e) => {setData(e.target.value)}}
                     >
                         <MenuItem value='1'>1st</MenuItem>
                         <MenuItem value='2'>2nd</MenuItem>
@@ -231,17 +236,10 @@ const RegistrationForm = ({open, event, handleClose}) => {
                         <PrimaryButton
                             variant='contained'
                             type='submit'
-                            // onClick={()=>{
-                            //     setData(...data,{data.firstname=getValues("firstname")})
-                            //     setData(...data,{data.firstname=getValues("lastname")})
-                            //     setData(...data,{data.firstname=getValues("email")})
-                            //     setData(...data,{data.firstname=getValues("year")})
-                            //     setData(...data,{data.firstname=getValues("branch")})
-                            //     setData(...data,{data.firstname=getValues("reg_number")})
-                            //     setData(...data,{data.firstname=getValues("whatsapp_no")})
-                            //     setData(...data,{data.firstname=getValues("expectations")})
+                             onClick={()=>{
+                                 setData(getValues())                           
 
-                            // }}
+                             }}
                         >
                             Submit
                         </PrimaryButton>
