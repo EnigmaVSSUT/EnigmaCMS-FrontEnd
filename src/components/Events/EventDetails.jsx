@@ -77,9 +77,9 @@ const EventDetails = () => {
       url:`events/detail/${slug}`
     }).then((res) => {
       setEvent(res.data);
-     
+      // console.log(res.data)
     });
-    // console.log(slug)
+   
   }, []);
 
 
@@ -145,7 +145,8 @@ const EventDetails = () => {
             </CardContent>
           </Card>
           <div className={cls.buttons}>
-            <StyledButton variant='outlined' onClick={handleOpen}>Registrations Closed</StyledButton>
+            {new Date(event.registration_end_date) > new Date() ? <StyledButton  variant='outlined' onClick={handleOpen}>Register</StyledButton> : <StyledButton  variant='outlined' >Registration closed</StyledButton>}
+            {/* <StyledButton variant='outlined' onClick={handleOpen}>Registrations Closed</StyledButton> */}
             <Link to="/events">
               <StyledButton variant='outlined'>Go back</StyledButton>
             </Link>

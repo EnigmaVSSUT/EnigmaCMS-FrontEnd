@@ -61,8 +61,19 @@ const StyledFormControl = styled(FormControl)({
 })
 
 const RegistrationForm = ({open, event, handleClose}) => {
-    const {register, handleSubmit} = useForm()
-    const [branches, setBranches] = useState([])
+    const {register, handleSubmit,getValues} = useForm()
+    const [branches, setBranches] = useState()
+    const [data,setData] = useState({
+        "firstname": "",
+        "lastname": "",
+        "email": "",
+        "year": "",
+        "branch": "",
+        "gender": null,
+        "whatsapp_no": "",
+        "expectations": "",  
+        "reg_number" : "" 
+    })
     const onSubmit = (d) => {
         if(d.whatsapp_no.length !== 10){
             alert('Please enter a 10-digit whatsapp number')
@@ -75,10 +86,11 @@ const RegistrationForm = ({open, event, handleClose}) => {
     useEffect(() => {
         UnivAxios.get('core/department-list/?is_academic=true/')
         .then(res => {
-            // console.log(res.data)
+            console.log(res.data)
             setBranches(res.data)
         })
         .catch(err => console.log(err.message))
+    //    Axios.post('events/register/', data)
     }, [])
 
     return (
@@ -219,6 +231,17 @@ const RegistrationForm = ({open, event, handleClose}) => {
                         <PrimaryButton
                             variant='contained'
                             type='submit'
+                            // onClick={()=>{
+                            //     setData(...data,{data.firstname=getValues("firstname")})
+                            //     setData(...data,{data.firstname=getValues("lastname")})
+                            //     setData(...data,{data.firstname=getValues("email")})
+                            //     setData(...data,{data.firstname=getValues("year")})
+                            //     setData(...data,{data.firstname=getValues("branch")})
+                            //     setData(...data,{data.firstname=getValues("reg_number")})
+                            //     setData(...data,{data.firstname=getValues("whatsapp_no")})
+                            //     setData(...data,{data.firstname=getValues("expectations")})
+
+                            // }}
                         >
                             Submit
                         </PrimaryButton>
