@@ -25,6 +25,10 @@ import { Axios } from "../../helpers/AxiosInstance";
 import { TabContext, TabPanel } from "@material-ui/lab";
 
 const useStyles = makeStyles({
+    mainCont:{
+        justifyContent:'center',
+        alignItems:'center',
+    },
   imgContainer: {
     maxWidth: "100%",
     height: "360px",
@@ -43,7 +47,7 @@ const useStyles = makeStyles({
     color: "#35ff1f",
     fontSize: "25px",
     textAlign: "center",
-    // border: "1px solid red",
+     borderBottom: "1px solid #35ff1f",
     letterSpacing: "2px",
   },
   name: {
@@ -58,12 +62,13 @@ const useStyles = makeStyles({
   },
   nameHeading: {
     color: "#fff",
-    fontSize: "22px",
+    fontSize: "18px",
     // border: "1px solid red",
   },
   nameTitle: {
+   
     color: "#35ff1f",
-    fontSize: "30px",
+    fontSize: "22px",
     marginLeft: "10px",
     //    border: "1px solid red",
     overflow: "hidden",
@@ -138,7 +143,7 @@ const ProfileDetails = () => {
     <>
       <Heading main="PROFILE" />
       <Container maxWidth="xl">
-        <Grid container spacing={3}>
+        <Grid container spacing={3} className={classes.mainCont}>
           <Grid item xs={12} sm={4} lg={3}>
             <div className={classes.imgContainer}>
               <img
@@ -215,7 +220,7 @@ const ProfileDetails = () => {
                   <Typography
                     className={classes.nameTitle}
                     variant=""
-                    component="p"
+                    component="div"
                   >
                     {member.email}
                   </Typography>
@@ -231,17 +236,18 @@ const ProfileDetails = () => {
                     style={{ color: "#fff" }}
                     TabIndicatorProps={{ style: { background: "#35ff1f" } }}
                   >
-                    {member.description && (
-                      <Tab value="1" label="Bio" style={{ color: "#35ff1f" }} />
-                    )}
-                    <Tab
-                      value="2"
+                       <Tab
+                      value="1"
                       label="Details"
                       style={{ color: "#35ff1f" }}
                     />
+                    {member.description && (
+                      <Tab value="2" label="Bio" style={{ color: "#35ff1f" }} />
+                    )}
+                   
                   </Tabs>
                   {member.description && (
-                    <TabPanel value="1">
+                    <TabPanel value="2">
                       <Typography
                         variant=""
                         component="p"
@@ -251,7 +257,7 @@ const ProfileDetails = () => {
                       </Typography>
                     </TabPanel>
                   )}
-                  <TabPanel value="2">
+                  <TabPanel value="1">
                     <div className={classes.detailsCont}>
                       <span className={classes.detailsTitle}>Year: </span>
                       <Typography
