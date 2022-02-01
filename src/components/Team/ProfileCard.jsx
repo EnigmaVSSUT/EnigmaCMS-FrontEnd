@@ -7,8 +7,10 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { SiCodechef } from "react-icons/si";
+import { Link } from "react-router-dom";
 const ProfileCard = ({ details }) => {
   return (
+    <Link to={`/profile/${details.slug}`} style={{textDecoration:'none'}}>
     <div className={classes.card}>
       <img className={classes.profile_pic} src={details.profile_pic} alt="" />
       <span className={classes.name}>
@@ -39,6 +41,7 @@ const ProfileCard = ({ details }) => {
         </a>
       </div>
     </div>
+    </Link>
   );
 };
 

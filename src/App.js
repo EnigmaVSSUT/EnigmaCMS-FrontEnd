@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Events from "./components/Events";
 import EventDetails from "./components/Events/EventDetails";
 import ProjectDetails from "./components/Project/ProjectDetails";
+import ProfileDetails from "./components/Team/ProfileDetails";
 import Scroll from "./components/Scroll/Scroll";
 
 const Home = lazy(() => import("./components/Home/Home"));
@@ -45,6 +46,7 @@ function App() {
             <Route path="/events" component={Events} exact />
             <Route path="/events/:slug" component={EventDetails} exact />
             <Route path="/projects/:slug" component={ProjectDetails} exact />
+            <Route path="/profile/:slug" component={ProfileDetails} exact />
           </Suspense>
         </Switch>
       </BrowserRouter>

@@ -17,7 +17,7 @@ const EventCard = ({ onRegisterClick, event }) => {
               <strong>DATE : </strong>
               {event.start_date}
             </h3>
-            <p className={classes.content}>{event.description}</p>
+            <p className={classes.content}>{event.description.substring(0,200)}...</p>
            <Link to={`events/${event.slug}`}>
               <button  className={classes.button}>
                    View More
