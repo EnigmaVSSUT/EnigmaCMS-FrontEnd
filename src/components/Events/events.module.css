@@ -186,3 +186,31 @@ h1 {
   margin: auto;
   max-width: 60%;
 }
+.tabBtn {
+  border-radius: 10px;
+  background-color: #100e17;
+  color: white;
+  padding: 3px 20px;
+  transition-duration: 0.4s;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  margin: 4px 20px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  max-width: 300px;
+}
+.tabBtn ::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 0.175rem;
+  background: #35ff1f;
+  left: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease;
+}
+.tabBtn :hover {
+  transform: scale(1, 1);
+}
