@@ -47,7 +47,7 @@ function App() {
             <Route path="/events/:slug" component={EventDetails} exact />
             <Route path="/projects/:slug" component={ProjectDetails} exact />
             <Route path="/profile/:slug" component={ProfileDetails} exact />
-            <Route path='/articles' component={Article} exact />
+            {/* <Route path='/articles' component={Article} exact /> */}
           </Suspense>
         </Switch>
       </BrowserRouter>
