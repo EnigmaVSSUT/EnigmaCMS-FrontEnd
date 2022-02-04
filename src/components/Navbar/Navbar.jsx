@@ -14,6 +14,7 @@ function NavBar() {
     { name: "Home", path: "/"},
     { name: "About Us", path:"/aboutus"},
     { name: "Events", path: "/events" },
+    // { name:"Articles", path: "/articles" },
     { name: "Projects", path: "/projects" },
     { name: "Team", path: "/team" },
     { name: "Contact Us", path: "/contact" },
