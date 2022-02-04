@@ -68,9 +68,7 @@ function Events() {
               value={value}
               onChange={handleChange}
               TabIndicatorProps={{
-                style: {
-                  display: "none",
-                },
+                style:  { background: "#35ff1f" }
               }}
               centered
             >
@@ -79,46 +77,49 @@ function Events() {
                 sx={{ margin: 1, fontSize: "1.2rem" }}
                 value="upcoming"
                 label="Upcoming"
-                className={classes.tabBtn}
+                style={{ color: "#35ff1f" }}
+                // className={classes.tabBtn}
               />
               <Tab
                 sx={{ margin: 1, fontSize: "1.2rem" }}
                 value="current"
                 label="Current"
-                className={classes.tabBtn}
+                style={{ color: "#35ff1f" }}
+                // className={classes.tabBtn}
               />
               <Tab
                 sx={{ margin: 1, fontSize: "1.2rem" }}
                 value="past"
                 label="Past"
-                className={classes.tabBtn}
+                style={{ color: "#35ff1f" }}
+                // className={classes.tabBtn}
               />
             </Tabs>
           </Box>
           <div hidden={value !== "upcoming"}>
             <div align="center" className={classes.upcoming}>
-              <p align="center" className={classes.mainContent}>
+              {/* <p align="center" className={classes.mainContent}>
                 {header[0].text}
-              </p>
-              <div className={classes.commonBorder}></div>
+              </p> */}
+              {/* <div className={classes.commonBorder}></div> */}
               {upComing && upComing.map((event) => <EventCard event={event} />)}
             </div>
           </div>
           <div hidden={value !== "current"}>
             <div align="center" className={classes.upcoming}>
-              <p align="center" className={classes.mainContent}>
+              {/* <p align="center" className={classes.mainContent}>
                 {header[1].text}
-              </p>
-              <div className={classes.commonBorder}></div>
+              </p> */}
+              {/* <div className={classes.commonBorder}></div> */}
               {current && current.map((event) => <EventCard event={event} />)}
             </div>
           </div>
           <div hidden={value !== "past"}>
             <div align="center" className={classes.upcoming}>
-              <p align="center" className={classes.mainContent}>
+              {/* <p align="center" className={classes.mainContent}>
                 {header[2].text}
-              </p>
-              <div className={classes.commonBorder}></div>
+              </p> */}
+              {/* <div className={classes.commonBorder}></div> */}
               {past && past.map((event) => <EventCard event={event} />)}
             </div>
           </div>
