@@ -62,13 +62,37 @@ function Events() {
     <ThemeProvider theme={theme}>
       <div>
         {/*tabs -container*/}
-        <Box sx={{ width: "100%" }}>
+        <Box sx={{ width: "100%", color: "white" }}>
           <Box sx={{ bgcolor: "background" }}>
-            <Tabs value={value} onChange={handleChange} centered>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              TabIndicatorProps={{
+                style: {
+                  display: "none",
+                },
+              }}
+              centered
+            >
               {/* <Tab label="Item One" /> */}
-              <Tab sx={{ margin: 1 }} value="upcoming" label="Upcoming" />
-              <Tab sx={{ margin: 1 }} value="current" label="Current" />
-              <Tab sx={{ margin: 1 }} value="past" label="Past" />
+              <Tab
+                sx={{ margin: 1, fontSize: "1.2rem" }}
+                value="upcoming"
+                label="Upcoming"
+                className={classes.tabBtn}
+              />
+              <Tab
+                sx={{ margin: 1, fontSize: "1.2rem" }}
+                value="current"
+                label="Current"
+                className={classes.tabBtn}
+              />
+              <Tab
+                sx={{ margin: 1, fontSize: "1.2rem" }}
+                value="past"
+                label="Past"
+                className={classes.tabBtn}
+              />
             </Tabs>
           </Box>
           <div hidden={value !== "upcoming"}>
