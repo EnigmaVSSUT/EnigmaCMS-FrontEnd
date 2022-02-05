@@ -52,7 +52,7 @@ const ArticleCard = ({ item }) => {
           <Typography variant="h5" component="" className={classes.title}>
             {item.name}
           </Typography>
-          <Chip label='web' variant="outlined" style={{borderColor:'#35ff1f',color:'#35ff1f'}} />
+          <Chip label={item.category} variant="outlined" style={{borderColor:'#35ff1f',color:'#35ff1f'}} />
           </Stack>
           <Typography variant="body2" style={{color:'#fff'}} component="p">
             {item.description}
