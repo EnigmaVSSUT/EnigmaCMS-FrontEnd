@@ -54,9 +54,9 @@ const ArticleCard = ({ item }) => {
           </Typography>
           <Chip label='web' variant="outlined" style={{borderColor:'#35ff1f',color:'#35ff1f'}} />
           </Stack>
-          {/* <Typography variant="body2" style={{color:'#fff'}} component="p">
+          <Typography variant="body2" style={{color:'#fff'}} component="p">
             {item.description}
-          </Typography> */}
+          </Typography>
         </CardContent>
         <CardActions style={{ justifyContent: "center" }}>
           <Link

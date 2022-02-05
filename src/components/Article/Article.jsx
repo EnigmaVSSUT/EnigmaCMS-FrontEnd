@@ -24,13 +24,13 @@ const useStyles = makeStyles({
 const Article = () => {
   const classes = useStyles();
   const [docs,setDocs] = useState([]);
-  const articles = [
-    { img: "https://picsum.photos/200", title: "Article 1", id: 1 },
-    { img: "https://picsum.photos/200", title: "Article 2", id: 2 },
-    { img: "https://picsum.photos/200", title: "Article 3", id: 3 },
-    { img: "https://picsum.photos/200", title: "Article 4", id: 4 },
-    { img: "https://picsum.photos/200", title: "Article 5", id: 5 },
-  ];
+  // const articles = [
+  //   { img: "https://picsum.photos/200", title: "Article 1", id: 1 },
+  //   { img: "https://picsum.photos/200", title: "Article 2", id: 2 },
+  //   { img: "https://picsum.photos/200", title: "Article 3", id: 3 },
+  //   { img: "https://picsum.photos/200", title: "Article 4", id: 4 },
+  //   { img: "https://picsum.photos/200", title: "Article 5", id: 5 },
+  // ];
   useEffect(()=>{
     Axios({
       method: "GET",
