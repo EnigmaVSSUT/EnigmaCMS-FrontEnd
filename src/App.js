@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Article from "./components/Article/Article";
+import ArticleDetail from "./components/Article/ArticleDetail";
 import Footer from "./components/Footer/Footer";
 import Preloader from "./components/Preloader/Preloader";
 import Navbar from "./components/Navbar/Navbar";
@@ -47,7 +48,8 @@ function App() {
             <Route path="/events/:slug" component={EventDetails} exact />
             <Route path="/projects/:slug" component={ProjectDetails} exact />
             <Route path="/profile/:slug" component={ProfileDetails} exact />
-            {/* <Route path='/articles' component={Article} exact /> */}
+            <Route path='/articles' component={Article} exact />
+            <Route path='/articles/:slug' component={ArticleDetail} exact />
           </Suspense>
         </Switch>
       </BrowserRouter>
