@@ -8,8 +8,8 @@ const Cursor = () => {
 
 	useLayoutEffect(() => {
 		const mouseMove = e => {
-			let x = e.pageX
-			let y = e.pageY
+			let x = e.pageX + window.scrollX
+			let y = e.pageY + window.scrollY
 
 			setCursorPosition(x, y)
 		}

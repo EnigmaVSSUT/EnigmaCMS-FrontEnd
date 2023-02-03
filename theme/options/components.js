@@ -3,6 +3,14 @@ const componentOptions = {
 		defaultProps: {
 			elevation: 0
 		}
+	},
+	MuiButton: {
+		styleOverrides: {
+			root: {
+				width: 'fit-content',
+				padding: '10px 16px'
+			}
+		}
 	}
 }
 

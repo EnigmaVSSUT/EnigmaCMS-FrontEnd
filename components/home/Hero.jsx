@@ -24,6 +24,7 @@ const Hero = () => {
 				style={{
 					width: 500,
 					height: 500,
+					maxWidth: '100%',
 					position: 'absolute',
 					top: '50%',
 					left: '50%',

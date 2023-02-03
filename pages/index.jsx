@@ -1,4 +1,5 @@
 import Hero from "@/components/home/Hero"
+import LiftOffC from "@/components/home/LiftOffC"
 import DefaultLayout from "@/layout/DefaultLayout"
 import { Button, Stack } from "@mui/material"
 
@@ -8,6 +9,7 @@ const Home = () => {
 			flexGrow={1}
 		>
 			<Hero />
+			<LiftOffC />
 		</Stack>
 	)
 }

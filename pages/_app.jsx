@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
 				minHeight: '100vh'
 			}}
 		>
-			<Cursor />
+			{/* <Cursor /> */}
 			{ getLayout(<Component {...pageProps} />) }
 		</div>
 	</EnigmaTheme>
