@@ -22,7 +22,7 @@ const Cursor = () => {
 
 		return () => document.body.removeEventListener('mousemove', mouseMove)
 		
-	}, [])
+	}, [setCursorPosition, setCursorVisibility])
 
 	const variants = {
 		default: {

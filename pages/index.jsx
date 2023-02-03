@@ -1,15 +1,9 @@
 import Hero from "@/components/home/Hero"
 import LiftOffC from "@/components/home/LiftOffC"
 import DefaultLayout from "@/layout/DefaultLayout"
-import { Button, Stack, useTheme } from "@mui/material"
-import { useEffect } from "react"
+import { Stack } from "@mui/material"
 
 const Home = () => {
-	const theme = useTheme()
-	useEffect(() => {
-		console.log(theme)
-	}, [])
-
 	return (
 		<Stack
 			flexGrow={1}
