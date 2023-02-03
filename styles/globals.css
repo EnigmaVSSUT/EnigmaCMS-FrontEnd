@@ -3,3 +3,17 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+html {
+	cursor: none;
+}
+
+body {
+	min-height: 100vh;
+	/* background-color: #121212; */
+}
+
+@font-face {
+	font-family: 'Gilroy ExtraBold';
+	src: url('/fonts/Gilroy-ExtraBold.ttf');
+}

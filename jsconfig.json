@@ -1,9 +1,15 @@
 {
   "compilerOptions": {
+	"module": "ES6",
+	"target": "ES6",
     "baseUrl": ".",
+	"moduleResolution": "node",
     "paths": {
       "@/components/*": ["./components/*"],
-	  "@/styles/*": ["./styles/*"]
+	  "@/styles/*": ["./styles/*"],
+	  "@/lib/*": ["./lib/*"],
+	  "@/layout/*": ["./layout/*"]
     }
-  }
+  },
+  "exclude": ["node_modules"]
 }
