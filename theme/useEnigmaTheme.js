@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material"
+import { createTheme, responsiveFontSizes } from "@mui/material"
 import paletteOptions from "./options/palette"
 import componentOptions from "./options/components"
 import typographyOptions from "./options/typography"
@@ -10,7 +10,7 @@ const useEnigmaTheme = () => {
 		typography: typographyOptions
 	})
 
-	return theme
+	return responsiveFontSizes(theme)
 }
 
 export default useEnigmaTheme

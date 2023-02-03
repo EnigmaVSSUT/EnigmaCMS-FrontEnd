@@ -1,5 +1,6 @@
 import { Button, Stack, Typography } from "@mui/material"
 import useCursorStore from "@/lib/store/useCursorPositionStore"
+import { RocketLaunch } from "@mui/icons-material"
 
 const LiftOffC = () => {
 	const toggleHoverState = useCursorStore(state => state.toggleHoverState)
@@ -20,14 +21,14 @@ const LiftOffC = () => {
 					Upcoming
 				</Typography>
 				<Stack
-					
-					onMouseEnter={() => toggleHoverState()}
+					onMouseEnter={() => toggleHoverState('#35ff1f')}
 					onMouseLeave={() => toggleHoverState()}
 				>
 					<Typography
 						variant='h1'
+						component='span'
 					>
-						Lift-Off C 🚀
+						Lift-Off C <RocketLaunch sx={{ fontSize: (theme) => theme.typography.h1.fontSize }} />
 					</Typography>
 					<Typography>
 						Are you dreaming of competing off the edge with high-class hackathons and dreaming of a top position? Don't worry! Team Enigma has come up with a great program to help you build up your programming skills.

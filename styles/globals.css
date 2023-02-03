@@ -4,8 +4,8 @@
 	box-sizing: border-box;
 }
 
-html {
-	/* cursor: none; */
+html, * {
+	cursor: none;
 }
 
 body {

@@ -12,6 +12,7 @@
         "@emotion/react": "^11.10.5",
         "@emotion/styled": "^11.10.5",
         "@fontsource/source-code-pro": "^4.5.14",
+        "@mui/icons-material": "^5.11.0",
         "@mui/material": "^5.11.6",
         "@next/font": "13.1.5",
         "eslint": "8.32.0",

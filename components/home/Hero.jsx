@@ -35,7 +35,7 @@ const Hero = () => {
 				gap='8px'
 				alignItems='center'
 				zIndex={1000}
-				onMouseEnter={() => toggleHoverState()}
+				onMouseEnter={() => toggleHoverState('#ffffff')}
 				onMouseLeave={() => toggleHoverState()}
 			>
 				<Typography
