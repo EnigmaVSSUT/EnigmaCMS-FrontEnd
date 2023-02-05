@@ -31,7 +31,7 @@ const LiftOffC = () => {
 						Lift-Off C <RocketLaunch sx={{ fontSize: (theme) => theme.typography.h1.fontSize }} />
 					</Typography>
 					<Typography>
-						Are you dreaming of competing off the edge with high-class hackathons and dreaming of a top position? Don&#39t worry! Team Enigma has come up with a great program to help you build up your programming skills.
+						Are you dreaming of competing off the edge with high-class hackathons and dreaming of a top position? Don&#39;t worry! Team Enigma has come up with a great program to help you build up your programming skills.
 					</Typography>
 				</Stack>
 				<Button
