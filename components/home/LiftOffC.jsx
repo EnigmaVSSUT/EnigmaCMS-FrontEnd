@@ -1,6 +1,6 @@
-import { Button, Stack, Typography } from "@mui/material"
+import { Button, Link, Stack, Typography } from "@mui/material"
 import useCursorStore from "@/lib/store/useCursorPositionStore"
-import { RocketLaunch } from "@mui/icons-material"
+import { BrandingWatermark, RocketLaunch } from "@mui/icons-material"
 
 const LiftOffC = () => {
 	const toggleHoverState = useCursorStore(state => state.toggleHoverState)
@@ -18,7 +18,7 @@ const LiftOffC = () => {
 				<Typography
 					variant="h6"
 				>
-					Upcoming
+					Registrations Open !
 				</Typography>
 				<Stack
 					onMouseEnter={() => toggleHoverState('#35ff1f')}
@@ -31,9 +31,19 @@ const LiftOffC = () => {
 						Lift-Off C <RocketLaunch sx={{ fontSize: (theme) => theme.typography.h1.fontSize }} />
 					</Typography>
 					<Typography>
-						Are you dreaming of competing off the edge with high-class hackathons and dreaming of a top position? Don&#39;t worry! Team Enigma has come up with a great program to help you build up your programming skills.
+					"Learning never exhausts the mind" <br/>
+
+That is our conviction.....
+<br/>
+' Lift off C ' requires no prior programming expertise and is suitable for all levels of experience, as everything will be taught from the scratch along with personalised mentoring and attention. Simple study materials and well curated assignments are all you need to get started.
+<br/>
+So, what are you holding out for?
+<br/>
+Registrations are open till 23rd February 2023.
+We are awaiting your presence from 26 February 2023.
 					</Typography>
 				</Stack>
+				<Link href="/locregistration" style={{textDecoration:'none'}}>
 				<Button
 					variant='contained'
 					color='black'
@@ -44,6 +54,7 @@ const LiftOffC = () => {
 						Register
 					</Typography>
 				</Button>
+				</Link>
 			</Stack>
 		</Stack>
 	)
