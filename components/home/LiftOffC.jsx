@@ -1,6 +1,6 @@
 import { Button, Link, Stack, Typography } from "@mui/material"
 import useCursorStore from "@/lib/store/useCursorPositionStore"
-import { BrandingWatermark, RocketLaunch } from "@mui/icons-material"
+import { RocketLaunch } from "@mui/icons-material"
 
 const LiftOffC = () => {
 	const toggleHoverState = useCursorStore(state => state.toggleHoverState)

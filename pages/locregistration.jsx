@@ -1,10 +1,10 @@
 import { Stack, Typography } from "@mui/material"
-import useCursorStore from "lib/store/useCursorPositionStore"
+// import useCursorStore from "lib/store/useCursorPositionStore"
 import styles from "../styles/admission.module.css";
 import React, { Component } from "react";
 import IconRocketLaunch from "/components/loc/IconRocketLaunch";
 import Loader from "/components/loc/Loader";
-// import useCursorStore from "@/lib/store/useCursorPositionStore"
+
 
 class AdmissionForm extends Component {
     
@@ -27,7 +27,7 @@ class AdmissionForm extends Component {
   
       this.initialState = this.state;
     }
-  
+   
     handleFormValidation() {
       const { fullname, email, regdNo, year, phone, confirmphone, branch, codingProfile } =
         this.state;
@@ -151,11 +151,11 @@ class AdmissionForm extends Component {
         }, 5000);
       } catch (error) {
         console.log(error);
-      }
-      
+      } 
     };
   
-    render() {
+    render()
+     {
        
       const {
         fullnameErr,
@@ -171,9 +171,10 @@ class AdmissionForm extends Component {
       // IoIosRocket
     //   const toggleHoverState = useCursorStore(state => state.toggleHoverState)
       return (
+        
         <>
           <div className={styles.formDiv}>
-            <div className={styles.heading}>Lift-Off C  <IconRocketLaunch /></div>
+            <div className={styles.heading} >Lift-Off C  <IconRocketLaunch /></div>
             <div className={styles.form_wrap}>
               <div className={styles.form_comp}>
                 <form onSubmit={this.handleSubmit}>
