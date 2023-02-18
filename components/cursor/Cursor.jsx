@@ -43,7 +43,7 @@ const Cursor = () => {
 				visibility: showCursor ? 'visible' : 'hidden',
 				position: 'fixed',
 				backgroundColor: cursorBackgroundColor,
-				border: '1px solid black',
+				border: '1px solid green',
 				borderRadius: '50%',
 				pointerEvents: 'none',
 				zIndex: 99999,
