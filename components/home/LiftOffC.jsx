@@ -1,4 +1,4 @@
-import { Button, Link, Stack, Typography } from "@mui/material"
+import { Button, Link, Stack, Typography ,Box} from "@mui/material"
 import useCursorStore from "@/lib/store/useCursorPositionStore"
 import { RocketLaunch } from "@mui/icons-material"
 
@@ -37,6 +37,7 @@ const LiftOffC = () => {
 Registrations are open till 23rd February 2023.
 					</Typography>
 				</Stack>
+				<Box>
 				<Link href="/locregistration" style={{textDecoration:'none'}}>
 				<Button
 					variant='contained'
@@ -49,6 +50,7 @@ Registrations are open till 23rd February 2023.
 					</Typography>
 				</Button>
 				</Link>
+				</Box>
 			</Stack>
 		</Stack>
 	)
