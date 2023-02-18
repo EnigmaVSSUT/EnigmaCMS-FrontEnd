@@ -32,15 +32,9 @@ const LiftOffC = () => {
 					</Typography>
 					<Typography>
 					"Learning never exhausts the mind" <br/>
-
-That is our conviction.....
-<br/>
 ' Lift off C ' requires no prior programming expertise and is suitable for all levels of experience, as everything will be taught from the scratch along with personalised mentoring and attention. Simple study materials and well curated assignments are all you need to get started.
 <br/>
-So, what are you holding out for?
-<br/>
 Registrations are open till 23rd February 2023.
-We are awaiting your presence from 26 February 2023.
 					</Typography>
 				</Stack>
 				<Link href="/locregistration" style={{textDecoration:'none'}}>
