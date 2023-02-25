@@ -13,7 +13,7 @@ const Thanks = () => {
 				onMouseLeave={() => toggleHoverState()}>Lift-Off C  <IconRocketLaunch /></div>
                 <div className={styles.messageBox}>
                     <h1 className={styles.thanksmessage} onMouseEnter={() => toggleHoverState('#ffffff')}
-				onMouseLeave={() => toggleHoverState()}>Thanks for registering!</h1>
+				onMouseLeave={() => toggleHoverState()}>Sorry ! Registrations Closed</h1>
                     
                 </div>
                 <Box sx={{display:"flex",justifyContent:"center",paddingTop:"20px"}}>
