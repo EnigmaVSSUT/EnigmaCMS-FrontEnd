@@ -37,7 +37,7 @@ const LiftOffC = () => {
 					</Typography>
 				</Stack>
 				<Box>
-				<Link href="/closed" style={{textDecoration:'none'}}>
+				<Link href="/locregistration" style={{textDecoration:'none'}}>
 				<Button
 					variant='contained'
 					color='black'
