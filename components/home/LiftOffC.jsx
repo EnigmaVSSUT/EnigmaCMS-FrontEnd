@@ -18,7 +18,7 @@ const LiftOffC = () => {
 				<Typography
 					variant="h6"
 				>
-					Registrations Open !
+					Registrations Closed !
 				</Typography>
 				<Stack
 					onMouseEnter={() => toggleHoverState('#35ff1f')}
@@ -34,11 +34,10 @@ const LiftOffC = () => {
 					Learning never exhausts the mind <br/>
 &#39; Lift off C &#39; requires no prior programming expertise and is suitable for all levels of experience, as everything will be taught from the scratch along with personalised mentoring and attention. Simple study materials and well curated assignments are all you need to get started.
 <br/>
-Registrations are open till 23rd February 2023.
 					</Typography>
 				</Stack>
 				<Box>
-				<Link href="/locregistration" style={{textDecoration:'none'}}>
+				<Link href="/closed" style={{textDecoration:'none'}}>
 				<Button
 					variant='contained'
 					color='black'
