@@ -17,6 +17,7 @@ const LiftOffC = () => {
 			>
 				<Typography
 					variant="h6"
+					sx={{fontFamily:'Oxygen'}}
 				>
 					Registrations Closed !
 				</Typography>
@@ -27,10 +28,13 @@ const LiftOffC = () => {
 					<Typography
 						variant='h1'
 						component='span'
+						sx={{fontFamily:'Play'}}
 					>
 						Lift-Off C <RocketLaunch sx={{ fontSize: (theme) => theme.typography.h1.fontSize }} />
 					</Typography>
-					<Typography>
+					<Typography
+					
+					sx={{fontFamily:'Comforta'}}>
 					Learning never exhausts the mind <br/>
 &#39; Lift off C &#39; requires no prior programming expertise and is suitable for all levels of experience, as everything will be taught from the scratch along with personalised mentoring and attention. Simple study materials and well curated assignments are all you need to get started.
 <br/>
