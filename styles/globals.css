@@ -17,3 +17,24 @@ body {
 	font-family: 'Gilroy ExtraBold';
 	src: url('/fonts/Gilroy-ExtraBold.ttf');
 }
+
+@font-face {
+	font-family: "Play";
+	src: url('/fonts/Play-Bold.ttf');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: "Comforta";
+	src: url('/fonts/Comforta.ttf');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+  @font-face {
+	font-family: "Oxygen";
+	src: url('/fonts/Oxygen-Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+  }

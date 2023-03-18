@@ -1,5 +1,6 @@
 import Hero from "@/components/home/Hero"
 import LiftOffC from "@/components/home/LiftOffC"
+import Induction from "@/components/home/Induction"
 import DefaultLayout from "@/layout/DefaultLayout"
 import { Stack } from "@mui/material"
 
@@ -10,6 +11,7 @@ const Home = () => {
 		>
 			<Hero />
 			<LiftOffC />
+			<Induction></Induction>
 		</Stack>
 	)
 }
