@@ -1,4 +1,5 @@
 import Hero from "@/components/home/Hero"
+import Services from "@/components/home/Services"
 import AnimatePage from "@/layout/AnimatePage"
 import DefaultLayout from "@/layout/DefaultLayout"
 import { Stack } from "@mui/material"
@@ -11,12 +12,7 @@ const Home = () => {
 				flexGrow={1}
 			>
 				<Hero />
-				<Link
-					href='/members'
-					passHref
-				>
-					members
-				</Link>
+				<Services />
 			</Stack>
 		</AnimatePage>
 	)

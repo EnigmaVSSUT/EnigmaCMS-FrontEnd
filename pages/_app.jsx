@@ -1,3 +1,4 @@
+import BackgroundBlob from '@/layout/BackgroundBlob'
 import Header from '@/layout/appbar/Header'
 import Footer from '@/layout/footer/Footer'
 import '@/styles/globals.css'
@@ -25,6 +26,7 @@ export default function App({ Component, pageProps }) {
 			minHeight='100vh'
 			bgcolor='background.default'
 		>
+			<BackgroundBlob />
 			<Cursor />
 			<Header />
 			<Stack
