@@ -1,14 +1,15 @@
 import { AppBar, Stack, Typography } from "@mui/material"
 import Image from "next/image"
 
-const DefaultAppBar = () => {
+const Header = () => {
 	return (
 		<AppBar
-			color="white"
+			position="sticky"
 		>
 			<Stack
 				direction='row'
 				borderBottom='1px solid'
+				borderColor='divider'
 				justifyContent='center'
 				alignItems='center'
 				padding='10px 24px'
@@ -34,4 +35,4 @@ const DefaultAppBar = () => {
 	)
 }
 
-export default DefaultAppBar
+export default Header

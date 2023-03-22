@@ -1,7 +1,9 @@
 import "@fontsource/source-code-pro"
+import "@fontsource/space-grotesk"
+import "@fontsource/space-grotesk/500.css"
 
 const typographyOptions = {
-	fontFamily: 'Source Code Pro',
+	fontFamily: 'Space Grotesk',
 	h1: {
 		fontFamily: 'Gilroy ExtraBold'
 	},

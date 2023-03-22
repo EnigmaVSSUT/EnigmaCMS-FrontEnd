@@ -26,10 +26,10 @@ const Cursor = () => {
 
 	const variants = {
 		default: {
-			x: x - (isHovering ? 50 : 20),
-			y: y - (isHovering ? 50 : 20),
-			width: isHovering ? 100 : 40,
-			height: isHovering ? 100 : 40
+			x: x - 10,
+			y: y - 10,
+			width: 20,
+			height: 20
 		}
 	}
 
@@ -43,7 +43,8 @@ const Cursor = () => {
 				visibility: showCursor ? 'visible' : 'hidden',
 				position: 'fixed',
 				backgroundColor: cursorBackgroundColor,
-				border: '1px solid green',
+				border: '1px solid',
+				borderColor: 'AppWorkspace',
 				borderRadius: '50%',
 				pointerEvents: 'none',
 				zIndex: 99999,

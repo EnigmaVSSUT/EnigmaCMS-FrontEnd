@@ -12,8 +12,9 @@ const componentOptions = {
 		styleOverrides: {
 			root: {
 				width: 'fit-content',
-				padding: '10px 16px',
-				cursor: 'none'
+				padding: '6px 16px',
+				textTransform: 'none',
+				fontWeight: 500
 			}
 		}
 	}
