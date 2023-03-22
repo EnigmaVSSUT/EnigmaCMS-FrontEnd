@@ -4,13 +4,8 @@
 	box-sizing: border-box;
 }
 
-/* html, * {
-	cursor: none;
-} */
-
 body {
 	min-height: 100vh;
-	/* background-color: #121212; */
 }
 
 @font-face {
@@ -18,23 +13,28 @@ body {
 	src: url('/fonts/Gilroy-ExtraBold.ttf');
 }
 
-@font-face {
-	font-family: "Play";
-	src: url('/fonts/Play-Bold.ttf');
-	font-weight: normal;
-	font-style: normal;
-  }
+::-webkit-scrollbar {
+	position: fixed;
+	width: 10px;
+}
 
-  @font-face {
-	font-family: "Comforta";
-	src: url('/fonts/Comforta.ttf');
-	font-weight: normal;
-	font-style: normal;
-  }
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 2px #121212;
+	background: #121212;
+	border: 1px solid #121212;
+}
 
-  @font-face {
-	font-family: "Oxygen";
-	src: url('/fonts/Oxygen-Light.ttf');
-	font-weight: normal;
-	font-style: normal;
-  }
+::-webkit-scrollbar-thumb {
+	background: #ccc;
+	box-shadow: inset 0 0 0 3px #121212;
+	/* border-radius: 10px; */
+	border: 1px solid #121212;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #fff;
+}
+
+::-webkit-scrollbar-button {
+	display: none;
+}
