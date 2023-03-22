@@ -4,9 +4,9 @@
 	box-sizing: border-box;
 }
 
-html, * {
+/* html, * {
 	cursor: none;
-}
+} */
 
 body {
 	min-height: 100vh;

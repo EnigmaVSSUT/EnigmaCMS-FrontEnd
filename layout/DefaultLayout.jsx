@@ -1,7 +1,7 @@
 import { Box, Stack } from "@mui/material"
 import { Children } from "react"
-import DefaultAppBar from "./appbar/DefaultAppBar"
-import DefaultFooter from "./footer/DefaultFooter"
+import DefaultAppBar from "./appbar/Header"
+import DefaultFooter from "./footer/Footer"
 
 const DefaultLayout = ({ children }) => {
 	return (
