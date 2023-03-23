@@ -23,6 +23,7 @@ const Hero = () => {
 				justifyContent='center'
 				alignItems='center'
 				padding='32px'
+				gap='16px'
 			>	
 				<Typography
 					variant='h1'

@@ -22,6 +22,13 @@ const componentOptions = {
 		defaultProps: {
 			underline: 'none'
 		}
+	},
+	MuiIconButton: {
+		styleOverrides: {
+			root: {
+				width: 'fit-content'
+			}
+		}
 	}
 }
 
