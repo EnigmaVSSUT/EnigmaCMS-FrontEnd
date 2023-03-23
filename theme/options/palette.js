@@ -16,13 +16,19 @@ const paletteOptions = {
 		main: '#35ff1f',
 		dark: '#35ff1f'
 	},
+	appBar: {
+		main: '#12121270'
+	},
 	background: {
-		default: '#121212'
+		default: '#121212',
 	},
 	text: {
 		title: grey[100],
 		subtitle: grey[400],
 		body: grey[500]
+	},
+	border: {
+		default: '#ffffff'
 	}
 }
 

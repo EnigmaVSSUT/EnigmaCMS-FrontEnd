@@ -7,7 +7,11 @@ const Footer = () => {
 			alignItems='center'
 			borderTop='1px solid'
 			borderColor='divider'
-			bgcolor='background.default'
+			// bgcolor='background.default'
+			sx={{
+				background: '#12121240',
+				backdropFilter: 'blur(200px)'
+			}}
 		>
 			<Typography
 				color='text.body'

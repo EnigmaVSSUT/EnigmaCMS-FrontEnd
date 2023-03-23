@@ -17,6 +17,11 @@ const componentOptions = {
 				fontWeight: 500
 			}
 		}
+	},
+	MuiLink: {
+		defaultProps: {
+			underline: 'none'
+		}
 	}
 }
 
