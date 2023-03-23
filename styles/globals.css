@@ -40,6 +40,7 @@ body {
 }
 
 a, a:visited, a:hover, a:focus {
+	color: inherit;
 	text-transform: none;
 	text-decoration: none;
 }
