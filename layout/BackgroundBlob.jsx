@@ -11,7 +11,7 @@ const BackgroundBlob = () => {
 			animate={{
 				rotate: 360,
 				transition: {
-					duration: 6,
+					duration: 3,
 					repeat: Infinity,
 					repeatType: 'loop',
 					ease: 'linear'
@@ -23,9 +23,8 @@ const BackgroundBlob = () => {
 				position: 'fixed',
 				left: x - 100,
 				top: y - 100,
-				background: `linear-gradient(to right, #000000, #35ff1f)`,
+				background: `linear-gradient(to right, #2BC96D, #D3D3D3)`,
 				borderRadius: '200px',
-				filter: 'blur(80px)',
 				zIndex: 0,
 			}}
 		/>

@@ -38,3 +38,8 @@ body {
 ::-webkit-scrollbar-button {
 	display: none;
 }
+
+a, a:visited, a:hover, a:focus {
+	text-transform: none;
+	text-decoration: none;
+}

@@ -29,7 +29,7 @@ const AnimatePage = ({ children }) => {
 				display: 'flex',
 				flexDirection: 'column',
 				flexGrow: 1,
-				backdropFilter: 'blur(80px)'
+				backdropFilter: 'blur(200px)'
 			}}
 		>
 			{ children }

@@ -5,6 +5,10 @@ const Header = () => {
 	return (
 		<AppBar
 			position="sticky"
+			sx={{
+				backgroundColor: '#12121240',
+				backdropFilter: 'blur(200px)'
+			}}
 		>
 			<Stack
 				direction='row'

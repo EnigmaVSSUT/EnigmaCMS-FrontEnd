@@ -1,4 +1,5 @@
 import { Stack, Typography } from "@mui/material"
+import EnigmaLink from "../common/EnigmaLink"
 
 const Services = () => {
 	return (
@@ -12,6 +13,7 @@ const Services = () => {
 			>
 				What we do.
 			</Typography>
+			<EnigmaLink />
 		</Stack>
 	)
 }
