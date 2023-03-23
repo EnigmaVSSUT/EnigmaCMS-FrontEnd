@@ -1,3 +1,5 @@
+import EnigmaLink from "@/components/common/EnigmaLink"
+import EnigmaNavLink from "@/components/common/EnigmaNavLink"
 import { AppBar, Stack, Typography } from "@mui/material"
 import Image from "next/image"
 
@@ -6,7 +8,7 @@ const Header = () => {
 		<AppBar
 			position="sticky"
 			sx={{
-				backgroundColor: '#12121240',
+				backgroundColor: '#12121290',
 				backdropFilter: 'blur(200px)'
 			}}
 		>
@@ -17,12 +19,13 @@ const Header = () => {
 				justifyContent='center'
 				alignItems='center'
 				padding='10px 24px'
-			>
-				
+				gap='16px'
+			>				
 				<Stack
 					direction='row'
 					gap='12px'
 					alignItems='center'
+					flexGrow={1}
 				>
 					<Image
 						src='/logo/enigma_contained.png'
@@ -33,6 +36,26 @@ const Header = () => {
 					<Typography>
 						Enigma VSSUT
 					</Typography>
+				</Stack>
+				<Stack
+					direction='row'
+					gap='20px'
+				>
+					<EnigmaNavLink
+						href='/events'
+					>
+						Events
+					</EnigmaNavLink>
+					<EnigmaNavLink
+						href='/projects'
+					>
+						Projects
+					</EnigmaNavLink>
+					<EnigmaNavLink
+						href='/team'
+					>
+						Team
+					</EnigmaNavLink>
 				</Stack>
 			</Stack>
 		</AppBar>
