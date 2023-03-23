@@ -1,7 +1,7 @@
-import { Link, Stack, Box } from "@mui/material"
+import { Stack, Box, Typography } from "@mui/material"
 import { ArrowForward } from "@mui/icons-material"
 
-import { Link as NextLink } from "next/link"
+import Link from "next/link"
 
 const EnigmaLink = () => {
 	return (
@@ -23,12 +23,14 @@ const EnigmaLink = () => {
         }
       }}
     >
-      <Link
-				component={NextLink}
+			<Link
 				href='/about'
-				color='text.subtitle'
 			>
-				About
+				<Typography
+					color='text.body'
+				>
+					About
+				</Typography>
 			</Link>
       <ArrowForward
         fontSize="12px"

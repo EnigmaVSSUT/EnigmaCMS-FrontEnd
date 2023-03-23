@@ -18,30 +18,35 @@ export default function App({ Component, pageProps }) {
 	const router = useRouter()
 
   return (
-	<EnigmaTheme>
-		<Head>
-			<title>Enigma VSSUT</title>
-		</Head>
-		<Stack
-			minHeight='100vh'
-			bgcolor='background.default'
-		>
-			<BackgroundBlob />
-			<Cursor />
-			<Header />
-			<Stack
-				flexGrow={1}
-				overflow='hidden'
-			>
-				<AnimatePresence
-					mode='wait'
-					initial={false}
+		<>
+			<EnigmaTheme>
+				<Head>
+					<title>Enigma VSSUT</title>
+				</Head>
+				<Stack
+					minHeight='100vh'
+					bgcolor='background.default'
 				>
-					<Component {...pageProps} key={router.pathname} />
-				</AnimatePresence>
-			</Stack>
-			<Footer />
-		</Stack>
-	</EnigmaTheme>
+					<BackgroundBlob />
+					<Cursor />
+					<Header />
+					<Stack
+						flexGrow={1}
+						overflow='hidden'
+						sx={{
+							backdropFilter: 'blur(200px)'
+						}}
+					>
+						<AnimatePresence
+							mode='wait'
+							initial={false}
+						>
+							<Component {...pageProps} key={router.pathname} />
+						</AnimatePresence>
+					</Stack>
+					<Footer />
+				</Stack>
+			</EnigmaTheme>
+		</>
   )
 }
