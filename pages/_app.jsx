@@ -7,6 +7,7 @@ import { AnimatePresence } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import { useEffect } from 'react'
 import EnigmaTheme from 'theme/EnigmaTheme'
 
 const Cursor = dynamic(() => import('@/components/cursor/Cursor'), {
@@ -34,7 +35,7 @@ export default function App({ Component, pageProps }) {
 						flexGrow={1}
 						overflow='hidden'
 						sx={{
-							backdropFilter: 'blur(200px)'
+							// backdropFilter: 'blur(200px)'
 						}}
 					>
 						<AnimatePresence
