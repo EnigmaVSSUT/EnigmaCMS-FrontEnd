@@ -15,7 +15,7 @@ const Hero = () => {
 		>
 			<Stack
 				sx={{
-					background: `radial-gradient(circle at 50% 50%, ${theme.palette.background.default} 10%, transparent)`,
+					background: `radial-gradient(300px circle at 50% 50%, ${theme.palette.background.default} 40%, transparent)`,
 					backgroundSize: '100% 100%',
 				}}
 				width='100%'
