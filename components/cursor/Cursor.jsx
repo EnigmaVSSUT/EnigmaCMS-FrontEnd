@@ -7,15 +7,20 @@ import { useTheme } from "@emotion/react"
 const Cursor = () => {
 	const cursorRef = useRef(null)
 	const [showCursor, x, y, setCursorPosition, isHovering, cursorBackgroundColor, setCursorVisibility] = useCursorStore(state => [state.showCursor, state.x, state.y, state.setCursorPosition, state.isHovering, state.cursorBackgroundColor, state.setCursorVisibility])
-	const isTouchDevice = useMediaQuery('(pointer: coarse)')
 	const theme = useTheme()
+	const [isMobile, setIsMobile] = useState(true)
 
 	useLayoutEffect(() => {
+		if(window.orientation == undefined)	 {
+			setIsMobile(false)
+		}
+
 		const mouseMove = e => {
 			let x = e.pageX + window.scrollX
 			let y = e.pageY - window.scrollY
-
-			setCursorPosition(x, y)
+			cursorRef.current.style.setProperty('--mouse-x', `${x-10}px`)
+			cursorRef.current.style.setProperty('--mouse-y', `${y-10}px`)
+			// setCursorPosition(x, y)
 		}
 
 		document.body.addEventListener('mousemove', mouseMove)
@@ -38,19 +43,26 @@ const Cursor = () => {
 	return (
 		<motion.div
 			ref={cursorRef}
-			variants={variants}
-			animate='default'
+			// variants={variants}
+			// animate='default'
 			style={{
-				display: isTouchDevice ? 'none' : 'block',
+				display: isMobile ? 'none' : 'block',
 				visibility: showCursor ? 'visible' : 'hidden',
 				position: 'fixed',
-				backgroundColor: cursorBackgroundColor,
+				width: '20px',
+				height: '20px',
+				left: 'var(--mouse-x)',
+				top: 'var(--mouse-y)',				
+				backgroundColor: 'transparent',
 				border: '1px solid',
 				borderColor: theme.palette.border.default,
 				borderRadius: '50%',
 				pointerEvents: 'none',
 				zIndex: 99999,
 				mixBlendMode: isHovering ? 'difference' : 'normal'
+			}}
+			transition={{
+				delay: 1
 			}}
 		/>
 	)
