@@ -18,7 +18,7 @@ const Header = () => {
 				borderColor='divider'
 				justifyContent='center'
 				alignItems='center'
-				padding='10px 24px'
+				padding='10px 32px'
 				gap='16px'
 			>				
 				<Stack
