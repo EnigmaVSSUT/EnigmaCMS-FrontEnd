@@ -70,28 +70,6 @@ const Services = () => {
 			>
 				What we do.
 			</Typography>
-			{/* <Stack
-				direction='row'
-				flexWrap='wrap'
-				ref={servicesContainerRef}
-				sx={{
-					'&:hover': {
-						'& .MuiStack-root:before': {
-							opacity: 1
-						}
-					}
-				}}
-				gap='8px'
-				padding='64px 0'
-				flex='300px'
-				maxWidth='916px'
-				alignSelf='center'
-				justifyContent='center'
-			>
-				{ services.map(s => (
-					<ServiceCard service={s} />
-				)) }
-			</Stack> */}
 			<Grid
 				container
 				maxWidth='1024px'
@@ -115,6 +93,7 @@ const Services = () => {
 						md={3}
 						maxWidth='300px'
 						width='100%'
+						key={s.name}
 					>
 						<ServiceCard service={s} />
 					</Grid>
