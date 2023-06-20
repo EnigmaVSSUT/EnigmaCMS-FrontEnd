@@ -2,7 +2,6 @@ import AnimatePage from "@/layout/AnimatePage";
 import React, { Suspense, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import baseAPIMethods from "@/lib/axios/base";
-import { useRouter } from "next/navigation";
 import {
 	Avatar,
 	Box,

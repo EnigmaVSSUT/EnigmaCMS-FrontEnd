@@ -52,7 +52,7 @@ const Header = () => {
 						Projects
 					</EnigmaNavLink>
 					<EnigmaNavLink
-						href='/team'
+						href='/teams'
 					>
 						Team
 					</EnigmaNavLink>
