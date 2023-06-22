@@ -1,0 +1,12 @@
+.memberCard {
+    background: rgba( 14, 14, 14, 0.25 );
+    box-shadow: 0 0px 10px 0 rgba(31, 135, 116, 0.27);
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.memberCard:hover{
+    box-shadow: 0 0px 18px 0 rgba(31, 135, 116, 0.50);
+}

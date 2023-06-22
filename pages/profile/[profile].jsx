@@ -38,7 +38,7 @@ export default function Profile() {
 				setUser({
 					username: res.data.username,
 					name: res.data.name,
-					avatar: "https://api.enigmavssut.com/media/" + res.data.avatar,
+					avatar: process.env.NEXT_PUBLIC_BASE_URL+"/media/"+ res.data.avatar,
 					graduationYear: res.data.graduation_year,
 					linkedin_handle: res.data.linkedin_url,
 					twitter_handle: res.data.twitter_username,
