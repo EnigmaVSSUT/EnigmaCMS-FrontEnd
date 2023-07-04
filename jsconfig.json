@@ -5,10 +5,13 @@
     "baseUrl": ".",
 	"moduleResolution": "node",
     "paths": {
-      "@/components/*": ["./components/*"],
-	  "@/styles/*": ["./styles/*"],
-	  "@/lib/*": ["./lib/*"],
-	  "@/layout/*": ["./layout/*"]
+      "@/components/*": ["./src/components/*"],
+      "@/pages/*": ["./src/pages/*"],
+	  "@/styles/*": ["./src/styles/*"],
+	  "@/lib/*": ["./src/lib/*"],
+	  "@/layout/*": ["./src/layout/*"],
+    "@/theme/*": ["./src/theme/*"],
+    "@/router/*": ["./src/router/*"],
     }
   },
   "exclude": ["node_modules"]
