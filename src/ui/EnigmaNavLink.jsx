@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Stack, Box, Typography } from "@mui/material"
 
 const EnigmaNavLink = ({ href = '/', color = 'text.body', children }) => {
