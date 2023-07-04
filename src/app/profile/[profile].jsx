@@ -1,22 +1,25 @@
-import AnimatePage from "src/ui/AnimatePage";
-import { Suspense, useEffect } from "react";
-import baseAPIMethods from "@/lib/axios/base";
+import { useEffect, useState } from "react";
 import {
 	Avatar,
 	Chip,
+	CircularProgress,
 	Grid,
 	IconButton,
 	Stack,
 	Typography,
 } from "@mui/material";
-import useUserProfile from "@/lib/store/useUserProfile";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import {useParams} from "react-router-dom"
+import { useParams } from "react-router-dom";
+import AnimatePage from "../../ui/AnimatePage";
+import baseAPIMethods from "../../lib/axios/base";
+import useUserProfile from "./store/useUserProfile";
+// import useLoading from "../../shared/store/useLoading";
 
-export default function Profile() {
-	const {username} = useParams() 
+export default function UserProfile() {
+	const { username } = useParams();
 
+	const [loading, setLoading] = useState(false);
 	const [user, setUser] = useUserProfile((state) => [
 		state.user,
 		state.setUser,
@@ -24,6 +27,7 @@ export default function Profile() {
 
 	useEffect(() => {
 		if (username) {
+			setLoading(true);
 			const getUserProfile = async () => {
 				return baseAPIMethods.user.userProfile(username);
 			};
@@ -31,12 +35,11 @@ export default function Profile() {
 				setUser({
 					username: res.data.username,
 					name: res.data.name,
-					avatar: import.meta.env.VITE_BASE_URL+"/media/" + res.data.avatar,
+					avatar: import.meta.env.VITE_BASE_URL + "/media/" + res.data.avatar,
 					graduationYear: res.data.graduation_year,
 					linkedin_handle: res.data.linkedin_url,
 					twitter_handle: res.data.twitter_username,
 				});
-
 				// console.log(user);
 			});
 		}
@@ -44,27 +47,27 @@ export default function Profile() {
 
 	return (
 		<AnimatePage>
-			<Stack justifyContent={"center"} alignItems={"center"}>
+			<Stack justifyContent="center" alignItems="center">
 				<Stack
 					border={3}
-					boxShadow={"0 0 10px 3px"}
-					direction={"row"}
-					minWidth={"900px"}
+					boxShadow="0 0 10px 3px"
+					direction="row"
+					minWidth="900px"
 					padding={12}
 					margin={8}
 				>
 					<Stack className="data-box" gap={2} flexGrow={1}>
-						<Typography color={"#fff"} variant="h3">
+						<Typography color="#fff" variant="h3">
 							{user.name}
 						</Typography>
-						<Typography color={"#fff"} variant="h6">
+						<Typography color="#fff" variant="h6">
 							{user.username}
 						</Typography>
 
-						<Typography color={"#fff"}>{user.graduationYear}</Typography>
+						<Typography color="#fff">{user.graduationYear}</Typography>
 
-						<Stack direction={"column"} marginTop={5} gap={1}>
-							<Typography color={"#fff"} variant="h6">
+						<Stack direction="column" marginTop={5} gap={1}>
+							<Typography color="#fff" variant="h6">
 								Skills
 							</Typography>
 							<Grid container xs={8} gap={1}>
@@ -86,13 +89,13 @@ export default function Profile() {
 							</Grid>
 						</Stack>
 
-						<Stack
-							direction={"row"}
-							sx={{ color: "#fff" }}
-							gap={3}
-							marginTop={3}
-						>
-							<a href={user.linkedin_handle} target="_blank" key="linkedin" rel="noreferrer">
+						<Stack direction="row" sx={{ color: "#fff" }} gap={3} marginTop={3}>
+							<a
+								href={user.linkedin_handle}
+								target="_blank"
+								key="linkedin"
+								rel="noreferrer"
+							>
 								<IconButton
 									sx={{
 										border: "1px solid",
@@ -103,7 +106,12 @@ export default function Profile() {
 								</IconButton>
 							</a>
 
-							<a href={user.twitter_handle} target="_blank" key="twitter" rel="noreferrer">
+							<a
+								href={user.twitter_handle}
+								target="_blank"
+								key="twitter"
+								rel="noreferrer"
+							>
 								<IconButton
 									sx={{
 										border: "1px solid",
@@ -116,7 +124,7 @@ export default function Profile() {
 						</Stack>
 					</Stack>
 
-					<Stack className="image-box" flexGrow={1} alignItems={"center"}>
+					<Stack className="image-box" flexGrow={1} alignItems="center">
 						<Stack
 							height="100%"
 							width="100%"
@@ -125,19 +133,45 @@ export default function Profile() {
 							sx={{
 								"&:hover": {
 									"& .MuiAvatar-root": {
-										filter: "brightness(1.2)",
+										filter: "brightness(1.05)",
 									},
 								},
 								height: "fit-content",
 								width: "fit-content",
 							}}
 						>
-							<Suspense fallback={<div>Loading..</div>}>
+							<Avatar
+								justifyContent={"center"}
+								alignItems={"center"}
+								sx={{
+									width: 255,
+									height: 255,
+									border: 5,
+									color: "#52527a",
+									backgroundColor: "transparent",
+									position: "relative",
+								}}
+							>
+								{loading && (
+									<CircularProgress
+										sx={{
+											color: "white",
+											position: "relative",
+											transform: "translate(-50%, -50%)",
+										}}
+										size={40}
+									/>
+								)}
 								<Avatar
-									sx={{ width: 255, height: 255, border: 5, color: "#52527a" }}
+									sx={{
+										width: 250,
+										height: 250,
+										display: loading ? "none" : "block",
+									}}
 									src={user.avatar}
+									onLoad={() => setLoading((loading) => !loading)}
 								/>
-							</Suspense>
+							</Avatar>
 						</Stack>
 					</Stack>
 				</Stack>

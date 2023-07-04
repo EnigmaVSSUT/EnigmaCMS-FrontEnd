@@ -7,6 +7,6 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    host: 'enigma.code'
+    host: 'club.enigma.code'
     },
 })

@@ -4,6 +4,7 @@ import {RouterProvider, createBrowserRouter} from "react-router-dom"
 import RootLayout from './app/root/RootLayout'
 import Background from './ui/Background'
 import HomePage from './app/home/Home'
+import UserProfile from './app/profile/[profile]'
 
 const router = createBrowserRouter([
 	{
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
 			{
 				path: '/',
 				element: <HomePage />
+			},
+			{
+				path: '/profile/:username',
+				element: < UserProfile/>
 			}
 		]
 	}
