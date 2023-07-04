@@ -1,6 +1,6 @@
 // import EnigmaLink from "@/components/common/EnigmaLink"
-import EnigmaNavLink from "@/components/common/EnigmaNavLink"
 import { AppBar, Stack, Typography } from "@mui/material"
+import EnigmaNavLink from "./EnigmaNavLink"
 
 const Header = () => {
 	return (

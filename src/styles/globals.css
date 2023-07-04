@@ -13,8 +13,8 @@ body {
 }
 
 @font-face {
-	font-family: 'Gilroy ExtraBold';
-	src: url('/fonts/Gilroy-ExtraBold.ttf');
+	font-family: 'Satoshi';
+	src: url('/fonts/Satoshi-Variable.ttf');
 }
 
 ::-webkit-scrollbar {

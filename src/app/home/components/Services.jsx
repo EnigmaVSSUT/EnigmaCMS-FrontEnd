@@ -1,8 +1,7 @@
 import { Stack, Typography } from "@mui/material"
-import EnigmaLink from "../common/EnigmaLink"
 import ServiceCard from "./ServiceCard"
-import { useEffect, useRef, useState } from "react"
-import { faBrain, faGamepad, faGlobe, faLaptopCode, faMobileAndroid, faShield } from "@fortawesome/free-solid-svg-icons"
+import { useEffect, useRef } from "react"
+import { faBrain, faGamepad, faGlobe, faLaptopCode, faShield } from "@fortawesome/free-solid-svg-icons"
 import { faAndroid, faFigma } from "@fortawesome/free-brands-svg-icons"
 import Grid from "@mui/material/Unstable_Grid2"
 
@@ -64,8 +63,7 @@ const Services = () => {
 			alignItems='center'
 		>
 			<Typography
-				variant='h1'
-				color='text.title'
+				variant='displayLarge'
 				textAlign='center'
 			>
 				What we do.

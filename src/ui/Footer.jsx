@@ -1,7 +1,6 @@
-import ScrollToTopButton from "@/components/common/BackToTopButton"
 import { Instagram, LinkedIn, Twitter } from "@mui/icons-material"
 import { Button, Divider, IconButton, Stack, Typography } from "@mui/material"
-
+import ScrollToTopButton from "./BackToTopButton"
 
 const socialLinks = [
 	{
