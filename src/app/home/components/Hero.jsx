@@ -1,4 +1,4 @@
-import { Button, Stack, Typography, useTheme } from "@mui/material"
+import {Stack, Typography, useTheme } from "@mui/material"
 import { grey } from "@mui/material/colors"
 
 const Hero = () => {
@@ -26,14 +26,11 @@ const Hero = () => {
 				gap='16px'
 			>	
 				<Typography
-					variant='h1'
-					color='text.title'
+					variant='displayLarge'
 				>
 					Enigma
 				</Typography>
-				<Typography
-					color='text.body'
-				>
+				<Typography>
 					The Official Coding Club of VSSUT, Burla 
 				</Typography>
 			</Stack>

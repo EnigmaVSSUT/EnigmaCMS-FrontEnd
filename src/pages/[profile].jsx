@@ -1,4 +1,4 @@
-import AnimatePage from "@/layout/AnimatePage";
+import AnimatePage from "src/ui/AnimatePage";
 import { Suspense, useEffect } from "react";
 import baseAPIMethods from "@/lib/axios/base";
 import {

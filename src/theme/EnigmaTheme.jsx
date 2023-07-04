@@ -1,9 +1,16 @@
-/* eslint-disable react/prop-types */
-import {  ThemeProvider } from "@mui/material"
-import useEnigmaTheme from "./useEnigmaTheme"
+import { ThemeProvider, createTheme } from "@mui/material"
+import componentOverrides from "./components"
+import darkPalette from "./palette.dark"
+import typographyOptions from "./typography"
+// import lightPalette from "./palette.light"
 
-const EnigmaTheme = ({ children }) => {
-	const theme = useEnigmaTheme()
+const EnigmaTheme = ({children}) => {
+	const theme = createTheme({
+		components: componentOverrides,
+		palette: darkPalette,
+		typography: typographyOptions,
+		
+	})
 
 	return (
 		<ThemeProvider

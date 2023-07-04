@@ -1,52 +1,31 @@
 import './App.css'
-import '@/styles/globals.css'
-import EnigmaTheme from '@/theme/EnigmaTheme'
-import { Stack } from '@mui/material'
-import BackgroundBlob from '@/layout/BackgroundBlob'
-import Header from '@layout/appbar/Header'
-import Footer from '@layout/footer/Footer'
-import Cursor from '@/components/cursor/Cursor'
-import { AnimatePresence } from 'framer-motion'
-import PageRouter from './router'
-import {BrowserRouter} from "react-router-dom"
+import './styles/globals.css'
+import {RouterProvider, createBrowserRouter} from "react-router-dom"
+import RootLayout from './app/root/RootLayout'
+import Background from './ui/Background'
+import HomePage from './app/home/Home'
 
-function App() {
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <RootLayout />,
+		children: [
+			{
+				path: '/',
+				element: <HomePage />
+			}
+		]
+	}
+])
 
-  return (
-    <>
-   <EnigmaTheme>
-				<head>
-					<title>Enigma VSSUT</title>
-				</head>
-				<Stack
-					minHeight='100vh'
-					bgcolor='background.default'
-				>
-					<BackgroundBlob />
-					<Cursor />
-					<Header />
-					<Stack
-						flexGrow={1}
-						overflow='hidden'
-						sx={{
-							// backdropFilter: 'blur(200px)'
-						}}
-					>
-						<AnimatePresence
-							mode='wait'
-							initial={false}
-						>
-							{/* <Component {...pageProps} key={router.pathname} /> */}
-							<BrowserRouter>
-							<PageRouter/>
-							</BrowserRouter>
-						</AnimatePresence>
-					</Stack>
-					<Footer />
-				</Stack>
-			</EnigmaTheme>
-    </>
-  )
+const App = () => {
+	return (
+		<Background>
+			<RouterProvider 
+				router={router}
+			/>
+		</Background>
+	)
 }
 
 export default App

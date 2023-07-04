@@ -1,5 +1,4 @@
-import useCursorStore from "@/lib/store/useCursorPositionStore"
-import { faGlobe } from "@fortawesome/free-solid-svg-icons"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Stack, Typography, useTheme } from "@mui/material"
 
@@ -20,26 +19,28 @@ const ServiceCardContent = ({ service }) => {
 				alignItems: 'start',
 				'&:hover svg': {
 					color: theme.palette.primary.main
+				},
+				'&:hover .MuiTypography-bodyLarge': {
+					color: theme.palette.primary.main
 				}
 			}}
 		>
 			<FontAwesomeIcon 
 				icon={service.icon}
-				color={theme.palette.text.body}
+				color={theme.palette.text.primary}
 				size="2xl"
 				style={{
 					transition: 'color 500ms',
 				}}
 			/>
 			<Typography
-				color='text.title'
-				variant='body1'
+				variant='bodyLarge'
 			>
 				{ service.name }
 			</Typography>
 			<Typography
-				color='text.body'
-				variant='body2'
+				variant='bodyMedium'
+				color={theme => theme.palette.text.secondary}
 			>
 				{ service.description }
 			</Typography>
