@@ -12,7 +12,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    host: 'club.enigma.code'
+    host: 'enigma.code'
     },
   resolve: {
     alias: [
