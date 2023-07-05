@@ -5,6 +5,7 @@ import RootLayout from './app/root/RootLayout'
 import Background from './ui/Background'
 import HomePage from './app/home/Home'
 import UserProfile from './app/profile/[profile]'
+import Team from './app/team/Team'
 
 const router = createBrowserRouter([
 	{
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
 			{
 				path: '/profile/:username',
 				element: < UserProfile/>
+			},
+			{
+				path: '/team',
+				element: < Team/>
 			}
 		]
 	}
