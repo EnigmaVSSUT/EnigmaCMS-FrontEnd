@@ -20,6 +20,11 @@ const baseAPIMethods = {
 			return APIInstance.get(`/user/${data}`);
 		},
 	},
+	members : {
+		getAllMembers: () => {
+			return APIInstance.get(`/user/all`);
+		}
+	}
 };
 
 export default baseAPIMethods;
