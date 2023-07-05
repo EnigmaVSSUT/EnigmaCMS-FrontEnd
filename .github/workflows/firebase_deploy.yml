@@ -36,7 +36,7 @@ jobs:
                 name: dist
                 path: dist
             - name: Deploy to Firebase
-              uses: EnigmaVSSUT/EnigmaCMS-FrontEnd@master
+              uses: EnigmaVSSUT/EnigmaCMS-FrontEnd@main
               with:
                 args: deploy --only hosting
               env:
