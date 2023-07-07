@@ -1,0 +1,43 @@
+name: Build and deploy
+
+on:
+  push:
+    branches: [ main ]
+    
+  # Run workflow manually
+  workflow_dispatch:
+  
+jobs: 
+   build: 
+      name: Build
+      runs-on: ubuntu-latest
+      steps:
+            - name: Checkout repository
+              uses: actions/checkout@main
+            - name: Install dependencies
+              run: yarn install --frozen-lockfile
+            - name: Build dependencies
+              run: yarn build
+            - name: Archive production artifact
+              uses: actions/upload-artifact@main
+              with: 
+                name: dist
+                path: dist
+   deploy: 
+      name: Deploy
+      needs: build
+      runs-on: ubuntu-latest
+      steps:
+            - name: Checkout repository
+              uses: actions/checkout@main
+            - name: Download artifact
+              uses: actions/download-artifact@main
+              with:
+                name: dist
+                path: dist
+            - name: Deploy to Firebase
+              uses: EnigmaVSSUT/EnigmaCMS-FrontEnd@main
+              with:
+                args: deploy --only hosting
+              env:
+                FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
