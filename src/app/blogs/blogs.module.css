@@ -1,0 +1,14 @@
+.main:hover .title{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #f5f5f5;
+}
+
+.main:hover{
+    cursor: pointer;
+}
+
+/* .main{
+    background-color: #0f0e0e;
+} */

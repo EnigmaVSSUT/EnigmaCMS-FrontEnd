@@ -46,6 +46,11 @@ const Header = () => {
 						Events
 					</EnigmaNavLink>
 					<EnigmaNavLink
+						href='/blogs'
+					>
+						Blogs
+					</EnigmaNavLink>
+					<EnigmaNavLink
 						href='/projects'
 					>
 						Projects

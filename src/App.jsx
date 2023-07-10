@@ -6,6 +6,7 @@ import Background from './ui/Background'
 import HomePage from './app/home/Home'
 import UserProfile from './app/profile/[profile]'
 import Team from './app/team/Team'
+import Blogs from './app/blogs/Blogs'
 
 const router = createBrowserRouter([
 	{
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
 			{
 				path: '/team',
 				element: < Team/>
+			},
+			{
+				path: '/blogs',
+				element: < Blogs/>
 			}
 		]
 	}
