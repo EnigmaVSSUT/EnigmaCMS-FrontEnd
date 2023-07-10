@@ -1,7 +1,7 @@
-import { Stack, Typography } from "@mui/material";
+import { Divider, Stack, Typography } from "@mui/material";
 import blogStyles from "./blogs.module.css";
 import AnimatePage from "../../ui/AnimatePage";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+// import useLoading from "../../shared/store/useLoading";
 
 const blogs = [
 	{
@@ -42,63 +42,61 @@ const blogs = [
 	},
 ];
 
-export default function Blogs() {
-	const openBlog = () => {
-		window.open("http://club.enigma.code:3000/blogs/2", "_blank");
-	};
-
+export default function Blogs2() {
 	return (
 		<AnimatePage>
-			<Stack orderColor="#f0f" justifyContent="center" alignItems={"center"}>
-				<Stack
-					padding={5}
-					direction="row"
-					gap="50px"
-					justifyContent={"center"}
-					alignItems={"center"}
-					flexWrap="wrap"
-				>
-					{blogs.map((blog, index) => (
-						<Stack
-							className={blogStyles.main}
-							key={index}
-							minHeight="340px"
-							minWidth="440px"
-							borderRadius="20px"
-							position="relative"
-						>
+			<Stack justifyContent="center" alignItems="center">
+				{blogs.map((blog, index) => (
+					<Stack
+						key={index}
+						width={"100%"}
+						direction={index % 2 === 0 ? "row" : "row-reverse"}
+						justifyContent="center"
+						alignItems="center"
+						padding="30px"
+						paddingX="50px"
+						backgroundColor={index % 2 === 0 ? "#1a1a1a;" : "#0f0e0e"}
+						className={blogStyles.main}
+					>
+						<Stack className="image container">
 							<img
-								className={blogStyles.blogimage}
-								height="340px"
-								width="440px"
 								src={blog.img}
-								alt={blog.title}
-								style={{ objectFit: "cover", borderRadius: "20px" }}
+								alt="image"
+								width="600rem"
+								height="600rem"
+								style={{ objectFit: "cover" }}
 							/>
-							<Stack
-								className={blogStyles.title}
-								position="absolute"
-								bottom="20px"
-								paddingX="20px"
-								direction="column"
-								alignItems="self-start"
-								justifyContent="space-between"
-							>
-								<Typography variant="h5">{blog.title}</Typography>
-								<Typography variant="caption">{blog.date}</Typography>
-							</Stack>
-							<Stack
-								className={blogStyles.newtab}
-								onClick={openBlog}
-								position="absolute"
-								right="20px"
-								bottom="30px"
-							>
-								<OpenInNewIcon style={{ color: "white", fontSize: "25px" }} />
+						</Stack>
+
+						{/* <Divider orientation="vertical" flexItem sx={{marginLeft:'50px'}}/> */}
+
+						<Stack
+							className="content container"
+							height={"100%"}
+							padding="20px"
+							{...(index % 2 === 0
+								? { marginLeft: "50px" }
+								: { marginRight: "50px" })}
+							flexGrow={1}
+						>
+							<Stack direction="column" minHeight={"35rem"} flexGrow={1}>
+								<Stack direction="row" gap="20px">
+									<Typography>{blog.reference}</Typography>
+
+									<Divider orientation="vertical" flexItem />
+
+									<Typography>{blog.date}</Typography>
+								</Stack>
+
+								<Stack direction="column" flexGrow={1}></Stack>
+
+								<Typography className={blogStyles.title} variant="h1">
+									{blog.title}
+								</Typography>
 							</Stack>
 						</Stack>
-					))}
-				</Stack>
+					</Stack>
+				))}
 			</Stack>
 		</AnimatePage>
 	);

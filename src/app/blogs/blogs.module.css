@@ -1,13 +1,46 @@
-.main:hover .title{
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness: 2px;
-    text-decoration-color: #f5f5f5;
-}
 
 .main:hover{
-    cursor: pointer;
+    position: relative;
+
 }
+
+.main:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0%;
+    width: 100%;
+    bottom: 0;
+    transition: height 0.5s ease-out;
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+  }
+  .main:hover:before {
+    height: 100%;
+  }
+
+  .main:hover .title{
+    opacity: 1;
+    transition: 1s ease-in-out all;; 
+  }
+
+  .main:hover .newtab{
+    opacity: 1;
+    transition: 1s ease-in-out all;; 
+  }
+
+  .title,.newtab{
+    opacity: 0;
+  }
+
+  .newtab{    
+    cursor: pointer;
+  }
+
+  @media (max-width: 1000px) {
+   .main,.blogimage{
+    min-width: 70vw;
+   }
+  }
 
 /* .main{
     background-color: #0f0e0e;
