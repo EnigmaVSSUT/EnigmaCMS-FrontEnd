@@ -2,6 +2,8 @@ import { Stack, Typography } from "@mui/material";
 import blogStyles from "./blogs.module.css";
 import AnimatePage from "../../ui/AnimatePage";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { IconButton } from "@mui/material";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const blogs = [
 	{
@@ -59,16 +61,25 @@ const blogs = [
 export default function Blogs() {
 	const openBlog = (id) => {
 		// console.log("id",id);
-		window.open(`https://enigma-dev-web.web.app/blogs/${id}`, "_blank");
+		window.open(import.meta.env.VITE_WEB_BASE_URL + `/blogs/${id}`, "_blank");
 	};
 
 	return (
 		<AnimatePage>
-			<Stack orderColor="#f0f" justifyContent="center" alignItems={"center"}>
+			<Stack
+				orderColor="#f0f"
+				justifyContent="flex-start"
+				alignItems={"center"}
+				position="relative"
+				paddingBottom="10rem"
+			>
+				<Typography variant="h2" className={blogStyles.blogs} paddingY="20px">
+					Blogs
+				</Typography>
 				<Stack
-					padding={5}
+					padding="20px"
 					direction="row"
-					gap="50px"
+					gap="40px"
 					justifyContent={"center"}
 					alignItems={"center"}
 					flexWrap="wrap"
@@ -78,15 +89,15 @@ export default function Blogs() {
 							id={blog.id}
 							className={blogStyles.main}
 							key={index}
-							minHeight="340px"
-							minWidth="440px"
+							minHeight="300px"
+							minWidth="400px"
 							borderRadius="20px"
 							position="relative"
 						>
 							<img
 								className={blogStyles.blogimage}
-								height="340px"
-								width="440px"
+								height="300px"
+								width="400px"
 								src={blog.img}
 								alt={blog.title}
 								style={{ objectFit: "cover", borderRadius: "20px" }}
@@ -114,6 +125,21 @@ export default function Blogs() {
 							</Stack>
 						</Stack>
 					))}
+				</Stack>
+
+				<Stack className={blogStyles.more} direction='row' sx={{ position: "absolute", right: "60px", bottom: "40px" }}>
+					
+					<IconButton
+						sx={{
+							border: "1px solid",
+							borderColor: "divider",
+							borderRadius: "100%",
+						}}
+					>
+						<ArrowForwardIosIcon
+							sx={{ borderRadius: "100%", height: "30px", width: "30px" }}
+						/>
+					</IconButton>
 				</Stack>
 			</Stack>
 		</AnimatePage>

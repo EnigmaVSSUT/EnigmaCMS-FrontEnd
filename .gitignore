@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 .env
 *.cache
+
+.env.production
+.env.development
