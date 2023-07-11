@@ -5,6 +5,7 @@ import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const blogs = [
 	{
+		id: 1,
 		title: "Blog 1",
 		reference: "AI, Midjourney",
 		description:
@@ -14,6 +15,7 @@ const blogs = [
 		author: "Rohit Kumar",
 	},
 	{
+		id: 2,
 		title: "Blog 2",
 		reference: "Devops, Midjourney",
 		description:
@@ -23,6 +25,7 @@ const blogs = [
 		author: "Donald Duck",
 	},
 	{
+		id: 3,
 		title: "Blog 3",
 		reference: "UI/UX, designing",
 		description:
@@ -32,6 +35,7 @@ const blogs = [
 		author: "Soumya Sagar",
 	},
 	{
+		id: 4,
 		title: "Blog 4",
 		reference: "AI, Midjourney",
 		description:
@@ -40,11 +44,22 @@ const blogs = [
 		img: "https://images.unsplash.com/photo-1680459575585-390ed5cfcae0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
 		author: "Anya ",
 	},
+	{
+		id: 5,
+		title: "Blog 5",
+		reference: "Web Dev, Designing",
+		description:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+		date: "1 Jan 2023",
+		img: "https://images.unsplash.com/photo-1609921212029-bb5a28e60960?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1152&q=80",
+		author: "Loid",
+	},
 ];
 
 export default function Blogs() {
-	const openBlog = () => {
-		window.open("http://club.enigma.code:3000/blogs/2", "_blank");
+	const openBlog = (id) => {
+		// console.log("id",id);
+		window.open(`https://enigma-dev-web.web.app/blogs/${id}`, "_blank");
 	};
 
 	return (
@@ -60,6 +75,7 @@ export default function Blogs() {
 				>
 					{blogs.map((blog, index) => (
 						<Stack
+							id={blog.id}
 							className={blogStyles.main}
 							key={index}
 							minHeight="340px"
@@ -89,7 +105,7 @@ export default function Blogs() {
 							</Stack>
 							<Stack
 								className={blogStyles.newtab}
-								onClick={openBlog}
+								onClick={() => openBlog(blog.id)}
 								position="absolute"
 								right="20px"
 								bottom="30px"
