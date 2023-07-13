@@ -59,7 +59,7 @@ export default function SingleBlog() {
 					laboriosam ipsa? Quia officia voluptatum dolorem debitis voluptates
 					maxime vel? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 					Fugiat quisquam, non quidem quod veritatis ea natus accusantium
-					blanditiis praesentium rem iure omnis quom commodi dolorum nobis
+					blanditiis praesentium rem iure omnis quomm commodi dolorum nobis
 					provident reiciendis unde nihil!
 				</Typography>
 			</Stack>
