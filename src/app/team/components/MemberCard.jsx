@@ -13,8 +13,7 @@ import SmartToyIcon from "@mui/icons-material/SmartToy";
 
 export default function MemberCard({ memberImage, memberName }) {
 	const profileRedirect = () => {
-		const newPageUrl =
-			import.meta.env.VITE_WEB_BASE_URL + "/profile/" + memberName;
+		const newPageUrl = "/profile/" + memberName;
 		window.open(newPageUrl, "_blank");
 	};
 

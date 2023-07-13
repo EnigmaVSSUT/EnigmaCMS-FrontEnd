@@ -61,7 +61,7 @@ const blogs = [
 export default function Blogs() {
 	const openBlog = (id) => {
 		// console.log("id",id);
-		window.open(import.meta.env.VITE_WEB_BASE_URL + `/blogs/${id}`, "_blank");
+		window.open(`/blogs/${id}`, "_blank");
 	};
 
 	return (
