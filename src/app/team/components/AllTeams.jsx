@@ -13,7 +13,7 @@ export default function AllTeam() {
 		const getTeam = async () => {
 			const res = await baseAPIMethods.members.getAllMembers();
 			setMember(res.data);
-			//console.log(res.data);
+			console.log(res.data);
 		};
 		getTeam();
 	}, []);
