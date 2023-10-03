@@ -37,9 +37,9 @@ export default function AllTeam() {
 						alignItems={"center"}
 						flexWrap={"wrap"}
 					>
-						{member.map((member) => (
+						{member.map((member,idx) => (
 							<MemberCard
-								key={member.id}
+								key={idx}
 								memberName={member.profile.username}
 								memberImage={
 									import.meta.env.VITE_BASE_URL +
