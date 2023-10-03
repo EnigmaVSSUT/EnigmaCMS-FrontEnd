@@ -1,21 +1,91 @@
-name: Build and deploy
+name: Build and Deploy to Firebase Hosting
 
 on:
   push:
-    branches: [ main ]
-    
-  # Run workflow manually
-  workflow_dispatch:
-  
+    branches:
+      - main
+
 jobs:
-  build_and_deploy:
+  Build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - run: CI=false npm install && CI=false npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ENIGMA_DEV_WEB }}'
-          channelId: live
-          projectId: enigma-dev-web
+          node-version: '19'
+
+      - name: Install Dependencies
+        run: npm install --force
+
+      - name: Build Vite Project
+        run: npm run build
+
+      - name: Archive Build
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: dist/  # Change this path to the build output directory
+
+  Deploy-Staging:
+    needs: [Build]
+    runs-on: ubuntu-latest
+    environment: 
+      name: Preview
+      url: "https://enigma-web-preview.web.app"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '19'
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Restore Build
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+
+      - name: Set Environment Variables Staging
+        run: echo "FIREBASE_PROJECT_ID=${{ secrets.PREVIEW }}" >> $GITHUB_ENV
+
+      - name: Deploy to Firebase (Staging)
+        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only hosting --project ${{ env.FIREBASE_PROJECT_ID }}
+
+  Deploy-Production:
+    needs: [Build]
+    runs-on: ubuntu-latest
+    environment: 
+      name: Production
+      url: "https://enigma-dev-web.web.app"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '19'
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Restore Build
+        uses: actions/download-artifact@v2
+        with:
+          name: build
+
+      - name: Set Environment Variables for Production
+        run: echo "FIREBASE_PROJECT_ID=${{ secrets.PRODUCTION }}" >> $GITHUB_ENV
+
+      - name: Deploy to Firebase (Production)
+        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only hosting --project ${{ env.FIREBASE_PROJECT_ID }}
