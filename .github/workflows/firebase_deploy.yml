@@ -49,17 +49,13 @@ jobs:
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      - name: Install Vite
-        run: npm install -g vite
+      - name: Install Dependencies
+        run: npm install --force
 
       - name: Restore Build
         uses: actions/download-artifact@v3
         with:
           name: build
-
-      - name: Find Vite Binary Path
-        run: which vite
-
 
       - name: Set Environment Variables Staging
         run: echo "FIREBASE_PROJECT_ID=${{ secrets.PREVIEW }}" >> $GITHUB_ENV
@@ -86,8 +82,8 @@ jobs:
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      - name: Install Vite
-        run: npm install -g vite
+      - name: Install Dependencies
+        run: npm install --force
 
       - name: Restore Build
         uses: actions/download-artifact@v3
