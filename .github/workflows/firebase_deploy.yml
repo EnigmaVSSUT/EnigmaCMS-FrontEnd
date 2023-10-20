@@ -71,7 +71,7 @@ jobs:
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only hosting --project ${{ env.FIREBASE_PROJECT_ID }}
 
   Deploy-Production:
-    needs: [Build]
+    needs: [Build,Deploy-Staging]
     runs-on: ubuntu-latest
     environment: 
       name: Production
