@@ -57,6 +57,10 @@ jobs:
         with:
           name: build
 
+      - name: Find Vite Binary Path
+        run: which vite
+
+
       - name: Set Environment Variables Staging
         run: echo "FIREBASE_PROJECT_ID=${{ secrets.PREVIEW }}" >> $GITHUB_ENV
 
