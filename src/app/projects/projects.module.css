@@ -1,0 +1,19 @@
+.tab{
+ padding: 5px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.projectCard:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    transform: scale(1.01);
+    transition: all 0.4s ease-in-out;
+}
+
+
+.projectCard:hover .data .projectTitle{
+    color: #35FF1F;
+    transition: all 0.3s ease-in-out;
+}
