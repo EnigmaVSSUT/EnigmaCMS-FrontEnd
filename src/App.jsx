@@ -9,6 +9,7 @@ import Team from './app/team/Team'
 import Blogs from './app/blogs/Blogs'
 import SingleBlog from './app/blogs/[blogid]'
 import Projects from './app/projects/Projects'
+import Events from './app/events/Events'
 
 const router = createBrowserRouter([
 	{
@@ -24,8 +25,8 @@ const router = createBrowserRouter([
 				element: < UserProfile/>
 			},
 			{
-				path: '/team',
-				element: < Team/>
+				path: '/events',
+				element: < Events/>
 			},
 			{
 				path: '/blogs',
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
 			{
 				path: '/projects',
 				element: < Projects/>
+			},
+			
+			{
+				path: '/team',
+				element: < Team/>
 			},
 			{
 				path: '/blogs/:blogid',
