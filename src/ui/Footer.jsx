@@ -56,7 +56,7 @@ const Footer = () => {
 						<Typography
 							color='text.subtitle'
 						>
-							Enigma VSSUT </br>Since 2014
+							Enigma VSSUT <br>Since 2014
 						</Typography>
 					</Stack>
 				</Stack>
