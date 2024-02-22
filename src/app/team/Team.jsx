@@ -566,12 +566,34 @@ const teamMembersData = [
 ];
 
 const Team = () => {
-	return (
-		<div>
-			<h2 style={{color:"white",textAlign:"center",marginTop:"5px",fontSize:"35px"}}>Team Members</h2>
-			<TeamMembersSection teamMembers={teamMembersData} />
-		</div>
-	);
+  
+  const finalYearStartIndex = teamMembersData.findIndex(
+    (member) => member.name === "ISHITA SATHPATHY"
+  );
+  const finalYearEndIndex = teamMembersData.findIndex(
+    (member) => member.name === "NIKHIL KUMAR SAHU"
+  );
+
+ 
+  const finalYearMembers = teamMembersData.slice(finalYearStartIndex, finalYearEndIndex + 1);
+  const prefinalYearMembers = [
+    ...teamMembersData.slice(0, finalYearStartIndex),
+    ...teamMembersData.slice(finalYearEndIndex + 1),
+  ];
+
+  return (
+    <div>
+      <h2 style={{ color: "white", textAlign: "center", marginTop: "5px", fontSize: "35px" }}>Team Members</h2>
+
+     
+      <h3 style={{ color: "white", textAlign: "center", marginTop: "20px", fontSize: "24px" }}>Final Year Members</h3>
+      <TeamMembersSection teamMembers={finalYearMembers} />
+
+      
+      <h3 style={{ color: "white", textAlign: "center", marginTop: "20px", fontSize: "24px" }}>Prefinal Year Members</h3>
+      <TeamMembersSection teamMembers={prefinalYearMembers} />
+    </div>
+  );
 };
 
 export default Team;
