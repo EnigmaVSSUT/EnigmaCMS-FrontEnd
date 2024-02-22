@@ -6,14 +6,14 @@ import projectStyles from "../projects.module.css";
 export default function ProjectCard() {
 	return (
 		<Stack
-			className={projectStyles.projectCard}
+			classNameName={projectStyles.projectCard}
 			maxWidth={"400px"}
 			borderRadius={2}
 			sx={{
 				backgroundColor: "rgba(72, 75, 73, 0.5)",
 			}}
 		>
-			<Stack className="image-wrapper">
+			<Stack classNameName="image-wrapper">
 				<img
 					style={{
 						objectFit: "cover",
@@ -23,8 +23,8 @@ export default function ProjectCard() {
 					alt=""
 				/>
 			</Stack>
-			<Stack className={projectStyles.data} gap={2} padding={3}>
-				<Typography variant="h4" className={projectStyles.projectTitle}>
+			<Stack classNameName={projectStyles.data} gap={2} padding={3}>
+				<Typography variant="h4" classNameName={projectStyles.projectTitle}>
 					Enigma-CMS
 				</Typography>
 
@@ -34,7 +34,7 @@ export default function ProjectCard() {
 				</Typography>
 
 				<Stack
-					className="stats"
+					classNameName="stats"
 					direction={"row"}
 					justifyContent={"space-between"}
 					alignItems={"top"}
@@ -43,7 +43,7 @@ export default function ProjectCard() {
 					paddingInline={3}
 				>
 					<Stack
-						className="commits"
+						classNameName="commits"
 						justifyContent={"start"}
 						alignItems={"start"}
 						gap={1}
@@ -69,7 +69,7 @@ export default function ProjectCard() {
 					</Stack>
 
 					<Stack
-						className="Contributors"
+						classNameName="Contributors"
 						justifyContent={"start"}
 						alignItems={"start"}
 						gap={1}

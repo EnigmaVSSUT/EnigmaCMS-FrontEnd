@@ -30,7 +30,7 @@ export default function AllTeam() {
 					</Typography>
 
 					<Stack
-						className="team-grid"
+						classNameName="team-grid"
 						direction={"row"}
 						gap={4}
 						justifyContent={"center"}

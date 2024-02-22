@@ -48,7 +48,7 @@ export default function EventList() {
   return (
     <Stack gap={3} justifyContent={'start'} alignItems={'start'} width={"650px"}>
       
-      <Stack className="search-box" width={'70%'} position={'relative'} left={30} direction={'row'} gap={3}>
+      <Stack classNameName="search-box" width={'70%'} position={'relative'} left={30} direction={'row'} gap={3}>
       <TextField fullWidth id="outlined-basic"  variant="outlined" />
       <Button variant="contained">
         Filter

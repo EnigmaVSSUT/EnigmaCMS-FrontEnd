@@ -3,15 +3,15 @@ import eventStyles from "../events.module.css";
 
 export default function EventCard({ key,date, title, info }) {
 	return (
-		<Stack className={eventStyles.eventcard} width={"650px"} key={key} padding={4} borderRadius={2}>
-			<Stack className={eventStyles.upper} paddingY={2} gap={1}>
+		<Stack classNameName={eventStyles.eventcard} width={"650px"} key={key} padding={4} borderRadius={2}>
+			<Stack classNameName={eventStyles.upper} paddingY={2} gap={1}>
 				<Typography variant="h6">{date}</Typography>
                 <Stack>
 				<Divider
-                 className={eventStyles.divider}
+                 classNameName={eventStyles.divider}
                  />
                  <Divider
-                 className={eventStyles.dividerGreen}
+                 classNameName={eventStyles.dividerGreen}
                  />
                  </Stack>
 			</Stack>    

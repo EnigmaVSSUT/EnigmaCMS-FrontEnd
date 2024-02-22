@@ -56,7 +56,7 @@ export default function UserProfile() {
 					padding={12}
 					margin={8}
 				>
-					<Stack className="data-box" gap={2} flexGrow={1}>
+					<Stack classNameName="data-box" gap={2} flexGrow={1}>
 						<Typography color="#fff" variant="h3">
 							{user.name}
 						</Typography>
@@ -124,7 +124,7 @@ export default function UserProfile() {
 						</Stack>
 					</Stack>
 
-					<Stack className="image-box" flexGrow={1} alignItems="center">
+					<Stack classNameName="image-box" flexGrow={1} alignItems="center">
 						<Stack
 							height="100%"
 							width="100%"

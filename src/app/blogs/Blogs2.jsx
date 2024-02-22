@@ -56,9 +56,9 @@ export default function Blogs2() {
 						padding="30px"
 						paddingX="50px"
 						backgroundColor={index % 2 === 0 ? "#1a1a1a;" : "#0f0e0e"}
-						className={blogStyles.main}
+						classNameName={blogStyles.main}
 					>
-						<Stack className="image container">
+						<Stack classNameName="image container">
 							<img
 								src={blog.img}
 								alt="image"
@@ -71,7 +71,7 @@ export default function Blogs2() {
 						{/* <Divider orientation="vertical" flexItem sx={{marginLeft:'50px'}}/> */}
 
 						<Stack
-							className="content container"
+							classNameName="content container"
 							height={"100%"}
 							padding="20px"
 							{...(index % 2 === 0
@@ -90,7 +90,7 @@ export default function Blogs2() {
 
 								<Stack direction="column" flexGrow={1}></Stack>
 
-								<Typography className={blogStyles.title} variant="h1">
+								<Typography classNameName={blogStyles.title} variant="h1">
 									{blog.title}
 								</Typography>
 							</Stack>

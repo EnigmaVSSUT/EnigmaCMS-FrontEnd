@@ -45,7 +45,7 @@ export default function Projects() {
 									borderRadius: "5px",
 								},
 							}}
-							className={projectStyles.tab}
+							classNameName={projectStyles.tab}
 							value="one"
 							label="Upcoming"
 						/>
@@ -57,7 +57,7 @@ export default function Projects() {
 									borderRadius: "5px",
 								},
 							}}
-							className={projectStyles.tab}
+							classNameName={projectStyles.tab}
 							value="two"
 							label="Ongoing"
 						/>
@@ -69,7 +69,7 @@ export default function Projects() {
 									borderRadius: "5px",
 								},
 							}}
-							className={projectStyles.tab}
+							classNameName={projectStyles.tab}
 							value="three"
 							label="Archieved"
 						/>
