@@ -19,11 +19,7 @@ const TeamMembersSection = ({ teamMembers }) => {
 							<CardContent>
 								<Grid container alignItems="center">
 									<Grid item>
-										<Avatar
-											src={member.avatar}
-											alt={member.name}
-											style={{ width: 60, height: 60 }}
-										/>
+										<Avatar style={{ width: 60, height: 60 }}>{member.name.charAt(0)}</Avatar>
 									</Grid>
 									<Grid item xs={8} style={{ paddingLeft: 10 }}>
 										<Typography
@@ -37,8 +33,11 @@ const TeamMembersSection = ({ teamMembers }) => {
 										>
 											{member.name}
 										</Typography>
-										<Typography variant="body1" style={{color:"black",fontSize:"14px",fontWeight:500}}>
-											{member.designation}
+										<Typography variant="body1" style={{color:"black",fontSize:"14px",fontWeight:600}}>
+											{member.domain}
+										</Typography>
+										<Typography variant="body1" style={{color:"black",fontSize:"14px",fontWeight:600}}>
+											{member.branch}
 										</Typography>
 									</Grid>
 								</Grid>

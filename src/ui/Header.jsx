@@ -42,7 +42,7 @@ export default function Navbar() {
 			>
 				<a href="/">
 				<Stack direction="row" alignItems="center" gap="10px">
-					<img src="/logo/enigma_contained.png" alt="logo" width={80} />
+					<img src="/logo/enigma_contained.png" alt="logo" width={40} />
 					<Typography
 						sx={{
 							fontSize: { lg: "24px", xs: "18px" },
