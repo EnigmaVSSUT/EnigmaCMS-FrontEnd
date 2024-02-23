@@ -655,6 +655,13 @@ const teamMembersData = [
 	avatar:
 		"",
 },
+
+{
+	name: "ASHISH KUMAR MOHAPATRA",
+	domain: "Web Dev | Game Dev",
+	avatar:
+		"",
+},
 {
 	name: "AUMSHUMAN MOHAPATRA",
 	domain: "Web Dev | CW",
