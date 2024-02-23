@@ -1,6 +1,6 @@
 import { Stack, Typography } from "@mui/material";
 import AnimatePage from "../../ui/AnimatePage";
-import eventStyles from './events.module.css';
+import eventStyles from "./events.module.css";
 import EventList from "./components/EventList";
 import Calender from "./components/Calender";
 

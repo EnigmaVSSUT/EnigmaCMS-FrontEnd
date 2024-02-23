@@ -1,99 +1,151 @@
-import { Stack , TextField,Button , Typography} from "@mui/material";
+import {
+	Stack,
+	TextField,
+	Button,
+	Typography,
+	IconButton,
+} from "@mui/material";
 import EventCard from "./EventCard";
-import useDatePicker from '../../../shared/store/useDatePicker';
-import { useEffect,useState } from "react";
+import useDatePicker from "../../../shared/store/useDatePicker";
+import { useEffect, useState } from "react";
+import { HighlightOff } from "@mui/icons-material";
 
 const datalist1 = [
-    {
-        date: "Wednesday, November 29",
-        title: "Orientation Day",
-        info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos." 
-    }
-]
+	{
+		date: "Wednesday, November 29",
+		title: "Orientation Day",
+		info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos.",
+	},
+];
 
 const datalist2 = [
-    {
-        date: "Tuesday, November 21",
-        title: "Enigma Induction",
-        info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos." 
-    },
-    {
-        date: "Tuesday, November 21",
-        title: "Info Session",
-        info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos." 
-    }
-]
+	{
+		date: "Sunday, November 21",
+		title: "Enigma Induction",
+		info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos.",
+	},
+	{
+		date: "Sunday, November 21",
+		title: "Info Session",
+		info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos.",
+	},
+];
 
 const totalData = [...datalist1, ...datalist2];
 
 export default function EventList() {
+	const [result, setResult] = useState([]);
+	const [value, setValue] = useState("");
+	const pickedDate = useDatePicker((state) => state.pickedDate);
 
-    const [result, setResult] = useState([]);
-    const [pickedDate] = useDatePicker((state) => [state.pickedDate]);
-    // console.log('Picked Date:', pickedDate);
+	useEffect(() => {
+		if (pickedDate !== "") {
+			const filteredByDate = totalData.filter(
+				(data) => data.date === pickedDate
+			);
+			setResult(filteredByDate);
+		} else {
+			setResult(totalData);
+		}
+	}, [pickedDate]);
 
-    useEffect(() => {
-        console.log('useEffect')
-        totalData.map((data) => {
-            if(data.date == pickedDate){
-                setResult(
-                    [...result, data]
-                );
-            }
-        })
+	const filterDataList = () => {
+		if (value.trim() === "" && pickedDate === "") {
+			setResult(totalData);
+		} else if (pickedDate !== "" && value === "") {
+			setResult([])
+			const filtered = totalData.filter(
+				(item) =>
+					item.date === pickedDate
+			);
+			setResult(filtered);
+		} else {
+			const filtered = totalData.filter(
+				(item) =>
+					item.title.toLowerCase().includes(value.toLowerCase()) ||
+					item.info.toLowerCase().includes(value.toLowerCase())
+			);
+			setResult(filtered);
+		}
+	};
 
-    }, [pickedDate]);
+	return (
+		<Stack
+			gap={3}
+			justifyContent={"start"}
+			alignItems={"start"}
+			width={"650px"}
+		>
+			<Stack
+				className="search-box"
+				width={"70%"}
+				position={"relative"}
+				left={30}
+				direction={"row"}
+				gap={3}
+			>
+				<TextField
+					fullWidth
+					id="outlined-basic"
+					variant="outlined"
+					value={value}
+					onChange={(e) => setValue(e.target.value)}
+					onKeyDown={(e) => {
+						if (e.key === "Enter") {
+							filterDataList();
+						}
+					}}
+					InputProps={{
+						endAdornment: (
+							<IconButton
+								onClick={() => {
+									if (pickedDate !== "") {
+										const filteredByDate = totalData.filter(
+											(data) => data.date === pickedDate
+										);
+										setResult(filteredByDate);
+									}else {
+										setResult(totalData);
+									}
+									setValue("");
+								}}
+								sx={{
+									display: value.length > 0 ? "flex" : "none",
+									justifyContent: "center",
+									alignItems: "center"
+								}}
+							>
+								<HighlightOff />
+							</IconButton>
+						),
+					}}
+				/>
+				<Button variant="contained" onClick={filterDataList}>
+					Filter
+				</Button>
+			</Stack>
 
-
-  return (
-    <Stack gap={3} justifyContent={"start"} alignItems={{xs:"center",md:"start"}} width={"650px"}>
-      
-      <Stack className="search-box" width={{md: "70%"}} position={'relative'} left={{md: 30}} direction={'row'} gap={{md: 3, xs: 1}}  >
-      <TextField fullWidth id="outlined-basic"  variant="outlined" size="small" />
-      <Button variant="contained">
-        Filter
-      </Button>
-      </Stack>
-
-        {
-            pickedDate == '' && (
-                <Stack
-                alignItems={"center"}>
-                {totalData.map((data,idx) => (
-                  <EventCard 
-                  key={idx}
-                  date={data.date}
-                   title={data.title}
-                    info={data.info} />
-                ))}
-              </Stack>)
-        }
-
-        {!(pickedDate != '' && result.length > 0) ? (
-            <Stack paddingY={8} width={'100%'}
-            justifyContent={'center'}
-              alignItems={'center'}
-            >
-              <Typography variant="h6">
-          No events on this day
-              </Typography>
-        </Stack>)
-        :
-        (
-            <Stack justifyContent={{xs: Center,md: flex-start}}>
-            {result.map((data,idx) => (
-              <EventCard 
-              key={idx}
-              date={data.date}
-               title={data.title}
-                info={data.info} />
-            ))
-            }
-          </Stack>
-        )
-        }
-
-
-    </Stack>
-  )
+			{result.length === 0 ? (
+				<Stack
+					paddingY={8}
+					width={"100%"}
+					justifyContent={"center"}
+					alignItems={"center"}
+				>
+					<Typography variant="h6">No events found</Typography>
+				</Stack>
+			) : (
+				<Stack>
+					{result.map((data, idx) => (
+						<EventCard
+							key={idx}
+							date={data.date}
+							title={data.title}
+							info={data.info}
+						/>
+					))}
+				</Stack>
+			)}
+		</Stack>
+	);
 }
