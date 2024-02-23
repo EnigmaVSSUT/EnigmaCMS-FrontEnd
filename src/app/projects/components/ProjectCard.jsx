@@ -11,7 +11,7 @@ export default function ProjectCard({imgUrl,title,content,status}) {
 			borderRadius={2}
 			sx={{
 				backgroundColor: "rgba(72, 75, 73, 0.5)",
-				
+			
 			}}
 		>
 			<Stack className="image-wrapper" sx={{ height:"300px"}}>
