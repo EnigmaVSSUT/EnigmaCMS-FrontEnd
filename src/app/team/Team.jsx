@@ -23,577 +23,950 @@
 
 
 
-
-
-
-
-
-
-
 // Khitish's code
 
 
+
+
+
+
+import { Stack, Typography } from "@mui/material";
 import TeamMembersSection from "./TeamMembersSection";
 
 const teamMembersData = [
 	//final-years
 	{
 		name: "ISHITA SATHPATHY",
-		designation: "Developer",
+		// domain: "Developer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ADYASHA SAMAL",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "CHANDAN KUMAR HABODA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "HEMADRI TANAYA SATPATHY",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "DHAIRYA JOSHI",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "RAVINDRA NAG",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "RUCHIRA PRIYADARSHINI",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "SWADESH PANDA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "SWAPNIL KUMAR SAHU",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "AASHWASTI PANDIA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "SMRUTI RANJAN ROUT",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "GYANA RANJAN PANDA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "SMRUTI RANJAN BADATYA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "CHINMAYA CHINTAN MISHRA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Mechanical Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "SOMNATH SINGH",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "SURAJ MOHAPATRA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "LALIT KUMAR",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "SANDEEPAN MOHANTY",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "SIBASUNDER BEHERA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Computer science and Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "PRACHI SUMAN",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Information Technology",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "SWAYAM PRAKASH BARIK",
-		designation: "Designer",
+		// domain: "Designer",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ADRASH KUMAR GOSWAMI",
-		designation: "Designer",
-		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+		// domain: "Designer",
+		branch:"Information Technology",
+		avatar:"",
+		
 	},
 	{
 		name: "PALLAV KUMAR PATRA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Information Technology",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			" ",
 	},
 	{
 		name: "DEBABRATA MOHAPATRA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Electronics and  Telecommunication Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			" ",
 	},
 	{
 		name: "SUBHRAJYOTI",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Information Technology",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "RAJAT KUMAR NAYAK",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Information Technology",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "TANUSRIYA MAHAWAR",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Information Technology",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "PRATHAM MISHRA",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Electronics and  Telecommunication Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "OM PARMAR",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Civil Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "BISWAJEET NAYAK",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Information Technology",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "RAJSEKHER PRADHAN",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Electronics and Telecommunication Enginerring",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "KUMAR BISHWA KALYAN",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:'Metallurgical and Materials Engineering',
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "RATAN KUMAR TRIPATHY",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Electrical Engineering",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "NIKHIL KUMAR SAHU",
-		designation: "Designer",
+		// domain: "Designer",
+		branch:"Information Technology",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 
 	//pre final-years
 	{
 		name: "PRERIT AGRAWAL",
-		designation: "COORDINATOR",
+		domain: "COORDINATOR",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ANANYA MOHAPATRA",
-		designation: "COORDINATOR",
+		domain: "COORDINATOR",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ABHIBANDITA RATH",
-		designation: "Web Dev | Content Writting",
+		domain: "Web Dev | Content Writting",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "AMAN GOSWAMI",
-		designation: "Web Dev | CP",
+		domain: "Web Dev | CP",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "AMISHA SAMAL",
-		designation: "App Dev | GD",
+		domain: "App Dev | GD",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "AMIT KUMAR SATHPATHY",
-		designation: "Web Dev | App Dev",
+		domain: "Web Dev | App Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ANKITA AGRAWAL",
-		designation: "CP",
+		domain: "CP",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ANKITA PANDA",
-		designation: "Web Dev | CP",
+		domain: "Web Dev | CP",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "MS. ANKITA SWAIN",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "MR. ANSHU AGRAWAL",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ARPITA TRIPATHY",
-		designation: "Web Dev | UI/UX",
+		domain: "Web Dev | UI/UX",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ARYAN AGRAWAL",
-		designation: "AI/ML",
+		domain: "AI/ML",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ASHISH KUMAR BEHERA",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ANKITA SWAIN",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ASHUTOSH BEHURIA",
-		designation: "Web Dev | CP | VIDEO EDITING",
+		domain: "Web Dev | CP | VIDEO EDITING",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ASWATHI M",
-		designation: "Web Dev | Content Writting",
+		domain: "Web Dev | Content Writting",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 
 	{
 		name: "AYUSHI KUMARI",
-		designation: "App Dev",
+		domain: "App Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "BIBEK KUMAR MEHER",
-		designation: "Web Dev | CP",
+		domain: "Web Dev | CP",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "CHIRAG AGRAWAL",
-		designation: "AIML | CP",
+		domain: "AIML | CP",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "DEB KALYAN MOHANTY",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "DEBJANI AISWARYA",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "GIRIJA MEHER",
-		designation: "Cyber Security | Content Writting",
+		domain: "Cyber Security | Content Writting",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "GOBINDA PANDA",
-		designation: "CP | Game Dev",
+		domain: "CP | Game Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "JYOTI PRAKASH PANDA",
-		designation: "Web Dev | CP",
+		domain: "Web Dev | CP",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "KISHORE BHAGAT",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "LEHER KUMAR KACHHYAP",
-		designation: "Web Dev | Video Editing",
+		domain: "Web Dev | Video Editing",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "MAAZ ALAM",
-		designation: "AI/ML",
+		domain: "AI/ML",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "MAHAK AGRAWAL",
-		designation: "CP | Web Dev",
+		domain: "CP | Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "MOHIT KUMAR DORA ",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "OMM SUSEKHAR PANI",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "PAREEKSHIT SAHU",
-		designation: "Video Editing",
+		domain: "Video Editing",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 
 	{
 		name: "PRERIT KUMAR JAIN",
-		designation: "App Dev",
+		domain: "App Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "PRIYADARSHINI BAL",
-		designation: "Web Dev |  UI/UX",
+		domain: "Web Dev |  UI/UX",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 	{
 		name: "ROHIT KUMAR",
-		designation: "Web Dev |  UI/UX",
+		domain: "Web Dev |  UI/UX",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 
 	{
 		name: "SAMBIT KUMAR SAHU",
-		designation: "Game Dev",
+		domain: "Game Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 
-
-  {
+	{
 		name: "SAMRIT KRUSHAN",
-		designation: "GD | UI/UX",
+		domain: "GD | UI/UX",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 
-  {
+	{
 		name: "SATYAJEET PRADHAN",
-		designation: "App Dev |  Cybersecurity",
+		domain: "App Dev |  Cybersecurity",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
-  {
+	{
 		name: "SIBANI PANDA",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
-  {
+	{
 		name: "SHRADHA SUMAN",
-		designation: "App Dev | CP",
+		domain: "App Dev | CP",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
-  {
+	{
 		name: "SHRUTI SAMANTARAY",
-		designation: "Web Dev | GD",
+		domain: "Web Dev | GD",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 
-  {
+	{
 		name: "SOHAM SAMANATRAY",
-		designation: "Web Dev | UI/UX",
+		domain: "Web Dev | UI/UX",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 
-
-  {
+	{
 		name: "SOUMENDRA PRIYADARSAN",
-		designation: "Web Dev | Content Writting",
+		domain: "Web Dev | Content Writting",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
-  {
+	{
 		name: "SOUMYA SAGAR SAMAL",
-		designation:  "App Dev",
+		domain: "App Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
-  {
+	{
 		name: "SOHAM SAMANTRAY",
-		designation: "Web Dev | UI/UX",
+		domain: "Web Dev | UI/UX",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 
-  {
+	{
 		name: "SUBHRANSU SEKHAR PANDA",
-		designation: "Web Dev | CP",
+		domain: "Web Dev | CP",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
-  {
+	{
 		name: "SUCHARITA SAHU",
-		designation: "Web Dev | UI/UX | GD",
+		domain: "Web Dev | UI/UX | GD",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
-  {
+	{
 		name: "SUGYANI MANJARI DAS",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
-  {
+	{
 		name: "SWASTIK GORAI",
-		designation: "AI/ML | CP | App Dev",
+		domain: "AI/ML | CP | App Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
-  {
+	{
 		name: "TAUFIK KHAN",
-		designation: "Game Dev | AI/ML | UI/UX",
+		domain: "Game Dev | AI/ML | UI/UX",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
-  {
+	{
 		name: "TIRTHABAS MISHRA",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
 
-  {
+	{
 		name: "VISHAL LOHANI",
-		designation: "Web Dev",
+		domain: "Web Dev",
 		avatar:
-			"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
+			"",
 	},
+
+
+
+//second years
+
+
+{
+	name: "HARDEEP MOHANTY",
+	domain: "Assistant Cordinator",
+	avatar:
+		"",
+},
+{
+	name: "ANANYA PATI",
+	domain: "Assistant Cordinator",
+	avatar:
+		"",
+},
+{
+	name: "A HAREKRUSHNA NAYAK",
+	domain: "Web Dev | AI/ML",
+	avatar:
+		"",
+},
+{
+	name: "ANANDITA DHAL",
+	domain: "AI/ML",
+	avatar:
+		"",
+},
+{
+	name: "ANIMESH PATTNAIK",
+	domain: "AI/ML | Web Dev",
+	avatar:
+		"",
+},
+{
+	name: "ANKUSH BEHERA",
+	domain: "App Dev | Game Dev",
+	avatar:
+		"",
+},
+{
+	name: "ANSHUMAN MISHRA",
+	domain: "AI/ML",
+	avatar:
+		"",
+},
+{
+	name: "ARCHAN SWAIN",
+	domain: "App Dev | AI/ML",
+	avatar:
+		"",
+},
+{
+	name: "ARPITA PANDA",
+	domain: "Web Dev | GD",
+	avatar:
+		"",
+},
+{
+	name: "ASHUTOSH PANIGRAHI",
+	domain: "Web Dev | UI/UX",
+	avatar:
+		"",
+},
+{
+	name: "AUMSHUMAN MOHAPATRA",
+	domain: "Web Dev | CW",
+	avatar:
+		"",
+},
+{
+	name: "BHARAT PANIGRAHI",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+{
+	name: "CHINMAY KUMAR BEHERA",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+{
+	name: "DEBASISH DEY",
+	domain: "App Dev",
+	avatar:
+		"",
+},
+{
+	name: "DEEPAK KUMAR DASH",
+	domain: "AI/ML",
+	avatar:
+		"",
+},
+{
+	name: "DEVANSH BANSAL",
+	domain: "Game Dev",
+	avatar:
+		"",
+},
+{
+	name: "GANTYADA TEJESH KUMAR",
+	domain: "App Dev",
+	avatar:
+		"",
+},
+{
+	name: "HARISH SAHOO",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+{
+	name: "KAUSHIK KUMAR DASH",
+	domain: "Web Dev | AI/ML | VE",
+	avatar:
+		"",
+},
+{
+	name: "KHITISH KUMAR PRADHAN",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+
+{
+	name: "KOMAL GOEL",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+
+{
+	name: "KRITIKA SUREKA",
+	domain: "Web Dev | UI/UX",
+	avatar:
+		"",
+},
+{
+	name: "KUMAR PIYUSH",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+
+{
+	name: "LIPIKA MUNDA",
+	domain: "Web Dev | UI/UX",
+	avatar:
+		"",
+},
+{
+	name: "MANASA MOHAPATRA",
+	domain: "Web Dev | App Dev",
+	avatar:
+		"",
+},
+{
+	name: "NITESH KUMAR YADAV",
+	domain: "Web Dev | CW",
+	avatar:
+		"",
+},
+{
+	name: "NITESH KUMAR YADAV",
+	domain: "Web Dev | CW",
+	avatar:
+		"",
+},
+{
+	name: "PRATYUSH PANDA",
+	domain: "Web Dev | CW",
+	avatar:
+		"",
+},
+{
+	name: "PRIYADARSHINI MUDULI",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+{
+	name: "RITESH KUMAR PANDA",
+	domain: "AI/ML",
+	avatar:
+		"",
+},
+{
+	name: "SAGAR SATHPATHY",
+	domain: "Web Dev | GD",
+	avatar:
+		"",
+},
+{
+	name: "SRUTI SMARANIKA KAR",
+	domain: "Web Dev | UI/UX",
+	avatar:
+		"",
+},
+{
+	name: "NITESH KUMAR YADAV",
+	domain: "Web Dev | CW",
+	avatar:
+		"",
+},
+{
+	name: "SUBHALAXMI NAYAK",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+{
+	name: "SUBHAM MISHRA",
+	domain: "Web Dev | AI/ML | VE",
+	avatar:
+		"",
+},
+{
+	name: "NITESH KUMAR YADAV",
+	domain: "Web Dev | CW",
+	avatar:
+		"",
+},
+{
+	name: "SUBHAM SWORUP MALLICK",
+	domain: "App DeV",
+	avatar:
+		"",
+},
+{
+	name: "SURAJ PANDA",
+	domain: "App Dev | Cybersecurity",
+	avatar:
+		"",
+},
+{
+	name: "NITESH KUMAR YADAV",
+	domain: "Web Dev | CW",
+	avatar:
+		"",
+},
+{
+	name: "SWAPNIL ROY",
+	domain: "Game Dev| UI/UX",
+	avatar:
+		"",
+},
+{
+	name: "SWASTIDEEPA DASH",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+{
+	name: "SWAYAMJEET PADHI",
+	domain: "Game Dev | Cybersecurity",
+	avatar:
+		"",
+},
+
+
+{
+	name: "TASHU AGRAWAL",
+	domain: "App Dev | AI/ML",
+	avatar:
+		"",
+},
+{
+	name: "VISHAL EKKA",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+{
+	name: "YASHIKA SHARMA",
+	domain: "Web Dev",
+	avatar:
+		"",
+},
+
+
+
+
+
 
 
 
 ];
 
 const Team = () => {
-  
-  const finalYearStartIndex = teamMembersData.findIndex(
-    (member) => member.name === "ISHITA SATHPATHY"
-  );
-  const finalYearEndIndex = teamMembersData.findIndex(
-    (member) => member.name === "NIKHIL KUMAR SAHU"
-  );
+    const finalYearStartIndex = teamMembersData.findIndex(
+        (member) => member.name === "ISHITA SATHPATHY"
+    );
+    const finalYearEndIndex = teamMembersData.findIndex(
+        (member) => member.name === "NIKHIL KUMAR SAHU"
+    );
 
- 
-  const finalYearMembers = teamMembersData.slice(finalYearStartIndex, finalYearEndIndex + 1);
-  const prefinalYearMembers = [
-    ...teamMembersData.slice(0, finalYearStartIndex),
-    ...teamMembersData.slice(finalYearEndIndex + 1),
-  ];
+    const finalYearMembers = teamMembersData.slice(
+        finalYearStartIndex,
+        finalYearEndIndex + 1
+    );
 
-  return (
-    <div>
-      <h2 style={{ color: "white", textAlign: "center", marginTop: "5px", fontSize: "35px" }}>Team Members</h2>
+    const prefinalYearStartIndex = teamMembersData.findIndex(
+        (member) => member.name === "PRERIT AGRAWAL"
+    );
+    const prefinalYearEndIndex = teamMembersData.findIndex(
+        (member) => member.name === "VISHAL LOHANI"
+    );
 
-     
-      <h3 style={{ color: "white", textAlign: "center", marginTop: "20px", fontSize: "24px" }}>Final Year Members</h3>
-      <TeamMembersSection teamMembers={finalYearMembers} />
+    const prefinalYearMembers = teamMembersData.slice(
+        prefinalYearStartIndex,
+        prefinalYearEndIndex + 1
+    );
 
-      
-      <h3 style={{ color: "white", textAlign: "center", marginTop: "20px", fontSize: "24px" }}>Prefinal Year Members</h3>
-      <TeamMembersSection teamMembers={prefinalYearMembers} />
-    </div>
-  );
+	const secondYearStartIndex = teamMembersData.findIndex(
+		(member) => member.name === "HARDEEP MOHANTY"
+	);
+	
+	const secondYearEndIndex = teamMembersData.findIndex(
+		(member) => member.name === "YASHIKA SHARMA"
+	);
+	
+	const secondYearMembers = teamMembersData.slice(
+		secondYearStartIndex,
+		secondYearEndIndex + 1
+	);
+	
+
+    return (
+        <Stack>
+            
+
+            <Typography
+                sx={{
+                    color: "green",
+                    textAlign: "center",
+                    marginTop: "50px",
+                    fontSize: "30px",
+                    fontWeight: 900,
+                }}
+            >
+                Final Year Members
+            </Typography>
+            <TeamMembersSection teamMembers={finalYearMembers} />
+
+            <Typography
+                sx={{
+                    color: "green",
+                    textAlign: "center",
+                    marginTop: "50px",
+                    fontSize: "30px",
+                    fontWeight: 900,
+                }}
+            >
+                Prefinal Year Members
+            </Typography>
+            <TeamMembersSection teamMembers={prefinalYearMembers} />
+
+            <Typography
+                sx={{
+                    color: "green",
+                    textAlign: "center",
+                    marginTop: "50px",
+                    fontSize: "30px",
+                    fontWeight: 900,
+                }}
+            >
+                Second Year Members
+            </Typography>
+            <TeamMembersSection teamMembers={secondYearMembers} />
+        </Stack>
+    );
 };
 
 export default Team;
+
+
+
+
