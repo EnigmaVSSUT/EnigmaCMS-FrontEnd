@@ -43,6 +43,13 @@ const teamMembersData = [
 			"",
 	},
 	{
+		name: "Ritu Rani Mohapatra",
+		// domain: "Developer",
+		branch:"Computer science and Engineering",
+		avatar:
+			"",
+	},
+	{
 		name: "ADYASHA SAMAL",
 		// domain: "Designer",
 		branch:"Computer science and Engineering",
