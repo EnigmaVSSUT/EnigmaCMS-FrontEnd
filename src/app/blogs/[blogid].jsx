@@ -6,9 +6,6 @@ import { useParams } from "react-router-dom";
 
 export default function SingleBlog() {
 	const {blogid} = useParams()
-	useEffect(() => {
-		console.log(blogid)
-	}, [])
 	return (
 		<AnimatePage>
 			<Stack justifyContent="center" alignItems="center" paddingY="40px" >

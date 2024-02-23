@@ -104,7 +104,7 @@ export default function Blogs() {
 							key={index}
 							minHeight="300px"
 							minWidth="400px"
-							borderRadius="20px"
+							borderRadius="10px"
 							position="relative"
 						>
 							<img
@@ -124,7 +124,7 @@ export default function Blogs() {
 								alignItems="self-start"
 								justifyContent="space-between"
 							>
-								<Typography variant="h6">{blog.title}</Typography>
+								<Typography className={blogStyles.titleHeading} variant="h6" sx={{width:'300px'}}>{blog.title}</Typography>
 								<Typography variant="caption">{blog.date}</Typography>
 							</Stack>
 							<Stack

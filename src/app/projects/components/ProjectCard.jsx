@@ -1,9 +1,9 @@
 import { Stack, Typography } from "@mui/material";
-import Avatar from "@mui/material/Avatar";
-import AvatarGroup from "@mui/material/AvatarGroup";
+// import Avatar from "@mui/material/Avatar";
+// import AvatarGroup from "@mui/material/AvatarGroup";
 import projectStyles from "../projects.module.css";
-
-export default function ProjectCard() {
+import Box from '@mui/material/Box';
+export default function ProjectCard({imgUrl,title,content,status}) {
 	return (
 		<Stack
 			className={projectStyles.projectCard}
@@ -11,29 +11,37 @@ export default function ProjectCard() {
 			borderRadius={2}
 			sx={{
 				backgroundColor: "rgba(72, 75, 73, 0.5)",
+				
 			}}
 		>
-			<Stack className="image-wrapper">
+			<Stack className="image-wrapper" sx={{ height:"300px"}}>
 				<img
 					style={{
 						objectFit: "cover",
 						borderRadius: "6px 6px 0 0",
 					}}
-					src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&q=80&w=2020&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					src={imgUrl}
 					alt=""
+					width="100%"
+					height="100%"
 				/>
 			</Stack>
 			<Stack className={projectStyles.data} gap={2} padding={3}>
-				<Typography variant="h4" className={projectStyles.projectTitle}>
-					Enigma-CMS
+			<Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+			<Typography variant="h4" className={projectStyles.projectTitle}>
+					{title}
 				</Typography>
+				<Typography variant="h4" className={projectStyles.projectTitle}>
+					{status}
+				</Typography>
+			</Box>
+				
 
 				<Typography variant="body1" color={"#ABABAB"}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-					quae.
+					{content}
 				</Typography>
 
-				<Stack
+				{/* <Stack
 					className="stats"
 					direction={"row"}
 					justifyContent={"space-between"}
@@ -41,12 +49,14 @@ export default function ProjectCard() {
 					gap={4}
 					paddingTop={4}
 					paddingInline={3}
+					sx={{border:"1px solid red"}}
 				>
 					<Stack
 						className="commits"
 						justifyContent={"start"}
 						alignItems={"start"}
 						gap={1}
+						sx={{border:"1px solid red"}}
 					>
 						<Typography>Commits</Typography>
 
@@ -55,6 +65,7 @@ export default function ProjectCard() {
 							gap={1}
 							justifyContent={"center"}
 							alignItems={"center"}
+							sx={{border:"1px solid red"}}
 						>
 							<img
 								style={{
@@ -73,6 +84,7 @@ export default function ProjectCard() {
 						justifyContent={"start"}
 						alignItems={"start"}
 						gap={1}
+						sx={{border:"1px solid red"}}
 					>
 						<Typography>Contributors</Typography>
 
@@ -99,7 +111,7 @@ export default function ProjectCard() {
 							/>
 						</AvatarGroup>
 					</Stack>
-				</Stack>
+				</Stack> */}
 			</Stack>
 		</Stack>
 	);
