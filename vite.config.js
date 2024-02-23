@@ -7,7 +7,6 @@ export default defineConfig({
 	server: {
 		port: 3000,
 		host: "club.enigma.code",
-		// host: "localhost",
 	},
 	optimizeDeps: {
 		include: ["@mui/icons-material"],
