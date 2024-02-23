@@ -18,10 +18,10 @@ export default function Events() {
         </Typography>
     <Stack paddingY={3} direction={'row'} gap={20}>
 
-        <Stack classNameName={eventStyles.eventsList}>
+        <Stack className={eventStyles.eventsList}>
         <EventList />
         </Stack>
-        <Stack classNameName={eventStyles.calender}>
+        <Stack className={eventStyles.calender}>
         <Calender />
         </Stack>
 

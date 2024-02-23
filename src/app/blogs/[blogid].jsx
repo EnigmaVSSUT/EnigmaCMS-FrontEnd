@@ -13,7 +13,7 @@ export default function SingleBlog() {
 					padding="30px"
 					paddingX="50px"
 				>
-					<Stack classNameName="image container">
+					<Stack className="image container">
 						<img
 							src={
 								"https://images.unsplash.com/photo-1680459575585-390ed5cfcae0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
@@ -28,7 +28,7 @@ export default function SingleBlog() {
 					{/* <Divider orientation="vertical" flexItem sx={{marginLeft:'50px'}}/> */}
 
 					<Stack
-						classNameName="content container"
+						className="content container"
 						height={"100%"}
 						padding="20px"
 						marginRight={"50px"}

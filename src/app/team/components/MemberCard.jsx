@@ -19,7 +19,7 @@ export default function MemberCard({ memberImage, memberName }) {
 
 	return (
 		<Card
-			classNameName={cardStyles.memberCard}
+			className={cardStyles.memberCard}
 			sx={{
 				borderRadius: "15px",
 				padding: "3rem",
@@ -54,7 +54,7 @@ export default function MemberCard({ memberImage, memberName }) {
 				/>
 
 				<Stack
-					classNameName={cardStyles.overlay}
+					className={cardStyles.overlay}
 					position={"absolute"}
 					bottom={0}
 					left={0}
@@ -64,18 +64,18 @@ export default function MemberCard({ memberImage, memberName }) {
 					direction={"column"}
 				>
 					<Stack
-						classNameName="overlay-body"
+						className="overlay-body"
 						position={"relative"}
 						gap={2}
 						height={"100%"}
 						marginTop={"1rem"}
 						alignItems={"center"}
 					>
-						<Typography classNameName={cardStyles.memberName} textAlign={"center"} variant="body1">{memberName}</Typography>
+						<Typography className={cardStyles.memberName} textAlign={"center"} variant="body1">{memberName}</Typography>
 						<Typography variant="caption">Code and coffee is life!</Typography>
 						<Stack direction={"row"} gap={2}>
 							<IconButton
-							classNameName={cardStyles.domainIcon}
+							className={cardStyles.domainIcon}
 								sx={{
 									border: "1px solid",
 									borderColor: "divider",

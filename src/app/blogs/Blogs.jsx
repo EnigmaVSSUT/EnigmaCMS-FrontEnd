@@ -73,7 +73,7 @@ export default function Blogs() {
 				position="relative"
 				paddingBottom="10rem"
 			>
-				<Typography variant="h2" classNameName={blogStyles.blogs} paddingY="20px">
+				<Typography variant="h2" className={blogStyles.blogs} paddingY="20px">
 					Blogs
 				</Typography>
 				<Stack
@@ -87,7 +87,7 @@ export default function Blogs() {
 					{blogs.map((blog, index) => (
 						<Stack
 							id={blog.id}
-							classNameName={blogStyles.main}
+							className={blogStyles.main}
 							key={index}
 							minHeight="300px"
 							minWidth="400px"
@@ -95,7 +95,7 @@ export default function Blogs() {
 							position="relative"
 						>
 							<img
-								classNameName={blogStyles.blogimage}
+								className={blogStyles.blogimage}
 								height="300px"
 								width="400px"
 								src={blog.img}
@@ -103,7 +103,7 @@ export default function Blogs() {
 								style={{ objectFit: "cover", borderRadius: "20px" }}
 							/>
 							<Stack
-								classNameName={blogStyles.title}
+								className={blogStyles.title}
 								position="absolute"
 								bottom="20px"
 								paddingX="20px"
@@ -115,7 +115,7 @@ export default function Blogs() {
 								<Typography variant="caption">{blog.date}</Typography>
 							</Stack>
 							<Stack
-								classNameName={blogStyles.newtab}
+								className={blogStyles.newtab}
 								onClick={() => openBlog(blog.id)}
 								position="absolute"
 								right="20px"
@@ -127,7 +127,7 @@ export default function Blogs() {
 					))}
 				</Stack>
 
-				<Stack classNameName={blogStyles.more} direction='row' sx={{ position: "absolute", right: "60px", bottom: "40px" }}>
+				<Stack className={blogStyles.more} direction='row' sx={{ position: "absolute", right: "60px", bottom: "40px" }}>
 					
 					<IconButton
 						sx={{
