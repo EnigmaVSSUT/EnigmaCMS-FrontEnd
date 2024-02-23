@@ -6,7 +6,7 @@ export default defineConfig({
 	plugins: [react()],
 	server: {
 		port: 3000,
-		host: "localhost",
+		host: "club.enigma.code",
 	},
 	optimizeDeps: {
 		include: ["@mui/icons-material"],
