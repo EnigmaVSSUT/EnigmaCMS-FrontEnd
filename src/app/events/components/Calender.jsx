@@ -17,7 +17,7 @@ export default function Calendar() {
 					<DateCalendar
 						value={value}
 						onChange={(newValue) => {
-							setPickedDate(newValue.format("dddd, MMMM DD"));
+							setPickedDate(newValue.format("DD MMMM, YYYY"));
 							setValue(newValue);
 						}}
 					/>

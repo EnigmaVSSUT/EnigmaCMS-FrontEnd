@@ -1,39 +1,41 @@
 @keyframes fillAnimation {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
+  0% {
+    width: 0;
   }
-  
-  .divider, .dividerGreen {
-    position: relative;
+  100% {
     width: 100%;
-    transition: width 0.5s; 
-    animation: fillAnimation 2s;
-    animation-fill-mode: forwards; 
   }
+}
+.divider, .dividerGreen {
+  position: relative;
+  width: 100%;
+  transition: width 0.5s; 
+  animation: fillAnimation 2s;
+  animation-fill-mode: forwards; 
+}
 
-  .eventcard:hover {
-    cursor: pointer;
-    box-shadow: 0 0 2px 1px rgba(68, 237, 63, 0.2);
-  }
+.eventcard:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2px 1px rgba(68, 237, 63, 0.2);
+}
 
 
 
-  .eventcard:hover .dividerGreen{
-    display: block;
-    border-color: #6ffa53;
-  }
-  
-  .dividerGreen{
-    display: none;
-  }
+.eventcard:hover .dividerGreen{
+  display: block;
+  border-color: #6ffa53;
+}
 
-  .calender{
-    border: 1px solid  rgba(43, 201, 37, 0.2);
-    box-shadow: 0 0px 6px 2px rgba(43, 201, 37, 0.2);
-    border-radius: 10px;
-    height: fit-content;
-  }
+.dividerGreen{
+  display: none;
+}
+
+.calender{
+  border: 1px solid  rgba(43, 201, 37, 0.2);
+  box-shadow: 0 0px 6px 2px rgba(43, 201, 37, 0.2);
+  border-radius: 10px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

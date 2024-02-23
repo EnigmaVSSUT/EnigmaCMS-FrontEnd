@@ -12,7 +12,7 @@ import { HighlightOff } from "@mui/icons-material";
 
 const datalist1 = [
 	{
-		date: "Wednesday, November 29",
+		date: "20 February, 2024",
 		title: "Orientation Day",
 		info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos.",
 	},
@@ -20,12 +20,12 @@ const datalist1 = [
 
 const datalist2 = [
 	{
-		date: "Sunday, November 21",
+		date: "17 November, 2024",
 		title: "Enigma Induction",
 		info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos.",
 	},
 	{
-		date: "Sunday, November 21",
+		date: "18 March, 2024",
 		title: "Info Session",
 		info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos.",
 	},
@@ -39,6 +39,7 @@ export default function EventList() {
 	const pickedDate = useDatePicker((state) => state.pickedDate);
 
 	useEffect(() => {
+		console.log(pickedDate)
 		if (pickedDate !== "") {
 			const filteredByDate = totalData.filter(
 				(data) => data.date === pickedDate
