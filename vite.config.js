@@ -5,8 +5,9 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
 	plugins: [react()],
 	server: {
-		port: 3000,
+		port: 5000,
 		host: "club.enigma.code",
+		// host: "localhost",
 	},
 	optimizeDeps: {
 		include: ["@mui/icons-material"],

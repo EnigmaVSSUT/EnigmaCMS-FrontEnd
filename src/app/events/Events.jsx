@@ -8,7 +8,7 @@ export default function Events() {
   return (
     <AnimatePage>
     <Stack
-        justifyContent="flex-start"
+        justifyContent={"center"}
         alignItems={"center"}
         position="relative"
         paddingBottom={"2rem"}
@@ -16,11 +16,12 @@ export default function Events() {
         <Typography variant="h2" paddingY="20px">
             Events
         </Typography>
-    <Stack paddingY={3} direction={'row'} gap={20}>
+    <Stack paddingY={3} direction={{xs: "column-reverse", md: "row"}} gap={{md: 20, xs: 10}}>
 
         <Stack className={eventStyles.eventsList}>
         <EventList />
         </Stack>
+
         <Stack className={eventStyles.calender}>
         <Calender />
         </Stack>

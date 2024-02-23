@@ -46,10 +46,10 @@ export default function EventList() {
 
 
   return (
-    <Stack gap={3} justifyContent={'start'} alignItems={'start'} width={"650px"}>
+    <Stack gap={3} justifyContent={"start"} alignItems={{xs:"center",md:"start"}} width={"650px"}>
       
-      <Stack className="search-box" width={'70%'} position={'relative'} left={30} direction={'row'} gap={3}>
-      <TextField fullWidth id="outlined-basic"  variant="outlined" />
+      <Stack className="search-box" width={{md: "70%"}} position={'relative'} left={{md: 30}} direction={'row'} gap={{md: 3, xs: 1}}  >
+      <TextField fullWidth id="outlined-basic"  variant="outlined" size="small" />
       <Button variant="contained">
         Filter
       </Button>
@@ -57,7 +57,8 @@ export default function EventList() {
 
         {
             pickedDate == '' && (
-                <Stack>
+                <Stack
+                alignItems={"center"}>
                 {totalData.map((data,idx) => (
                   <EventCard 
                   key={idx}
@@ -79,7 +80,7 @@ export default function EventList() {
         </Stack>)
         :
         (
-            <Stack>
+            <Stack justifyContent={{xs: Center,md: flex-start}}>
             {result.map((data,idx) => (
               <EventCard 
               key={idx}

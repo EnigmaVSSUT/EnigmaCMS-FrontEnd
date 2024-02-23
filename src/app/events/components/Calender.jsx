@@ -12,10 +12,10 @@ export default function Calendar() {
   const [value, setValue] = useState(dayjs());
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <LocalizationProvider dateAdapter={AdapterDayjs} >
       <DemoContainer components={['DateCalendar', 'DateCalendar']}>
       <DemoItem >
-      <DateCalendar  
+      <DateCalendar
        value={value}
        onChange={(newValue) => {
          setPickedDate(newValue.format('dddd, MMMM DD'));
