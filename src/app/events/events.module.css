@@ -6,7 +6,9 @@
       width: 100%;
     }
   }
-  
+  * {
+    overflow-x: hidden;
+  }
   .divider, .dividerGreen {
     position: relative;
     width: 100%;
@@ -36,4 +38,7 @@
     box-shadow: 0 0px 6px 2px rgba(43, 201, 37, 0.2);
     border-radius: 10px;
     height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }

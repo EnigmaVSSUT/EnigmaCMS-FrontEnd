@@ -3,9 +3,10 @@ import eventStyles from "../events.module.css";
 
 export default function EventCard({ key, date, title, info }) {
 	return (
+		
 		<Stack
 			className={eventStyles.eventcard}
-			width={"650px"}
+			width={{md: "650px", xs: "300px"}} 
 			key={key}
 			padding={4}
 			borderRadius={2}
