@@ -1,4 +1,10 @@
-import { Stack, TextField, Button, Typography, Icon, IconButton } from "@mui/material";
+import {
+	Stack,
+	TextField,
+	Button,
+	Typography,
+	IconButton,
+} from "@mui/material";
 import EventCard from "./EventCard";
 import useDatePicker from "../../../shared/store/useDatePicker";
 import { useEffect, useState } from "react";
@@ -44,9 +50,15 @@ export default function EventList() {
 	}, [pickedDate]);
 
 	const filterDataList = () => {
-		if (value.trim() === "") {
-			// If input is empty, reset result to show all events
+		if (value.trim() === "" && pickedDate === "") {
 			setResult(totalData);
+		} else if (pickedDate !== "" && value === "") {
+			setResult([])
+			const filtered = totalData.filter(
+				(item) =>
+					item.date === pickedDate
+			);
+			setResult(filtered);
 		} else {
 			const filtered = totalData.filter(
 				(item) =>
@@ -78,21 +90,33 @@ export default function EventList() {
 					variant="outlined"
 					value={value}
 					onChange={(e) => setValue(e.target.value)}
-          onKeyDown={(e)=>{
-            if(e.key ==='Enter'){
-              filterDataList()
-            }
-          }}
+					onKeyDown={(e) => {
+						if (e.key === "Enter") {
+							filterDataList();
+						}
+					}}
 					InputProps={{
 						endAdornment: (
-								<IconButton onClick={() => {
-                  setResult(totalData)
-                  setValue("")
-                }} sx={{
-                  display: value.length > 0 ? "block" : "none" 
-                }}>
-                  <HighlightOff />
-                </IconButton>
+							<IconButton
+								onClick={() => {
+									if (pickedDate !== "") {
+										const filteredByDate = totalData.filter(
+											(data) => data.date === pickedDate
+										);
+										setResult(filteredByDate);
+									}else {
+										setResult(totalData);
+									}
+									setValue("");
+								}}
+								sx={{
+									display: value.length > 0 ? "flex" : "none",
+									justifyContent: "center",
+									alignItems: "center"
+								}}
+							>
+								<HighlightOff />
+							</IconButton>
 						),
 					}}
 				/>
