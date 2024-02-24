@@ -5,8 +5,8 @@ import EventList from "./components/EventList";
 import Calender from "./components/Calender";
 
 export default function Events() {
-	return (
-		<AnimatePage>
+  return (
+    <AnimatePage>
     <Stack
         justifyContent={"center"}
         alignItems={"center"}
@@ -32,4 +32,5 @@ export default function Events() {
         </Stack>
         </AnimatePage>
 	);
+
 }
