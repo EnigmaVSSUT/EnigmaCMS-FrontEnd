@@ -23,7 +23,7 @@ jobs:
 
       - name: Set Environment Variables
         run: |
-            echo "VITE_BASE_API=${{ secrets.VITE_BASE_API }}" >> $GITHUB_ENV
+            echo "VITE_BASE_URL=${{ secrets.VITE_BASE_URL }}" >> $GITHUB_ENV
             echo "VITE_CDN_URL=${{ secrets.VITE_CDN_URL }}" >> $GITHUB_ENV
             echo "VITE_DOMAIN_NAME=${{ secrets.VITE_DOMAIN_NAME }}" >> $GITHUB_ENV
             echo "VITE_GITHUB_APP_AUTHORIZE_URL=${{ secrets.VITE_GITHUB_APP_AUTHORIZE_URL }}" >> $GITHUB_ENV
