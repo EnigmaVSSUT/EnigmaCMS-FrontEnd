@@ -1,19 +1,22 @@
 import { Stack, Typography } from "@mui/material";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import { useState } from "react";
+// import { useState } from "react";
 import AnimatePage from "../../ui/AnimatePage";
-import projectStyles from "./projects.module.css";
+
 import ProjectCard from "./components/ProjectCard";
+import img1 from "/assets/image1.jpg?url"
+import img2 from "/assets/image2.jpg?url"
+import img3 from "/assets/image3.jpg?url"
+import img4 from "/assets/image4.jpg?url"
+import img5 from "/assets/image5.png?url"
 
 export default function Projects() {
-	const [value, setValue] = useState("one");
+	// const [value, setValue] = useState("one");
 
-	const handleChange = (event, newValue) => {
-		setValue(newValue);
-	};
+	// const handleChange = (event, newValue) => {
+	// 	setValue(newValue);
+	// };
 
-	console.log(value);
+	// console.log(value);
 	return (
 		<AnimatePage>
 			<Stack
@@ -26,8 +29,8 @@ export default function Projects() {
 					Projects
 				</Typography>
 
-				<Stack paddingY={2} borderRadius={3}>
-					<Tabs
+				{/* <Stack paddingY={2} borderRadius={3}> */}
+					{/* <Tabs
 						value={value}
 						onChange={handleChange}
 						textColor="green"
@@ -74,7 +77,7 @@ export default function Projects() {
 							label="Archieved"
 						/>
 					</Tabs>
-				</Stack>
+				</Stack> */}
 
 				<Stack
 					direction={"row"}
@@ -84,7 +87,7 @@ export default function Projects() {
 					gap={6}
 					padding={6}
 				>
-					{value === "one" && (
+					{/* {value === "one" && (
 						<>
 							<ProjectCard />
 							<ProjectCard />
@@ -103,7 +106,12 @@ export default function Projects() {
 						<>
 							<ProjectCard />
 						</>
-					)}
+					)} */}
+					<ProjectCard  title="SMS" status="ongoing" content="VSSUT's Student Management System app enhances connectivity, streamlining student information." imgUrl={img1} />
+					<ProjectCard  title="Ritrovo" status="ongoing" content="Ritrovo unifies clubs, updates students, revolutionizes attendance for enjoyable university life." imgUrl={img2} />
+					<ProjectCard  title="WMS" status="ongoing" content="Innovative waste system with real-time dustbin tracker website promotes efficient disposal for a cleaner university environment." imgUrl={img3} />
+					<ProjectCard  title="Schedule" status="upcoming" content="Efficiently manage tasks with our user-friendly schedule app for streamlined organization, productivity, and stress-free planning." imgUrl={img4} />
+					<ProjectCard  title="VSIEGE" status="upcoming" content="Multiplayer game where we need to choose loadout, spawn with team, hunt enemies, use cover, win match, check stats." imgUrl={img5} />
 				</Stack>
 			</Stack>
 		</AnimatePage>

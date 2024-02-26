@@ -10,6 +10,7 @@ import cardStyles from "../team.module.css";
 import LanguageIcon from "@mui/icons-material/Language";
 import AndroidIcon from "@mui/icons-material/Android";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 export default function MemberCard({ memberImage, memberName }) {
 	const profileRedirect = () => {
@@ -63,14 +64,22 @@ export default function MemberCard({ memberImage, memberName }) {
 					minHeight={"260px"}
 					direction={"column"}
 				>
+					<IconButton
+							className={cardStyles.newtab}	
+							sx={{ position: "absolute", top: "0px", right: "10px" }}
+							variant="outlined"
+							onClick={profileRedirect}
+						>
+							<OpenInNewIcon style={{ color: "white", fontSize: "20px" }} />
+						</IconButton>
 					<Stack
 						className="overlay-body"
 						position={"relative"}
 						gap={2}
-						height={"100%"}
-						marginTop={"1rem"}
+						marginTop={"1.5rem"}
 						alignItems={"center"}
 					>
+							
 						<Typography className={cardStyles.memberName} textAlign={"center"} variant="body1">{memberName}</Typography>
 						<Typography variant="caption">Code and coffee is life!</Typography>
 						<Stack direction={"row"} gap={2}>
@@ -106,13 +115,6 @@ export default function MemberCard({ memberImage, memberName }) {
 							</IconButton>
 						</Stack>
 
-						<Button
-							sx={{ position: "absolute", bottom: "20px" }}
-							variant="outlined"
-							onClick={profileRedirect}
-						>
-							View Profile
-						</Button>
 					</Stack>
 				</Stack>
 			</Stack>

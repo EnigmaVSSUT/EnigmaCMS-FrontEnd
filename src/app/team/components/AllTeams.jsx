@@ -13,7 +13,7 @@ export default function AllTeam() {
 		const getTeam = async () => {
 			const res = await baseAPIMethods.members.getAllMembers();
 			setMember(res.data);
-			console.log(res.data);
+			console.log("members", res.data);
 		};
 		getTeam();
 	}, []);
@@ -40,12 +40,8 @@ export default function AllTeam() {
 						{member.map((member,idx) => (
 							<MemberCard
 								key={idx}
-								memberName={member.profile.username}
-								memberImage={
-									import.meta.env.VITE_BASE_URL +
-									"/media/" +
-									member.profile.avatar
-								}
+								memberName={member.profile.name}
+								memberImage={member.profile.avatar}
 							/>
 						))}
 					</Stack>

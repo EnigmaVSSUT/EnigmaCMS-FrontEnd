@@ -1,75 +1,82 @@
-
 .main:hover{
-    position: relative;
+  position: relative;
 
 }
 
 .main:before {
-    content: '';
-    display: block;
-    position: absolute;
-    height: 0%;
-    width: 100%;
-    bottom: 0;
-    transition: height 0.5s ease-out;
-    background: linear-gradient(to bottom, transparent 0%, black 100%);
-  }
-  .main:hover:before {
-    height: 100%;
-  }
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  bottom: 0;
+  transition: 0.5s ease-in-out;
+  background: linear-gradient(180deg, transparent 0%, black 100%);
+}
+.main:hover:before {
+  height: 100%;
+}
 
-  .main:hover .title{
-    opacity: 1;
-    transition: 1s ease-in-out all;; 
-  }
+.main:hover .title{
+  opacity: 4;
+  transition: 1s ease-in-out all;; 
+}
 
-  .main:hover .newtab{
-    opacity: 1;
-    transition: 1s ease-in-out all;; 
-  }
+.main:hover .newtab{
+  opacity: 1;
+  transition: 1s ease-in-out all;; 
+}
 
-  .title,.newtab{
-    opacity: 0;
-  }
+.title,.newtab{
+  opacity: 0;
+}
 
-  .newtab{    
-    cursor: pointer;
-  }
+.titleHeading{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
 
-  @media (max-width: 1000px) {
-   .main,.blogimage{
-    min-width: 70vw;
-   }
-  }
+.newtab{    
+  cursor: pointer;
+}
 
-  .blogs:hover{
-    transition: 1s ease-in-out all;;
-    text-decoration: underline;
-    text-underline-offset: 0.1em;
-    text-decoration-thickness: 2px;
-  }
+@media (max-width: 1000px) {
+ .main,.blogimage{
+  min-width: 70vw;
+ }
+}
 
-  .more::before{
-    content: '';
-    width: 180px;
-    transition: width 1s;
-  }
+.blogs:hover{
+  transition: 1s ease-in-out all;;
+  text-decoration: underline;
+  text-underline-offset: 0.5em;
+  text-decoration-thickness: 2px;
+}
 
-  .more:hover::before{
-    content: 'Explore more';
-    font-size: 20px;
-    color: white;
-    font-family: Satoshi;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 0px;
-    width: 220px;
-    height: 49px;
-    border-radius: 60px;
-    background-color: rgb(63, 63, 63);
-  }
+.more::before{
+  content: '';
+  width: 180px;
+  transition: width 1s;
+}
+
+.more:hover::before{
+  content: 'Explore more';
+  font-size: 17px;
+  color: white;
+  font-family: Satoshi;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  width: 220px;
+  height: 52px;
+  border-radius: 60px;
+  background-color: rgb(63, 63, 63);
+}
+
 /* .main{
-    background-color: #0f0e0e;
+  background-color: #0f0e0e;
 } */
