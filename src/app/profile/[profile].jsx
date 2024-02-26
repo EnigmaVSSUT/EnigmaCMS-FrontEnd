@@ -35,7 +35,7 @@ export default function UserProfile() {
 				setUser({
 					username: res.data.username,
 					name: res.data.name,
-					avatar: import.meta.env.VITE_BASE_URL + "/media/" + res.data.avatar,
+					avatar: res.data.avatar,
 					graduationYear: res.data.graduation_year,
 					linkedin_handle: res.data.linkedin_url,
 					twitter_handle: res.data.twitter_username,
@@ -50,7 +50,7 @@ export default function UserProfile() {
 			<Stack justifyContent="center" alignItems="center">
 				<Stack
 					border={3}
-					boxShadow="0 0 10px 3px"
+					boxShadow="0 0 5px 1px"
 					direction="row"
 					minWidth="900px"
 					padding={12}

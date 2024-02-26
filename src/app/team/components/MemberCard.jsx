@@ -12,9 +12,9 @@ import AndroidIcon from "@mui/icons-material/Android";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
-export default function MemberCard({ memberImage, memberName }) {
+export default function MemberCard({ memberImage, memberName, memberUsername }) {
 	const profileRedirect = () => {
-		const newPageUrl = "/profile/" + memberName;
+		const newPageUrl = "/profile/" + memberUsername;
 		window.open(newPageUrl, "_blank");
 	};
 

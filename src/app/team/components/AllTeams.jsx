@@ -42,6 +42,7 @@ export default function AllTeam() {
 								key={idx}
 								memberName={member.profile.name}
 								memberImage={member.profile.avatar}
+								memberUsername={member.profile.username}
 							/>
 						))}
 					</Stack>
