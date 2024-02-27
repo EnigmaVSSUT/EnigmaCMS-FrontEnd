@@ -9,6 +9,7 @@ import EventCard from "./EventCard";
 import useDatePicker from "../../../shared/store/useDatePicker";
 import { useEffect, useState } from "react";
 import { HighlightOff } from "@mui/icons-material";
+import { useDebounce } from "../../../hooks/useDebounce";
 
 const datalist1 = [
 	{
@@ -37,6 +38,7 @@ export default function EventList() {
 	const [result, setResult] = useState([]);
 	const [value, setValue] = useState("");
 	const pickedDate = useDatePicker((state) => state.pickedDate);
+	const debouncedQuery = useDebounce(value, 100);
 
 	useEffect(() => {
 		if (pickedDate !== "") {
@@ -49,10 +51,10 @@ export default function EventList() {
 		}
 	}, [pickedDate]);
 
-	const filterDataList = () => {
-		if (value.trim() === "" && pickedDate === "") {
+	const filterDataList = (debouncedQuery) => {
+		if (debouncedQuery === "" && pickedDate === "") {
 			setResult(totalData);
-		} else if (pickedDate !== "" && value === "") {
+		} else if (pickedDate !== "" && debouncedQuery === "") {
 			setResult([])
 			const filtered = totalData.filter(
 				(item) =>
@@ -68,6 +70,10 @@ export default function EventList() {
 			setResult(filtered);
 		}
 	};
+
+	useEffect(() => {
+			filterDataList(debouncedQuery);
+	}, [debouncedQuery]);
 
 	return (
 		<Stack
