@@ -55,3 +55,30 @@
   margin: 0 auto;
   width: 100%;
 }
+
+
+@keyframes oscillate {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.drawerButton{
+  background-color: brown;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+  animation: oscillate 2s infinite;
+}
+
+.drawer{
+  background: rgba( 0, 0, 0, 0.7 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 12px );
+  -webkit-backdrop-filter: blur( 20px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
