@@ -67,7 +67,7 @@ export default function SideTab() {
 		<Stack
 		className={styles.drawer}
 					sx={{
-						minWidth: "16rem",
+						minWidth: "13rem",
 						height: "100vh",
 						top: "3.8rem",
 						left: "0",

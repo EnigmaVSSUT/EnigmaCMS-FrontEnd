@@ -82,3 +82,13 @@
   -webkit-backdrop-filter: blur( 20px );
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+
+.mobileTeams{
+  display: grid;
+  grid-template-columns: 2;
+  gap: 20px;
+  padding: 20px;
+  padding-top: 0;
+  justify-items: center;
+  align-items: center;
+}

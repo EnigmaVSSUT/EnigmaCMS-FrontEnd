@@ -1,4 +1,3 @@
-import * as React from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useState } from "react";
 
@@ -8,7 +7,7 @@ export const useResponsive = () => {
 	const isMobile = useMediaQuery("(max-width:500px)");
 
 	let fontSize, lineHeight, fontWeight;
-	
+
 	useEffect(() => {
 		window.addEventListener("resize", ()=>{});
 		return () => {
