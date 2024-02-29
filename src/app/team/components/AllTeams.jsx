@@ -8,7 +8,7 @@ import { useResponsive } from "../../../hooks/useResponsive";
 
 export default function AllTeam() {
 	const [member, setMember] = useState([]);
-	const { isTablet } = useResponsive();
+	const { isTablet, fontSize, fontWeight } = useResponsive();
 
 	useEffect(() => {
 		const getTeam = async () => {
@@ -19,10 +19,19 @@ export default function AllTeam() {
 		getTeam();
 	}, []);
 
+	console.log("fontSize", fontSize);
+
 	return (
 		<AnimatePage>
 			<Stack justifyContent={"center"} alignItems={"center"} gap={10}>
-				<Typography variant={isTablet ? "h4" : "h2"} color={"#fff"}>
+				<Typography
+					sx={{
+						fontSize: fontSize,
+						fontWeight: fontWeight,
+						textAlign: "center",
+						color: "#fff",
+					}}
+				>
 					Team Enigma
 				</Typography>
 
