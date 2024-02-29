@@ -17,7 +17,7 @@ const DrawerList = ({ activeLink }) => (
 		direction="column"
 		gap="25px"
 		padding="20px"
-		width="230px"
+		width="210px"
 		alignItems="flex-start"
 		height={1}
 		position={"relative"}
@@ -46,7 +46,7 @@ const DrawerList = ({ activeLink }) => (
 		/>
 		<Stack
 			gap={4}
-			paddingLeft={5}
+			paddingLeft={4}
 			justifyContent={"center"}
 			alignItems={"start"}
 		>
