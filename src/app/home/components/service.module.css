@@ -27,13 +27,7 @@
     }
 }
 
-.slide-container{
-    padding: 60px 0 0;
+.slideContainer{
     overflow: hidden!important;
-    
     white-space: nowrap;
-}
-
-.cards{
-
 }

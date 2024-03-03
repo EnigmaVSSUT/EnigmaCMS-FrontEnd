@@ -64,6 +64,7 @@ const Services = () => {
 			minHeight='100vh'
 			padding='64px 32px'
 			alignItems='center'
+			overflow={'hidden'}
 		>
 			<Typography
 				variant='displayLarge'
@@ -73,8 +74,8 @@ const Services = () => {
 			</Typography>
 			{
 				isTablet? (
-					<Stack gap={3} paddingTop={7} width={'100vw'}>
-						<Stack className="slide-container" direction={'row'} gap={3}>
+					<Stack gap={3} paddingTop={7} width={'100vw'} overflow={'hidden'}>
+						<Stack className={styles.slideContainer} direction={'row'} gap={3} overflow={'hidden'}>
 							
 						<Stack className={styles.leftSlider}  gap={3} direction={'row'} ref={servicesContainerRef}> 
 						{
@@ -103,7 +104,7 @@ const Services = () => {
 						
 						</Stack>
 						
-						<Stack className="slide-container" direction={'row'} gap={3}>
+						<Stack className={styles.slideContainer} direction={'row'} gap={3} overflow={'hidden'}>
 							
 						<Stack className={styles.rightSlider} justifyContent={'center'} alignItems={'center'} gap={3} direction={'row'} ref={servicesContainerRef}> 
 						{
