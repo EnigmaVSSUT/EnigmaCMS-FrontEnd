@@ -4,6 +4,8 @@ import { useEffect, useRef } from "react"
 import { faBrain, faGamepad, faGlobe, faLaptopCode, faShield } from "@fortawesome/free-solid-svg-icons"
 import { faAndroid, faFigma } from "@fortawesome/free-brands-svg-icons"
 import Grid from "@mui/material/Unstable_Grid2"
+import { useResponsive } from "../../../hooks/useResponsive"
+import styles from './service.module.css'
 
 const services = [
 	{
@@ -45,6 +47,7 @@ const services = [
 
 const Services = () => {
 	const servicesContainerRef = useRef()
+	const {isTablet} = useResponsive();
 
 	useEffect(() => {
 		servicesContainerRef.current.addEventListener('mousemove', e => {
@@ -68,35 +71,99 @@ const Services = () => {
 			>
 				What we do.
 			</Typography>
-			<Grid
-				container
-				maxWidth='1024px'
-				width='100%'
-				ref={servicesContainerRef}
-				gap='8px'
-				justifyContent='center'
-				padding='64px 0'
-				sx={{
-					'&:hover': {
-						'& .MuiGrid2-root .MuiStack-root:before': {
-							opacity: 1
+			{
+				isTablet? (
+					<Stack gap={3} paddingTop={7} width={'100vw'}>
+						<Stack className="slide-container" direction={'row'} gap={3}>
+							
+						<Stack className={styles.leftSlider}  gap={3} direction={'row'} ref={servicesContainerRef}> 
+						{
+							services.filter((item,idx)=> idx <= (services.length/2)).map((filteredItem)=>(
+								<Stack
+								className={styles.cards}
+								height={'270px'}
+								width='250px' key={filteredItem.name}>
+								<ServiceCard service={filteredItem} />
+								</Stack>
+							))
 						}
-					}
-				}}
-			>
-				{ services.map(s => (
-					<Grid
-						xs={12}	
-						sm={6}
-						md={3}
-						maxWidth='300px'
+						</Stack>
+						<Stack className={styles.leftSlider}  gap={3} direction={'row'} ref={servicesContainerRef}> 
+						{
+							services.filter((item,idx)=> idx <= (services.length/2)).map((filteredItem)=>(
+								<Stack
+								className={styles.cards}
+								height={'270px'}
+								width='250px' key={filteredItem.name}>
+								<ServiceCard service={filteredItem} />
+								</Stack>
+							))
+						}
+						</Stack>
+						
+						</Stack>
+						
+						<Stack className="slide-container" direction={'row'} gap={3}>
+							
+						<Stack className={styles.rightSlider} justifyContent={'center'} alignItems={'center'} gap={3} direction={'row'} ref={servicesContainerRef}> 
+						{
+							services.filter((item,idx)=> idx >= (services.length/2)).map((filteredItem)=>(
+								<Stack
+								className={styles.cards}
+								height={'270px'}
+								width='250px' key={filteredItem.name}>
+								<ServiceCard service={filteredItem} />
+								</Stack>
+							))
+						}
+						</Stack>
+						<Stack className={styles.rightSlider} justifyContent={'center'} alignItems={'center'} gap={3} direction={'row'} ref={servicesContainerRef}> 
+						{
+							services.filter((item,idx)=> idx >= (services.length/2)).map((filteredItem)=>(
+								<Stack
+								className={styles.cards}
+								height={'270px'}
+								width='250px' key={filteredItem.name}>
+								<ServiceCard service={filteredItem} />
+								</Stack>
+							))
+						}
+						</Stack>
+						
+						</Stack>
+					</Stack>
+					):(
+						<Grid
+						container
+						maxWidth='1024px'
 						width='100%'
-						key={s.name}
+						ref={servicesContainerRef}
+						gap='8px'
+						justifyContent='center'
+						padding='64px 0'
+						sx={{
+							'&:hover': {
+								'& .MuiGrid2-root .MuiStack-root:before': {
+									opacity: 1
+								}
+							}
+						}}
 					>
-						<ServiceCard service={s} />
+						{ services.map(s => (
+							<Grid
+								xs={12}	
+								sm={6}
+								md={3}
+								maxWidth='300px'
+								width='100%'
+								key={s.name}
+								>
+								<ServiceCard service={s} />
+							</Grid>
+						)) }
 					</Grid>
-				)) }
-			</Grid>
+					)
+			}
 		</Stack>
 	)
 }

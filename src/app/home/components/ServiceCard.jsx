@@ -40,6 +40,7 @@ const ServiceCardContent = ({ service }) => {
 			</Typography>
 			<Typography
 				variant='bodyMedium'
+				whiteSpace={'normal'}
 				color={theme => theme.palette.text.secondary}
 			>
 				{ service.description }
