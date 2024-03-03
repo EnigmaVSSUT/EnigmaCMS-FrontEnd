@@ -1,0 +1,39 @@
+.leftSlider{
+    animation: 10s slide infinite linear;
+    display: inline-block;
+}
+
+.rightSlider{
+    animation: 10s slideR infinite linear;
+    display: inline-block;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(-102.5%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes slideR {
+    from {
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-102.5%);
+    }
+}
+
+.slide-container{
+    padding: 60px 0 0;
+    overflow: hidden!important;
+    
+    white-space: nowrap;
+}
+
+.cards{
+
+}
