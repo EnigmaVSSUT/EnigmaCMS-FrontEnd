@@ -9,6 +9,7 @@ import BookIcon from "@mui/icons-material/Book";
 import WebhookIcon from "@mui/icons-material/Webhook";
 import GroupsIcon from "@mui/icons-material/Groups";
 import Divider from "@mui/material/Divider";
+import Link from "@mui/material/Link";
 import "../App.css";
 
 const DrawerList = ({ activeLink }) => (
@@ -156,7 +157,17 @@ const Header = () => {
 				padding="10px 32px"
 				gap="16px"
 			>
-				<Stack direction="row" gap="12px" alignItems="center" flexGrow={1}>
+				<Stack
+					component={Link}
+					href="/"
+					style={{
+						textDecoration: "none",
+					}}
+					direction="row"
+					gap="12px"
+					alignItems="center"
+					flexGrow={1}
+				>
 					<img
 						src="/logo/enigma_contained.png"
 						alt="Enigma VSSUT logo"
