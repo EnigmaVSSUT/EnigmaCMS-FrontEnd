@@ -5,21 +5,33 @@ import MemberCard from "./MemberCard";
 import baseAPIMethods from "../../../lib/axios/base";
 import AnimatePage from "../../../ui/AnimatePage";
 import { useResponsive } from "../../../hooks/useResponsive";
+import useLoading from "../../../shared/store/useLoading";
+import Shimmer from "./Shimmer";
 
 export default function AllTeam() {
 	const [member, setMember] = useState([]);
 	const { isTablet, fontSize, fontWeight } = useResponsive();
-
+	const [loading, setLoading] = useLoading((state) => [
+		state.loading,
+		state.setLoading,
+	]);
+	const shimmerSize = localStorage.getItem("teamSize");
+	console.log("local", shimmerSize);
 	useEffect(() => {
+		setLoading(true);
 		const getTeam = async () => {
 			const res = await baseAPIMethods.members.getAllMembers();
 			setMember(res.data);
 			console.log("members", res.data);
+			return res.data;
 		};
-		getTeam();
+		getTeam().then((res) => {
+			console.log("test", res);
+			localStorage.setItem("teamSize", res.length);
+		}).then(()=>{
+			setLoading(false);
+		})
 	}, []);
-
-	console.log("fontSize", fontSize);
 
 	return (
 		<AnimatePage>
@@ -43,14 +55,33 @@ export default function AllTeam() {
 					alignItems={"center"}
 					flexWrap={"wrap"}
 				>
-					{member.map((member, idx) => (
-						<MemberCard
-							key={idx}
-							memberName={member.profile.name}
-							memberImage={member.profile.avatar}
-							memberUsername={member.profile.username}
-						/>
-					))}
+					{loading ? (
+						<>
+							{[
+								...Array(shimmerSize).map((_, i) => {
+									<>
+									{console.log('cnt',i)}
+									<MemberCard key={i}
+									memberImage="loadingShimmer"
+									memberName="loadingShimmer"
+									memberUsername="loadingShimmer"
+									/>;
+									</>
+								}),
+							]}
+						</>
+					) : (
+						<>
+							{member.map((member, idx) => (
+								<MemberCard
+									key={idx}
+									memberName={member.profile.name}
+									memberImage={member.profile.avatar}
+									memberUsername={member.profile.username}
+								/>
+							))}
+						</>
+					)}
 				</Stack>
 			</Stack>
 		</AnimatePage>

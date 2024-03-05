@@ -13,9 +13,10 @@ import SmartToyIcon from "@mui/icons-material/SmartToy";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import style from "../team.module.css";
 import Link from '@mui/material/Link';
+import Skeleton from "@mui/material/Skeleton";
 import { useResponsive } from "../../../hooks/useResponsive";
 
-export default function MemberCard({ memberImage, memberName, memberUsername }) {
+export default function MemberCard({ memberImage='loadingShimmer', memberName='loadingShimmer', memberUsername='loadingShimmer' }) {
 	const profileRedirect = () => {
 		const newPageUrl = "/profile/" + memberUsername;
 		window.open(newPageUrl, "_blank");
@@ -30,11 +31,21 @@ export default function MemberCard({ memberImage, memberName, memberUsername }) 
 				<Stack gap={2} paddingBottom={2}>
 					<div className={style.mobileTeams}>
 
-					<Avatar
+					{
+						(memberImage=='loadingShimmer') ?
+						<Skeleton variant="circular" width={100} height={100} />
+						:
+						<Avatar
 						alt={memberName}
 						sx={{ width: 100, height: 100 }}
 						src={memberImage}
 						/>
+					}
+
+					{
+						(memberName=='loadingShimmer')?
+						<Skeleton variant="rectangular" width={210} height={60} />
+						:
 						<Typography 
 						component={Button}
 						padding={0}
@@ -42,6 +53,7 @@ export default function MemberCard({ memberImage, memberName, memberUsername }) 
 						 variant="caption">
 							{memberName}
 						</Typography>
+					}
 						</div>
 				</Stack>
 			):(
@@ -74,11 +86,16 @@ export default function MemberCard({ memberImage, memberName, memberUsername }) 
 					justifyContent={"center"}
 					alignItems={"center"}
 				>
-					<Avatar
+					{
+						(memberImage=='loadingShimmer') ?
+						<Skeleton variant="circular" width={100} height={100} />
+						:
+						<Avatar
 						alt={memberName}
 						sx={{ width: 100, height: 100 }}
 						src={memberImage}
-					/>
+						/>
+					}
 	
 					<Stack
 						className={cardStyles.overlay}
