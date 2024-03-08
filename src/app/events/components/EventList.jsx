@@ -8,8 +8,10 @@ import {
 import EventCard from "./EventCard";
 import useDatePicker from "../../../shared/store/useDatePicker";
 import { useEffect, useState } from "react";
+import dayjs from "dayjs";
 import { HighlightOff } from "@mui/icons-material";
 import { useDebounce } from "../../../hooks/useDebounce";
+import { useResponsive } from "../../../hooks/useResponsive";
 
 const datalist1 = [
 	{
@@ -38,6 +40,7 @@ export default function EventList() {
 	const [result, setResult] = useState([]);
 	const [value, setValue] = useState("");
 	const pickedDate = useDatePicker((state) => state.pickedDate);
+	const { isLaptop, isTablet, isMobile } = useResponsive();
 	const debouncedQuery = useDebounce(value, 100);
 
 	useEffect(() => {
@@ -55,11 +58,8 @@ export default function EventList() {
 		if (debouncedQuery === "" && pickedDate === "") {
 			setResult(totalData);
 		} else if (pickedDate !== "" && debouncedQuery === "") {
-			setResult([])
-			const filtered = totalData.filter(
-				(item) =>
-					item.date === pickedDate
-			);
+			setResult([]);
+			const filtered = totalData.filter((item) => item.date === pickedDate);
 			setResult(filtered);
 		} else {
 			const filtered = totalData.filter(
@@ -72,7 +72,7 @@ export default function EventList() {
 	};
 
 	useEffect(() => {
-			filterDataList(debouncedQuery);
+		filterDataList(debouncedQuery);
 	}, [debouncedQuery]);
 
 	return (
@@ -80,11 +80,11 @@ export default function EventList() {
 			gap={3}
 			justifyContent={"start"}
 			alignItems={"start"}
-			width={"650px"}
+			width={isMobile ? "300px" : isTablet ? "400px" : "650px"}
 		>
 			<Stack
 				className="search-box"
-				width={"70%"}
+				width={isLaptop ? "100%" : "70%"}
 				position={"relative"}
 				left={30}
 				direction={"row"}
@@ -110,7 +110,7 @@ export default function EventList() {
 											(data) => data.date === pickedDate
 										);
 										setResult(filteredByDate);
-									}else {
+									} else {
 										setResult(totalData);
 									}
 									setValue("");
@@ -118,7 +118,7 @@ export default function EventList() {
 								sx={{
 									display: value.length > 0 ? "flex" : "none",
 									justifyContent: "center",
-									alignItems: "center"
+									alignItems: "center",
 								}}
 							>
 								<HighlightOff />
