@@ -2,8 +2,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useEffect, useState } from "react";
 
 export const useResponsive = () => {
-	const isLaptop = useMediaQuery("(max-width:900px)");
-	const isTablet = useMediaQuery("(max-width:650px)");
+	const isLaptop = useMediaQuery("(max-width:1100px)");
+	const isTablet = useMediaQuery("(max-width:700px)");
 	const isMobile = useMediaQuery("(max-width:500px)");
 
 	let fontSize, lineHeight, fontWeight;

@@ -1,11 +1,13 @@
 import { Stack, Divider, Typography } from "@mui/material";
 import eventStyles from "../events.module.css";
+import { useResponsive } from "../../../hooks/useResponsive";
 
 export default function EventCard({ key, date, title, info }) {
+	const { isTablet } = useResponsive();
 	return (
 		<Stack
 			className={eventStyles.eventcard}
-			width={"650px"}
+			width={isTablet ? "350px" : "650px"}
 			key={key}
 			padding={4}
 			borderRadius={2}

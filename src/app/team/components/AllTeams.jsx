@@ -6,7 +6,6 @@ import baseAPIMethods from "../../../lib/axios/base";
 import AnimatePage from "../../../ui/AnimatePage";
 import { useResponsive } from "../../../hooks/useResponsive";
 import useLoading from "../../../shared/store/useLoading";
-import Shimmer from "./Shimmer";
 
 export default function AllTeam() {
 	const [member, setMember] = useState([]);
