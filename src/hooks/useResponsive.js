@@ -15,17 +15,9 @@ export const useResponsive = () => {
 		}
 	},[]);
 
-
-	 fontSize = isMobile ? "1.4rem" : isTablet ? "2rem" : "2.5rem";
-	 lineHeight = isMobile ? "1.1rem" : isTablet ? "1.3rem" : "1.5rem";
-	 fontWeight = isMobile ? "200" : isTablet ? "300" : "400";
-
 	return {
 		isLaptop,
 		isTablet,
-		isMobile,
-		fontSize,
-		lineHeight,
-		fontWeight,
+		isMobile
 	};
 };
