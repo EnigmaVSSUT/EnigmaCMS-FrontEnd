@@ -105,7 +105,7 @@ const Footer = () => {
 					<Typography
 						color='text.body'
 					>
-						+91 7008032898
+						+91 6372742772
 					</Typography>
 				</Stack>
 			</Stack>
