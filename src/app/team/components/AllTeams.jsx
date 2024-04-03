@@ -9,7 +9,7 @@ import useLoading from "../../../shared/store/useLoading";
 
 export default function AllTeam() {
 	const [member, setMember] = useState([]);
-	const { isTablet, fontSize, fontWeight } = useResponsive();
+	const { isMobile, isTablet } = useResponsive();
 	const [loading, setLoading] = useLoading((state) => [
 		state.loading,
 		state.setLoading,
@@ -37,8 +37,8 @@ export default function AllTeam() {
 			<Stack justifyContent={"center"} alignItems={"center"} gap={10}>
 				<Typography
 					sx={{
-						fontSize: fontSize,
-						fontWeight: fontWeight,
+						fontSize: isMobile?"1.4rem":isTablet ? "2rem" : "2.5rem",
+						fontWeight: isMobile?"200":isTablet ? "300" : "400",
 						textAlign: "center",
 						color: "#fff",
 					}}
