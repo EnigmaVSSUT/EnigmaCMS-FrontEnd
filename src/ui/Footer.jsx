@@ -18,6 +18,9 @@ const socialLinks = [
 ]
 
 const Footer = () => {
+
+	const currentYear = new Date().getFullYear();
+
 	const openGmail = () => {
 		window.open('mailto:enigma.vssut@gmail.com', '_blank')
 	}
@@ -126,7 +129,7 @@ const Footer = () => {
 				<Typography
 					color='text.body'
 				>
-					Enigma VSSUT &copy; 2023
+					Enigma VSSUT &copy; {currentYear}
 				</Typography>
 				<ScrollToTopButton />
 			</Stack>
