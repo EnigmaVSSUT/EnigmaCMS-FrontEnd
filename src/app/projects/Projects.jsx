@@ -8,7 +8,7 @@ import img2 from "/assets/image2.jpg?url"
 import img3 from "/assets/image3.jpg?url"
 import img4 from "/assets/image4.jpg?url"
 import img5 from "/assets/image5.png?url"
-
+import img6 from "/assets/image6.jpg?url"
 export default function Projects() {
 	// const [value, setValue] = useState("one");
 
@@ -111,7 +111,8 @@ export default function Projects() {
 					<ProjectCard  title="Ritrovo" status="ongoing" content="Ritrovo unifies clubs, updates students, revolutionizes attendance for enjoyable university life." imgUrl={img2} />
 					<ProjectCard  title="WMS" status="ongoing" content="Innovative waste system with real-time dustbin tracker website promotes efficient disposal for a cleaner university environment." imgUrl={img3} />
 					<ProjectCard  title="Schedule" status="upcoming" content="Efficiently manage tasks with our user-friendly schedule app for streamlined organization, productivity, and stress-free planning." imgUrl={img4} />
-					<ProjectCard  title="VSIEGE" status="upcoming" content="Multiplayer game where we need to choose loadout, spawn with team, hunt enemies, use cover, win match, check stats." imgUrl={img5} />
+					<ProjectCard  title="VSIEGE" status="ongoing" content="Multiplayer game where we need to choose loadout, spawn with team, hunt enemies, use cover, win match, check stats." imgUrl={img5} />
+					<ProjectCard  title="Enigma-Ui-Kit" status="ongoing" content="CSS framework like MUI it offers a streamlined approach to creating user interfaces. Utilizing Material UI, it provides a familiar yet nimble toolkit for developers, making UI development more accessible and efficient" imgUrl={img6} />
 				</Stack>
 			</Stack>
 		</AnimatePage>
