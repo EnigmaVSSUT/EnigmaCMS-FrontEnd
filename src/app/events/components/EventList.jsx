@@ -5,26 +5,36 @@ import { useEffect,useState } from "react";
 
 const datalist1 = [
     {
-        date: "Wednesday, November 29",
-        title: "Orientation Day",
-        info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos." 
+        date: "Wednesday, February 21",
+        title: "Explorigma- the freshmen orientation program",
+        info: " The initial stride towards knowing a community is the adventurous pursuit of exploration. The program provided the freshers a chance to delve into the offerings of Enigma." 
     }
 ]
 
 const datalist2 = [
     {
-        date: "Tuesday, November 21",
+        date: "Thursday, March 14",
         title: "Enigma Induction",
-        info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos." 
-    },
-    {
-        date: "Tuesday, November 21",
-        title: "Info Session",
-        info: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia quae ipsum numquam error, sequi hic, facere perferendis nostrum nulla, quis modi culpa corrupti officiis fuga quaerat ex odit sed dignissimos." 
+        info: " Enigma conducted its Induction program, welcoming freshers into the club's fold. This event was crucial as it not only introduces newcomers to the club's activities but also fosters a sense of community and collaboration among members." 
     }
 ]
 
-const totalData = [...datalist1, ...datalist2];
+const datalist3 = [
+  {
+      date: "Monday, October 09",
+      title: "ICPC Info Session      ",
+      info: "The ICPC info session was conducted to appraise everyone about the international programming contest where they can participate in groups of three. The team which qualified for the regional round of last year's ICPC was invited as the guest." 
+  }
+]
+const datalist4 = [
+  {
+      date: "Sunday, January 14",
+      title: "AWS Cloud Workshop",
+      info: "- The AWS cloud workshop was conducted to  elevate the students' knowledge on AI and AWS cloud. The workshop was conducted by the founder of Linux World - Vimal Daga." 
+  }
+]
+
+const totalData = [...datalist1, ...datalist2, ...datalist3, ...datalist4];
 
 export default function EventList() {
 
