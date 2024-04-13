@@ -12,8 +12,8 @@ export default function Calendar() {
   const [value, setValue] = useState(dayjs());
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
-      <DemoContainer components={['DateCalendar', 'DateCalendar']}>
+    <LocalizationProvider dateAdapter={AdapterDayjs} >
+      <DemoContainer components={['DateCalendar', 'DateCalendar']} >
       <DemoItem >
       <DateCalendar  
        value={value}

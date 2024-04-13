@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography,Box } from "@mui/material";
 import blogStyles from "./blogs.module.css";
 import AnimatePage from "../../ui/AnimatePage";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
@@ -73,7 +73,7 @@ export default function Blogs() {
 				position="relative"
 				paddingBottom="10rem"
 			>
-				<Typography variant="h2" className={blogStyles.blogs} paddingY="20px">
+				<Typography variant="h2" className={blogStyles.blogs} paddingY="20px" sx={{fontSize:{xs:"30px",md:"45px",lg:"60px"},}}>
 					Blogs
 				</Typography>
 				<Stack
@@ -90,17 +90,19 @@ export default function Blogs() {
 							className={blogStyles.main}
 							key={index}
 							minHeight="300px"
-							minWidth="400px"
+							minWidth="250px"
 							borderRadius="20px"
 							position="relative"
 						>
-							<img
+							<Box
+							component="img"
+							src={blog.img}
 								className={blogStyles.blogimage}
 								height="300px"
-								width="400px"
-								src={blog.img}
+								// width="400px"
+								// src={blog.img}
 								alt={blog.title}
-								style={{ objectFit: "cover", borderRadius: "20px" }}
+								sx={{ objectFit: "cover", borderRadius: "20px",width:{xs:"250px !important",md:"400px"} }}
 							/>
 							<Stack
 								className={blogStyles.title}

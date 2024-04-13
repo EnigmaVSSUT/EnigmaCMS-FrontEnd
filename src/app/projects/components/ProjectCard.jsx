@@ -7,37 +7,41 @@ export default function ProjectCard({imgUrl,title,content,status}) {
 	return (
 		<Stack
 			className={projectStyles.projectCard}
-			maxWidth={"400px"}
+			
 			borderRadius={2}
 			sx={{
 				backgroundColor: "rgba(72, 75, 73, 0.5)",
+				display:"flex",
+				height:"100%",maxWidth:{xs:"none",md:"400px"},width:"100%"
 			
 			}}
 		>
 			<Stack className="image-wrapper" sx={{ height:"300px"}}>
-				<img
-					style={{
+				<Box 
+				component="img"
+					sx={{
 						objectFit: "cover",
 						borderRadius: "6px 6px 0 0",
+						width:{xs:"100%",md:"100%"}
 					}}
 					src={imgUrl}
 					alt=""
-					width="100%"
+				
 					height="100%"
 				/>
 			</Stack>
 			<Stack className={projectStyles.data} gap={2} padding={3}>
 			<Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-			<Typography variant="h4" className={projectStyles.projectTitle}>
+			<Typography sx={{fontSize:{xs:"4.5vw", sm:"2.8vw",md:"2.5vw",lg:"2.5vw"}}} >
 					{title}
 				</Typography>
-				<Typography variant="h4" className={projectStyles.projectTitle}>
+				<Typography  sx={{fontSize:{xs:"4.5vw",sm:"2.8vw",md:"2.5vw",lg:"2.5vw"}}}>
 					{status}
 				</Typography>
 			</Box>
 				
 
-				<Typography variant="body1" color={"#ABABAB"}>
+				<Typography  color={"#ABABAB"} sx={{fontSize:{xs:"3.5vw",sm:"2vw" ,md:"1.7vw",lg:"1.3vw"}}}>
 					{content}
 				</Typography>
 

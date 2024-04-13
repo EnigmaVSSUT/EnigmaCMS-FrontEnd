@@ -38,6 +38,7 @@ export default function Navbar() {
 					justifyContent: "space-between",
 					background: "rgb(17,17,17)",
 					boxShadow: "0px 3px 7px black",
+					position:"sticky"
 				}}
 			>
 				<a href="/">
