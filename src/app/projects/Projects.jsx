@@ -3,6 +3,11 @@ import { Stack, Typography } from "@mui/material";
 import AnimatePage from "../../ui/AnimatePage";
 
 import ProjectCard from "./components/ProjectCard";
+import img1 from "/assets/image1.jpg?url"
+import img2 from "/assets/image2.jpg?url"
+import img3 from "/assets/image3.jpg?url"
+import img4 from "/assets/image4.jpg?url"
+import img5 from "/assets/image5.png?url"
 
 import img2 from "/assets/image2.jpg?url"
 import img1 from "/assets/image1.png?url"

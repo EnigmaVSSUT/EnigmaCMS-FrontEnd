@@ -6,6 +6,11 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import { Stack } from "@mui/material";
 import AllTeam from "./AllTeams";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import IconButton from "@mui/material/IconButton";
+import styles from "../team.module.css";
+import Drawer from "@mui/material/Drawer";
+import { useResponsive } from "../../../hooks/useResponsive";
 
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
@@ -45,10 +50,47 @@ TabPanel.propTypes = {
 
 export default function SideTab() {
 	const [value, setValue] = React.useState(0);
+	const { isTablet } = useResponsive();
 
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
 	};
+
+	const [open, setOpen] = React.useState(false);
+
+	const toggleDrawer = (newOpen) => () => {
+	  setOpen(newOpen);
+	};
+  
+
+	const DrawerList = ()=>(
+		<Stack
+		className={styles.drawer}
+					sx={{
+						minWidth: "13rem",
+						height: "100vh",
+						top: "3.8rem",
+						left: "0",
+						zIndex: "1",
+					}}
+				>
+					<Tabs
+						orientation="vertical"
+						variant="standard"
+						value={value}
+						onChange={handleChange}
+						sx={{ marginTop: "2rem" }}
+					>
+						<Tab label="All" />
+						<Tab label="Web Devs" />
+						<Tab label="App Devs" />
+						<Tab label="AI/Ml Devs" />
+						<Tab label="CyberSecurity Devs" />
+						<Tab label="UI/UX designers" />
+						<Tab label="Content Writers" />
+					</Tabs>
+				</Stack>
+	);
 
 	return (
 		<Box
@@ -60,35 +102,57 @@ export default function SideTab() {
 			width={"100vw"}
 			position={"relative"}
 		>
-			<Stack
-				sx={{
-					border: 1,
-					borderColor: "divider",
-					minWidth: "16rem",
-					position: "sticky",
-					top: "3.8rem",
-					left: "0",
-					zIndex: "1",
-                    maxHeight: "100vh",
-				}}
-			>
-				<Tabs
-					orientation="vertical"
-					variant="standard"
-					value={value}
-					onChange={handleChange}
-					sx={{ marginTop: "2rem" }}
+			{isTablet ? (
+				<>
+					<IconButton
+					 onClick={toggleDrawer(true)}
+						className={styles.drawerButton}
+						aria-label="options"
+						sx={{ position: "fixed", top: "20px", left: "15px", zIndex: 2 }}
+					>
+						<ArrowForwardIosIcon sx={{ color: "white" }} />
+					</IconButton>
+					<Drawer
+					sx={{
+						"& .MuiDrawer-paper": {
+							backgroundColor: "transparent",
+							color: "white",
+						},
+					}} 
+					open={open} onClose={toggleDrawer(false)}>
+						<DrawerList />
+					</Drawer>
+				</>
+			) : (
+				<Stack
+					sx={{
+						border: 1,
+						borderColor: "divider",
+						minWidth: "16rem",
+						position: "sticky",
+						top: "3.8rem",
+						left: "0",
+						zIndex: "1",
+						maxHeight: "100vh",
+					}}
 				>
-					<Tab label="All" />
-					<Tab label="Web Devs" />
-					<Tab label="App Devs" />
-					<Tab label="AI/Ml Devs" />
-					<Tab label="CyberSecurity Devs" />
-					<Tab label="UI/UX designers" />
-					<Tab label="Content Writers" />
-				</Tabs>
-			</Stack>
-
+					<Tabs
+						orientation="vertical"
+						variant="standard"
+						value={value}
+						onChange={handleChange}
+						sx={{ marginTop: "2rem" }}
+					>
+						<Tab label="All" />
+						<Tab label="Web Devs" />
+						<Tab label="App Devs" />
+						<Tab label="AI/Ml Devs" />
+						<Tab label="CyberSecurity Devs" />
+						<Tab label="UI/UX designers" />
+						<Tab label="Content Writers" />
+					</Tabs>
+				</Stack>
+			)}
 
 			<TabPanel value={value} index={0}>
 				<AllTeam />

@@ -38,12 +38,17 @@ export default function ProjectCard({imgUrl,title,content,status}) {
 				<Typography  sx={{fontSize:{xs:"4.5vw",sm:"2.8vw",md:"2.5vw",lg:"2.5vw"}}}>
 					{status}
 				</Typography>
-			</Box>
+			{/* </Box> */}
 				
 
 				<Typography  color={"#ABABAB"} sx={{fontSize:{xs:"3.5vw",sm:"2vw" ,md:"1.7vw",lg:"1.3vw"}}}>
 					{content}
 				</Typography>
+				<Typography variant="h4" className={projectStyles.projectTitle}>
+					{status}
+				</Typography>
+			</Box>
+				
 
 				{/* <Stack
 					className="stats"
