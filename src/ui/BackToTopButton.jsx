@@ -45,7 +45,7 @@ const ScrollToTopButton = () => {
       <Box
         sx={{
           position: "absolute",
-          bottom: "-4px",
+          bottom: "0px",
           left: "0",
           width: "0%",
           height: "2px",

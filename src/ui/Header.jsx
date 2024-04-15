@@ -43,14 +43,14 @@ export default function Navbar() {
 			>
 				<a href="/">
 				<Stack direction="row" alignItems="center" gap="10px">
-					<img src="/logo/enigma_contained.png" alt="logo" width={80} />
+					<Box component="img" src="/logo/enigma_contained.png" alt="logo" sx={{width:{xs:"40px",md:"50px"}}} />
 					<Typography
 						sx={{
 							fontSize: { lg: "24px", xs: "18px" },
 							fontWeight: "500",
 						}}
 					>
-						ENIGMA
+						Enigma
 					</Typography>
 				</Stack>
 				</a>

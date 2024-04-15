@@ -36,7 +36,7 @@ const Footer = () => {
 				background: '#12121290',
 				backdropFilter: 'blur(200px)',
 				
-				padding:"1.6vw"
+				padding:{xs:"2vw",md:"1.6vw"},paddingBottom:{xs:"3.7vw",md:"1.6vw"}
 			}}
 			// gap='32px'
 		>

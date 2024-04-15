@@ -3,19 +3,15 @@ import { Stack, Typography } from "@mui/material";
 import AnimatePage from "../../ui/AnimatePage";
 
 import ProjectCard from "./components/ProjectCard";
-import img1 from "/assets/image1.jpg?url"
-import img2 from "/assets/image2.jpg?url"
-import img3 from "/assets/image3.jpg?url"
-import img4 from "/assets/image4.jpg?url"
-import img5 from "/assets/image5.png?url"
-
-import img2 from "/assets/image2.jpg?url"
 import img1 from "/assets/image1.png?url"
 import img4 from "/assets/image4.jpg?url"
 import img5 from "/assets/image5.png?url"
 import img6 from "/assets/image6.jpg?url"
 import img7 from "/assets/image7.png?url"
 import img8 from "/assets/image8.jpg?url"
+import img2 from "/assets/image2.jpg?url"
+
+
 export default function Projects() {
 	// const [value, setValue] = useState("one");
 
@@ -25,7 +21,7 @@ export default function Projects() {
 
 	// console.log(value);
 	return (
-		// <AnimatePage>
+		<AnimatePage>
 			<Stack
 				justifyContent="flex-start"
 				alignItems={"center"}
@@ -92,7 +88,7 @@ export default function Projects() {
 					alignItems={"center"}
 					flexWrap={"wrap"}
 					gap={6}
-					sx={{padding:{xs:"20px",md:"48px"}}}
+					sx={{margin:{xs:"20px",md:"48px"}}}
 				>
 					{/* {value === "one" && (
 						<>
@@ -121,9 +117,8 @@ export default function Projects() {
 					<ProjectCard  title="SMS" status="ongoing" content="VSSUT's Student Management System app enhances connectivity, streamlining student information." imgUrl={img8} />
 
 					<ProjectCard  title="Schedule" status="upcoming" content="Efficiently manage tasks with our user-friendly schedule app for streamlined organization, productivity, and stress-free planning." imgUrl={img4} />
-
 				</Stack>
 			</Stack>
-		// </AnimatePage>
+		</AnimatePage>
 	);
 }
