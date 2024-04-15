@@ -15,29 +15,30 @@ export default function ProjectCard({imgUrl,title,content,status}) {
 			}}
 		>
 			<Stack className="image-wrapper" sx={{ height:"300px"}}>
-				<img
-					style={{
+				<Box
+				component="img"
+					sx={{
 						objectFit: "cover",
 						borderRadius: "6px 6px 0 0",
+						width:{xs:"100%",md:"100%"},height:"100%"
 					}}
 					src={imgUrl}
 					alt=""
-					width="100%"
-					height="100%"
+					
 				/>
 			</Stack>
 			<Stack className={projectStyles.data} gap={2} padding={3}>
 			<Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-			<Typography variant="h4" className={projectStyles.projectTitle}>
+			<Typography variant="h4" sx={{fontSize:{xs:"4.5vw", md:"34px"}}} >
 					{title}
 				</Typography>
-				<Typography variant="h4" className={projectStyles.projectTitle}>
+				<Typography variant="h4" sx={{fontSize:{xs:"4.5vw", md:"34px"}}} >
 					{status}
 				</Typography>
 			</Box>
 				
 
-				<Typography variant="body1" color={"#ABABAB"}>
+				<Typography variant="body1"  color={"#ABABAB"} sx={{fontSize:{xs:"3.5vw",md:"16px"}}}>
 					{content}
 				</Typography>
 

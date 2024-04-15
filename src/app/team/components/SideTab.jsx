@@ -82,12 +82,12 @@ export default function SideTab() {
 						sx={{ marginTop: "2rem" }}
 					>
 						<Tab label="All" />
-						<Tab label="Web Devs" />
+						{/* <Tab label="Web Devs" />
 						<Tab label="App Devs" />
 						<Tab label="AI/Ml Devs" />
 						<Tab label="CyberSecurity Devs" />
 						<Tab label="UI/UX designers" />
-						<Tab label="Content Writers" />
+						<Tab label="Content Writers" /> */}
 					</Tabs>
 				</Stack>
 	);
@@ -144,12 +144,12 @@ export default function SideTab() {
 						sx={{ marginTop: "2rem" }}
 					>
 						<Tab label="All" />
-						<Tab label="Web Devs" />
+						{/* <Tab label="Web Devs" />
 						<Tab label="App Devs" />
 						<Tab label="AI/Ml Devs" />
 						<Tab label="CyberSecurity Devs" />
 						<Tab label="UI/UX designers" />
-						<Tab label="Content Writers" />
+						<Tab label="Content Writers" /> */}
 					</Tabs>
 				</Stack>
 			)}
@@ -157,7 +157,7 @@ export default function SideTab() {
 			<TabPanel value={value} index={0}>
 				<AllTeam />
 			</TabPanel>
-			<TabPanel value={value} index={1}>
+			{/* <TabPanel value={value} index={1}>
 				Web devs
 			</TabPanel>
 			<TabPanel value={value} index={2}>
@@ -174,7 +174,7 @@ export default function SideTab() {
 			</TabPanel>
 			<TabPanel value={value} index={6}>
 				Content Writers
-			</TabPanel>
+			</TabPanel> */}
 		</Box>
 	);
 }
