@@ -27,21 +27,20 @@ export default function AllTeam() {
 		getTeam().then((res) => {
 			console.log("test", res);
 			localStorage.setItem("teamSize", res.length);
-		}).then(()=>{
+		}).then(() => {
 			setLoading(false);
 		})
 	}, []);
 
 	return (
 		<AnimatePage>
-			<Stack justifyContent={"center"} alignItems={"center"} gap={10}>
-				<Typography
-					sx={{
-						fontSize: isMobile?"1.4rem":isTablet ? "2rem" : "2.5rem",
-						fontWeight: isMobile?"200":isTablet ? "300" : "400",
-						textAlign: "center",
-						color: "#fff",
-					}}
+			<Stack justifyContent={"center"} alignItems={"center"} gap={5}>
+				<Typography variant="h2" paddingY="20px" sx={{
+					fontSize: { xs: "30px", md: "45px", lg: "60px" }, fontWeight: isMobile ? "200" : isTablet ? "300" : "400",
+					textAlign: "center",
+					color: "#fff",
+				}}
+
 				>
 					Team Enigma
 				</Typography>
@@ -59,12 +58,12 @@ export default function AllTeam() {
 							{[
 								...Array(shimmerSize).map((_, i) => {
 									<>
-									{console.log('cnt',i)}
-									<MemberCard key={i}
-									memberImage="loadingShimmer"
-									memberName="loadingShimmer"
-									memberUsername="loadingShimmer"
-									/>;
+										{console.log('cnt', i)}
+										<MemberCard key={i}
+											memberImage="loadingShimmer"
+											memberName="loadingShimmer"
+											memberUsername="loadingShimmer"
+										/>;
 									</>
 								}),
 							]}

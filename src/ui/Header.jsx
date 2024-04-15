@@ -1,235 +1,126 @@
-import React, { useState, useEffect } from "react";
-import { AppBar, Stack, Typography, Drawer } from "@mui/material";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import MenuIcon from "@mui/icons-material/Menu";
-import IconButton from "@mui/material/IconButton";
+import {
+	Typography,
+	IconButton,
+	Divider,
+	AppBar,
+	Box,
+	SwipeableDrawer,
+	List,
+	ListItem,
+	Stack,
+} from "@mui/material";
+import FormatAlignLeftIcon from "@mui/icons-material/FormatAlignLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { useState } from "react";
 import EnigmaNavLink from "./EnigmaNavLink";
-import EventIcon from "@mui/icons-material/Event";
-import BookIcon from "@mui/icons-material/Book";
-import WebhookIcon from "@mui/icons-material/Webhook";
-import GroupsIcon from "@mui/icons-material/Groups";
-import Divider from "@mui/material/Divider";
-import Link from "@mui/material/Link";
-import "../App.css";
+// import { motion } from "framer-motion";
+// import { navVariants } from "../Utils/motion";
+// import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
-const DrawerList = ({ activeLink }) => (
-	<Stack
-		className="drawerStyles"
-		direction="column"
-		gap="25px"
-		padding="20px"
-		width="210px"
-		alignItems="flex-start"
-		height={1}
-		position={"relative"}
-	>
-		<Stack
-			width={"100%"}
-			direction={"row"}
-			gap={2}
-			justifyContent={"center"}
-			alignItems={"center"}
-		>
-			<img
-				src="/logo/enigma_contained.png"
-				alt="Enigma VSSUT logo"
-				width={50}
-				height={50}
-			/>
-			<Typography variant="body1">Enigma VSSUT</Typography>
-		</Stack>
-
-		<Divider
-			sx={{
-				backgroundColor: "white",
-				width: "100%",
-			}}
-		/>
-		<Stack
-			gap={4}
-			paddingLeft={4}
-			justifyContent={"center"}
-			alignItems={"start"}
-		>
-			<EnigmaNavLink
-				href="/events"
-				className={activeLink === "/events" ? "active" : ""}
-				color={activeLink === "/events" ? "#5cdc21" : "inherit"}
-			>
-				<Stack
-					direction={"row"}
-					gap={2}
-					justifyContent={"start"}
-					alignItems={"center"}
-					fontSize={18}
-				>
-					<EventIcon sx={{ fontSize: 24 }} />
-					Events
-				</Stack>
-			</EnigmaNavLink>
-
-			<EnigmaNavLink
-				href="/blogs"
-				className={activeLink === "/blogs" ? "active" : ""}
-				color={activeLink === "/blogs" ? "#5cdc21" : "inherit"}
-			>
-				<Stack
-					direction={"row"}
-					gap={2}
-					justifyContent={"start"}
-					alignItems={"center"}
-					fontSize={18}
-				>
-					<BookIcon sx={{ fontSize: 24 }} />
-					Blogs
-				</Stack>
-			</EnigmaNavLink>
-
-			<EnigmaNavLink
-				href="/projects"
-				className={activeLink === "/projects" ? "active" : ""}
-				color={activeLink === "/projects" ? "#5cdc21" : "inherit"}
-			>
-				<Stack
-					direction={"row"}
-					gap={2}
-					justifyContent={"start"}
-					alignItems={"center"}
-					fontSize={18}
-				>
-					<WebhookIcon sx={{ fontSize: 24 }} />
-					Projects
-				</Stack>
-			</EnigmaNavLink>
-
-			<EnigmaNavLink
-				href="/team"
-				className={activeLink === "/team" ? "active" : ""}
-				color={activeLink === "/team" ? "#5cdc21" : "inherit"}
-			>
-				<Stack
-					direction={"row"}
-					gap={2}
-					justifyContent={"start"}
-					alignItems={"center"}
-					fontSize={18}
-				>
-					<GroupsIcon sx={{ fontSize: 24 }} />
-					Team
-				</Stack>
-			</EnigmaNavLink>
-		</Stack>
-
-		<Stack position={"absolute"} bottom={15} left={"23%"}>
-			<Typography variant="caption">© 2024 Enigma VSSUT</Typography>
-		</Stack>
-	</Stack>
-);
-
-const Header = () => {
-	const isPhone = useMediaQuery("(max-width:600px)");
+export default function Navbar() {
 	const [open, setOpen] = useState(false);
-	const [activeLink, setActiveLink] = useState("");
-
-	useEffect(() => {
-		const currentPath = window.location.pathname;
-		setActiveLink(currentPath);
-	}, [activeLink]);
-
-	const toggleDrawer = (newOpen) => () => {
-		setOpen(newOpen);
-	};
-
 	return (
-		<AppBar
-			position="sticky"
-			sx={{
-				backgroundColor: "#12121290",
-				backdropFilter: "blur(200px)",
-			}}
-		>
-			<Stack
-				direction="row"
-				borderBottom="1px solid"
-				borderColor="divider"
-				justifyContent="center"
-				alignItems="center"
-				padding="10px 32px"
-				gap="16px"
+		<>
+			{/* <motion.nav
+				variants={navVariants}
+				initial="hidden"
+				whileInView="show"
+				viewport={{ once: true }}
+			> */}
+			<AppBar
+				elevation={0}
+				sx={{
+					position: "relative",
+					top: "0",
+					left: "0",
+					padding: { lg: "10px 30px", xs: "10px 10px" },
+					flexDirection: "row",
+					justifyContent: "space-between",
+					background: "rgb(17,17,17)",
+					boxShadow: "0px 3px 7px black",
+					position:"sticky"
+				}}
 			>
-				<Stack
-					component={Link}
-					href="/"
-					style={{
-						textDecoration: "none",
-					}}
-					direction="row"
-					gap="12px"
-					alignItems="center"
-					flexGrow={1}
-				>
-					<img
-						src="/logo/enigma_contained.png"
-						alt="Enigma VSSUT logo"
-						width={42}
-						height={42}
-					/>
-					<Typography>Enigma VSSUT</Typography>
+				<a href="/">
+				<Stack direction="row" alignItems="center" gap="10px">
+					<Box component="img" src="/logo/enigma_contained.png" alt="logo" sx={{width:{xs:"40px",md:"50px"}}} />
+					<Typography
+						sx={{
+							fontSize: { lg: "24px", xs: "18px" },
+							fontWeight: "500",
+						}}
+					>
+						Enigma
+					</Typography>
 				</Stack>
-				{isPhone ? (
-					<>
-						<IconButton aria-label="options" onClick={toggleDrawer(true)}>
-							<MenuIcon />
-						</IconButton>
-						<Drawer
-							sx={{
-								"& .MuiDrawer-paper": {
-									backgroundColor: "transparent",
-									color: "white",
-								},
-							}}
-							open={open}
-							onClose={toggleDrawer(false)}
-							anchor="right"
-						>
-							<DrawerList activeLink={activeLink} />
-						</Drawer>
-					</>
-				) : (
+				</a>
+				<Box
+					sx={{
+						display: { xs: "none", md: "flex" },
+						flexDirection: "row",
+						gap: "30px",
+						alignItems: "center",
+					}}
+				>
 					<Stack direction="row" gap="20px">
-						<EnigmaNavLink
-							href="/events"
-							className={activeLink === "/events" ? "active" : ""}
-							color={activeLink === "/events" ? "#5cdc21" : "inherit"}
-						>
-							Events
-						</EnigmaNavLink>
-						<EnigmaNavLink
-							href="/blogs"
-							className={activeLink === "/blogs" ? "active" : ""}
-							color={activeLink === "/blogs" ? "#5cdc21" : "inherit"}
-						>
-							Blogs
-						</EnigmaNavLink>
-						<EnigmaNavLink
-							href="/projects"
-							className={activeLink === "/projects" ? "active" : ""}
-							color={activeLink === "/projects" ? "#5cdc21" : "inherit"}
-						>
-							Projects
-						</EnigmaNavLink>
-						<EnigmaNavLink
-							href="/team"
-							className={activeLink === "/team" ? "active" : ""}
-							color={activeLink === "/team" ? "#5cdc21" : "inherit"}
-						>
-							Team
-						</EnigmaNavLink>
+						<EnigmaNavLink href="/events">Events</EnigmaNavLink>
+						<EnigmaNavLink href="/blogs">Blogs</EnigmaNavLink>
+						<EnigmaNavLink href="/projects">Projects</EnigmaNavLink>
+						<EnigmaNavLink href="/team">Team</EnigmaNavLink>
 					</Stack>
-				)}
-			</Stack>
-		</AppBar>
+				</Box>
+				<IconButton sx={{ display: { md: "none" } }}>
+					<FormatAlignLeftIcon
+						onClick={() => setOpen(true)}
+						sx={{ color: "white" }}
+					/>
+				</IconButton>
+				<SwipeableDrawer
+					PaperProps={{
+						sx: {
+							background: "transparent",
+							backdropFilter: "blur(10px)",
+							width: "200px",
+							display: open ? "flex" : "none",
+						},
+					}}
+					open={open}
+					anchor="right"
+					onOpen={() => {
+						setOpen(true);
+					}}
+					onClose={() => {
+						setOpen(false);
+					}}
+				>
+					<div>
+						<IconButton>
+							<ChevronRightIcon
+								onClick={() => setOpen(false)}
+								sx={{ color: "white" }}
+							/>
+						</IconButton>
+					</div>
+					<Divider sx={{ backgroundColor: "white" }} />
+					<List>
+						<ListItem>
+							<EnigmaNavLink href="/events">Events</EnigmaNavLink>
+						</ListItem>
+						<ListItem>
+						<EnigmaNavLink href="/blogs">Blogs</EnigmaNavLink>
+						</ListItem>
+						<ListItem>
+						<EnigmaNavLink href="/projects">Projects</EnigmaNavLink>
+						</ListItem>
+						<ListItem>
+						<EnigmaNavLink href="/team">Team</EnigmaNavLink>
+						</ListItem>
+					
+						
+					</List>
+				</SwipeableDrawer>
+			</AppBar>
+			{/* </motion.nav> */}
+		</>
 	);
-};
-
-export default Header;
+}

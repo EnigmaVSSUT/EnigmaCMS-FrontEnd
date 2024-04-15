@@ -27,28 +27,39 @@ const Footer = () => {
 
 	return (
 		<Stack
-			padding='24px'
+		
+			// padding='24px'
 			borderTop='1px solid'
 			borderColor='divider'
 			// bgcolor='background.default'
 			sx={{
 				background: '#12121290',
-				backdropFilter: 'blur(200px)'
+				backdropFilter: 'blur(200px)',
+				
+				padding:{xs:"2vw",md:"1.6vw"},paddingBottom:{xs:"3.7vw",md:"1.6vw"}
 			}}
-			gap='32px'
+			// gap='32px'
 		>
 			<Stack
-				direction='row'
-				gap='12px'
+				// direction='row'
+				// gap='12px'
+				
+				sx={{flexDirection:{sm:"column",md:"column",lg:"row"},gap:"13px"}}
 			>
 				<Stack
-					padding='16px'
+				
+					padding='0.8vw'
 					flexGrow={1}
+					
 				>
 					<Stack
+					
 						direction='row'
-						gap='12px'
+						gap='0.8vw'
 						alignItems='center'
+						
+						
+						// sx={{alignItems:{md:"center",lg:"flex-start"}}}
 					>
 						<img
 							src='/logo/enigma_contained.png'
@@ -69,12 +80,13 @@ const Footer = () => {
 				/>
 				<Stack
 					flexGrow={1}
-					gap='16px'
-					padding='16px'
+					
+					gap='0.9vw'
+					padding='0.9vw'
 				>
 					<Stack
 						direction='row'
-						gap='8px'
+						gap='0.5vw'
 					>
 						{ socialLinks.map(s => (
 						
@@ -115,14 +127,16 @@ const Footer = () => {
 			<Button
 				variant='contained'
 				sx={{
-					alignSelf: 'center'
+					alignSelf: 'center',
+					marginTop:"10px",
+					marginBottom:"10px"
 				}}
 				onClick={openGmail}
 			>
 				Mail Us
 			</Button>
 			<Stack
-				padding='16px'
+				// padding='16px'
 				direction='row'
 				justifyContent='space-between'
 			>

@@ -10,36 +10,26 @@ import Typography from "@mui/material/Typography";
 import { useResponsive } from "../../../hooks/useResponsive";
 
 export default function Calendar() {
-	const [setPickedDate] = useDatePicker((state) => [state.setPickedDate]);
-	const [value, setValue] = useState();
+
 	const pickedDate = useDatePicker((state) => state.pickedDate);
 	const { isLaptop, isTablet } = useResponsive();
 
+	const [setPickedDate] = useDatePicker((state) => [state.setPickedDate]);
+	const [value, setValue] = useState(dayjs());
+
 	return (
-		<Stack
-			direction={isTablet ? "column" : "row"}
-			gap={isTablet ? 2 : 10}
-			justifyContent={"center"}
-			alignItems={"center"}
-		>
-			<LocalizationProvider dateAdapter={AdapterDayjs}>
-				<DemoContainer components={["DateCalendar", "DateCalendar"]}>
-					<DemoItem>
-						<DateCalendar
-							value={value}
-							onChange={(newValue) => {
-								setPickedDate(newValue.format("dddd, MMMM DD"));
-								setValue(newValue);
-							}}
-						/>
-					</DemoItem>
-				</DemoContainer>
-			</LocalizationProvider>
-			{isLaptop && (
-				<Stack>
-					<Typography variant={isTablet ? "h6" : "h4"}>{pickedDate}</Typography>
-				</Stack>
-			)}
-		</Stack>
+		<LocalizationProvider dateAdapter={AdapterDayjs} >
+			<DemoContainer components={['DateCalendar', 'DateCalendar']} >
+				<DemoItem >
+					<DateCalendar
+						value={value}
+						onChange={(newValue) => {
+							setPickedDate(newValue.format('dddd, MMMM DD'));
+							setValue(newValue);
+						}}
+					/>
+				</DemoItem>
+			</DemoContainer>
+		</LocalizationProvider>
 	);
 }
