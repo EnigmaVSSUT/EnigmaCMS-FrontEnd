@@ -59,37 +59,39 @@ export default function SideTab() {
 	const [open, setOpen] = React.useState(false);
 
 	const toggleDrawer = (newOpen) => () => {
-	  setOpen(newOpen);
+		setOpen(newOpen);
 	};
-  
 
-	const DrawerList = ()=>(
+
+	const DrawerList = () => (
 		<Stack
-		className={styles.drawer}
-					sx={{
-						minWidth: "13rem",
-						height: "100vh",
-						top: "3.8rem",
-						left: "0",
-						zIndex: "1",
-					}}
-				>
-					<Tabs
-						orientation="vertical"
-						variant="standard"
-						value={value}
-						onChange={handleChange}
-						sx={{ marginTop: "2rem" }}
-					>
-						<Tab label="All" />
-						{/* <Tab label="Web Devs" />
-						<Tab label="App Devs" />
-						<Tab label="AI/Ml Devs" />
-						<Tab label="CyberSecurity Devs" />
+			className={styles.drawer}
+			sx={{
+				minWidth: "13rem",
+				height: "100vh",
+				top: "3.8rem",
+				left: "0",
+				zIndex: "1",
+			}}
+		>
+			<Tabs
+				orientation="vertical"
+				variant="standard"
+				value={value}
+				onChange={handleChange}
+				sx={{ marginTop: "2rem" }}
+			>
+				<Tab label="All" />
+				<Tab label="2024" />
+				<Tab label="2025" />
+				<Tab label="2026" />
+				<Tab label="2027" />
+				<Tab label="Alumni" />
+				{/* <Tab label="CyberSecurity Devs" />
 						<Tab label="UI/UX designers" />
 						<Tab label="Content Writers" /> */}
-					</Tabs>
-				</Stack>
+			</Tabs>
+		</Stack>
 	);
 
 	return (
@@ -105,7 +107,7 @@ export default function SideTab() {
 			{isTablet ? (
 				<>
 					<IconButton
-					 onClick={toggleDrawer(true)}
+						onClick={toggleDrawer(true)}
 						className={styles.drawerButton}
 						aria-label="options"
 						sx={{ position: "fixed", top: "20px", left: "15px", zIndex: 2 }}
@@ -113,13 +115,13 @@ export default function SideTab() {
 						<ArrowForwardIosIcon sx={{ color: "white" }} />
 					</IconButton>
 					<Drawer
-					sx={{
-						"& .MuiDrawer-paper": {
-							backgroundColor: "transparent",
-							color: "white",
-						},
-					}} 
-					open={open} onClose={toggleDrawer(false)}>
+						sx={{
+							"& .MuiDrawer-paper": {
+								backgroundColor: "transparent",
+								color: "white",
+							},
+						}}
+						open={open} onClose={toggleDrawer(false)}>
 						<DrawerList />
 					</Drawer>
 				</>
@@ -144,37 +146,34 @@ export default function SideTab() {
 						sx={{ marginTop: "2rem" }}
 					>
 						<Tab label="All" />
-						{/* <Tab label="Web Devs" />
-						<Tab label="App Devs" />
-						<Tab label="AI/Ml Devs" />
-						<Tab label="CyberSecurity Devs" />
-						<Tab label="UI/UX designers" />
-						<Tab label="Content Writers" /> */}
+						<Tab label="2024" />
+						<Tab label="2025" />
+						<Tab label="2026" />
+						<Tab label="2027" />
+						<Tab label="Alumni" />
 					</Tabs>
 				</Stack>
 			)}
 
 			<TabPanel value={value} index={0}>
-				<AllTeam />
+				<AllTeam year={"all"} />
 			</TabPanel>
-			{/* <TabPanel value={value} index={1}>
-				Web devs
+			<TabPanel value={value} index={1}>
+				<AllTeam year={"2024"} />
 			</TabPanel>
 			<TabPanel value={value} index={2}>
-				App Devs
+				<AllTeam year={"2025"} />
 			</TabPanel>
 			<TabPanel value={value} index={3}>
-				Ai/ML Devs
+				<AllTeam year={"2026"} />
 			</TabPanel>
 			<TabPanel value={value} index={4}>
-				cybersecurity Devs
+				<AllTeam year={"2027"} />
 			</TabPanel>
 			<TabPanel value={value} index={5}>
-				UI/UX designers
+				<AllTeam year={"alumni"} />
 			</TabPanel>
-			<TabPanel value={value} index={6}>
-				Content Writers
-			</TabPanel> */}
+
 		</Box>
 	);
 }
