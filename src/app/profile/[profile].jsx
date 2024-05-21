@@ -105,7 +105,7 @@ export default function UserProfile() {
 									<LinkedInIcon />
 								</IconButton>
 							</a>
-
+						{ user?.twitter_handle && user.twitter_handle !== "" &&
 							<a
 								href={user.twitter_handle}
 								target="_blank"
@@ -121,6 +121,7 @@ export default function UserProfile() {
 									<TwitterIcon />
 								</IconButton>
 							</a>
+							}
 						</Stack>
 					</Stack>
 

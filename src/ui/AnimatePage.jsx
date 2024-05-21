@@ -18,13 +18,13 @@ const variants = {
 const AnimatePage = ({ children }) => {
 	return (
 		<motion.main
-			variants={variants}
-			initial='hidden'
-			animate='enter'
-			exit='exit'
-			transition={{
-				stiffness: 500
-			}}
+			// variants={variants}
+			// initial='hidden'
+			// animate='enter'
+			// exit='exit'
+			// transition={{
+			// 	stiffness: 500
+			// }}
 			style={{
 				display: 'flex',
 				flexDirection: 'column',
