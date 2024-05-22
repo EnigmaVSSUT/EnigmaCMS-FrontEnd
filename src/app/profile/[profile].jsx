@@ -51,39 +51,54 @@ export default function UserProfile() {
 				<Stack
 					border={3}
 					boxShadow="0 0 5px 1px"
-					direction="row"
-					minWidth="900px"
-					padding={12}
-					margin={8}
+					sx={{
+						flexDirection: { xs: "column-reverse", md: "row" },
+						minWidth: { xs: "90%", md: "880px" },
+						padding: { xs: 3, sm: 7, md: 12 },
+						margin: 8,
+					}}
 				>
 					<Stack className="data-box" gap={2} flexGrow={1}>
-						<Typography color="#fff" variant="h3">
+						<Typography
+							color="#fff"
+							variant="h3"
+							sx={{
+								fontSize: {
+									xs: "2.5rem",
+									sm: "3rem",
+								},
+							}}
+						>
 							{user.name}
 						</Typography>
+
 						<Typography color="#fff" variant="h6">
 							{user.username}
 						</Typography>
-
 						<Typography color="#fff">{user.graduationYear}</Typography>
 
-						<Stack direction="column" marginTop={5} gap={1}>
+						<Stack
+							direction="column"
+							sx={{ marginTop: { xs: 3, sm: 5 } }}
+							gap={1}
+						>
 							<Typography color="#fff" variant="h6">
 								Skills
 							</Typography>
-							<Grid container xs={8} gap={1}>
-								<Grid item>
+							<Grid container spacing={1}>
+								<Grid item xs="auto">
 									<Chip sx={{ width: "fit-content" }} label="React" />
 								</Grid>
-								<Grid item>
+								<Grid item xs="auto">
 									<Chip sx={{ width: "fit-content" }} label="Firebase" />
 								</Grid>
-								<Grid item>
+								<Grid item xs="auto">
 									<Chip sx={{ width: "fit-content" }} label="NextJS" />
 								</Grid>
-								<Grid item>
+								<Grid item xs="auto">
 									<Chip sx={{ width: "fit-content" }} label="wsl" />
 								</Grid>
-								<Grid item>
+								<Grid item xs="auto">
 									<Chip sx={{ width: "fit-content" }} label="Android" />
 								</Grid>
 							</Grid>
@@ -105,27 +120,32 @@ export default function UserProfile() {
 									<LinkedInIcon />
 								</IconButton>
 							</a>
-						{ user?.twitter_handle && user.twitter_handle !== "" &&
-							<a
-								href={user.twitter_handle}
-								target="_blank"
-								key="twitter"
-								rel="noreferrer"
-							>
-								<IconButton
-									sx={{
-										border: "1px solid",
-										borderColor: "divider",
-									}}
+							{user?.twitter_handle && user.twitter_handle !== "" && (
+								<a
+									href={user.twitter_handle}
+									target="_blank"
+									key="twitter"
+									rel="noreferrer"
 								>
-									<TwitterIcon />
-								</IconButton>
-							</a>
-							}
+									<IconButton
+										sx={{
+											border: "1px solid",
+											borderColor: "divider",
+										}}
+									>
+										<TwitterIcon />
+									</IconButton>
+								</a>
+							)}
 						</Stack>
 					</Stack>
 
-					<Stack className="image-box" flexGrow={1} alignItems="center">
+					<Stack
+						className="image-box"
+						flexGrow={1}
+						alignItems="center"
+						sx={{ marginBottom: { xs: 4, sm: 2, md: 0 } }}
+					>
 						<Stack
 							height="100%"
 							width="100%"
@@ -145,8 +165,8 @@ export default function UserProfile() {
 								justifyContent={"center"}
 								alignItems={"center"}
 								sx={{
-									width: 255,
-									height: 255,
+									width: { xs: 200, sm: 255 },
+									height: { xs: 200, sm: 255 },
 									border: 5,
 									color: "#52527a",
 									backgroundColor: "transparent",
@@ -165,8 +185,8 @@ export default function UserProfile() {
 								)}
 								<Avatar
 									sx={{
-										width: 250,
-										height: 250,
+										width: { xs: 190, sm: 250 },
+										height: { xs: 190, sm: 250 },
 										display: loading ? "none" : "block",
 									}}
 									src={user.avatar}
