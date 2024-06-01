@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, Pagination } from "@mui/material";
 import { useEffect, useState } from "react";
 import MemberCard from "./MemberCard";
 import baseAPIMethods from "../../../lib/axios/base";
@@ -14,34 +14,62 @@ export default function AllTeam({ year }) {
 		state.loading,
 		state.setLoading,
 	]);
-	const shimmerSize = localStorage.getItem("teamSize") || 0;
+	const shimmerSize = Number(localStorage.getItem("teamSize")) || 0;
+
+	const [currentPage, setCurrentPage] = useState(1);
+	const cardsPerPage = 9;
+
+	const indexOfLastCard = currentPage * cardsPerPage;
+	const indexOfFirstCard = indexOfLastCard - cardsPerPage;
+	const currentCards = filteredMembers.slice(indexOfFirstCard, indexOfLastCard);
 
 	useEffect(() => {
+		// Load team data from local storage if available
+		const storedMembers = JSON.parse(localStorage.getItem("teamMembers"));
+		if (storedMembers) {
+			setMembers(storedMembers);
+		}
+
 		const getTeam = async () => {
 			setLoading(true);
-			const res = await baseAPIMethods.members.getAllMembers();
-			setMembers(res.data);
-			localStorage.setItem("teamSize", res.data.length);
-			setLoading(false);
+			try {
+				const res = await baseAPIMethods.members.getAllMembers();
+				setMembers(res.data);
+				localStorage.setItem("teamMembers", JSON.stringify(res.data));
+				localStorage.setItem("teamSize", res.data.length);
+			} catch (error) {
+				console.error("Failed to fetch team members:", error);
+			} finally {
+				setLoading(false);
+			}
 		};
 		getTeam();
 	}, [setLoading]);
 
 	useEffect(() => {
-		let filtered;
-		if (year === "all") {
-			filtered = members;
-		} else if (year === "alumni") {
-			filtered = members.filter(
-				(member) => parseInt(member.profile.graduation_year) < 2024
-			);
-		} else {
-			filtered = members.filter(
-				(member) => member.profile.graduation_year === parseInt(year)
-			);
-		}
-		setFilteredMembers(filtered);
+		const filterMembers = () => {
+			if (year === "all") {
+				setFilteredMembers(members);
+			} else if (year === "alumni") {
+				setFilteredMembers(
+					members.filter(
+						(member) => parseInt(member.profile.graduation_year) < 2024
+					)
+				);
+			} else {
+				setFilteredMembers(
+					members.filter(
+						(member) => member.profile.graduation_year === parseInt(year)
+					)
+				);
+			}
+		};
+		filterMembers();
 	}, [year, members]);
+
+	const handlePageChange = (event, value) => {
+		setCurrentPage(value);
+	};
 
 	return (
 		<AnimatePage>
@@ -67,8 +95,8 @@ export default function AllTeam({ year }) {
 					alignItems={"center"}
 					flexWrap={"wrap"}
 				>
-					{loading ? (
-						[...Array(Number(shimmerSize)).keys()].map((i) => (
+					{loading && !members.length ? (
+						Array.from({ length: shimmerSize }).map((_, i) => (
 							<MemberCard
 								key={i}
 								memberImage="loadingShimmer"
@@ -77,7 +105,7 @@ export default function AllTeam({ year }) {
 							/>
 						))
 					) : (
-						filteredMembers.map((member, idx) => (
+						currentCards.map((member, idx) => (
 							<MemberCard
 								key={idx}
 								memberName={member.profile.name}
@@ -87,6 +115,15 @@ export default function AllTeam({ year }) {
 						))
 					)}
 				</Stack>
+
+				{filteredMembers.length > cardsPerPage && (
+					<Pagination
+						count={Math.ceil(filteredMembers.length / cardsPerPage)}
+						page={currentPage}
+						onChange={handlePageChange}
+						color="primary"
+					/>
+				)}
 			</Stack>
 		</AnimatePage>
 	);
