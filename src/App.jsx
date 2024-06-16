@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./app/root/RootLayout";
 import Background from "./ui/Background";
 import HomePage from "./app/home/Home";
-import UserProfile from "./app/profile/[profile]";
+import UserProfile from "./app/profile/UserProfile";
 import Team from "./app/team/Team";
 import Blogs from "./app/blogs/Blogs";
 import SingleBlog from "./app/blogs/[blogid]";
