@@ -23,19 +23,20 @@ jobs:
 
       - name: Set Environment Variables
         run: |
-            echo "VITE_BASE_URL=${{ secrets.VITE_BASE_URL }}" >> $GITHUB_ENV
-            echo "VITE_CDN_URL=${{ secrets.VITE_CDN_URL }}" >> $GITHUB_ENV
-            echo "VITE_DOMAIN_NAME=${{ secrets.VITE_DOMAIN_NAME }}" >> $GITHUB_ENV
-            echo "VITE_GITHUB_APP_AUTHORIZE_URL=${{ secrets.VITE_GITHUB_APP_AUTHORIZE_URL }}" >> $GITHUB_ENV
+          echo "VITE_BASE_URL=${{ secrets.VITE_BASE_URL }}" >> $GITHUB_ENV
+          echo "VITE_CDN_URL=${{ secrets.VITE_CDN_URL }}" >> $GITHUB_ENV
+          # If your domain secret changed to enigmavssut.in, update here:
+          echo "VITE_DOMAIN_NAME=${{ secrets.VITE_DOMAIN_NAME }}" >> $GITHUB_ENV
+          echo "VITE_GITHUB_APP_AUTHORIZE_URL=${{ secrets.VITE_GITHUB_APP_AUTHORIZE_URL }}" >> $GITHUB_ENV
 
       - name: Build Vite Project
         run: npm run build
 
       - name: Archive Build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@latest
         with:
           name: build
-          path: dist/ 
+          path: dist/
 
   Deploy-Staging:
     needs: [Build]
@@ -60,7 +61,7 @@ jobs:
         run: npm install --force
 
       - name: Restore Build
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@latest
         with:
           name: build
 
@@ -71,9 +72,9 @@ jobs:
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only hosting --project ${{ env.FIREBASE_PROJECT_ID }}
 
   Deploy-Production:
-    needs: [Build,Deploy-Staging]
+    needs: [Build, Deploy-Staging]
     runs-on: ubuntu-latest
-    environment: 
+    environment:
       name: Production
       url: "https://enigma-dev-web.web.app"
 
@@ -93,7 +94,7 @@ jobs:
         run: npm install --force
 
       - name: Restore Build
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@latest
         with:
           name: build
 
