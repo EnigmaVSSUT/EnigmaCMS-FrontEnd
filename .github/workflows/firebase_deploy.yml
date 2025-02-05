@@ -66,11 +66,8 @@ jobs:
           name: build
           path: dist/
 
-      - name: Set Environment Variables Staging
-        run: echo "FIREBASE_PROJECT_ID=${{ secrets.PREVIEW }}" >> $GITHUB_ENV
-
       - name: Deploy to Firebase (Staging)
-        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only hosting:preview --project ${{ env.FIREBASE_PROJECT_ID }}
+        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only hosting --project ${{ secrets.PREVIEW }}
 
   Deploy-Production:
     needs: [Build, Deploy-Staging]
@@ -99,9 +96,6 @@ jobs:
         with:
           name: build
           path: dist/
-
-      - name: Set Environment Variables for Production
-        run: echo "FIREBASE_PROJECT_ID=${{ secrets.PRODUCTION }}" >> $GITHUB_ENV
-
+          
       - name: Deploy to Firebase (Production)
-        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only hosting:production --project ${{ env.FIREBASE_PROJECT_ID }}
+        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }} --only hosting --project ${{ secrets.PRODUCTION }}
