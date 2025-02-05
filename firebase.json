@@ -2,7 +2,6 @@
   "hosting": [
     {
       "target": "preview",
-      "site": "enigma-web-preview",
       "public": "dist",
       "ignore": [
         "firebase.json",
@@ -18,7 +17,6 @@
     },
     {
       "target": "production",
-      "site": "enigma-dev-web",
       "public": "dist",
       "ignore": [
         "firebase.json",
