@@ -29,7 +29,7 @@ export default function ProjectCard({imgUrl,title,content,status}) {
 			</Stack>
 			<Stack className={projectStyles.data} gap={2} padding={3}>
 			<Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-			<Typography variant="h4" sx={{fontSize:{xs:"4.5vw", md:"34px"}}} >
+			<Typography variant="h4" sx={{fontSize:{xs:"4vw", md:"30px"}}} >
 					{title}
 				</Typography>
 				<Typography variant="h4" sx={{fontSize:{xs:"4.5vw", md:"34px"}}} >
